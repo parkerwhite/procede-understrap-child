@@ -1,0 +1,279 @@
+//
+// Typography
+//
+body {
+	letter-spacing: .01em
+}
+h1 {
+	font-weight: $font-weight-bold;
+	letter-spacing: 0;
+	line-height: 3.8rem;
+}
+h2 {
+	letter-spacing: .025em;
+	line-height: 2.75rem;
+}
+h3 {
+	letter-spacing: .025em;
+	line-height: 2.2rem;
+}
+h4 {
+	font-weight: $font-weight-bold;
+	letter-spacing: 0;
+	line-height: 1.9rem;
+}
+@each $color, $value in $theme-colors {
+  hr.#{$color} {
+    border-top: 1px solid #{$value} !important;
+  }
+}
+
+//
+// Backgrounds
+//
+.bg-gray-clip {
+	background: #{$gray-100};
+	background: -moz-linear-gradient(top, #{$gray-100} 0%, #{$gray-100} 75%, #{$white} 75%, #{$white} 100%);
+	background: -webkit-linear-gradient(top, #{$gray-100} 0%,#{$gray-100} 75%,#{$white} 75%,#{$white} 100%);
+	background: linear-gradient(to bottom, #{$gray-100} 0%,#{$gray-100} 75%,#{$white} 75%,#{$white} 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$gray-100}', endColorstr='#{$white}',GradientType=0 );
+}
+
+//
+// Images
+//
+img.object-fit-cover {
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+//
+// Buttons
+//
+.btn {
+	&.btn-primary {
+		background-color: $primary;
+		border: 1px solid $primary;
+		color: $white;
+
+		&:hover {
+			background-color: $white;
+			color: $primary;
+		}
+
+		&:active,
+		&:focus {
+			background-color: $gray-600;
+			color: $white;
+			border-color: $gray-600;
+		}
+	}
+	&.btn-secondary {
+		background-color: $gray-600;
+		border: 1px solid $gray-600;
+		color: $white;
+
+		&:hover {
+			background-color: $white;
+			color: $gray-600;
+		}
+
+		&:active,
+		&:focus {
+			background-color: $primary;
+			color: $white;
+			border-color: $primary;
+		}
+
+	}
+	&.btn-outline-primary {
+		background-color: transparent;
+		border: 1px solid $primary;
+		color: $primary;
+
+		&:hover {
+			background-color: $primary;
+			color: $white;
+		}
+
+		&:active,
+		&:focus {
+			background-color: $gray-600;
+			color: $white;
+			border-color: $gray-600;
+		}
+	}
+	&.btn-outline-secondary {
+		background-color: transparent;
+		border: 1px solid $gray-600;
+		color: $gray-600;
+
+		&:hover {
+			background-color: $gray-600;
+			color: $white;
+		}
+
+		&:active,
+		&:focus {
+			background-color: $primary;
+			color: $white;
+			border-color: $primary;
+		}
+
+	}
+}
+
+//
+// Navbars
+//
+#top-nav {
+	padding-bottom: .6875rem;
+	padding-top: .6875rem;
+
+	#searchform {
+		margin-right: 2.25rem;
+
+		.input-group {
+			border: 1px solid $gray-600;
+			border-radius: 1.5rem;
+
+			.form-control {
+				background-color: transparent;
+				border: none;
+				border-top-left-radius: 1.5rem;
+				border-bottom-left-radius: 1.5rem;
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+			.btn {
+				background-color: transparent;
+				border: none;
+				font-size: $font-size-sm;
+				&:active,
+				&:focus,
+				&:hover {
+					background-color: transparent;
+					color: $primary;
+				}
+			}
+		}
+	}
+}
+#main-nav {
+	box-shadow: $box-shadow;
+	padding: 0;
+
+	.navbar-nav {
+		height: 7.875rem;
+
+		.nav-item {
+			align-items: center;
+			border-bottom: 4px solid transparent;
+			border-top: 4px solid transparent;
+			display: flex;
+			height: 100%;
+			margin-left: 1rem;
+			margin-right: 1rem;
+
+			&:first-of-type {
+				margin-left: 0;
+			}
+			&:last-of-type {
+				margin-right: 0;
+			}
+			&:hover {
+				border-top-color: $primary;
+			}
+			.nav-link {
+				padding: 0;
+				// font-size: 
+			}
+		}
+	}
+}
+
+//
+// Hero
+//
+#header-wrapper {
+	padding: 0;
+	position: relative;
+
+	.wp-post-image {
+		position: absolute;
+		z-index: -1;
+	}
+
+	#header-hero-content-wrapper {
+		background-color: rgba($black, .65);
+		padding-bottom: 6rem;
+		padding-top: 6rem;
+
+		.page-title {
+			font-weight: $font-weight-normal;
+		}
+		.page-subtitle {}
+	}
+}
+
+//
+// Sections
+//
+section {
+	padding-bottom: 3.125rem;
+	padding-top: 3.125rem;
+
+	.section-title {
+		margin-bottom: 2rem;
+	}
+}
+
+//
+// Cards
+//
+.card {
+	box-shadow: 0 .625rem .9375rem rgba($black, .1);
+
+	.card-header {
+		background-color: transparent;
+		border-bottom: none;
+		height: 18rem;
+		padding: 1.125rem;
+	}
+
+	.card-body {
+		text-align: center;
+	}
+
+	.card-footer {
+		background-color: transparent;
+		border-top: none;
+		padding-bottom: 3.125rem;
+	}
+}
+
+//
+// Site Footer
+//
+.site-footer {
+	.tagline {
+		color: $primary;
+		font-weight: $font-weight-bold;
+	}
+	.widget-title {
+		margin-bottom: 1rem;
+	}
+	.social-icons {
+		i {
+			border: 1px solid $dark;
+			border-radius: 1.875rem;
+			font-size: 1.625rem;
+			height: 3.75rem;
+			line-height: 3.75rem;
+			margin-bottom: .25rem;
+			text-align: center;
+			width: 3.75rem;
+		}
+	}
+}

@@ -28,3 +28,79 @@ function add_child_theme_textdomain() {
     load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
+
+
+/**
+ * Initialize theme default settings
+ */
+// require get_stylesheet_directory() . '/inc/theme-settings.php';
+
+/**
+ * Theme setup and custom theme supports.
+ */
+// require get_stylesheet_directory() . '/inc/setup.php';
+
+/**
+ * Register widget area.
+ */
+require get_stylesheet_directory() . '/inc/widgets.php';
+
+/**
+ * Enqueue scripts and styles.
+ */
+// require get_stylesheet_directory() . '/inc/enqueue.php';
+
+/**
+ * Custom template tags for this theme.
+ */
+// require get_stylesheet_directory() . '/inc/template-tags.php';
+
+/**
+ * Custom pagination for this theme.
+ */
+// require get_stylesheet_directory() . '/inc/pagination.php';
+
+/**
+ * Custom hooks.
+ */
+require get_stylesheet_directory() . '/inc/hooks.php';
+
+/**
+ * Custom functions that act independently of the theme templates.
+ */
+// require get_stylesheet_directory() . '/inc/extras.php';
+
+/**
+ * Customizer additions.
+ */
+// require get_stylesheet_directory() . '/inc/customizer.php';
+
+/**
+ * Custom Comments file.
+ */
+// require get_stylesheet_directory() . '/inc/custom-comments.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
+// require get_stylesheet_directory() . '/inc/jetpack.php';
+
+/**
+ * Load custom WordPress nav walker.
+ */
+// require get_stylesheet_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+
+/**
+ * Load WooCommerce functions.
+ */
+// require get_stylesheet_directory() . '/inc/woocommerce.php';
+
+/**
+ * Load Editor functions.
+ */
+// require get_stylesheet_directory() . '/inc/editor.php';
+
+/**
+ * Load Advanced Custom Fields Partials.
+ */
+require get_stylesheet_directory() . '/inc/class-advanced-custom-fields-partials.php';
