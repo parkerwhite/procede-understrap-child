@@ -1,0 +1,167 @@
+{
+    "key": "group_5b96efa9b2540",
+    "title": "Page Header",
+    "fields": [
+        {
+            "key": "field_5b984ef479a36",
+            "label": "Page Header Type",
+            "name": "page_header_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "hero": "Hero with Image",
+                "none": "No Header"
+            },
+            "default_value": [
+                "hero"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5b993af84a5d5",
+            "label": "Title",
+            "name": "page_title",
+            "type": "text",
+            "instructions": "H1. This is the first line of text in the page header.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b984ef479a36",
+                        "operator": "==",
+                        "value": "hero"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b96efb89c5f6",
+            "label": "Subtitle",
+            "name": "page_subtitle",
+            "type": "text",
+            "instructions": "H2. This is the second line of text in the page header.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b984ef479a36",
+                        "operator": "==",
+                        "value": "hero"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5b98506d79a37",
+            "label": "Header Text",
+            "name": "header_text",
+            "type": "wysiwyg",
+            "instructions": "P. This is the subsequent header text below the title\/subtitle.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b984ef479a36",
+                        "operator": "==",
+                        "value": "hero"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5b993b854a5d6",
+            "label": "Page Header Height",
+            "name": "page_header_height",
+            "type": "select",
+            "instructions": "Sets the amount of space above the page header text when using the Hero header format.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5b984ef479a36",
+                        "operator": "==",
+                        "value": "hero"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "regular": "Regular (default)",
+                "tall": "Tall"
+            },
+            "default_value": [
+                "regular"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1537841091
+}
