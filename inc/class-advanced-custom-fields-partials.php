@@ -202,7 +202,7 @@ class Advanced_Custom_Fields_Partials {
 
 				<div class="<?php echo esc_attr( $this->container ); ?>">
 
-					<div class="row card-deck">
+					<div class="card-deck">
 
 						<?php for ($i = 0; $i < $posts; $i++) {
 
@@ -309,7 +309,7 @@ class Advanced_Custom_Fields_Partials {
 
 				<div class="<?php echo esc_attr( $this->container ); ?>">
 
-					<div class="row card-deck">
+					<div class="card-deck">
 
 						<?php for ($i = 0; $i < $posts; $i++) {
 
@@ -500,7 +500,7 @@ class Advanced_Custom_Fields_Partials {
 
 					</div>
 
-					<div class="row card-deck" data-cols="<?php echo $cards; ?>">
+					<div class="card-deck" data-cols="<?php echo $cards; ?>">
 
 						<?php for ($i = 0; $i < $cards; $i++) {
 
@@ -1078,12 +1078,10 @@ class Advanced_Custom_Fields_Partials {
 				$testimonial_id      = $this->get_field( $this->repeater_field . '_' . $key . '_slides_' . $i . '_testimonials', false );
 				$testimonial         = get_post( $testimonial_id );
 				$testimonial_content = apply_filters( 'the_content', $testimonial->post_content );
-				$testimonial_image   = get_the_post_thumbnail( $testimonial_id );
+				$testimonial_image   = get_the_post_thumbnail( $testimonial_id, 'post-thumbnail', array( 'class' => 'object-fit-cover' ) );
 
 				$slide_content[]    = sprintf( '<div class="carousel-item %1$s">
-						<div class="">
-							<blockquote class="blockquote">%2$s<footer class="blockquote-footer">%3$s %4$s</footer></blockquote>
-						</div>
+						<blockquote class="blockquote">%2$s<footer class="blockquote-footer">%3$s %4$s</footer></blockquote>
 					</div>', $active, $testimonial_content, $testimonial_image, get_the_title( $testimonial_id ) );
 
 				$slide_indicators[] = sprintf( '<li data-target="#carousel_%1$s" data-slide-to="%2$d" class="carousel-indicator %3$s"></li>', $rand_str, $i, $active );
@@ -1114,7 +1112,7 @@ class Advanced_Custom_Fields_Partials {
 
 					<div class="row justify-content-center">
 
-						<div class="col-12 col-md-10 col-xl-8">
+						<div class="col-12 col-md-11 col-xl-9">
 
 							<div id="carousel_<?php echo $rand_str; ?>" class="carousel slide carousel_<?php echo $rand_str; ?>" data-ride="false" data-interval="<?php echo ( $interval ? $interval : false ); ?>">
 
@@ -1124,7 +1122,7 @@ class Advanced_Custom_Fields_Partials {
 									</ol>
 								<?php } ?>
 
-								<div class="carousel-inner row text-center">
+								<div class="carousel-inner text-center">
 
 									<?php echo implode( '', $slide_content ); ?>
 

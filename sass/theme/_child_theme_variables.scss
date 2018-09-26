@@ -167,7 +167,7 @@ $body-color:                $gray-600 !default; // $gray-900 !default;
 
 $link-color:                theme-color("primary") !default;
 $link-decoration:           none !default;
-$link-hover-color:          darken($link-color, 15%) !default;
+$link-hover-color:          theme-color("dark") !default; // darken($link-color, 15%) !default;
 $link-hover-decoration:     underline !default;
 
 // Paragraphs
@@ -296,9 +296,9 @@ $small-font-size:             80% !default;
 $text-muted:                  $gray-600 !default;
 
 $blockquote-small-color:      $gray-600 !default;
-$blockquote-font-size:        ($font-size-base * 1.25) !default;
+$blockquote-font-size:        $font-size-base !default; // ($font-size-base * 1.25) !default;
 
-$hr-border-color:             rgba($black, .1) !default;
+$hr-border-color:             $primary !default; // rgba($black, .1) !default;
 $hr-border-width:             $border-width !default;
 
 $mark-padding:                .2em !default;
@@ -347,7 +347,7 @@ $table-caption-color:         $text-muted !default;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .375rem !default;
+$input-btn-padding-y:         .3rem !default; // .375rem !default;
 $input-btn-padding-x:         1.25rem !default; // .75rem !default;
 $input-btn-line-height:       $line-height-base !default;
 
