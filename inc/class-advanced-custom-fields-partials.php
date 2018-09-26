@@ -567,116 +567,6 @@ class Advanced_Custom_Fields_Partials {
 	}
 
 	/**
-	 * The ACF partial template for Team Member Card Decks
-	 */
-	public function acf_partial_team_card_deck() {
-
-		$key = $this->key;
-
-		$rand_str      = $this->rand_str();
-
-		$css_class     = $this->get_field( $this->repeater_field . '_' . $key . '_css_class' );
-		$section_color = $this->get_field( $this->repeater_field . '_' . $key . '_section_color', false );
-		$section_title = $this->get_field( $this->repeater_field . '_' . $key . '_section_title' );
-		$section_intro = $this->get_field( $this->repeater_field . '_' . $key . '_section_intro', false );
-		$read_more     = $this->get_field( $this->repeater_field . '_' . $key . '_read_more', false ); // gets Term ID for team
-		$cards         = $this->get_field( $this->repeater_field . '_' . $key . '_cards', false );
-
-		if ( $cards ): 
-
-			ob_start();
-
-			?>
-
-			<section class="section-card-deck wrapper <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> <?php echo ( esc_html( $css_class ) ); ?>">
-
-				<div class="<?php echo esc_attr( $this->container ); ?>">
-
-					<div class="row">
-
-						<div class="col">
-
-							<h3 class="section-title"><?php _e( $section_title, 'understrap' ); ?></h3>
-
-							<?php echo apply_filters( 'the_content', $section_intro ); ?>
-
-						</div>
-
-					</div>
-
-					<div class="row card-deck" data-cols="<?php echo $cards; ?>">
-
-						<?php for ($i = 0; $i < $cards; $i++) {
-
-							$post_id      = esc_html( get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_post', true ) );
-							$post         = get_post( $post_id );
-							$post_image   = get_the_post_thumbnail( $post_id, 'full', array( 'class' => 'object-fit-cover' ) );
-
-							$job_title    = esc_html( get_post_meta( $post_id, 'job-title', true ) );
-
-							?>
-
-							<article class="card" id="post-<?php echo $post_id; ?>">
-
-								<?php if ( $post_image ) : ?>
-
-									<div class="card-header p-0">
-
-										<?php echo $post_image; ?>
-
-									</div>
-
-								<?php endif; ?>
-
-								<div class="card-body">
-
-									<h5 class="card-title"><?php echo get_the_title( $post_id ); ?></h5>
-
-									<?php echo apply_filters( 'the_content', $job_title ); ?>
-
-								</div><!-- .card-body -->
-
-								<div class="card-footer text-right">
-
-									<?php // fareverse_read_more( $post ); ?>
-
-								</div><!-- .card-footer -->
-
-							</article><!-- #post-## -->
-
-						<?php } ?>
-
-					</div>
-
-					<?php if ( $read_more ) { ?>
-
-						<div class="row justify-content-center">
-
-							<div class="col-auto">
-
-								<a href="<?php echo get_tag_link( $read_more ); ?>" alt="<?php _e( 'See all Team Members', 'understrap' ); ?>" class="btn btn-secondary"><?php _e( 'See All', 'understrap' ); ?></a>
-
-							</div>
-
-						</div>
-
-					<?php } ?>
-
-				</div>
-
-			</section>
-
-			<?php
-
-			echo ob_get_clean();
-
-		endif;
-
-		return;
-
-	}
-
-	/**
 	 * The ACF partial template for Testimonials Card Group
 	 */
 	public function acf_partial_testimonials_card_group() {
@@ -779,10 +669,21 @@ class Advanced_Custom_Fields_Partials {
 		$section_css_class = $this->get_field( $this->repeater_field . '_' . $key . '_css_class' );
 		$section_color     = $this->get_field( $this->repeater_field . '_' . $key . '_section_color', false );
 		$section_title     = $this->get_field( $this->repeater_field . '_' . $key . '_section_title', false );
+		$section_id        = $this->get_field( $this->repeater_field . '_' . $key . '_section_id' );
 		$row_css_class     = $this->get_field( $this->repeater_field . '_' . $key . '_row_css_class' );
+		$split_background  = $this->get_field( $this->repeater_field . '_' . $key . '_split_background', false );
 		$columns           = $this->get_field( $this->repeater_field . '_' . $key . '_columns', false );
 		$cols_per_row      = $this->get_field( $this->repeater_field . '_' . $key . '_columns_per_row', false );
-		$cols_class        = ( $cols_per_row > 0 ? 'col-md-' . ( 12 / $cols_per_row ) : 'col-md-auto' );
+		$col_widths        = array();
+
+		if ( $split_background ) {
+			$col_widths[]  = 'col-split';
+			$col_widths[]  = 'col-split-md-' . ( 12 / $cols_per_row );
+		} else {
+			$col_widths[]  = ( $cols_per_row > 0 ? 'col-md-' . ( 12 / $cols_per_row ) : 'col-md-auto' );
+		}
+
+
 
 		if ( $columns ): 
 
@@ -790,11 +691,15 @@ class Advanced_Custom_Fields_Partials {
 
 			?>
 
-			<section class="section-row-w-columns <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> <?php echo ( esc_html( $section_css_class ) ); ?>">
+			<section class="section-row-w-columns <?php echo ( $split_background ? 'section-split-cols' : '' ); ?> <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> <?php echo ( esc_html( $section_css_class ) ); ?>" id="<?php echo ( $section_id ? $section_id : '' ); ?>">
 
-				<div class="<?php echo esc_attr( $this->container ); ?>">
+				<?php if ( ! $split_background ) { ?>
+					<div class="<?php echo esc_attr( $this->container ); ?>"><!-- .container -->
+				<?php } else { ?>
+					<div class="container-fluid"><!-- .container -->
+				<?php } ?>
 
-					<?php if ( $section_title ) { ?>
+					<?php if ( $section_title && ! $split_background ) { ?>
 
 						<div class="row justify-content-center">
 
@@ -810,14 +715,26 @@ class Advanced_Custom_Fields_Partials {
 
 					<div class="row <?php echo ( esc_html( $row_css_class ) ); ?>">
 
-						<?php for ($i = 0; $i < $columns; $i++) {
+						<?php for ( $i = 0; $i < $columns; $i++ ) {
 
-							$content = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_content' );
-							$col_css = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_css_class' );
+							$content   = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_content' );
+							$col_css   = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_css_class' );
+							$col_color = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_column_color' );
+							$col_image = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_column_image' );
+
+							if ( $col_color && $split_background )
+								$col_css .= ' bg-' . $col_color;
+
+							if ( $cols_per_row > 0 && $split_background ) :
+								if ( ( $i + 1 ) % $cols_per_row === 0 )
+									$col_css .= ' col-split-end';
+								if ( $i % $cols_per_row === 0 )
+									$col_css .= ' col-split-start';
+							endif;
 
 							?>
 
-							<div class="col-12 <?php echo $cols_class; ?> <?php echo $col_css; ?>">
+							<div class="col-12 <?php echo implode( " ", $col_widths ); ?> <?php echo $col_css; ?>">
 
 								<?php echo apply_filters( 'the_content', html_entity_decode( $content ) ); ?>
 
@@ -827,94 +744,11 @@ class Advanced_Custom_Fields_Partials {
 
 					</div>
 
-				</div>
+				</div><!-- /.container -->
 
 			</section>
 
 			<?php
-
-			echo ob_get_clean();
-
-		endif;
-
-		return;
-
-	}
-
-	/**
-	 * The ACF partial template for row with split image/content cols
-	 */
-	public function acf_partial_row_w_split() {
-
-		$key               = $this->key;
-
-		$rand_str          = $this->rand_str();
-
-		$section_css_class = $this->get_field( $this->repeater_field . '_' . $key . '_css_class' );
-		$section_color     = $this->get_field( $this->repeater_field . '_' . $key . '_section_color', false );
-		$columns           = $this->get_field( $this->repeater_field . '_' . $key . '_columns', false );
-		$cols_class        = ( $columns[0] == 'content_column' ? 'container-split-left' : 'container-split-right' );
-
-		if ( $columns ): 
-
-			ob_start();
-
-			?>
-
-			<section class="section-row-split <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> <?php echo $css_class; ?>">
-
-				<div class="row m-0">
-
-					<?php foreach ( $columns as $i => $column ) { ?>
-
-						<?php if ( 'content_column' == $column ) {
-
-							$content  = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_content' );
-							$col_css  = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_css_class' );
-
-							?>
-
-							<div class="col-12 col-md-6 p-0 <?php echo $col_css; ?>">
-
-								<div class="<?php echo $cols_class; ?> h-100">
-
-									<div class="row h-100 align-items-center">
-
-										<div class="col-12 col-md-10 <?php echo ( $i == 0 ? 'offset-md-2' : '' ); ?>">
-
-											<?php echo apply_filters( 'the_content', html_entity_decode( $content ) ); ?>
-
-										</div>
-
-									</div>
-
-								</div>
-
-							</div>
-
-						<?php } elseif ( 'image_column' == $column ) {
-
-							$image_id  = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_image' );
-							$image_url = wp_get_attachment_url( $image_id );
-							$image_alt = get_post_meta( $image_id, '_wp_attachment_image_alt', true );
-
-							?>
-
-							<div class="col-12 col-md-6 p-0">
-								
-								<img src="<?php echo $image_url; ?>" alt="<?php _e( $image_alt, 'understrap' ); ?>" class="object-fit-cover">
-
-							</div>
-
-						<?php } ?>
-
-					<?php } ?>
-
-				</div>
-
-			</section>
-
-			<?php 
 
 			echo ob_get_clean();
 
@@ -1049,9 +883,9 @@ class Advanced_Custom_Fields_Partials {
 	}
 
 	/**
-	 * The ACF partial template for Testimonial sliders
+	 * The ACF partial template for Posts sliders
 	 */
-	public function acf_partial_testimonial_slider() {
+	public function acf_partial_posts_slider() {
 
 		$key = $this->key;
 
@@ -1074,15 +908,17 @@ class Advanced_Custom_Fields_Partials {
 
 			for ($i = 0; $i < $slides; $i++) { 
 
-				$active              = ( $i == 0 ? 'active' : '' );
-				$testimonial_id      = $this->get_field( $this->repeater_field . '_' . $key . '_slides_' . $i . '_testimonials', false );
-				$testimonial         = get_post( $testimonial_id );
-				$testimonial_content = apply_filters( 'the_content', $testimonial->post_content );
-				$testimonial_image   = get_the_post_thumbnail( $testimonial_id, 'post-thumbnail', array( 'class' => 'object-fit-cover' ) );
+				$active       = ( $i == 0 ? 'active' : '' );
+				$post_id      = $this->get_field( $this->repeater_field . '_' . $key . '_slides_' . $i . '_posts', false );
+				$post         = get_post( $post_id );
+				$post_content = apply_filters( 'the_content', $post->post_content );
+				$post_image   = get_the_post_thumbnail( $post_id, 'post-thumbnail', array( 'class' => 'object-fit-cover' ) );
 
-				$slide_content[]    = sprintf( '<div class="carousel-item %1$s">
-						<blockquote class="blockquote">%2$s<footer class="blockquote-footer">%3$s %4$s</footer></blockquote>
-					</div>', $active, $testimonial_content, $testimonial_image, get_the_title( $testimonial_id ) );
+				if ( get_post_type( $post_id ) === 'cpt-testimonials' ) {
+					$slide_content[] = sprintf( '<div class="carousel-item %1$s"><blockquote class="blockquote">%2$s<footer class="blockquote-footer">%3$s %4$s</footer></blockquote></div>', $active, $post_content, $post_image, get_the_title( $post_id ) );
+				} else {
+					$slide_content[] = $post_content;
+				}
 
 				$slide_indicators[] = sprintf( '<li data-target="#carousel_%1$s" data-slide-to="%2$d" class="carousel-indicator %3$s"></li>', $rand_str, $i, $active );
 
@@ -1116,17 +952,17 @@ class Advanced_Custom_Fields_Partials {
 
 							<div id="carousel_<?php echo $rand_str; ?>" class="carousel slide carousel_<?php echo $rand_str; ?>" data-ride="false" data-interval="<?php echo ( $interval ? $interval : false ); ?>">
 
-								<?php if ( $show_indicators ) { ?>
-									<ol class="carousel-indicators">
-										<?php echo implode( '', $slide_indicators ); ?>
-									</ol>
-								<?php } ?>
-
 								<div class="carousel-inner text-center">
 
 									<?php echo implode( '', $slide_content ); ?>
 
 								</div>
+
+								<?php if ( $show_indicators ) { ?>
+									<ol class="carousel-indicators">
+										<?php echo implode( '', $slide_indicators ); ?>
+									</ol>
+								<?php } ?>
 
 								<?php if ( $show_controls ) { ?>
 									<a class="carousel-control-prev" href="#carousel_<?php echo $rand_str; ?>" role="button" data-slide="prev">
@@ -1140,16 +976,6 @@ class Advanced_Custom_Fields_Partials {
 								<?php } ?>
 
 							</div>
-
-						</div>
-
-					</div>
-
-					<div class="row justify-content-center">
-
-						<div class="col-12 text-center">
-
-							<a href="<?php echo get_permalink( get_page_by_path( 'testimonials' ) ); ?>" class="btn btn-outline-primary"><?php _e( 'View More Testimonials' ); ?></a>
 
 						</div>
 

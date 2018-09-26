@@ -201,7 +201,7 @@ blockquote {
 	.navbar-nav {
 		height: 9.5rem;
 
-		.nav-item {
+		> .nav-item {
 			align-items: center;
 			border-bottom: 4px solid transparent;
 			border-top: 4px solid transparent;
@@ -209,6 +209,7 @@ blockquote {
 			height: 100%;
 			margin-left: 1rem;
 			margin-right: 1rem;
+			text-align: center;
 
 			&:first-of-type {
 				margin-left: 0;
@@ -218,11 +219,21 @@ blockquote {
 			}
 			&:hover {
 				border-top-color: $primary;
+
+				.dropdown-menu {
+					display: block;
+				}
 			}
 			.nav-link {
 				padding: 0;
-				// font-size: 
 			}
+		}
+	}
+
+	// Dropdown
+	.dropdown-toggle {
+		&:after {
+			display: none;
 		}
 	}
 }
@@ -258,10 +269,70 @@ section {
 	padding-bottom: 3.125rem;
 	padding-top: 3.125rem;
 
+	&.section-split-cols {
+		padding-bottom: 0;
+		padding-top: 0;
+		.col-split {
+			padding-bottom: 3.125rem;
+			padding-top: 3.125rem;
+		}
+	}
+
 	.section-title {
 		margin-bottom: 2rem;
 	}
 }
+
+//
+// Columns
+//
+.col-split-start {
+	flex-grow: 1 !important;
+	padding-right: ($grid-gutter-width / 2);
+	padding-left: ($grid-gutter-width / 2);
+}
+.col-split-end {
+	flex-grow: 1 !important;
+	padding-right: ($grid-gutter-width / 2);
+	padding-left: ($grid-gutter-width / 2);
+}
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-only($breakpoint) {
+		.col-split-start {
+			padding-left: calc( ( 100vw - #{map-get($container-max-widths, $breakpoint)} ) / 2 );
+		}
+		.col-split-end {
+			padding-right: calc( ( 100vw - #{map-get($container-max-widths, $breakpoint)} ) / 2 );
+		}
+	}
+}
+@for $i from 1 through $grid-columns {
+	.col-split-#{$i} {
+		flex: 0 0 #{percentage(1 / $grid-columns / $i)};
+		&.col-split-start,
+		&.col-split-end,
+		&:first-of-type,
+		&:last-of-type {
+			flex-grow: 1 !important;
+		}
+	}
+	@each $grid-breakpoint in map-keys($grid-breakpoints) {
+		.col-split-#{$grid-breakpoint}-#{$i} {
+			@each $breakpoint in map-keys($container-max-widths) {
+				@include media-breakpoint-only($breakpoint) {
+					flex: 0 0 #{map-get($container-max-widths, $breakpoint) / $grid-columns / $i};
+					&.col-split-start,
+					&.col-split-end,
+					&:first-of-type,
+					&:last-of-type {
+						flex-grow: 1 !important;
+					}
+				}
+			}
+		}
+	}
+}
+
 
 //
 // Cards
@@ -299,6 +370,30 @@ section {
 	margin: auto;
 	width: 70%;
 }
+.carousel-indicators {
+	bottom: 0;
+	position: relative;
+	li {
+		background-color: $gray-600;
+		border: 2px solid $gray-600;
+		border-radius: 50%;
+		box-shadow: inset 0 0 0 2px $white;
+		height: 10px;
+		margin-left: 9px;
+		margin-right: 9px;
+		width: 10px;
+		&:hover {
+			background-color: $dark;
+			border-color: $dark;
+		}
+		&.active,
+		&:active,
+		&:focus {
+			background-color: $primary;
+			border-color: $primary;
+		}
+	}
+}
 .carousel-control-next,
 .carousel-control-prev {
 	opacity: 1;
@@ -323,7 +418,6 @@ section {
 		}
 	}
 }
-
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
 	background-image: none;
@@ -432,6 +526,10 @@ section {
 					color: $primary;
 				}
 			}
+		}
+
+		.sub-menu {
+			display: none;
 		}
 	}
 

@@ -23,6 +23,52 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_5ba9bc24179fd",
+                            "label": "Section Title",
+                            "name": "section_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5babb3d08b736",
+                                        "operator": "!=",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5babacd86a395",
+                            "label": "Section ID",
+                            "name": "section_id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_5b948c4c91470",
                             "label": "Section Color",
                             "name": "section_color",
@@ -56,25 +102,6 @@
                             "return_format": "value",
                             "ajax": 0,
                             "placeholder": ""
-                        },
-                        {
-                            "key": "field_5ba9bc24179fd",
-                            "label": "Section Title",
-                            "name": "section_title",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
                         },
                         {
                             "key": "field_5b948c4c91471",
@@ -115,6 +142,25 @@
                             "maxlength": ""
                         },
                         {
+                            "key": "field_5babb3d08b736",
+                            "label": "Split Background",
+                            "name": "split_background",
+                            "type": "true_false",
+                            "instructions": "If yes, each column may have its own background color or image. Section title is not available on split backgrounds.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_5b94936f91473",
                             "label": "Columns per Row",
                             "name": "columns_per_row",
@@ -151,7 +197,7 @@
                             "collapsed": "",
                             "min": 1,
                             "max": 0,
-                            "layout": "table",
+                            "layout": "block",
                             "button_label": "Add Column",
                             "sub_fields": [
                                 {
@@ -172,6 +218,81 @@
                                     "toolbar": "full",
                                     "media_upload": 1,
                                     "delay": 0
+                                },
+                                {
+                                    "key": "field_5babafa119b3b",
+                                    "label": "Column Color",
+                                    "name": "column_color",
+                                    "type": "select",
+                                    "instructions": "Set the background color for the column",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5babb3d08b736",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "white": "White",
+                                        "primary": "Primary",
+                                        "secondary": "Secondary",
+                                        "light": "Light",
+                                        "dark": "Dark",
+                                        "gray-clip": "Gray \/ White",
+                                        "success": "Success",
+                                        "info": "Info",
+                                        "warning": "Warning",
+                                        "danger: Danger": "danger: Danger"
+                                    },
+                                    "default_value": [
+                                        "white"
+                                    ],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_5babafd819b3c",
+                                    "label": "Column Image",
+                                    "name": "column_image",
+                                    "type": "image",
+                                    "instructions": "Add an image as the column background.",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5babb3d08b736",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
                                 },
                                 {
                                     "key": "field_5b96d5436c275",
@@ -198,53 +319,18 @@
                     "min": "",
                     "max": ""
                 },
-                "5b96dad0c9467": {
-                    "key": "5b96dad0c9467",
-                    "name": "row_w_split",
-                    "label": "Row with split Image \/ Content",
+                "5b9427efa65f6": {
+                    "key": "5b9427efa65f6",
+                    "name": "content_slider",
+                    "label": "Mixed Content Slider",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5b96dad0c9468",
-                            "label": "Section Color",
-                            "name": "section_color",
-                            "type": "select",
-                            "instructions": "Set the background color for the section",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "white": "White",
-                                "primary": "Primary",
-                                "secondary": "Secondary",
-                                "light": "Light",
-                                "dark": "Dark",
-                                "gray-clip": "Gray \/ White",
-                                "success": "Success",
-                                "info": "Info",
-                                "warning": "Warning",
-                                "danger: Danger": "danger: Danger"
-                            },
-                            "default_value": [
-                                "white"
-                            ],
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "ui": 0,
-                            "return_format": "value",
-                            "ajax": 0,
-                            "placeholder": ""
-                        },
-                        {
-                            "key": "field_5b96dad0c9469",
-                            "label": "CSS Class",
-                            "name": "css_class",
+                            "key": "field_5babad2e6a397",
+                            "label": "Section ID",
+                            "name": "section_id",
                             "type": "text",
-                            "instructions": "Add CSS classes to the section, separated by a space",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -258,117 +344,6 @@
                             "append": "",
                             "maxlength": ""
                         },
-                        {
-                            "key": "field_5b96dad0c946b",
-                            "label": "Columns",
-                            "name": "columns",
-                            "type": "flexible_content",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layouts": {
-                                "5b96dafd7bfd9": {
-                                    "key": "5b96dafd7bfd9",
-                                    "name": "image_column",
-                                    "label": "Image Column",
-                                    "display": "block",
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_5b96db2ac946e",
-                                            "label": "Image",
-                                            "name": "image",
-                                            "type": "image",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "return_format": "",
-                                            "preview_size": "thumbnail",
-                                            "library": "",
-                                            "min_width": "",
-                                            "min_height": "",
-                                            "min_size": "",
-                                            "max_width": "",
-                                            "max_height": "",
-                                            "max_size": "",
-                                            "mime_types": ""
-                                        }
-                                    ],
-                                    "min": "1",
-                                    "max": "1"
-                                },
-                                "5b96db46c946f": {
-                                    "key": "5b96db46c946f",
-                                    "name": "content_column",
-                                    "label": "Content Column",
-                                    "display": "block",
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_5b96db46c9470",
-                                            "label": "Content",
-                                            "name": "content",
-                                            "type": "wysiwyg",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "tabs": "all",
-                                            "toolbar": "full",
-                                            "media_upload": 1,
-                                            "delay": 0
-                                        },
-                                        {
-                                            "key": "field_5b96db77c9471",
-                                            "label": "CSS Class",
-                                            "name": "css_class",
-                                            "type": "text",
-                                            "instructions": "Add CSS classes to column, separated by a space.",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "maxlength": ""
-                                        }
-                                    ],
-                                    "min": "1",
-                                    "max": "1"
-                                }
-                            },
-                            "button_label": "Add Column",
-                            "min": "",
-                            "max": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "5b9427efa65f6": {
-                    "key": "5b9427efa65f6",
-                    "name": "content_slider",
-                    "label": "Mixed Content Slider",
-                    "display": "block",
-                    "sub_fields": [
                         {
                             "key": "field_5b9427efa65f7",
                             "label": "Section Color",
@@ -493,10 +468,48 @@
                 },
                 "5b9410ed5cc1c": {
                     "key": "5b9410ed5cc1c",
-                    "name": "testimonial_slider",
-                    "label": "Testimonial Slider",
+                    "name": "posts_slider",
+                    "label": "Slider",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_5ba9a9d888d85",
+                            "label": "Section Title",
+                            "name": "section_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5babad406a398",
+                            "label": "Section ID",
+                            "name": "section_id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
                         {
                             "key": "field_5b9410ed5cc1d",
                             "label": "Section Color",
@@ -531,25 +544,6 @@
                             "return_format": "value",
                             "ajax": 0,
                             "placeholder": ""
-                        },
-                        {
-                            "key": "field_5ba9a9d888d85",
-                            "label": "Section Title",
-                            "name": "section_title",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
                         },
                         {
                             "key": "field_5ba9a5a110ade",
@@ -650,8 +644,8 @@
                             "sub_fields": [
                                 {
                                     "key": "field_5b9410ed5cc20",
-                                    "label": "Testimonials",
-                                    "name": "testimonials",
+                                    "label": "Posts",
+                                    "name": "posts",
                                     "type": "post_object",
                                     "instructions": "",
                                     "required": 0,
@@ -661,10 +655,8 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "post_type": [
-                                        "cpt-testimonials"
-                                    ],
-                                    "taxonomy": [],
+                                    "post_type": "",
+                                    "taxonomy": "",
                                     "allow_null": 0,
                                     "multiple": 0,
                                     "return_format": "object",
@@ -682,6 +674,44 @@
                     "label": "Posts Card Deck",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_5b943acf54a13",
+                            "label": "Section Title",
+                            "name": "section_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5babad526a399",
+                            "label": "Section ID",
+                            "name": "section_id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
                         {
                             "key": "field_5b9433d6188ad",
                             "label": "Section Color",
@@ -716,25 +746,6 @@
                             "return_format": "value",
                             "ajax": 0,
                             "placeholder": ""
-                        },
-                        {
-                            "key": "field_5b943acf54a13",
-                            "label": "Section Title",
-                            "name": "section_title",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
                         },
                         {
                             "key": "field_5b9831b9fd4b6",
@@ -806,14 +817,11 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "post_type": [
-                                        "post",
-                                        "page"
-                                    ],
-                                    "taxonomy": [],
+                                    "post_type": "",
+                                    "taxonomy": "",
                                     "allow_null": 0,
                                     "multiple": 0,
-                                    "return_format": "",
+                                    "return_format": "object",
                                     "ui": 1
                                 },
                                 {
@@ -841,214 +849,12 @@
                     "min": "",
                     "max": ""
                 },
-                "5b982fb129e02": {
-                    "key": "5b982fb129e02",
-                    "name": "team_card_deck",
-                    "label": "Team Members Card Deck",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5b982fb129e04",
-                            "label": "Section Color",
-                            "name": "section_color",
-                            "type": "select",
-                            "instructions": "Set the background color for the section",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "white": "White",
-                                "primary": "Primary",
-                                "secondary": "Secondary",
-                                "light": "Light",
-                                "dark": "Dark",
-                                "gray-clip": "Gray \/ White",
-                                "success": "Success",
-                                "info": "Info",
-                                "warning": "Warning",
-                                "danger: Danger": "danger: Danger"
-                            },
-                            "default_value": [
-                                "white"
-                            ],
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "ui": 0,
-                            "return_format": "value",
-                            "ajax": 0,
-                            "placeholder": ""
-                        },
-                        {
-                            "key": "field_5b982fb129e03",
-                            "label": "Section Title",
-                            "name": "section_title",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5b98319dfd4b5",
-                            "label": "Section Intro",
-                            "name": "section_intro",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "basic",
-                            "media_upload": 0,
-                            "delay": 0
-                        },
-                        {
-                            "key": "field_5b982fb129e05",
-                            "label": "CSS Class",
-                            "name": "css_class",
-                            "type": "text",
-                            "instructions": "Add CSS classes to the section, separated by a space",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5b982fb129e06",
-                            "label": "Cards",
-                            "name": "cards",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "collapsed": "",
-                            "min": 1,
-                            "max": 4,
-                            "layout": "table",
-                            "button_label": "Add Team Member",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5b982fb129e07",
-                                    "label": "Team Member",
-                                    "name": "post",
-                                    "type": "post_object",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "post_type": [
-                                        "far-team"
-                                    ],
-                                    "taxonomy": [],
-                                    "allow_null": 0,
-                                    "multiple": 0,
-                                    "return_format": "object",
-                                    "ui": 1
-                                }
-                            ]
-                        },
-                        {
-                            "key": "field_5b982fb129e09",
-                            "label": "See More",
-                            "name": "read_more",
-                            "type": "taxonomy",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "taxonomy": "far-teams",
-                            "field_type": "select",
-                            "allow_null": 0,
-                            "add_term": 0,
-                            "save_terms": 0,
-                            "load_terms": 0,
-                            "return_format": "object",
-                            "multiple": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "5b9849338789f": {
                     "key": "5b9849338789f",
                     "name": "testimonials_card_group",
                     "label": "Testimonials Card Group",
                     "display": "block",
                     "sub_fields": [
-                        {
-                            "key": "field_5b984933878a2",
-                            "label": "Section Color",
-                            "name": "section_color",
-                            "type": "select",
-                            "instructions": "Set the background color for the section",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "white": "White",
-                                "primary": "Primary",
-                                "secondary": "Secondary",
-                                "light": "Light",
-                                "dark": "Dark",
-                                "gray-clip": "Gray \/ White",
-                                "success": "Success",
-                                "info": "Info",
-                                "warning": "Warning",
-                                "danger: Danger": "danger: Danger"
-                            },
-                            "default_value": [
-                                "white"
-                            ],
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "ui": 0,
-                            "return_format": "value",
-                            "ajax": 0,
-                            "placeholder": ""
-                        },
                         {
                             "key": "field_5b984933878a0",
                             "label": "Section Title",
@@ -1086,6 +892,60 @@
                             "toolbar": "basic",
                             "media_upload": 0,
                             "delay": 0
+                        },
+                        {
+                            "key": "field_5babada86a39b",
+                            "label": "Section ID",
+                            "name": "section_id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "What our customers are saying",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5b984933878a2",
+                            "label": "Section Color",
+                            "name": "section_color",
+                            "type": "select",
+                            "instructions": "Set the background color for the section",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "white": "White",
+                                "primary": "Primary",
+                                "secondary": "Secondary",
+                                "light": "Light",
+                                "dark": "Dark",
+                                "gray-clip": "Gray \/ White",
+                                "success": "Success",
+                                "info": "Info",
+                                "warning": "Warning",
+                                "danger: Danger": "danger: Danger"
+                            },
+                            "default_value": [
+                                "white"
+                            ],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
                         },
                         {
                             "key": "field_5b984933878a3",
@@ -1159,6 +1019,25 @@
                     "label": "Row Break",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_5babadbc6a39c",
+                            "label": "Section ID",
+                            "name": "section_id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
                         {
                             "key": "field_5ba9b1089ef9e",
                             "label": "Section Background",
@@ -1260,5 +1139,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1537854568
+    "modified": 1537995378
 }
