@@ -31,7 +31,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="hfeed site" id="page">
 
-	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
+	<div id="wrapper-navbar" class="fixed-top" itemscope itemtype="http://schema.org/WebSite">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
@@ -75,7 +75,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php the_custom_logo(); ?>
 				<?php } ?><!-- end custom logo -->
 
-				<div class="w-75">
+				<div class="w-md-75">
 
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 						<span class="navbar-toggler-icon"></span>

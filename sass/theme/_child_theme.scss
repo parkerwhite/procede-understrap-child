@@ -1,3 +1,30 @@
+
+
+//
+// Fixed Nav
+//
+body {
+	margin-top: 222px;
+	&.admin-bar {
+		#wrapper-navbar {
+			top: 32px;
+			@media screen and ( max-width: 782px ) {
+				top: 46px;
+			}
+		}
+	}
+}
+
+//
+// Target anchor fix
+//
+:target {
+	display: block;
+	position: absolute;
+	top: -222px; 
+	visibility: hidden;
+}
+
 //
 // Typography
 //
@@ -217,11 +244,12 @@ blockquote {
 			&:last-of-type {
 				margin-right: 0;
 			}
-			&:hover {
+			&:hover,
+			&.show {
 				border-top-color: $primary;
 
 				.dropdown-menu {
-					display: block;
+					display: flex;
 				}
 			}
 			.nav-link {
@@ -230,10 +258,69 @@ blockquote {
 		}
 	}
 
-	// Dropdown
-	.dropdown-toggle {
-		&:after {
-			display: none;
+	#main-menu {
+		.dropdown-toggle {
+			&:after {
+				display: none;
+			}
+		}
+		// Dropdown
+		> .dropdown {
+			// Mega Menu wrapper
+			> .dropdown-menu {
+				border: none;
+				box-shadow: $box-shadow;
+				flex: 0 0 25%;
+				left: -100px;
+				margin-top: 3rem;
+				&:before {
+					background-color: $white;
+					border-top: 20px solid #fff;
+					border-right: 20px solid #fff;
+					border-left: 20px solid transparent;
+					border-bottom: 20px solid transparent;
+					content: "";
+					display: block;
+					height: 0;
+					left: 126px;
+					position: absolute;
+					top: -20px;
+					transform: rotate(45deg);
+					width: 0;
+				}
+				.dropdown-header {
+					color: $dark;
+					font-size: $font-size-base;
+					&:after {
+						content: "";
+						display: block;
+						width: 3rem;
+						height: 0;
+						border-top: 2px solid $dark;
+						margin-top: 1rem;
+					}
+				}
+				.dropdown-menu {
+					border: none;
+					flex-direction: column;
+					flex-wrap: wrap;
+					position: relative;
+					top: 0;
+					.dropdown-item {
+						background-color: transparent;
+						color: $gray-600;
+						font-size: 1.25rem;
+						&:hover {
+							background-color: transparent;
+							color: $dark;
+						}
+						&:active {
+							background-color: transparent;
+							color: $primary;
+						}
+					}
+				}
+			}
 		}
 	}
 }
