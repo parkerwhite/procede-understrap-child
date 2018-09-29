@@ -20,9 +20,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="<?php echo esc_attr( $container ); ?>">
 
-			<div class="row">
+			<div class="row justify-content-between">
 
-				<div class="col-md">
+				<div class="col-12 col-md">
 
 					<?php the_custom_logo(); ?>
 

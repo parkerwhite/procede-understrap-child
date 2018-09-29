@@ -30,7 +30,7 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			'name'          => __( 'Footer', 'understrap' ),
 			'id'            => 'footer',
 			'description'   => __( 'Full sized footer widget with dynamic grid', 'understrap' ),
-		    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s col-md">', 
+		    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s col-12 col-md">', 
 		    'after_widget'   => '</div><!-- .footer-widget -->', 
 		    'before_title'   => '<h4 class="widget-title">', 
 		    'after_title'    => '</h4>', 
