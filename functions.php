@@ -93,7 +93,7 @@ require get_stylesheet_directory() . '/inc/hooks.php';
 /**
  * Load custom WordPress nav walker.
  */
-// require get_stylesheet_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+require get_stylesheet_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 
 /**
  * Load WooCommerce functions.

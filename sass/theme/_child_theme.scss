@@ -195,10 +195,15 @@ blockquote {
 			.form-control {
 				background-color: transparent;
 				border: none;
-				border-top-left-radius: 1.5rem;
 				border-bottom-left-radius: 1.5rem;
-				border-top-right-radius: 0;
 				border-bottom-right-radius: 0;
+				border-top-left-radius: 1.5rem;
+				border-top-right-radius: 0;
+				transition: $transition-base;
+				width: 10rem;
+				&:focus {
+					width: 20rem;
+				}
 			}
 			.btn {
 				background-color: transparent;
@@ -237,6 +242,7 @@ blockquote {
 			margin-left: 1rem;
 			margin-right: 1rem;
 			text-align: center;
+			transition: $transition-base;
 
 			&:first-of-type {
 				margin-left: 0;
@@ -247,14 +253,17 @@ blockquote {
 			&:hover,
 			&.show {
 				border-top-color: $primary;
-
-				.dropdown-menu {
-					display: flex;
-				}
 			}
 			.nav-link {
 				padding: 0;
 			}
+		}
+	}
+
+	#main-menu-wrapper {
+		@include media-breakpoint-up('xl') {
+			margin-left: 5rem;
+			max-width: 66.5rem;
 		}
 	}
 
@@ -265,14 +274,30 @@ blockquote {
 			}
 		}
 		// Dropdown
-		> .dropdown {
+		> .dropdown { // li
+			@include media-breakpoint-down('lg') {
+				// position: inherit;
+			}
+			&:hover,
+			&.show {
+				.dropdown-menu {
+					display: flex;
+				}
+			}
 			// Mega Menu wrapper
-			> .dropdown-menu {
+			> .dropdown-menu { // ul
 				border: none;
 				box-shadow: $box-shadow;
-				flex: 0 0 25%;
-				left: -100px;
+				// flex: 0 0 25%;
+				left: -8.5rem;
 				margin-top: 3rem;
+				// @each $breakpoint in map-keys($container-max-widths) {
+				// 	@include media-breakpoint-only($breakpoint) {
+				// 		left: 50%;
+				// 		margin-left: -#{map-get($container-max-widths, $breakpoint)/2};
+				// 		max-width: #{map-get($container-max-widths, $breakpoint)};
+				// 	}
+				// }
 				&:before {
 					background-color: $white;
 					border-top: 20px solid #fff;
@@ -282,7 +307,7 @@ blockquote {
 					content: "";
 					display: block;
 					height: 0;
-					left: 126px;
+					left: 10rem;
 					position: absolute;
 					top: -20px;
 					transform: rotate(45deg);
@@ -302,6 +327,7 @@ blockquote {
 				}
 				.dropdown-menu {
 					border: none;
+					display: flex;
 					flex-direction: column;
 					flex-wrap: wrap;
 					position: relative;

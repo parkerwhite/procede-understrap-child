@@ -75,27 +75,23 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php the_custom_logo(); ?>
 				<?php } ?><!-- end custom logo -->
 
-				<div class="w-md-75">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-
-					<!-- The WordPress Menu goes here -->
-					<?php wp_nav_menu(
-						array(
-							'theme_location'  => 'primary',
-							'container_class' => 'collapse navbar-collapse',
-							'container_id'    => 'navbarNavDropdown',
-							'menu_class'      => 'navbar-nav ml-auto w-100 justify-content-between',
-							'fallback_cb'     => '',
-							'menu_id'         => 'main-menu',
-							'depth'           => 3,
-							'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-						)
-					); ?>
-
-				</div>
+				<!-- The WordPress Menu goes here -->
+				<?php wp_nav_menu(
+					array(
+						'theme_location'  => 'primary',
+						'container_class' => 'collapse navbar-collapse d-flex flex-grow-1',
+						'container_id'    => 'main-menu-wrapper',
+						'menu_class'      => 'navbar-nav ml-auto w-100 justify-content-between',
+						'fallback_cb'     => '',
+						'menu_id'         => 'main-menu',
+						'depth'           => 3,
+						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+					)
+				); ?>
 
 			<?php if ( 'container' == $container ) : ?>
 				</div><!-- .container -->
