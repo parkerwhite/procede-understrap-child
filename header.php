@@ -51,7 +51,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</nav>
 
-		<nav id="main-nav" class="navbar sticky-top navbar-expand-lg navbar-light bg-white d-none d-md-block">
+		<nav id="main-nav" class="navbar sticky-top navbar-expand-lg navbar-light bg-white d-none d-lg-block">
 
 			<?php if ( 'container' == $container ) : ?>
 				<div class="container" >
@@ -84,7 +84,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'menu_class'      => 'navbar-nav ml-auto w-100 justify-content-between',
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
-						'depth'           => 2,
+						'depth'           => 3,
 						'walker'          => new Procede_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
@@ -95,7 +95,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</nav><!-- .site-navigation -->
 
-		<nav id="mobile-nav" class="navbar sticky-top navbar-expand-lg navbar-light bg-white d-block d-md-none">
+		<nav id="mobile-nav" class="navbar sticky-top navbar-expand-lg navbar-light bg-white d-block d-lg-none">
 
 			<?php if ( 'container' == $container ) : ?>
 				<div class="container" >
@@ -142,7 +142,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'menu_class'      => 'navbar-nav',
 						'fallback_cb'     => '',
 						'menu_id'         => 'mobile-menu',
-						'depth'           => 3,
+						'depth'           => 2,
 						'walker'          => new WP_Bootstrap_Navwalker(),
 					)
 				); ?>

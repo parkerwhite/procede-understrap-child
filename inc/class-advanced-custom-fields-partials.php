@@ -504,21 +504,50 @@ class Advanced_Custom_Fields_Partials {
 
 						<?php for ($i = 0; $i < $cards; $i++) {
 
-							$post_id      = esc_html( get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_post', true ) );
-							$post         = get_post( $post_id );
-							$post_image   = get_the_post_thumbnail( $post_id, 'full', array( 'class' => 'object-fit-cover' ) );
+							$use_custom_content = get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_use_custom_content', true );
 
-							$link_text    = esc_html( get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_link_text', true ) );
+							$card_img_top = false;
+							$card_title   = false;
+							$card_body    = false;
+							$link_title   = false;
+							$link_url     = false;
+							$link_target  = '_self';
+
+							if ( $use_custom_content ) {
+								$card_image_id = get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_card_image', true );
+								$card_img_src  = wp_get_attachment_image_src( $card_img_id, 'large' );
+								$card_img_top  = $card_img_src['url'];
+								$card_title    = get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_card_title', true );
+								$card_body     = get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_card_body', true );
+								$card_body     = apply_filters( 'the_content', html_entity_decode( $card_body ) );
+								$link          = get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_card_link', false );
+								$link_title    = $link['title'];
+								$link_url      = $link['url'];
+								$link_target   = $link['target'];
+							} else {
+								$post_id       = esc_html( get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_post', true ) );
+								$post          = get_post( $post_id );
+
+								if ( has_post_thumbnail( $post_id ) )
+									$card_img_top = get_the_post_thumbnail_url( $post_id, 'large' );
+
+								$card_title    = get_the_title( $post_id );
+
+								$card_body     = ( has_excerpt( $post_id ) ? get_the_excerpt( $post_id ) : apply_filters( 'the_content', html_entity_decode( $post->post_content ) ) );
+
+								$link_title    = esc_html( get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_link_text', true ) );
+								$link_url      = get_permalink( $post_id );
+							}
 
 							?>
 
 							<article class="card" id="post-<?php echo $post_id; ?>">
 
-								<?php if ( $post_image ) : ?>
+								<?php if ( $card_img_top ) : ?>
 
 									<div class="card-header">
 
-										<?php echo $post_image; ?>
+										<img src="<?php echo $card_img_top; ?>" alt="" class="object-fit-cover card-img-top">
 
 									</div>
 
@@ -526,7 +555,7 @@ class Advanced_Custom_Fields_Partials {
 
 								<div class="card-body">
 
-									<h5 class="card-title"><?php echo get_the_title( $post_id ); ?></h5>
+									<h5 class="card-title"><?php echo $card_title; ?></h5>
 
 									<?php if ( has_excerpt( $post_id ) ) { ?>
 
@@ -542,7 +571,7 @@ class Advanced_Custom_Fields_Partials {
 
 								<div class="card-footer text-center">
 
-									<a href="<?php echo get_permalink( $post_id ); ?>" class="btn btn-secondary"><?php echo ( $link_text ? $link_text : __( 'Read More' ) ); ?></a>
+									<a href="<?php echo $link_url; ?>" class="btn btn-secondary" target="<?php echo $link_target; ?>"><?php echo ( $link_title ? $link_title : __( 'Read More' ) ); ?></a>
 
 								</div><!-- .card-footer -->
 

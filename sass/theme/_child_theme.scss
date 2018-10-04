@@ -47,6 +47,7 @@ h1 {
 h2 {
 	letter-spacing: .025em;
 	line-height: 1.222222em;
+	margin-bottom: 1em;
 	@include media-breakpoint-down('md') {
 		@include mobile-size( $h2-font-size );
 	}
@@ -56,6 +57,20 @@ h3 {
 	line-height: 1.294em;
 	@include media-breakpoint-down('md') {
 		@include mobile-size( $h3-font-size );
+	}
+	&.add-ons {
+		background: $primary;
+		border-radius: 50%;
+		content: "";
+		display: inline-block;
+		height: 38px;
+		font-weight: $font-weight-bold;
+		margin-bottom: 3rem;
+		margin-right: 1rem;
+		position: relative;
+		text-transform: lowercase;
+		top: .5rem;
+		width: 38px;
 	}
 }
 h4 {
@@ -481,9 +496,9 @@ section {
 		}
 	}
 
-	.section-title {
-		margin-bottom: 2rem;
-	}
+	// .section-title {
+	// 	margin-bottom: 2rem;
+	// }
 }
 
 //
@@ -546,8 +561,8 @@ section {
 	.card-header {
 		background-color: transparent;
 		border-bottom: none;
-		padding: 1.125rem;
-		text-align: center;
+		// padding: 1.125rem;
+		// text-align: center;
 
 		img {
 			height: 18rem;
@@ -555,14 +570,14 @@ section {
 	}
 
 	.card-body {
-		text-align: center;
+		// text-align: center;
 	}
 
 	.card-footer {
 		background-color: transparent;
 		border-top: none;
-		padding-bottom: 3.125rem;
-		text-align: center;
+		// padding-bottom: 3.125rem;
+		// text-align: center;
 	}
 }
 

@@ -828,9 +828,28 @@
                             "collapsed": "",
                             "min": 1,
                             "max": 3,
-                            "layout": "table",
+                            "layout": "block",
                             "button_label": "Add Card",
                             "sub_fields": [
+                                {
+                                    "key": "field_5bb6965785e47",
+                                    "label": "Use Custom Content",
+                                    "name": "use_custom_content",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
                                 {
                                     "key": "field_5b9433d6188b0",
                                     "label": "Post",
@@ -838,7 +857,15 @@
                                     "type": "post_object",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5bb6965785e47",
+                                                "operator": "!=",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
                                     "wrapper": {
                                         "width": "",
                                         "class": "",
@@ -858,7 +885,15 @@
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5bb6965785e47",
+                                                "operator": "!=",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
                                     "wrapper": {
                                         "width": "",
                                         "class": "",
@@ -869,6 +904,115 @@
                                     "prepend": "",
                                     "append": "",
                                     "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5bb696af85e48",
+                                    "label": "Card Image",
+                                    "name": "card_image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5bb6965785e47",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_5bb699caa6a44",
+                                    "label": "Card Title",
+                                    "name": "card_title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5bb6965785e47",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5bb696c585e49",
+                                    "label": "Card Body",
+                                    "name": "card_body",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5bb6965785e47",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
+                                },
+                                {
+                                    "key": "field_5bb6970485e4a",
+                                    "label": "Card Link",
+                                    "name": "card_link",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5bb6965785e47",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
                                 }
                             ]
                         }
@@ -1166,5 +1310,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1538690128
+    "modified": 1538694045
 }
