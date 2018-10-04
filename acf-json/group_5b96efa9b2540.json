@@ -109,41 +109,6 @@
             "toolbar": "basic",
             "media_upload": 0,
             "delay": 0
-        },
-        {
-            "key": "field_5b993b854a5d6",
-            "label": "Page Header Height",
-            "name": "page_header_height",
-            "type": "select",
-            "instructions": "Sets the amount of space above the page header text when using the Hero header format.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5b984ef479a36",
-                        "operator": "==",
-                        "value": "hero"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "regular": "Regular (default)",
-                "tall": "Tall"
-            },
-            "default_value": [
-                "regular"
-            ],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "ajax": 0,
-            "return_format": "value",
-            "placeholder": ""
         }
     ],
     "location": [
@@ -163,5 +128,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1537841091
+    "modified": 1538695680
 }

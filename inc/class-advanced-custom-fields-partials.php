@@ -792,130 +792,6 @@ class Advanced_Custom_Fields_Partials {
 	}
 
 	/**
-	 * The ACF partial template for sliders
-	 */
-	public function acf_partial_content_slider() {
-
-		$key = $this->key;
-
-		$rand_str      = $this->rand_str();
-
-		$css_class     = $this->get_field( $this->repeater_field . '_' . $key . '_css_class' );
-		$section_color = $this->get_field( $this->repeater_field . '_' . $key . '_section_color', false );
-		$slides        = $this->get_field( $this->repeater_field . '_' . $key . '_slides' );
-
-		if ( $slides ):
-
-			$slide_content    = array();
-			$slide_images     = array();
-			$slide_indicators = array();
-
-			for ($i = 0; $i < $slides; $i++) { 
-
-				$active    = ( $i == 0 ? 'active' : '' );
-				$content   = $this->get_field( $this->repeater_field . '_' . $key . '_slides_' . $i . '_content', false );
-				$image_id  = $this->get_field( $this->repeater_field . '_' . $key . '_slides_' . $i . '_image' );
-				$image_url = wp_get_attachment_url( $image_id );
-				$image_alt = get_post_meta( $image_id, '_wp_attachment_image_alt', true);
-
-				$slide_content[]    = sprintf( '<div class="carousel-item %1$s">%2$s</div>', $active, apply_filters( 'the_content', $content ) );
-
-				$slide_indicators[] = sprintf( '<li data-target=".carousel_%1$s" data-slide-to="%2$d" class="carousel-indicator_%3$s %4$s"></li>', $rand_str, $i, $rand_str, $active );
-
-				$slide_images[]     = sprintf( '<div class="carousel-item %1$s"><img class="d-block w-100" src="%2$s" alt="%3$s"></div>', $active, $image_url, $image_alt );
-			}
-
-			ob_start();
-
-			?>
-
-			<section class="section-slider-content <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> <?php echo ( esc_html( $css_class ) ); ?>">
-
-				<div class="<?php echo esc_attr( $this->container ); ?>">
-
-					<div class="row">
-
-						<div class="col-12 col-md-6">
-
-							<div id="carousel_1_<?php echo $rand_str; ?>" class="carousel slide carousel_<?php echo $rand_str; ?> carousel-content" data-ride="false">
-
-								<ol class="carousel-indicators">
-
-									<?php echo implode( '', $slide_indicators ); ?>
-
-								</ol>
-
-								<div class="carousel-inner">
-
-									<?php echo implode( '', $slide_content ); ?>
-
-								</div>
-
-							</div>
-
-						</div>
-
-						<div class="col-12 col-md-6">
-
-							<div id="carousel_2_<?php echo $rand_str; ?>" class="carousel slide carousel_<?php echo $rand_str; ?> carousel-images" data-ride="false">
-
-								<div class="carousel-inner">
-
-									<?php echo implode( '', $slide_images ); ?>
-
-								</div>
-
-								<a class="carousel-control-prev" href="#carousel_2_<?php echo $rand_str; ?>" role="button" data-slide="prev">
-
-									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-									<span class="sr-only">Previous</span>
-
-								</a>
-
-								<a class="carousel-control-next" href="#carousel_2_<?php echo $rand_str; ?>" role="button" data-slide="next">
-
-									<span class="carousel-control-next-icon" aria-hidden="true"></span>
-									<span class="sr-only">Next</span>
-
-								</a>
-
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<script type="text/javascript">
-					jQuery('.carousel-control-next').on('click', function(e) {
-						e.preventDefault();
-						jQuery('.carousel_<?php echo $rand_str; ?>').carousel('next');
-					});
-					jQuery('.carousel-control-prev').on('click', function(e) {
-						e.preventDefault();
-						jQuery('.carousel_<?php echo $rand_str; ?>').carousel('prev');
-					});
-					jQuery('.carousel-indicator_<?php echo $rand_str; ?>').on('click', function(e) {
-						e.preventDefault();
-						var to = parseInt(jQuery(this).attr("data-slide-to"));
-						jQuery('.carousel_<?php echo $rand_str; ?>').carousel(to);
-					});
-				</script>
-
-			</section>
-
-			<?php
-
-			echo ob_get_clean();
-
-		endif;
-
-		return;
-
-	}
-
-	/**
 	 * The ACF partial template for Posts sliders
 	 */
 	public function acf_partial_posts_slider() {
@@ -936,7 +812,7 @@ class Advanced_Custom_Fields_Partials {
 
 		if ( $slides ):
 
-			$slide_content    = array();
+			$slides           = array();
 			$slide_indicators = array();
 
 			for ($i = 0; $i < $slides; $i++) { 
@@ -948,9 +824,9 @@ class Advanced_Custom_Fields_Partials {
 				$post_image   = get_the_post_thumbnail( $post_id, 'post-thumbnail', array( 'class' => 'object-fit-cover' ) );
 
 				if ( get_post_type( $post_id ) === 'cpt-testimonials' ) {
-					$slide_content[] = sprintf( '<div class="carousel-item %1$s"><blockquote class="blockquote">%2$s<footer class="blockquote-footer">%3$s %4$s</footer></blockquote></div>', $active, $post_content, $post_image, get_the_title( $post_id ) );
+					$slides[] = sprintf( '<div class="carousel-item %1$s"><blockquote class="blockquote">%2$s<footer class="blockquote-footer">%3$s %4$s</footer></blockquote></div>', $active, $post_content, $post_image, get_the_title( $post_id ) );
 				} else {
-					$slide_content[] = $post_content;
+					$slides[] = sprintf( '<div class="carousel-item %1$s">%2$s</div>', $active, $post_content );
 				}
 
 				$slide_indicators[] = sprintf( '<li data-target="#carousel_%1$s" data-slide-to="%2$d" class="carousel-indicator %3$s"></li>', $rand_str, $i, $active );
@@ -987,7 +863,7 @@ class Advanced_Custom_Fields_Partials {
 
 								<div class="carousel-inner text-center">
 
-									<?php echo implode( '', $slide_content ); ?>
+									<?php echo implode( '', $slides ); ?>
 
 								</div>
 

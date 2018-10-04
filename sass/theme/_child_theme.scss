@@ -59,18 +59,20 @@ h3 {
 		@include mobile-size( $h3-font-size );
 	}
 	&.add-ons {
-		background: $primary;
-		border-radius: 50%;
-		content: "";
-		display: inline-block;
-		height: 38px;
-		font-weight: $font-weight-bold;
-		margin-bottom: 3rem;
-		margin-right: 1rem;
-		position: relative;
-		text-transform: lowercase;
-		top: .5rem;
-		width: 38px;
+		&:before {
+			background: $primary;
+			border-radius: 50%;
+			content: "";
+			display: inline-block;
+			height: 38px;
+			font-weight: $font-weight-bold;
+			margin-bottom: 3rem;
+			margin-right: 1rem;
+			position: relative;
+			text-transform: lowercase;
+			top: .5rem;
+			width: 38px;
+		}
 	}
 }
 h4 {
@@ -290,6 +292,9 @@ blockquote {
 				padding: 0;
 			}
 		}
+		.current-menu-item {
+			color: $primary;
+		}
 	}
 
 	#main-menu-wrapper {
@@ -356,9 +361,12 @@ blockquote {
 						border-top: 2px solid $dark;
 						margin-top: 1rem;
 					}
-					&.dropdown-header-hidden {
-						span {
-							visibility: hidden;
+				}
+				.header-hidden {
+					span.dropdown-header {
+						visibility: hidden;
+						&:after {
+							border-color: transparent;
 						}
 					}
 				}
@@ -561,8 +569,11 @@ section {
 	.card-header {
 		background-color: transparent;
 		border-bottom: none;
-		// padding: 1.125rem;
-		// text-align: center;
+		padding: 1.125rem;
+
+		h2 {
+			margin-bottom: 0;
+		}
 
 		img {
 			height: 18rem;
@@ -570,14 +581,13 @@ section {
 	}
 
 	.card-body {
-		// text-align: center;
+		padding: 1.125rem;
 	}
 
 	.card-footer {
 		background-color: transparent;
 		border-top: none;
-		// padding-bottom: 3.125rem;
-		// text-align: center;
+		padding: 1.125rem;
 	}
 }
 

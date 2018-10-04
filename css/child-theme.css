@@ -10835,7 +10835,7 @@ h3 {
   @media (max-width: 1022.98px) {
     h3 {
       font-size: 1.55rem; } }
-  h3.add-ons {
+  h3.add-ons:before {
     background: #71C26A;
     border-radius: 50%;
     content: "";
@@ -11055,6 +11055,8 @@ blockquote .blockquote-footer {
         border-top-color: #71C26A; }
       #main-nav .navbar-nav > .nav-item .nav-link {
         padding: 0; }
+    #main-nav .navbar-nav .current-menu-item {
+      color: #71C26A; }
   @media (min-width: 1620px) {
     #main-nav #main-menu-wrapper {
       margin-left: 5rem;
@@ -11096,8 +11098,10 @@ blockquote .blockquote-footer {
         height: 0;
         border-top: 2px solid #4c5c53;
         margin-top: 1rem; }
-      #main-nav #main-menu > .dropdown > .dropdown-menu .dropdown-header.dropdown-header-hidden span {
-        visibility: hidden; }
+    #main-nav #main-menu > .dropdown > .dropdown-menu .header-hidden span.dropdown-header {
+      visibility: hidden; }
+      #main-nav #main-menu > .dropdown > .dropdown-menu .header-hidden span.dropdown-header:after {
+        border-color: transparent; }
     #main-nav #main-menu > .dropdown > .dropdown-menu .dropdown-menu {
       border: none;
       display: -webkit-box;
@@ -13751,12 +13755,18 @@ section {
           box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.1); }
   .card .card-header {
     background-color: transparent;
-    border-bottom: none; }
+    border-bottom: none;
+    padding: 1.125rem; }
+    .card .card-header h2 {
+      margin-bottom: 0; }
     .card .card-header img {
       height: 18rem; }
+  .card .card-body {
+    padding: 1.125rem; }
   .card .card-footer {
     background-color: transparent;
-    border-top: none; }
+    border-top: none;
+    padding: 1.125rem; }
 
 .carousel-inner {
   margin: auto;
