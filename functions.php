@@ -35,6 +35,11 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
+function register_custom_nav_menus() {
+    register_nav_menu( 'mobile', __( 'Mobile Menu', 'understrap' ) );
+}
+add_action( 'after_setup_theme', 'register_custom_nav_menus' );
+
 /**
  * Initialize theme default settings
  */
@@ -93,7 +98,7 @@ require get_stylesheet_directory() . '/inc/hooks.php';
 /**
  * Load custom WordPress nav walker.
  */
-require get_stylesheet_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+require get_stylesheet_directory() . '/inc/class-procede-bootstrap-navwalker.php';
 
 /**
  * Load WooCommerce functions.

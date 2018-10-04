@@ -674,7 +674,7 @@ class Advanced_Custom_Fields_Partials {
 		$split_background  = $this->get_field( $this->repeater_field . '_' . $key . '_split_background', false );
 		$columns           = $this->get_field( $this->repeater_field . '_' . $key . '_columns', false );
 		$cols_per_row      = $this->get_field( $this->repeater_field . '_' . $key . '_columns_per_row', false );
-		$col_widths        = array();
+		$col_widths        = array( 'col-12' );
 
 		if ( $split_background ) {
 			$col_widths[]  = 'col-split';
@@ -717,10 +717,14 @@ class Advanced_Custom_Fields_Partials {
 
 						<?php for ( $i = 0; $i < $columns; $i++ ) {
 
-							$content   = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_content' );
-							$col_css   = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_css_class' );
-							$col_color = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_column_color' );
-							$col_image = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_column_image' );
+							$content       = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_content' );
+							$col_css       = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_css_class' );
+							$col_color     = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_column_color' );
+							$col_image     = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_column_image' );
+							$overwrite_css = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_overwrite_css' );
+
+							if ( $overwrite_css && ! $split_background )
+								$col_widths = array();
 
 							if ( $col_color && $split_background )
 								$col_css .= ' bg-' . $col_color;
@@ -734,7 +738,7 @@ class Advanced_Custom_Fields_Partials {
 
 							?>
 
-							<div class="col-12 <?php echo implode( " ", $col_widths ); ?> <?php echo $col_css; ?>">
+							<div class="<?php echo implode( " ", $col_widths ); ?> <?php echo $col_css; ?>">
 
 								<?php echo apply_filters( 'the_content', html_entity_decode( $content ) ); ?>
 

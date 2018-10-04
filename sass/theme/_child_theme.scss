@@ -1,5 +1,7 @@
 
-
+@mixin mobile-size( $font-size ){
+	font-size: #{( ( $font-size - $font-size-base ) / 2 ) + $font-size-base};
+}
 //
 // Fixed Nav
 //
@@ -12,6 +14,9 @@ body {
 				top: 46px;
 			}
 		}
+	}
+	@include media-breakpoint-down('md') {
+		margin-top: 90px;
 	}
 }
 
@@ -34,20 +39,32 @@ body {
 h1 {
 	font-weight: $font-weight-bold;
 	letter-spacing: 0;
-	line-height: 3.8rem;
+	line-height: .95em;
+	@include media-breakpoint-down('md') {
+		@include mobile-size( $h1-font-size );
+	}
 }
 h2 {
 	letter-spacing: .025em;
-	line-height: 2.75rem;
+	line-height: 1.222222em;
+	@include media-breakpoint-down('md') {
+		@include mobile-size( $h2-font-size );
+	}
 }
 h3 {
 	letter-spacing: .025em;
-	line-height: 2.2rem;
+	line-height: 1.294em;
+	@include media-breakpoint-down('md') {
+		@include mobile-size( $h3-font-size );
+	}
 }
 h4 {
 	font-weight: $font-weight-bold;
 	letter-spacing: 0;
-	line-height: 1.9rem;
+	line-height: 1.218em;
+	@include media-breakpoint-down('md') {
+		@include mobile-size( $h4-font-size );
+	}
 }
 
 @each $color, $value in $theme-colors {
@@ -355,7 +372,71 @@ blockquote {
 		}
 	}
 }
-
+#mobile-nav {
+	height: 90px;
+	.navbar-toggler {
+		border-color: transparent;
+	}
+	.navbar-collapse {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 90px;
+	}
+	#mobile-menu {
+		background-color: $white;
+	}
+	.navbar-nav {
+		.nav-item {
+			border-bottom: 1px solid $gray-600;
+			&:first-of-type {
+				border-top: 1px solid $gray-600;
+			}
+			.nav-link {
+				padding: 1rem;
+			}
+		}
+	}
+	.dropdown-header {
+		color: $dark;
+		font-size: $font-size-base;
+		font-weight: $font-weight-bold;
+		padding: 0;
+	}
+	.dropdown-menu {
+		padding: 0;
+		margin: 0;
+		border: none;
+		.nav-item {
+			background-color: $gray-100;
+			&:last-of-type {
+				border-bottom: none;
+			}
+			.dropdown-item {
+				color: $gray-600;
+				padding: 1rem;
+			}
+		}
+	}
+	.dropdown {
+		&.show {
+			.dropdown-toggle {
+				&:after {
+					display: inline-block;
+					width: 0;
+					height: 0;
+					margin-left: .255em;
+					vertical-align: .255em;
+					content: "";
+					border-bottom: .3em solid;
+					border-right: .3em solid transparent;
+					border-top: 0;
+					border-left: .3em solid transparent;
+				}
+			}
+		}
+	}
+}
 //
 // Hero
 //
@@ -372,6 +453,10 @@ blockquote {
 		background-color: rgba($black, .65);
 		padding-bottom: 6rem;
 		padding-top: 6rem;
+		@include media-breakpoint-down('md') {
+			padding-bottom: 4rem;
+			padding-top: 4rem;
+		}
 
 		.page-title {
 			font-weight: $font-weight-normal;
