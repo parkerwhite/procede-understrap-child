@@ -38,8 +38,6 @@ $page_header_type = get_post_meta( get_the_ID(), 'page_header_type', true );
 
 			$partials->repeater( 'page_sections' );
 
-			$partials->acf_partial_cta();
-
 		}
 
 		?>
