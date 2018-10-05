@@ -447,7 +447,7 @@ class Advanced_Custom_Fields_Partials {
 
 				if ( $is_custom ) {
 					$content         = $this->get_field( $this->repeater_field . '_' . $key . '_slides_' . $i . '_slide_content', false );
-					$slide_content[] = sprintf( '<div class="carousel-item %1$s">%2$s</div>', $active, apply_filters( 'the_content', $post_content ) );
+					$slide_content[] = sprintf( '<div class="carousel-item %1$s">%2$s</div>', $active, apply_filters( 'the_content', $content ) );
 				} else {
 					$post_id      = $this->get_field( $this->repeater_field . '_' . $key . '_slides_' . $i . '_posts', false );
 					$post         = get_post( $post_id );
