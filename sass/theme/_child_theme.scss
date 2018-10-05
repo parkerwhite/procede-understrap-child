@@ -961,37 +961,39 @@ section {
 		}
 	}
 
-	#menu-main-menu {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		list-style: none;
-		margin: 0;
-		max-width: 25rem;
-		padding: 0;
+	.widget_nav_menu {
+		ul.menu {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			list-style: none;
+			margin: 0;
+			max-width: 25rem;
+			padding: 0;
 
-		.menu-item {
-			flex: 1 0 50%;
-			a {
-				color: $gray-600;
-				&:hover {
-					color: $dark;
-					text-decoration: none;
-				}
-				&:active,
-				&:focus {
-					color: $primary;
-				}
-			}
-			&.current-menu-item {
+			.menu-item {
+				flex: 1 0 50%;
 				a {
-					color: $primary;
+					color: $gray-600;
+					&:hover {
+						color: $dark;
+						text-decoration: none;
+					}
+					&:active,
+					&:focus {
+						color: $primary;
+					}
+				}
+				&.current-menu-item {
+					a {
+						color: $primary;
+					}
 				}
 			}
-		}
 
-		.sub-menu {
-			display: none;
+			.sub-menu {
+				display: none;
+			}
 		}
 	}
 
