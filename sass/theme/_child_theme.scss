@@ -663,12 +663,16 @@ section {
 		.card {
 			background: $gray-200;
 			box-shadow: none;
-			h5 {
-				font-size: 1.25rem;
-				font-weight: $font-weight-bold;
-			}
-			p {
-				font-size: 1.125rem;
+			.card-body {
+				padding-bottom: 0;
+				padding-top: 0;
+				h5 {
+					font-size: 1.25rem;
+					font-weight: $font-weight-bold;
+				}
+				p {
+					font-size: 1.125rem;
+				}
 			}
 		}
 	}
