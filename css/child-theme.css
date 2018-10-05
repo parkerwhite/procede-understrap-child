@@ -14581,6 +14581,11 @@ section {
   background: #F5F5F5;
   -webkit-box-shadow: none;
           box-shadow: none; }
+  #home-wrapper .card-deck .card h5 {
+    font-size: 1.25rem;
+    font-weight: 700; }
+  #home-wrapper .card-deck .card p {
+    font-size: 1.125rem; }
 
 #leadership .card-deck .card {
   -webkit-box-shadow: none;

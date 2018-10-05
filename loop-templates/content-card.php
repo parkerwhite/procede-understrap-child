@@ -25,9 +25,9 @@
 
 		<?php
 		if ( has_excerpt() ) {
-			echo get_the_excerpt();
+			echo apply_filters( 'the_content', get_the_excerpt() );
 		} else {
-			echo wp_trim_words( get_the_content(), 50, '...' );
+			echo apply_filters( 'the_content', wp_trim_words( get_the_content(), 50, '...' ) );
 		}
 		?>
 
