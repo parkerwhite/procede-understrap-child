@@ -14532,16 +14532,6 @@ section {
 .card {
   -webkit-box-shadow: 0 0.625rem 0.9375rem rgba(112, 112, 112, 0.5);
           box-shadow: 0 0.625rem 0.9375rem rgba(112, 112, 112, 0.5); }
-  @media (min-width: 768px) {
-    .card {
-      -webkit-box-flex: 1;
-          -ms-flex: 1 0 calc(50% - 2.25rem);
-              flex: 1 0 calc(50% - 2.25rem); } }
-  @media (min-width: 1620px) {
-    .card {
-      -webkit-box-flex: 1;
-          -ms-flex: 1 0 calc(33.3% - 2.25rem);
-              flex: 1 0 calc(33.3% - 2.25rem); } }
   .card .card-header {
     background-color: transparent;
     border-bottom: none; }
@@ -14557,6 +14547,22 @@ section {
     background-color: transparent;
     border-top: none;
     padding-bottom: 2.025rem; }
+
+@media (min-width: 768px) {
+  .card-deck .card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 40%;
+            flex: 1 0 40%;
+    -ms-flex: 1 0 calc(50% - 4.5rem);
+        flex: 1 0 calc(50% - 4.5rem); } }
+
+@media (min-width: 1620px) {
+  .card-deck .card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 20%;
+            flex: 1 0 20%;
+    -ms-flex: 1 0 calc(33.3% - 4.5rem);
+        flex: 1 0 calc(33.3% - 4.5rem); } }
 
 #leadership .card-deck .card {
   -webkit-box-shadow: none;
