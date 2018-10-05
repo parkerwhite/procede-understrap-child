@@ -75,7 +75,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 			<?php if ( have_posts() ) : ?>
 
-				<main class="site-main card-deck" id="main">
+				<main class="site-main card-deck" id="main" data-cols="3">
 
 						<?php /* Start the Loop */ ?>
 
