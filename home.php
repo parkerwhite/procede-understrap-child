@@ -41,15 +41,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 					<?php while ( have_posts() ) : the_post(); ?>
 
-						<?php
-
-						/*
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'loop-templates/content', get_post_format() );
-						?>
+						<?php get_template_part( 'loop-templates/content', 'card' ); ?>
 
 					<?php endwhile; ?>
 
@@ -64,13 +56,12 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			<!-- The pagination component -->
 			<?php understrap_pagination(); ?>
 
-		<!-- Do the right sidebar check -->
-		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-		
+			<!-- Do the right sidebar check -->
+			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
 
-	</div><!-- .row -->
+		</div><!-- .row -->
 
-</div><!-- Container end -->
+	</div><!-- Container end -->
 
 </div><!-- Wrapper end -->
 
