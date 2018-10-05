@@ -628,6 +628,15 @@ section {
 	}
 }
 
+#leadership {
+	.card-deck {
+		.card {
+			box-shadow: none;
+			border: none;
+			flex: 1 0 20%;
+		}
+	}
+}
 //
 // Carousel
 //
@@ -726,9 +735,41 @@ section {
 	}
 }
 
+//
+// customer-profiles
+//
+#customer-profiles {
+	.w-100 {
+		border-bottom: 1px solid $gray-600;
+		margin-bottom: 3rem;
+		padding-top: 3rem;
+	}
+}
 
-
-
+//
+// GForms
+//
+input,
+select,
+textarea {
+	border-radius: 0 !important;
+	font-size: 14px;
+	height: auto !important;
+	padding: 1rem !important;
+}
+.gfield_label {
+	display: none !important;
+}
+.form-group {
+	margin-bottom: 1.5rem;
+}
+.gform_footer {
+	padding-left: 1rem;
+	.gform_button {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+}
 //
 // Site Footer
 //
