@@ -602,6 +602,12 @@ section {
 //
 .card {
 	box-shadow: $box-shadow;
+	@include media-breakpoint-up('md') {
+		flex: 1 0 40%;
+	}
+	@include media-breakpoint-up('xl') {
+		flex: 1 0 20%;
+	}
 
 	.card-header {
 		background-color: transparent;
@@ -633,7 +639,7 @@ section {
 		.card {
 			box-shadow: none;
 			border: none;
-			flex: 1 0 20%;
+			
 		}
 	}
 }

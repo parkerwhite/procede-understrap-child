@@ -4684,7 +4684,7 @@ input[type="button"].btn-block {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding: 1.125rem; }
+  padding: 0.5625rem; }
 
 .card-title {
   margin-bottom: 1.125rem; }
@@ -4700,10 +4700,10 @@ input[type="button"].btn-block {
   text-decoration: none; }
 
 .card-link + .card-link {
-  margin-left: 1.125rem; }
+  margin-left: 0.5625rem; }
 
 .card-header {
-  padding: 1.125rem 1.125rem;
+  padding: 1.125rem 0.5625rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(112, 112, 112, 0.5); }
@@ -4713,21 +4713,21 @@ input[type="button"].btn-block {
     border-top: 0; }
 
 .card-footer {
-  padding: 1.125rem 1.125rem;
+  padding: 1.125rem 0.5625rem;
   background-color: rgba(0, 0, 0, 0.03);
   border-top: 1px solid rgba(112, 112, 112, 0.5); }
   .card-footer:last-child {
     border-radius: 0 0 calc(0 - 1px) calc(0 - 1px); }
 
 .card-header-tabs {
-  margin-right: -0.5625rem;
+  margin-right: -0.28125rem;
   margin-bottom: -1.125rem;
-  margin-left: -0.5625rem;
+  margin-left: -0.28125rem;
   border-bottom: 0; }
 
 .card-header-pills {
-  margin-right: -0.5625rem;
-  margin-left: -0.5625rem; }
+  margin-right: -0.28125rem;
+  margin-left: -0.28125rem; }
 
 .card-img-overlay {
   position: absolute;
@@ -14532,6 +14532,16 @@ section {
 .card {
   -webkit-box-shadow: 0 0.625rem 0.9375rem rgba(112, 112, 112, 0.5);
           box-shadow: 0 0.625rem 0.9375rem rgba(112, 112, 112, 0.5); }
+  @media (min-width: 768px) {
+    .card {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 40%;
+              flex: 1 0 40%; } }
+  @media (min-width: 1620px) {
+    .card {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 20%;
+              flex: 1 0 20%; } }
   .card .card-header {
     background-color: transparent;
     border-bottom: none;
@@ -14550,10 +14560,7 @@ section {
 #leadership .card-deck .card {
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: none;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 20%;
-          flex: 1 0 20%; }
+  border: none; }
 
 .carousel-inner {
   margin: auto;
