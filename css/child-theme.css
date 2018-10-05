@@ -10835,19 +10835,20 @@ h3 {
   @media (max-width: 1022.98px) {
     h3 {
       font-size: 1.55rem; } }
-  h3.add-ons:before {
-    background: #71C26A;
-    border-radius: 50%;
-    content: "";
-    display: inline-block;
-    height: 38px;
+  h3.add-ons {
     font-weight: 700;
     margin-bottom: 3rem;
-    margin-right: 1rem;
-    position: relative;
-    text-transform: lowercase;
-    top: .5rem;
-    width: 38px; }
+    text-transform: lowercase; }
+    h3.add-ons:before {
+      background: #71C26A;
+      border-radius: 50%;
+      content: "";
+      display: inline-block;
+      height: 38px;
+      margin-right: 1rem;
+      position: relative;
+      top: .5rem;
+      width: 38px; }
 
 h4 {
   font-weight: 700;
@@ -13762,11 +13763,11 @@ section {
     .card .card-header img {
       height: 18rem; }
   .card .card-body {
-    padding: 1.125rem; }
+    padding: 2rem; }
   .card .card-footer {
     background-color: transparent;
     border-top: none;
-    padding: 1.125rem; }
+    padding: 0 2rem 3rem; }
 
 .carousel-inner {
   margin: auto;

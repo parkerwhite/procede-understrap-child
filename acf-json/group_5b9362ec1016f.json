@@ -519,9 +519,28 @@
                             "collapsed": "",
                             "min": 2,
                             "max": 0,
-                            "layout": "table",
+                            "layout": "block",
                             "button_label": "Add Slide",
                             "sub_fields": [
+                                {
+                                    "key": "field_5bb6b13d9a611",
+                                    "label": "Custom Content",
+                                    "name": "custom_content",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
                                 {
                                     "key": "field_5b9410ed5cc20",
                                     "label": "Posts",
@@ -529,7 +548,15 @@
                                     "type": "post_object",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5bb6b13d9a611",
+                                                "operator": "!=",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
                                     "wrapper": {
                                         "width": "",
                                         "class": "",
@@ -541,6 +568,33 @@
                                     "multiple": 0,
                                     "return_format": "object",
                                     "ui": 1
+                                },
+                                {
+                                    "key": "field_5bb6b1589a612",
+                                    "label": "Slide Content",
+                                    "name": "slide_content",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5bb6b13d9a611",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 0
                                 }
                             ]
                         }
@@ -873,170 +927,6 @@
                     "min": "",
                     "max": ""
                 },
-                "5b9849338789f": {
-                    "key": "5b9849338789f",
-                    "name": "testimonials_card_group",
-                    "label": "Testimonials Card Group",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5b984933878a0",
-                            "label": "Section Title",
-                            "name": "section_title",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "What our customers are saying",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5b984933878a1",
-                            "label": "Section Intro",
-                            "name": "section_intro",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "basic",
-                            "media_upload": 0,
-                            "delay": 0
-                        },
-                        {
-                            "key": "field_5babada86a39b",
-                            "label": "Section ID",
-                            "name": "section_id",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "What our customers are saying",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5b984933878a2",
-                            "label": "Section Color",
-                            "name": "section_color",
-                            "type": "select",
-                            "instructions": "Set the background color for the section",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "white": "White",
-                                "primary": "Primary",
-                                "secondary": "Secondary",
-                                "light": "Light",
-                                "dark": "Dark",
-                                "gray-clip": "Gray \/ White",
-                                "success": "Success",
-                                "info": "Info",
-                                "warning": "Warning",
-                                "danger: Danger": "danger: Danger"
-                            },
-                            "default_value": [
-                                "white"
-                            ],
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "ui": 0,
-                            "return_format": "value",
-                            "ajax": 0,
-                            "placeholder": ""
-                        },
-                        {
-                            "key": "field_5b984933878a3",
-                            "label": "CSS Class",
-                            "name": "css_class",
-                            "type": "text",
-                            "instructions": "Add CSS classes to the section, separated by a space",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5b984933878a4",
-                            "label": "Cards",
-                            "name": "cards",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "collapsed": "",
-                            "min": 1,
-                            "max": 3,
-                            "layout": "table",
-                            "button_label": "Add Testimonial",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5b984933878a5",
-                                    "label": "Testimonials",
-                                    "name": "post",
-                                    "type": "post_object",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "post_type": [
-                                        "cpt-testimonials"
-                                    ],
-                                    "taxonomy": [],
-                                    "allow_null": 0,
-                                    "multiple": 0,
-                                    "return_format": "object",
-                                    "ui": 1
-                                }
-                            ]
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_5ba9b1089ef9b": {
                     "key": "layout_5ba9b1089ef9b",
                     "name": "row_break",
@@ -1163,5 +1053,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1538696391
+    "modified": 1538699668
 }

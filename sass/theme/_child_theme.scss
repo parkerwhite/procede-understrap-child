@@ -59,17 +59,17 @@ h3 {
 		@include mobile-size( $h3-font-size );
 	}
 	&.add-ons {
+		font-weight: $font-weight-bold;
+		margin-bottom: 3rem;
+		text-transform: lowercase;
 		&:before {
 			background: $primary;
 			border-radius: 50%;
 			content: "";
 			display: inline-block;
 			height: 38px;
-			font-weight: $font-weight-bold;
-			margin-bottom: 3rem;
 			margin-right: 1rem;
 			position: relative;
-			text-transform: lowercase;
 			top: .5rem;
 			width: 38px;
 		}
@@ -581,13 +581,13 @@ section {
 	}
 
 	.card-body {
-		padding: 1.125rem;
+		padding: 2rem;
 	}
 
 	.card-footer {
 		background-color: transparent;
 		border-top: none;
-		padding: 1.125rem;
+		padding: 0 2rem 3rem;
 	}
 }
 

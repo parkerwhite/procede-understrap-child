@@ -221,6 +221,8 @@ class Advanced_Custom_Fields_Partials {
 
 					<div class="card-deck" data-cols="<?php echo $cards; ?>">
 
+						<pre><?php // print_r( get_post_meta( get_the_ID() ) ); ?></pre>
+
 						<?php for ($i = 0; $i < $cards; $i++) {
 
 							$use_custom_content = get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_use_custom_content', true );
@@ -233,13 +235,13 @@ class Advanced_Custom_Fields_Partials {
 							$link_target  = '_self';
 
 							if ( $use_custom_content ) {
-								$card_image_id = get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_card_image', true );
+								$card_img_id   = get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_card_image', true );
 								$card_img_src  = wp_get_attachment_image_src( $card_img_id, 'large' );
-								$card_img_top  = $card_img_src['url'];
+								$card_img_top  = $card_img_src[0];
 								$card_title    = get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_card_title', true );
 								$card_body     = get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_card_body', true );
 								$card_body     = apply_filters( 'the_content', html_entity_decode( $card_body ) );
-								$link          = get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_card_link', false );
+								$link          = get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_card_link', true );
 								$link_title    = $link['title'];
 								$link_url      = $link['url'];
 								$link_target   = $link['target'];
@@ -275,17 +277,11 @@ class Advanced_Custom_Fields_Partials {
 
 								<div class="card-body">
 
-									<h5 class="card-title"><?php echo $card_title; ?></h5>
-
-									<?php if ( has_excerpt( $post_id ) ) { ?>
-
-										<?php echo get_the_excerpt( $post_id ); ?>
-
-									<?php } else { ?>
-
-										<?php echo apply_filters( 'the_content', html_entity_decode( $post->post_content ) ); ?>
-
+									<?php if ( $card_title ) { ?>
+										<h5 class="card-title"><?php echo $card_title; ?></h5>
 									<?php } ?>
+
+									<?php echo $card_body; ?>
 
 								</div><!-- .card-body -->
 
