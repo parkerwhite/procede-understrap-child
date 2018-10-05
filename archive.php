@@ -81,6 +81,13 @@ $post_type = get_post_type();
 
 			<?php if ( have_posts() ) : ?>
 
+				<!-- <div class="posts-loop-layout-wrapper">
+					<div class="post-loop-layout">
+						<a href="#posts-layout" class="post-layout-links" data-layout="list"><i class="fa fa-list" aria-hidden="true"></i></a>
+						<a href="#posts-layout" class="post-layout-links" data-layout="grid"><i class="fa fa-th" aria-hidden="true"></i></a>
+					</div>
+				</div> -->
+
 				<main class="site-main card-deck" id="main" data-cols="3">
 
 						<?php /* Start the Loop */ ?>

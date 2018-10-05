@@ -397,7 +397,8 @@ blockquote {
 						margin-top: 1rem;
 					}
 				}
-				.header-hidden {
+				.header-hidden,
+				.hidden-header {
 					span.dropdown-header {
 						visibility: hidden;
 						&:after {
@@ -425,6 +426,16 @@ blockquote {
 							color: $primary;
 						}
 					}
+				}
+			}
+			&.hidden-dropdown {
+				> .dropdown-menu {
+					display: none !important;
+				}
+			}
+			&.dropdown-stacked {
+				> .dropdown-menu {
+					flex-direction: column;
 				}
 			}
 		}
