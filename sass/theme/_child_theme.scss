@@ -603,10 +603,10 @@ section {
 .card {
 	box-shadow: $box-shadow;
 	@include media-breakpoint-up('md') {
-		flex: 1 0 40%;
+		flex: 1 0 calc(50% - #{$card-spacer-x * 2});
 	}
 	@include media-breakpoint-up('xl') {
-		flex: 1 0 20%;
+		flex: 1 0 calc(33.3% - #{$card-spacer-x * 2});
 	}
 
 	.card-header {

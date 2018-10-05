@@ -367,7 +367,7 @@ class Advanced_Custom_Fields_Partials {
 
 					<?php } ?>
 
-					<div class="row <?php echo ( esc_html( $row_css_class ) ); ?>" data-cols="<?php echo $$cols_per_row; ?>">
+					<div class="row <?php echo ( esc_html( $row_css_class ) ); ?>" data-cols="<?php echo $cols_per_row; ?>">
 
 						<?php for ( $i = 0; $i < $columns; $i++ ) {
 
