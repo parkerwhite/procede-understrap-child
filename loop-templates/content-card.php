@@ -11,11 +11,9 @@
 
 	<?php if ( has_post_thumbnail() ) : ?>
 
-		<?php $featured_img_url = get_the_post_thumbnail_url( get_the_ID(), 'large' ); ?>
-
 		<div class="card-header">
 
-			<img src="<?php echo $featured_img_url; ?>" alt="" class="object-fit-cover card-img-top">
+			<?php the_post_thumbnail( 'full', array( 'class' => 'object-fit-cover card-img-top' ) ); ?>
 
 		</div>
 
