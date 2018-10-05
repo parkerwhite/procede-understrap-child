@@ -815,7 +815,7 @@ section {
 // widgets
 //
 .widget {
-	.widget_categories {
+	&.widget_categories {
 		ul {
 			list-style: none;
 			padding: 0;
@@ -825,7 +825,7 @@ section {
 			}
 		}
 	}
-	.widget_lc_taxonomy {
+	&.widget_lc_taxonomy {
 		ul {
 			list-style: none;
 			padding: 0;

@@ -14705,17 +14705,17 @@ section {
     padding-left: 3rem;
     padding-right: 3rem; }
 
-.widget .widget_categories ul {
+.widget.widget_categories ul {
   list-style: none;
   padding: 0; }
-  .widget .widget_categories ul li {
+  .widget.widget_categories ul li {
     color: #707070;
     font-weight: bold; }
 
-.widget .widget_lc_taxonomy ul {
+.widget.widget_lc_taxonomy ul {
   list-style: none;
   padding: 0; }
-  .widget .widget_lc_taxonomy ul li {
+  .widget.widget_lc_taxonomy ul li {
     border: 1px solid #71C26A;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
