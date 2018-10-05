@@ -654,7 +654,7 @@ section {
 	&:after,
 	&:before {
 		border-radius: 7px;
-		box-shadow: $box-shadow;
+		box-shadow: $box-shadow-sm;
 		content: "";
 		display: block;
 		height: 20px;
