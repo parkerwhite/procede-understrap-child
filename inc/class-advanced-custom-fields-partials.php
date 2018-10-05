@@ -175,287 +175,6 @@ class Advanced_Custom_Fields_Partials {
 	}
 
 	/**
-	 * Individual Rows
-	 *
-	 * The following methods are designed to be called individually from within
-	 * the template file.
-	 */
-
-	/**
-	 * The ACF partial template for Related Posts (card deck)
-	 */
-	public function acf_partial_related_posts( $repeater_field ) {
-
-		$posts         = $this->get_field( $repeater_field, false );
-
-		$post_type     = get_post_type();
-
-		$read_more     = ( $post_type == 'post' ? get_home_url() . '/articles/' : get_post_type_archive_link( $post_type ) );
-
-		if ( $posts ): 
-
-			ob_start();
-
-			?>
-
-			<section class="wrapper related-posts-wrapper">
-
-				<div class="<?php echo esc_attr( $this->container ); ?>">
-
-					<div class="card-deck">
-
-						<?php for ($i = 0; $i < $posts; $i++) {
-
-							$post_id       = esc_html( get_post_meta( get_the_ID(), $repeater_field . '_' . $i . '_post', true ) );
-
-							if ( ! $post_id )
-								$post_id   = $this->get_rand_post( $post_type );
-
-							$post          = get_post( $post_id );
-							$post_image    = get_the_post_thumbnail( $post_id, 'full', array( 'class' => 'object-fit-cover' ) );
-
-							?>
-
-							<article class="card" id="post-<?php echo $post_id; ?>">
-
-								<?php if ( $post_image ) : ?>
-
-									<div class="card-header p-0">
-
-										<?php echo $post_image; ?>
-
-									</div>
-
-								<?php endif; ?>
-
-								<div class="card-body">
-
-									<h5 class="card-title"><?php echo get_the_title( $post_id ); ?></h5>
-
-									<?php if ( has_excerpt( $post_id ) ) { ?>
-
-										<?php echo get_the_excerpt( $post_id ); ?>
-
-									<?php } else { ?>
-
-										<?php echo apply_filters( 'the_content', html_entity_decode( $post->post_content ) ); ?>
-
-									<?php } ?>
-
-								</div><!-- .card-body -->
-
-								<div class="card-footer text-right">
-
-									<?php // fareverse_read_more( $post ); ?>
-
-								</div><!-- .card-footer -->
-
-							</article><!-- #post-## -->
-
-						<?php } ?>
-
-					</div>
-
-					<div class="pagination-banner d-flex align-items-center">
-
-						<ul class="nav ml-auto justify-content-end">
-
-							<li class="nav-item">
-
-								<a class="next nav-link" href="<?php echo $read_more; ?>"><?php _e( 'View More', 'understrap' ); ?></a>
-
-							</li>
-
-						</ul>
-
-					</div>
-
-				</div>
-
-			</section>
-
-			<?php
-
-			echo ob_get_clean();
-
-		endif;
-
-		return;
-
-	}
-
-	/**
-	 * The ACF partial template for Additional Team Members (card deck)
-	 */
-	public function acf_partial_additional_team_members( $repeater_field ) {
-
-		$posts         = $this->get_field( $repeater_field, false );
-
-		$post_type     = get_post_type();
-
-		$read_more     = get_home_url() . '/teams/leadership-team/';
-
-		$term          = get_the_terms( get_the_ID(), 'cpt-teams' );
-
-		$term_link     = get_term_link( $term[0] );
-
-		if ( $posts ): 
-
-			ob_start();
-
-			?>
-
-			<section id="section-additional-team-members-wrapper" class="wrapper bg-denim">
-
-				<div class="<?php echo esc_attr( $this->container ); ?>">
-
-					<div class="card-deck">
-
-						<?php for ($i = 0; $i < $posts; $i++) {
-
-							$post_id       = esc_html( get_post_meta( get_the_ID(), $repeater_field . '_' . $i . '_post', true ) );
-
-							if ( ! $post_id )
-								$post_id   = $this->get_rand_post( $post_type );
-
-							$post          = get_post( $post_id );
-							$post_image    = get_the_post_thumbnail( $post_id, 'full', array( 'class' => 'object-fit-cover' ) );
-
-							$card_term     = get_the_terms( $post_id, 'cpt-teams' );
-
-							$job_title     = $card_term[0]->name; // get_post_meta( $post_id, 'job-title', true );
-
-							?>
-
-							<article class="card" id="post-<?php echo $post_id; ?>">
-
-								<?php if ( $post_image ) : ?>
-
-									<div class="card-header p-0">
-
-										<?php echo $post_image; ?>
-
-									</div>
-
-								<?php endif; ?>
-
-								<div class="card-body">
-
-									<?php the_title( '<h5 class="card-title">', '</h5>' ); ?>
-
-									<?php echo $job_title; ?>
-
-								</div><!-- .card-body -->
-
-								<div class="card-footer text-right">
-
-									<?php // fareverse_read_more( $post ); ?>
-
-								</div><!-- .card-footer -->
-
-							</article><!-- #post-## -->
-
-						<?php } ?>
-
-					</div>
-
-					<div class="pagination-banner d-flex align-items-center">
-
-						<ul class="nav ml-auto justify-content-end">
-
-							<li class="nav-item">
-
-								<a class="next nav-link" href="<?php echo $term_link; ?>"><?php _e( 'View More', 'understrap' ); ?></a>
-
-							</li>
-
-						</ul>
-
-					</div>
-
-				</div>
-
-			</section>
-
-			<?php
-
-			echo ob_get_clean();
-
-		endif;
-
-		return;
-
-	}
-
-	/**
-	 * The ACF partial template for CTA banners
-	 */
-	public function acf_partial_cta() {
-
-		$term = get_queried_object();
-
-		$show_cta = ( isset( $term->taxonomy ) ? get_term_meta( $term->term_id, 'include_cta', true ) : $this->get_field( 'include_cta', false ) );
-
-		if ( $show_cta ) { 
-
-			$cta             = ( isset( $term->taxonomy ) ? get_term_meta( $term->term_id, 'cta_content_call_to_action', true ) : $this->get_field( 'cta_content_call_to_action' ) );
-			$supporting_text = ( isset( $term->taxonomy ) ? get_term_meta( $term->term_id, 'cta_content_supporting_text', true ) : $this->get_field( 'cta_content_supporting_text' ) );
-			$button          = ( isset( $term->taxonomy ) ? get_term_meta( $term->term_id, 'cta_content_buttoncta_content_button', true ) : $this->get_field( 'cta_content_button', false ) );
-			$image_id        = ( isset( $term->taxonomy ) ? get_term_meta( $term->term_id, 'cta_content_image', true ) : $this->get_field( 'cta_content_image', false ) );
-			$image_url       = wp_get_attachment_url( $image_id );
-			$image_alt       = get_post_meta( $image_id, '_wp_attachment_image_alt', true );
-
-			ob_start();
-
-			?>
-
-			<section id="section-cta" class="bg-light-gray">
-
-				<div class="row m-0">
-
-					<div class="col-12 col-md-6 p-0">
-
-						<img src="<?php echo $image_url; ?>" alt="<?php _e( $image_alt, 'understrap' ); ?>" class="object-fit-cover">
-
-					</div>
-
-					<div class="col-12 col-md-6 p-0">
-
-						<div class="container-split-right">
-
-							<div class="row">
-
-								<div class="col-12 col-md-10">
-
-									<h2 class="cta"><?php esc_html_e( $cta, 'understrap' ); ?></h2>
-
-									<p><?php esc_html_e( $supporting_text, 'understrap' ); ?></p>
-
-									<a href="<?php echo $button['url']; ?>" class="btn btn-secondary" target="<?php echo $button['target']; ?>"><?php _e( ( $button['title'] ? esc_html( $button['title'] ) : 'Learn More' ), 'understrap' ); ?></a>
-
-								</div>
-
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-			</section>
-
-			<?php
-
-			echo ob_get_clean();
-
-		}
-
-		return;
-
-	}
-
-	/**
 	 * Repeater Rows
 	 *
 	 * The following methods are designed to be called from within the 1page_builder1
@@ -528,8 +247,9 @@ class Advanced_Custom_Fields_Partials {
 								$post_id       = esc_html( get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_post', true ) );
 								$post          = get_post( $post_id );
 
-								if ( has_post_thumbnail( $post_id ) )
+								if ( has_post_thumbnail( $post_id ) ) {
 									$card_img_top = get_the_post_thumbnail_url( $post_id, 'large' );
+								}
 
 								$card_title    = get_the_title( $post_id );
 
@@ -578,97 +298,6 @@ class Advanced_Custom_Fields_Partials {
 							</article><!-- #post-## -->
 
 						<?php } ?>
-
-					</div>
-
-				</div>
-
-			</section>
-
-			<?php
-
-			echo ob_get_clean();
-
-		endif;
-
-		return;
-
-	}
-
-	/**
-	 * The ACF partial template for Testimonials Card Group
-	 */
-	public function acf_partial_testimonials_card_group() {
-
-		$key = $this->key;
-
-		$rand_str      = $this->rand_str();
-
-		$css_class     = $this->get_field( $this->repeater_field . '_' . $key . '_css_class' );
-		$section_color = $this->get_field( $this->repeater_field . '_' . $key . '_section_color', false );
-		$section_title = $this->get_field( $this->repeater_field . '_' . $key . '_section_title' );
-		$section_intro = $this->get_field( $this->repeater_field . '_' . $key . '_section_intro', false );
-		// $read_more     = $this->get_field( $this->repeater_field . '_' . $key . '_read_more', false ); // gets Term ID for team
-		$cards         = $this->get_field( $this->repeater_field . '_' . $key . '_cards', false );
-
-		if ( $cards ): 
-
-			ob_start();
-
-			?>
-
-			<section id="section-testimonials-card-group-<?php echo $rand_str; ?>-wrapper" class="section-testimonials-card-group wrapper <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> <?php echo ( esc_html( $css_class ) ); ?>">
-
-				<div class="<?php echo esc_attr( $this->container ); ?>">
-
-					<div class="row">
-
-						<div class="col text-center">
-
-							<h3 class="section-title"><?php _e( $section_title, 'understrap' ); ?></h3>
-
-							<?php echo apply_filters( 'the_content', $section_intro ); ?>
-
-						</div>
-
-					</div>
-
-					<div class="card-group" data-cols="<?php echo $cards; ?>">
-
-						<?php for ($i = 0; $i < $cards; $i++) {
-
-							$post_id      = esc_html( get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_post', true ) );
-							$post         = get_post( $post_id );
-
-							?>
-
-							<article class="card" id="post-<?php echo $post_id; ?>">
-
-								<div class="card-body">
-
-									<?php echo apply_filters( 'the_content', $post->post_content ); ?>
-
-								</div><!-- .card-body -->
-
-								<div class="card-footer">
-
-									<?php echo get_the_title( $post_id ); ?>
-
-								</div><!-- .card-footer -->
-
-							</article><!-- #post-## -->
-
-						<?php } ?>
-
-					</div>
-
-					<div class="row justify-content-center">
-
-						<div class="col-auto">
-
-							<a href="<?php echo get_post_type_archive_link( 'cpt-testimonials' ); ?>" class="btn btn-tertiary"><?php _e( 'View All Testimonials', 'understrap' ); ?></a>
-
-						</div>
 
 					</div>
 
@@ -812,7 +441,7 @@ class Advanced_Custom_Fields_Partials {
 
 		if ( $slides ):
 
-			$slides           = array();
+			$slide_content    = array();
 			$slide_indicators = array();
 
 			for ($i = 0; $i < $slides; $i++) { 
@@ -824,9 +453,9 @@ class Advanced_Custom_Fields_Partials {
 				$post_image   = get_the_post_thumbnail( $post_id, 'post-thumbnail', array( 'class' => 'object-fit-cover' ) );
 
 				if ( get_post_type( $post_id ) === 'cpt-testimonials' ) {
-					$slides[] = sprintf( '<div class="carousel-item %1$s"><blockquote class="blockquote">%2$s<footer class="blockquote-footer">%3$s %4$s</footer></blockquote></div>', $active, $post_content, $post_image, get_the_title( $post_id ) );
+					$slide_content[] = sprintf( '<div class="carousel-item %1$s"><blockquote class="blockquote">%2$s<footer class="blockquote-footer">%3$s %4$s</footer></blockquote></div>', $active, $post_content, $post_image, get_the_title( $post_id ) );
 				} else {
-					$slides[] = sprintf( '<div class="carousel-item %1$s">%2$s</div>', $active, $post_content );
+					$slide_content[] = sprintf( '<div class="carousel-item %1$s">%2$s</div>', $active, $post_content );
 				}
 
 				$slide_indicators[] = sprintf( '<li data-target="#carousel_%1$s" data-slide-to="%2$d" class="carousel-indicator %3$s"></li>', $rand_str, $i, $active );
@@ -863,7 +492,7 @@ class Advanced_Custom_Fields_Partials {
 
 								<div class="carousel-inner text-center">
 
-									<?php echo implode( '', $slides ); ?>
+									<?php echo implode( '', $slide_content ); ?>
 
 								</div>
 
