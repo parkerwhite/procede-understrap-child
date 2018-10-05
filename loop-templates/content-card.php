@@ -45,7 +45,7 @@ $post_type = get_post_type( $post->ID );
 
 	<div class="card-footer text-right">
 
-		<?php understrap_read_more(); ?>
+		<a href="<?php echo get_the_permalink(); ?>" class="btn btn-primary"><?php _e( 'Read More', 'understrap' ); ?></a>
 
 	</div><!-- .card-footer -->
 
