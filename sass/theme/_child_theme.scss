@@ -91,6 +91,43 @@ h4 {
 }
 
 //
+// lists 
+//
+ul {
+	&.list-checlist {
+		padding-left: 5.625rem;
+		list-style: none;
+		li {
+			position: relative;
+			&:before {
+				background: $primary;
+				border-radius: 50%;
+				content: "";
+				display: inline-block;
+				height: 52px;
+				left: -5.625rem;
+				position: absolute;
+				top: 0;
+				width: 52px;
+			}
+			&:after {
+				border-bottom: 5px solid $white;
+				border-left: 5px solid $white;
+				content: "";
+				display: block;
+				height: 18px;
+				left: -5rem;
+				position: absolute;
+				top: 13px;
+				transform: rotate(-45deg);
+				width: 32px;
+			}
+		}
+	}
+}
+
+
+//
 // Backgrounds
 //
 .bg-gray-clip {

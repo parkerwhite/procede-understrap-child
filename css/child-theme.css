@@ -10882,6 +10882,34 @@ hr.light {
 hr.dark {
   border-top: 1px solid #4c5c53 !important; }
 
+ul.list-checlist {
+  padding-left: 5.625rem;
+  list-style: none; }
+  ul.list-checlist li {
+    position: relative; }
+    ul.list-checlist li:before {
+      background: #71C26A;
+      border-radius: 50%;
+      content: "";
+      display: inline-block;
+      height: 52px;
+      left: -5.625rem;
+      position: absolute;
+      top: 0;
+      width: 52px; }
+    ul.list-checlist li:after {
+      border-bottom: 5px solid #fff;
+      border-left: 5px solid #fff;
+      content: "";
+      display: block;
+      height: 18px;
+      left: -5rem;
+      position: absolute;
+      top: 13px;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      width: 32px; }
+
 .bg-gray-clip {
   background: #F7F7F7;
   background: -webkit-gradient(linear, left top, left bottom, from(#F7F7F7), color-stop(75%, #F7F7F7), color-stop(75%, #fff), to(#fff));
