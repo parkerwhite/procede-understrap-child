@@ -7100,8 +7100,8 @@ button.bg-dark:focus {
           box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; }
 
 .shadow {
-  -webkit-box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.16) !important;
-          box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.16) !important; }
+  -webkit-box-shadow: 0 0.625rem 0.9375rem rgba(112, 112, 112, 0.5) !important;
+          box-shadow: 0 0.625rem 0.9375rem rgba(112, 112, 112, 0.5) !important; }
 
 .shadow-lg {
   -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
@@ -11024,8 +11024,8 @@ blockquote .blockquote-footer {
           color: #71C26A; }
 
 #main-nav {
-  -webkit-box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.16);
-          box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 0.625rem 0.9375rem rgba(112, 112, 112, 0.5);
+          box-shadow: 0 0.625rem 0.9375rem rgba(112, 112, 112, 0.5);
   height: 9.5rem;
   padding: 0; }
   #main-nav .navbar-brand img {
@@ -11070,8 +11070,8 @@ blockquote .blockquote-footer {
     display: flex; }
   #main-nav #main-menu > .dropdown > .dropdown-menu {
     border: none;
-    -webkit-box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.16);
-            box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 0 0.625rem 0.9375rem rgba(112, 112, 112, 0.5);
+            box-shadow: 0 0.625rem 0.9375rem rgba(112, 112, 112, 0.5);
     left: -8.5rem;
     margin-top: 3rem; }
     #main-nav #main-menu > .dropdown > .dropdown-menu:before {
@@ -13760,7 +13760,7 @@ section {
     padding: 1.125rem; }
     .card .card-header h2 {
       margin-bottom: 0; }
-    .card .card-header img {
+    .card .card-header .card-img-top {
       height: 18rem; }
   .card .card-body {
     padding: 2rem; }
@@ -13832,8 +13832,8 @@ section {
   .carousel-control-prev-icon:after,
   .carousel-control-prev-icon:before {
     border-radius: 7px;
-    -webkit-box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.16);
-            box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 0 0.625rem 0.9375rem rgba(112, 112, 112, 0.5);
+            box-shadow: 0 0.625rem 0.9375rem rgba(112, 112, 112, 0.5);
     content: "";
     display: block;
     height: 20px;

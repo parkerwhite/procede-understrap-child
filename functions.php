@@ -84,7 +84,7 @@ require get_stylesheet_directory() . '/inc/hooks.php';
 /**
  * Custom functions that act independently of the theme templates.
  */
-// require get_stylesheet_directory() . '/inc/extras.php';
+require get_stylesheet_directory() . '/inc/extras.php';
 
 /**
  * Customizer additions.
