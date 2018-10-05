@@ -10882,12 +10882,12 @@ hr.light {
 hr.dark {
   border-top: 1px solid #4c5c53 !important; }
 
-ul.list-checlist {
+ul.list-checklist {
   padding-left: 5.625rem;
   list-style: none; }
-  ul.list-checlist li {
+  ul.list-checklist li {
     position: relative; }
-    ul.list-checlist li:before {
+    ul.list-checklist li:before {
       background: #71C26A;
       border-radius: 50%;
       content: "";
@@ -10897,7 +10897,7 @@ ul.list-checlist {
       position: absolute;
       top: 0;
       width: 52px; }
-    ul.list-checlist li:after {
+    ul.list-checklist li:after {
       border-bottom: 5px solid #fff;
       border-left: 5px solid #fff;
       content: "";
