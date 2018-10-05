@@ -749,27 +749,30 @@ section {
 //
 // GForms
 //
-input,
-select,
-textarea {
-	border-radius: 0 !important;
-	font-size: 14px;
-	height: auto !important;
-	padding: 1rem !important;
-}
-.gfield_label {
-	display: none !important;
-}
-.form-group {
-	margin-bottom: 1.5rem;
-}
-.gform_footer {
-	padding-left: 1rem;
-	.gform_button {
-		padding-left: 3rem;
-		padding-right: 3rem;
+.gform_wrapper {
+	input,
+	select,
+	textarea {
+		border-radius: 0 !important;
+		font-size: 14px;
+		height: auto !important;
+		padding: 1rem !important;
+	}
+	.gfield_label {
+		display: none !important;
+	}
+	.form-group {
+		margin-bottom: 1.5rem;
+	}
+	.gform_footer {
+		padding-left: 1rem;
+		.gform_button {
+			padding-left: 3rem;
+			padding-right: 3rem;
+		}
 	}
 }
+
 //
 // Site Footer
 //
