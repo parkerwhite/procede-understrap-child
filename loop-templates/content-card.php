@@ -13,7 +13,7 @@
 
 		<div class="card-header">
 
-			<?php the_post_thumbnail( 'full', array( 'class' => 'object-fit-cover card-img-top' ) ); ?>
+			<?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'object-fit-cover' ) ); ?>
 
 		</div>
 

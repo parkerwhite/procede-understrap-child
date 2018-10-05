@@ -77,7 +77,7 @@ require get_stylesheet_directory() . '/inc/widgets.php';
 /**
  * Custom template tags for this theme.
  */
-// require get_stylesheet_directory() . '/inc/template-tags.php';
+require get_stylesheet_directory() . '/inc/template-tags.php';
 
 /**
  * Custom pagination for this theme.

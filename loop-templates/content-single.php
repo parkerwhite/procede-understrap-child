@@ -12,6 +12,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
+	<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+		<?php
+		if ( function_exists( 'bcn_display' ) ) {
+			bcn_display();
+		}?>
+	</div>
+
 	<header class="entry-header">
 
 		<?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'object-fit-cover' ) ); ?>
@@ -24,24 +31,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php the_content(); ?>
 
-		<?php
-		// wp_link_pages( array(
-		// 	'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-		// 	'after'  => '</div>',
-		// ) );
-		?>
-
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
 
-		<div class="entry-meta">
+		<div class="row">
 
-			<?php understrap_posted_on(); ?>
+			<div class="col"><?php understrap_entry_footer(); ?></div>
 
-		</div><!-- .entry-meta -->
+			<div class="col-12 col-md-auto">
+				<span class="social-icons">
+					<a href="http://www.linkedin.com/company/procede-software" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+					<a href="https://www.youtube.com/channel/UCLV7Lu6pQ5bD9UaSvTYTMBg" target="_blank"><i class="fab fa-youtube"></i></a>
+					<a href="https://twitter.com/procedesoftware" target="_blank"><i class="fab fa-twitter"></i></a>
+					<a href="http://www.facebook.com/pages/Procede-Software/196114337150947" target="_blank"><i class="fab fa-facebook-f"></i></a>
+				</span>
+			</div>
 
-		<?php understrap_entry_footer(); ?>
+		</div>
 
 	</footer><!-- .entry-footer -->
 

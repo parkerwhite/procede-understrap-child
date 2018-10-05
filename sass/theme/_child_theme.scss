@@ -43,6 +43,9 @@ h1 {
 	@include media-breakpoint-down('md') {
 		@include mobile-size( $h1-font-size );
 	}
+	&.entry-title {
+		@extend h2;
+	}
 }
 h2 {
 	letter-spacing: .025em;
@@ -828,6 +831,46 @@ section {
 		.gform_button {
 			padding-left: 3rem;
 			padding-right: 3rem;
+		}
+	}
+}
+
+//
+// Single
+//
+.entry-header {
+	img {
+		margin-bottom: 3rem;
+	}
+}
+
+.entry-footer {
+	border-bottom: 1px solid $gray-600;
+	border-top: 1px solid $gray-600;
+	padding-bottom: 1.375rem;
+	padding-top: 1.375rem;
+	.social-icons {
+		a {
+			border: 1px solid $gray-600;
+			border-radius: 50%;
+			color: $gray-600;
+			display: inline-block;
+			font-size: .825rem;
+			height: 1.875rem;
+			line-height: 1.875rem;
+			margin-bottom: .25rem;
+			text-align: center;
+			width: 1.875rem;
+
+			&:hover {
+				border-color: $dark;
+				color: $dark;
+			}
+			&:active,
+			&:focus {
+				border-color: $primary;
+				color: $primary;
+			}
 		}
 	}
 }
