@@ -658,6 +658,15 @@ section {
 	}
 }
 
+#home-wrapper {
+	.card-deck {
+		.card {
+			background: $gray-200;
+			box-shadow: none;
+		}
+	}
+}
+
 #leadership {
 	.card-deck {
 		.card {

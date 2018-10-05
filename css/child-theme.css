@@ -14577,6 +14577,11 @@ section {
     -ms-flex: 1 0 calc(25% - 2.25rem);
         flex: 1 0 calc(25% - 2.25rem); } }
 
+#home-wrapper .card-deck .card {
+  background: #F5F5F5;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
 #leadership .card-deck .card {
   -webkit-box-shadow: none;
           box-shadow: none;
