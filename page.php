@@ -24,16 +24,14 @@ $page_header_type = get_post_meta( get_the_ID(), 'page_header_type', true );
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
-<!-- 		<pre><?php var_dump(get_post_meta(get_the_ID())); ?></pre>
- -->
 		<?php
 
 		if ( class_exists('Advanced_Custom_Fields_Partials') ) {
 
 			$partials = new Advanced_Custom_Fields_Partials( $container );
 
-			if ( $partials->get_field( 'page_header_type' ) === 'hero' ) {
-				$partials->acf_partial_page_header( 'hero' );
+			if ( $partials->get_field( 'page_header_type' ) ) {
+				$partials->acf_partial_page_header( $partials->get_field( 'page_header_type' ) );
 			}
 
 			$partials->repeater( 'page_sections' );

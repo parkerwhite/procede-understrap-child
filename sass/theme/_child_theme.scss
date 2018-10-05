@@ -516,8 +516,24 @@ blockquote {
 		z-index: -1;
 	}
 
+	#header-content-wrapper {
+		background-color: $gray-200;
+		color: $gray-600;
+		padding-bottom: 6rem;
+		padding-top: 6rem;
+		@include media-breakpoint-down('md') {
+			padding-bottom: 4rem;
+			padding-top: 4rem;
+		}
+
+		.page-title {
+			font-weight: $font-weight-normal;
+		}
+		.page-subtitle {}
+	}
 	#header-hero-content-wrapper {
 		background-color: rgba($black, .65);
+		color: $white;
 		padding-bottom: 6rem;
 		padding-top: 6rem;
 		@include media-breakpoint-down('md') {

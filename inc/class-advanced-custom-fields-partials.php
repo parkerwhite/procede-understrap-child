@@ -129,15 +129,22 @@ class Advanced_Custom_Fields_Partials {
 
 		$container = $this->container;
 
-		$post_id   = get_the_ID();
+		$post_id   = get_the_ID(); ?>
 
-		if ( $style == 'hero' ) : ?>
 		
 		<section id="header-wrapper" class="wrapper <?php echo 'wrapper-' . $style; ?>">
 
-			<?php echo get_the_post_thumbnail( $post_id, 'full', array( 'class' => 'object-fit-cover' ) ); ?>
+			<?php if ( $style == 'hero' ) : ?>
 
-			<div id="header-hero-content-wrapper">
+				<?php echo get_the_post_thumbnail( $post_id, 'full', array( 'class' => 'object-fit-cover' ) ); ?>
+
+				<div id="header-hero-content-wrapper">
+			
+			<?php else : ?>
+
+				<div id="header-content-wrapper">
+
+			<?php endif; ?>
 
 				<div class="<?php echo esc_attr( $container ); ?>" id="" tabindex="-1">
 
@@ -145,7 +152,7 @@ class Advanced_Custom_Fields_Partials {
 
 						<div class="col-12 col-md-8 col-xl-8 offset-md-2 offset-xl-2 text-center">
 
-							<header class="page-header text-white">
+							<header class="page-header">
 
 								<?php if ( $this->get_field( 'page_title' ) ) { ?>
 									<h1 class="page-title"><?php echo $this->get_field( 'page_title', false ); ?></h1>
@@ -171,7 +178,7 @@ class Advanced_Custom_Fields_Partials {
 
 		</section>
 
-		<?php endif;
+		<?php
 	}
 
 	/**

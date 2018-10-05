@@ -17,6 +17,7 @@
             },
             "choices": {
                 "hero": "Hero with Image",
+                "plain": "Plain Header (Gray)",
                 "none": "No Header"
             },
             "default_value": [
@@ -42,6 +43,13 @@
                         "field": "field_5b984ef479a36",
                         "operator": "==",
                         "value": "hero"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5b984ef479a36",
+                        "operator": "==",
+                        "value": "plain"
                     }
                 ]
             ],
@@ -70,6 +78,13 @@
                         "operator": "==",
                         "value": "hero"
                     }
+                ],
+                [
+                    {
+                        "field": "field_5b984ef479a36",
+                        "operator": "==",
+                        "value": "plain"
+                    }
                 ]
             ],
             "wrapper": {
@@ -96,6 +111,13 @@
                         "field": "field_5b984ef479a36",
                         "operator": "==",
                         "value": "hero"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5b984ef479a36",
+                        "operator": "==",
+                        "value": "plain"
                     }
                 ]
             ],
@@ -128,5 +150,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1538695680
+    "modified": 1538778889
 }
