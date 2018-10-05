@@ -443,16 +443,23 @@ class Advanced_Custom_Fields_Partials {
 			for ($i = 0; $i < $slides; $i++) { 
 
 				$active       = ( $i == 0 ? 'active' : '' );
-				$post_id      = $this->get_field( $this->repeater_field . '_' . $key . '_slides_' . $i . '_posts', false );
-				$post         = get_post( $post_id );
-				$post_content = apply_filters( 'the_content', $post->post_content );
-				$post_image   = get_the_post_thumbnail( $post_id, 'post-thumbnail', array( 'class' => 'object-fit-cover' ) );
+				$is_custom    = $this->get_field( $this->repeater_field . '_' . $key . '_slides_' . $i . '_custom_content', false );
 
-				if ( get_post_type( $post_id ) === 'cpt-testimonials' ) {
-					$slide_content[] = sprintf( '<div class="carousel-item %1$s"><blockquote class="blockquote">%2$s<footer class="blockquote-footer">%3$s %4$s</footer></blockquote></div>', $active, $post_content, $post_image, get_the_title( $post_id ) );
+				if ( $is_custom ) {
+					$content         = $this->get_field( $this->repeater_field . '_' . $key . '_slides_' . $i . '_slide_content', false );
+					$slide_content[] = sprintf( '<div class="carousel-item %1$s">%2$s</div>', $active, apply_filters( 'the_content', $post_content ) );
 				} else {
-					$slide_content[] = sprintf( '<div class="carousel-item %1$s">%2$s</div>', $active, $post_content );
+					$post_id      = $this->get_field( $this->repeater_field . '_' . $key . '_slides_' . $i . '_posts', false );
+					$post         = get_post( $post_id );
+					$post_content = apply_filters( 'the_content', $post->post_content );
+					$post_image   = get_the_post_thumbnail( $post_id, 'post-thumbnail', array( 'class' => 'object-fit-cover' ) );
+					if ( get_post_type( $post_id ) === 'cpt-testimonials' ) {
+						$slide_content[] = sprintf( '<div class="carousel-item %1$s"><blockquote class="blockquote">%2$s<footer class="blockquote-footer">%3$s %4$s</footer></blockquote></div>', $active, $post_content, $post_image, get_the_title( $post_id ) );
+					} else {
+						$slide_content[] = sprintf( '<div class="carousel-item %1$s">%2$s</div>', $active, $post_content );
+					}
 				}
+
 
 				$slide_indicators[] = sprintf( '<li data-target="#carousel_%1$s" data-slide-to="%2$d" class="carousel-indicator %3$s"></li>', $rand_str, $i, $active );
 
