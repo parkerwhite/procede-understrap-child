@@ -663,6 +663,7 @@ section {
 		}
 	}
 }
+
 //
 // Carousel
 //
@@ -769,6 +770,14 @@ section {
 		border-bottom: 1px solid $gray-600;
 		margin-bottom: 3rem;
 		padding-top: 3rem;
+	}
+}
+.valuable-partners-slider {
+	.carousel-item {
+		img {
+			max-height: 80px
+			object-fit-contain;
+		}
 	}
 }
 

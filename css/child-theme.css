@@ -14677,6 +14677,9 @@ section {
   margin-bottom: 3rem;
   padding-top: 3rem; }
 
+.valuable-partners-slider .carousel-item img {
+  max-height: 80px object-fit-contain; }
+
 .gform_wrapper input,
 .gform_wrapper select,
 .gform_wrapper textarea {
