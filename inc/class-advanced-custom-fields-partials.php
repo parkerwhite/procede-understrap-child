@@ -129,8 +129,9 @@ class Advanced_Custom_Fields_Partials {
 
 		$container = $this->container;
 
-		$post_id   = get_the_ID(); ?>
+		$post_id   = get_the_ID(); 
 
+		if ( $style && $style !== 'none' ) : ?>
 		
 		<section id="header-wrapper" class="wrapper <?php echo 'wrapper-' . $style; ?>">
 
@@ -178,7 +179,7 @@ class Advanced_Custom_Fields_Partials {
 
 		</section>
 
-		<?php
+		<?php endif;
 	}
 
 	/**
