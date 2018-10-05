@@ -5,15 +5,13 @@
  * @package fareverse
  */
 
-$post_type = get_post_type( $post->ID );
-
 ?>
 
 <article <?php post_class( array( 'card' ) ); ?> id="post-<?php the_ID(); ?>">
 
-	<?php if ( has_post_thumbnail( $post->ID ) ) : ?>
+	<?php if ( has_post_thumbnail() ) : ?>
 
-		<?php $featured_img_url = get_the_post_thumbnail_url( $post->ID, 'large' ); ?>
+		<?php $featured_img_url = get_the_post_thumbnail_url( get_the_ID(), 'large' ); ?>
 
 		<div class="card-header">
 
