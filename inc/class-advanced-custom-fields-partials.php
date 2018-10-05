@@ -156,7 +156,7 @@ class Advanced_Custom_Fields_Partials {
 								<?php } ?>
 
 								<?php if ( $this->get_field( 'header_text' ) ) { ?>
-									<div class="page-description"><?php echo $this->get_field( 'header_text', false ); ?></div>
+									<div class="page-description"><?php echo do_shortcode( $this->get_field( 'header_text', false ) ); ?></div>
 								<?php } ?>
 
 							</header><!-- .page-header -->

@@ -254,7 +254,7 @@ blockquote {
 	}
 }
 #main-nav {
-	box-shadow: $box-shadow;
+	box-shadow: $box-shadow-sm;
 	height: 9.5rem;
 	padding: 0;
 
@@ -564,7 +564,7 @@ section {
 // Cards
 //
 .card {
-	box-shadow: 0 .625rem .9375rem rgba($black, .1);
+	box-shadow: $box-shadow;
 
 	.card-header {
 		background-color: transparent;
