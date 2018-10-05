@@ -4684,7 +4684,7 @@ input[type="button"].btn-block {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding: 0.5625rem; }
+  padding: 1.125rem; }
 
 .card-title {
   margin-bottom: 1.125rem; }
@@ -4700,10 +4700,10 @@ input[type="button"].btn-block {
   text-decoration: none; }
 
 .card-link + .card-link {
-  margin-left: 0.5625rem; }
+  margin-left: 1.125rem; }
 
 .card-header {
-  padding: 1.125rem 0.5625rem;
+  padding: 1.125rem 1.125rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(112, 112, 112, 0.5); }
@@ -4713,21 +4713,21 @@ input[type="button"].btn-block {
     border-top: 0; }
 
 .card-footer {
-  padding: 1.125rem 0.5625rem;
+  padding: 1.125rem 1.125rem;
   background-color: rgba(0, 0, 0, 0.03);
   border-top: 1px solid rgba(112, 112, 112, 0.5); }
   .card-footer:last-child {
     border-radius: 0 0 calc(0 - 1px) calc(0 - 1px); }
 
 .card-header-tabs {
-  margin-right: -0.28125rem;
+  margin-right: -0.5625rem;
   margin-bottom: -1.125rem;
-  margin-left: -0.28125rem;
+  margin-left: -0.5625rem;
   border-bottom: 0; }
 
 .card-header-pills {
-  margin-right: -0.28125rem;
-  margin-left: -0.28125rem; }
+  margin-right: -0.5625rem;
+  margin-left: -0.5625rem; }
 
 .card-img-overlay {
   position: absolute;
@@ -4760,15 +4760,15 @@ input[type="button"].btn-block {
       -ms-flex-direction: column;
           flex-direction: column; }
   .card-deck .card {
-    margin-bottom: 15px; }
+    margin-bottom: 0.5625rem; }
   @media (min-width: 576px) {
     .card-deck {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-flow: row wrap;
               flex-flow: row wrap;
-      margin-right: -15px;
-      margin-left: -15px; }
+      margin-right: -0.5625rem;
+      margin-left: -0.5625rem; }
       .card-deck .card {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -4780,9 +4780,9 @@ input[type="button"].btn-block {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-        margin-right: 15px;
+        margin-right: 0.5625rem;
         margin-bottom: 0;
-        margin-left: 15px; } }
+        margin-left: 0.5625rem; } }
 
 .card-group {
   display: -webkit-box;
@@ -14535,27 +14535,28 @@ section {
   @media (min-width: 768px) {
     .card {
       -webkit-box-flex: 1;
-          -ms-flex: 1 0 calc(50% - 1.125rem);
-              flex: 1 0 calc(50% - 1.125rem); } }
+          -ms-flex: 1 0 calc(50% - 2.25rem);
+              flex: 1 0 calc(50% - 2.25rem); } }
   @media (min-width: 1620px) {
     .card {
       -webkit-box-flex: 1;
-          -ms-flex: 1 0 calc(33.3% - 1.125rem);
-              flex: 1 0 calc(33.3% - 1.125rem); } }
+          -ms-flex: 1 0 calc(33.3% - 2.25rem);
+              flex: 1 0 calc(33.3% - 2.25rem); } }
   .card .card-header {
     background-color: transparent;
-    border-bottom: none;
-    padding: 1.125rem; }
+    border-bottom: none; }
     .card .card-header h2 {
       margin-bottom: 0; }
     .card .card-header .card-img-top {
       height: 18rem; }
   .card .card-body {
-    padding: 2rem; }
+    background-color: transparent;
+    padding-bottom: 2.025rem;
+    padding-top: 2.025rem; }
   .card .card-footer {
     background-color: transparent;
     border-top: none;
-    padding: 0 2rem 3rem; }
+    padding-bottom: 2.025rem; }
 
 #leadership .card-deck .card {
   -webkit-box-shadow: none;

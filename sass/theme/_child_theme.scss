@@ -612,7 +612,6 @@ section {
 	.card-header {
 		background-color: transparent;
 		border-bottom: none;
-		padding: 1.125rem;
 
 		h2 {
 			margin-bottom: 0;
@@ -624,13 +623,15 @@ section {
 	}
 
 	.card-body {
-		padding: 2rem;
+		background-color: transparent;
+		padding-bottom: #{$card-spacer-y * 1.8};
+		padding-top: #{$card-spacer-y * 1.8};
 	}
 
 	.card-footer {
 		background-color: transparent;
 		border-top: none;
-		padding: 0 2rem 3rem;
+		padding-bottom: #{$card-spacer-y * 1.8};
 	}
 }
 
