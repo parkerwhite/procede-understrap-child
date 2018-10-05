@@ -11553,12 +11553,6 @@ body {
     body {
       margin-top: 90px; } }
 
-:target {
-  display: block;
-  position: absolute;
-  top: -222px;
-  visibility: hidden; }
-
 body {
   letter-spacing: .01em; }
 
