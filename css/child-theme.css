@@ -14548,21 +14548,31 @@ section {
     border-top: none;
     padding-bottom: 2.025rem; }
 
-@media (min-width: 768px) {
-  .card-deck .card {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 40%;
-            flex: 1 0 40%;
-    -ms-flex: 1 0 calc(50% - 4.5rem);
-        flex: 1 0 calc(50% - 4.5rem); } }
+.card-deck .card {
+  margin-bottom: 1.125rem; }
+  @media (min-width: 768px) {
+    .card-deck .card {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 40%;
+              flex: 1 0 40%;
+      -ms-flex: 1 0 calc(50% - 4.5rem);
+          flex: 1 0 calc(50% - 4.5rem); } }
 
 @media (min-width: 1620px) {
-  .card-deck .card {
+  .card-deck[data-cols="3"] .card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 30%;
+            flex: 1 0 30%;
+    -ms-flex: 1 0 calc(33.3333% - 2.25rem);
+        flex: 1 0 calc(33.3333% - 2.25rem); } }
+
+@media (min-width: 1620px) {
+  .card-deck[data-cols="4"] .card {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 20%;
             flex: 1 0 20%;
-    -ms-flex: 1 0 calc(33.3% - 4.5rem);
-        flex: 1 0 calc(33.3% - 4.5rem); } }
+    -ms-flex: 1 0 calc(25% - 2.25rem);
+        flex: 1 0 calc(25% - 2.25rem); } }
 
 #leadership .card-deck .card {
   -webkit-box-shadow: none;
