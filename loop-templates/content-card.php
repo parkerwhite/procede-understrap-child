@@ -27,19 +27,13 @@ $post_type = get_post_type( $post->ID );
 
 		<?php the_title( '<h5 class="card-title">', '</h5>' ); ?>
 
-		<?php if ( has_excerpt() ) { ?>
-
-			<?php echo get_the_excerpt(); ?>
-
-		<?php } elseif ( has_more_tag() ) { ?>
-
-			<?php the_content(); ?>
-
-		<?php } else { ?>
-
-			<?php echo wp_trim_words( get_the_content(), 50, '...' ); ?>
-
-		<?php } ?>
+		<?php
+		if ( has_excerpt() ) {
+			echo get_the_excerpt();
+		} else {
+			echo wp_trim_words( get_the_content(), 50, '...' );
+		}
+		?>
 
 	</div><!-- .card-body -->
 
