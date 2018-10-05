@@ -156,7 +156,7 @@ class Advanced_Custom_Fields_Partials {
 								<?php } ?>
 
 								<?php if ( $this->get_field( 'header_text' ) ) { ?>
-									<div class="page-description"><?php echo do_shortcode( $this->get_field( 'header_text', false ) ); ?></div>
+									<div class="page-description"><?php echo apply_filters( 'the_content', html_entity_decode( do_shortcode( $this->get_field( 'header_text', false ) ) ) ); ?></div>
 								<?php } ?>
 
 							</header><!-- .page-header -->
@@ -213,7 +213,7 @@ class Advanced_Custom_Fields_Partials {
 
 							<h3 class="section-title"><?php _e( $section_title, 'understrap' ); ?></h3>
 
-							<?php echo apply_filters( 'the_content', $section_intro ); ?>
+							<?php echo apply_filters( 'the_content', html_entity_decode( $section_intro ) ); ?>
 
 						</div>
 
@@ -447,11 +447,11 @@ class Advanced_Custom_Fields_Partials {
 
 				if ( $is_custom ) {
 					$content         = $this->get_field( $this->repeater_field . '_' . $key . '_slides_' . $i . '_slide_content', false );
-					$slide_content[] = sprintf( '<div class="carousel-item %1$s">%2$s</div>', $active, apply_filters( 'the_content', $content ) );
+					$slide_content[] = sprintf( '<div class="carousel-item %1$s">%2$s</div>', $active, apply_filters( 'the_content', html_entity_decode( $content ) ) );
 				} else {
 					$post_id      = $this->get_field( $this->repeater_field . '_' . $key . '_slides_' . $i . '_posts', false );
 					$post         = get_post( $post_id );
-					$post_content = apply_filters( 'the_content', $post->post_content );
+					$post_content = apply_filters( 'the_content', html_entity_decode( $post->post_content ) );
 					$post_image   = get_the_post_thumbnail( $post_id, 'post-thumbnail', array( 'class' => 'object-fit-cover' ) );
 					if ( get_post_type( $post_id ) === 'cpt-testimonials' ) {
 						$slide_content[] = sprintf( '<div class="carousel-item %1$s"><blockquote class="blockquote">%2$s<footer class="blockquote-footer">%3$s %4$s</footer></blockquote></div>', $active, $post_content, $post_image, get_the_title( $post_id ) );
