@@ -325,6 +325,10 @@ blockquote {
 			&.show {
 				border-top-color: $primary;
 			}
+			&.dropdown-header {
+				font-size: inherit;
+				padding: inherit;
+			}
 			.nav-link {
 				padding: 0;
 			}

@@ -347,10 +347,10 @@ class Advanced_Custom_Fields_Partials {
 
 			<section class="section-row-w-columns <?php echo ( $split_background ? 'section-split-cols' : '' ); ?> <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> <?php echo ( esc_html( $section_css_class ) ); ?>" id="<?php echo ( $section_id ? $section_id : '' ); ?>">
 
-				<?php if ( ! $split_background ) { ?>
-					<div class="<?php echo esc_attr( $this->container ); ?>"><!-- .container -->
-				<?php } else { ?>
+				<?php if ( $split_background ) { ?>
 					<div class="container-fluid"><!-- .container -->
+				<?php } else { ?>
+					<div class="<?php echo esc_attr( $this->container ); ?>"><!-- .container -->
 				<?php } ?>
 
 					<?php if ( $section_title && ! $split_background ) { ?>
@@ -376,6 +376,12 @@ class Advanced_Custom_Fields_Partials {
 							$col_color     = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_column_color' );
 							$col_image     = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_column_image' );
 							$overwrite_css = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_overwrite_css' );
+							$col_style     = null;
+
+							if ( $col_image ) {
+								$image_src = wp_get_attachment_image_src( $col_image );
+								$col_style = sprintf( 'style="background-image:url(%1$s);background-repeat:no-repeat;background-size:cover;background-position:center;"', $image_src[0] );
+							}
 
 							if ( $overwrite_css && ! $split_background )
 								$col_widths = array();
@@ -392,7 +398,7 @@ class Advanced_Custom_Fields_Partials {
 
 							?>
 
-							<div class="<?php echo implode( " ", $col_widths ); ?> <?php echo $col_css; ?>">
+							<div class="<?php echo implode( " ", $col_widths ); ?> <?php echo $col_css; ?>" <?php echo $col_style; ?>>
 
 								<?php echo apply_filters( 'the_content', html_entity_decode( $content ) ); ?>
 

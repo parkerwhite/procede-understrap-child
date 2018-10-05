@@ -11832,6 +11832,9 @@ blockquote .blockquote-footer {
         margin-right: 0; }
       #main-nav .navbar-nav > .nav-item:hover, #main-nav .navbar-nav > .nav-item.show {
         border-top-color: #71C26A; }
+      #main-nav .navbar-nav > .nav-item.dropdown-header {
+        font-size: inherit;
+        padding: inherit; }
       #main-nav .navbar-nav > .nav-item .nav-link {
         padding: 0; }
     #main-nav .navbar-nav .current-menu-item {
