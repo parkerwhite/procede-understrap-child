@@ -772,6 +772,24 @@ section {
 		}
 	}
 }
+//
+// Tax widget
+//
+.list-custom-taxonomy-widget {
+	ul#lct-widget-post_tag {
+		list-style: none;
+		padding: 0;
+		li {
+			border: 1px solid $primary;
+			box-sizing: border-box;
+			color: $gray-600;
+			display: inline-block;
+			font-weight: $font-weight-bold;
+			padding: 10px 25px;
+			margin: 0 10px 10px 0;
+		}
+	}
+}
 
 //
 // Site Footer
