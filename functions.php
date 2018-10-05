@@ -46,6 +46,14 @@ function register_custom_nav_menus() {
 }
 add_action( 'after_setup_theme', 'register_custom_nav_menus' );
 
+function wpsites_exclude_latest_post( $query ) {
+    if ( $query->is_home() && $query->is_main_query() ) {
+        $query->set( 'offset', '1' );
+    }
+}
+
+add_action( 'pre_get_posts', 'wpsites_exclude_latest_post', 1 );
+
 /**
  * Initialize theme default settings
  */
