@@ -520,7 +520,7 @@ blockquote {
 		flex: 1 0 33.3%;
 		font-size: 25px;
 		font-weight: $font-weight-bold;
-		padding: 2.5rem;
+		padding: 2.5rem 1rem;
 		text-align: center;
 		&.active {
 			background-color: $primary;

@@ -18,11 +18,38 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 $container   = get_theme_mod( 'understrap_container_type' );
+
+$upload_dir = wp_upload_dir();
+
 ?>
 
-<?php if ( is_front_page() && is_home() ) : ?>
-	<?php get_template_part( 'global-templates/hero' ); ?>
-<?php endif; ?>
+<section id="header-wrapper" class="wrapper <?php echo 'wrapper-' . $style; ?>">
+
+	<img width="1920" height="435" src="<?php echo $upload_dir['baseurl']; ?>/2018/10/WHATS-NEW-HERO.png" class="object-fit-cover wp-post-image" alt="" sizes="(max-width: 1920px) 100vw, 1920px">
+
+	<div id="header-hero-content-wrapper">
+	
+		<div class="<?php echo esc_attr( $container ); ?>" id="" tabindex="-1">
+
+			<div class="row">
+
+				<div class="col-12 col-md-8 col-xl-8 offset-md-2 offset-xl-2 text-center">
+
+					<header class="page-header">
+
+						<h1 class="page-title">The latest <span class="text-primary">(and greatest)</span>span> news, features and announcements.</h1>
+
+					</header><!-- .page-header -->
+
+				</div>
+
+			</div>
+
+		</div><!-- .container -->
+
+	</div><!-- #header-hero-content-wrapper -->
+
+</section>
 
 <div class="wrapper" id="home-wrapper">
 

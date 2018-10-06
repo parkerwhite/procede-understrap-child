@@ -11968,7 +11968,7 @@ blockquote .blockquote-footer {
             flex: 1 0 33.3%;
     font-size: 25px;
     font-weight: 700;
-    padding: 2.5rem;
+    padding: 2.5rem 1rem;
     text-align: center; }
     .nav.nav-tabs .nav-link.active {
       background-color: #71C26A;
