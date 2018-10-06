@@ -515,13 +515,14 @@ blockquote {
 	.nav-link {
 		background-color: $gray-200;
 		border: 1px solid $gray-600;
+		border-radius: 0;
 		color: $gray-600;
 		flex: 1 0 33.3%;
 		font-size: 25px;
 		font-weight: $font-weight-bold;
 		padding: 2.5rem;
 		text-align: center;
-		.active {
+		&.active {
 			background-color: $primary;
 			border-color: $primary;
 			color: $white;
