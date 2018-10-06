@@ -506,6 +506,37 @@ blockquote {
 		}
 	}
 }
+
+//
+// Tabs
+//
+.nav.nav-tab {
+	box-shadow: $box-shadow-sm;
+	.nav-link {
+		background-color: $gray-200;
+		border: 1px solid $gray-600;
+		color: $gray-600;
+		flex: 1 0 33.3%;
+		font-size: 25px;
+		font-weight: $font-weight-bold;
+		padding: 2.5rem;
+		text-align: center;
+		.active {
+			background-color: $primary;
+			border-color: $primary;
+			color: $white;
+		}
+	}
+}
+.tab-content {
+	background-color: $white;
+	border-width: 1px;
+	border-style: solid;
+	border-color: $white $gray-600 $gray-600;
+	box-shadow: $box-shadow-sm;
+	padding: 3rem;
+}
+
 //
 // Hero
 //
