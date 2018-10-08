@@ -62,7 +62,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		</nav>
 
-		<nav id="main-nav" class="navbar sticky-top navbar-expand-lg navbar-light bg-white d-none d-lg-block">
+		<nav id="main-nav" class="navbar navbar-expand-lg navbar-light bg-white d-none d-lg-block">
 
 			<?php if ( 'container' == $container ) : ?>
 				<div class="container" >

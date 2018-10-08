@@ -11835,10 +11835,11 @@ blockquote .blockquote-footer {
         padding: 0; }
     #main-nav .navbar-nav .current-menu-item {
       color: #71C26A; }
-  @media (min-width: 1620px) {
-    #main-nav #main-menu-wrapper {
-      margin-left: 5rem;
-      max-width: 66.5rem; } }
+  #main-nav #main-menu-wrapper {
+    max-width: 66.5rem; }
+    @media (min-width: 1620px) {
+      #main-nav #main-menu-wrapper {
+        margin-left: 5rem; } }
   #main-nav #main-menu .dropdown-toggle:after {
     display: none; }
   #main-nav #main-menu > .dropdown:hover .dropdown-menu, #main-nav #main-menu > .dropdown.show .dropdown-menu {
@@ -14601,6 +14602,9 @@ section {
     padding-bottom: 2.025rem; }
 
 .card-deck .card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
   margin-bottom: 1.125rem; }
   @media (min-width: 768px) {
     .card-deck .card {
@@ -14630,14 +14634,14 @@ section {
   background: #F5F5F5;
   -webkit-box-shadow: none;
           box-shadow: none; }
-  #home-wrapper .card-deck .card .card-body {
+  #home-wrapper .card-deck .card .card-header + .card-body {
     padding-bottom: 0;
     padding-top: 0; }
-    #home-wrapper .card-deck .card .card-body h5 {
-      font-size: 1.25rem;
-      font-weight: 700; }
-    #home-wrapper .card-deck .card .card-body p {
-      font-size: 1.125rem; }
+  #home-wrapper .card-deck .card .card-body h5 {
+    font-size: 1.25rem;
+    font-weight: 700; }
+  #home-wrapper .card-deck .card .card-body p {
+    font-size: 1.125rem; }
 
 #leadership .card-deck .card {
   -webkit-box-shadow: none;

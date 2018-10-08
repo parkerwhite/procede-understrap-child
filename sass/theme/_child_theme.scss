@@ -336,9 +336,9 @@ blockquote {
 	}
 
 	#main-menu-wrapper {
+		max-width: 66.5rem;
 		@include media-breakpoint-up('xl') {
 			margin-left: 5rem;
-			max-width: 66.5rem;
 		}
 	}
 
@@ -696,6 +696,7 @@ section {
 }
 .card-deck {
 	.card {
+		flex: 1 0 100%;
 		margin-bottom: #{$card-deck-margin * 2};
 		@include media-breakpoint-up('md') { // 2 Cols
 			flex: 1 0 40%;
@@ -725,9 +726,13 @@ section {
 		.card {
 			background: $gray-200;
 			box-shadow: none;
+			.card-header {
+				+ .card-body {
+					padding-bottom: 0;
+					padding-top: 0;
+				}
+			}
 			.card-body {
-				padding-bottom: 0;
-				padding-top: 0;
 				h5 {
 					font-size: 1.25rem;
 					font-weight: $font-weight-bold;
