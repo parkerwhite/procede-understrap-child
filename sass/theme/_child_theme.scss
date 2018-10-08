@@ -945,6 +945,12 @@ section {
 //
 // Modals
 //
+.modal-dialog {
+	@include media-breakpoint-up('sm') {
+		width: 80vw;
+		width: calc(100vw - 4rem);
+	}
+}
 .modal-content {
 	border-radius: 0;
 	button.close {
