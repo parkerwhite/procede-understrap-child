@@ -71,7 +71,9 @@ h3 {
 			width: 38px;
 		}
 		img {
-			// max-height: 2rem;
+			max-height: 2rem;
+			width: auto;
+			max-width: 80%;
 		}
 	}
 }

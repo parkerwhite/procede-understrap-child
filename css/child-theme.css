@@ -11595,6 +11595,10 @@ h3 {
       position: relative;
       top: .5rem;
       width: 38px; }
+    h3.add-ons img {
+      max-height: 2rem;
+      width: auto;
+      max-width: 80%; }
 
 h4 {
   font-weight: 700;
