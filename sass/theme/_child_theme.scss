@@ -85,6 +85,11 @@ h4 {
 		@include mobile-size( $h4-font-size );
 	}
 }
+p {
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
 
 @each $color, $value in $theme-colors {
   hr.#{$color} {
@@ -717,8 +722,8 @@ section {
 
 	.card-body {
 		background-color: transparent;
-		padding-bottom: #{$card-spacer-y * 1.8};
-		padding-top: #{$card-spacer-y * 1.8};
+		// padding-bottom: #{$card-spacer-y * 1.8};
+		// padding-top: #{$card-spacer-y * 1.8};
 	}
 
 	.card-footer {
@@ -916,6 +921,7 @@ section {
 		font-size: 14px !important;
 		height: auto !important;
 		padding: 1rem !important;
+		-webkit-appearance: none;
 	}
 	.gfield_label {
 		display: none !important;
