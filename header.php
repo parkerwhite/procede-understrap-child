@@ -43,7 +43,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<?php get_template_part( 'searchform' ); ?>
 
-				<a href="#" class="btn btn-primary"><?php _e( 'Customer Login', 'understrap' ); ?></a>
+				<?php if ( has_nav_menu( 'topnav' ) ) {
+					$menu_items = array();
+					if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ 'topnav' ] ) ) {
+						$menu = get_term( $locations[ 'topnav' ] );
+						$menu_items = wp_get_nav_menu_items($menu->term_id);
+						foreach ($menu_items as $menu_item) { ?>
+							<a href="<?php echo $menu_item->url; ?>" class="btn <?php echo implode(" ", $menu_item->classes); ?>"><?php _e( $menu_item->title, 'understrap' ); ?></a>
+						<?php }
+					}
+				} ?>
+
+				
 
 			<?php if ( 'container' == $container ) : ?>
 				</div><!-- .container -->

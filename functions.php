@@ -4,6 +4,9 @@
 @ini_set( 'post_max_size', '64M');
 @ini_set( 'max_execution_time', '300' );
 
+if (! defined('TEXTDOMAIN') ) {
+    define("TEXTDOMAIN", "understrap");
+}
 
 function understrap_remove_scripts() {
     wp_dequeue_style( 'understrap-styles' );
@@ -43,6 +46,7 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 function register_custom_nav_menus() {
     register_nav_menu( 'mobile', __( 'Mobile Menu', 'understrap' ) );
+    register_nav_menu( 'topnav', __( 'Top Navbar', 'understrap' ) );
 }
 add_action( 'after_setup_theme', 'register_custom_nav_menus' );
 

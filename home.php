@@ -37,7 +37,7 @@ $upload_dir = wp_upload_dir();
 
 					<header class="page-header">
 
-						<h1 class="page-title">The latest <span class="text-primary">(and greatest)</span>span> news, features and announcements.</h1>
+						<h1 class="page-title"><?php echo sprintf( '%1$s <span class="text-primary">(%2$s)</span> %3$s.', __( 'The latest', 'understrap' ), __( 'and greatest', 'understrap' ), __( 'news, features and announcements', 'understrap' ) ); ?></h1>
 
 					</header><!-- .page-header -->
 
