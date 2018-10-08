@@ -14844,6 +14844,16 @@ section {
     .modal-content button.close:after {
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg); }
+    .modal-content button.close:not(:disabled):not(.disabled):focus, .modal-content button.close:not(:disabled):not(.disabled):hover {
+      opacity: 1; }
+    .modal-content button.close span {
+      bottom: 0;
+      color: transparent;
+      font-size: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0; }
   .modal-content .modal-title {
     font-weight: bold; }
 

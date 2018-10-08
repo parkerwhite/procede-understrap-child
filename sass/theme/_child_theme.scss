@@ -982,6 +982,19 @@ section {
 		&:after {
 			transform: rotate(-45deg);
 		}
+		&:not(:disabled):not(.disabled):focus,
+		&:not(:disabled):not(.disabled):hover {
+			opacity: 1;
+		}
+		span {
+			bottom: 0;
+			color: transparent;
+			font-size: 0;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
 	}
 	.modal-title {
 		font-weight: bold;
