@@ -11551,6 +11551,9 @@ body {
         top: 46px; } }
   @media (max-width: 1022.98px) {
     body {
+      margin-top: 161px; } }
+  @media (max-width: 767.98px) {
+    body {
       margin-top: 90px; } }
 
 body {
@@ -11912,6 +11915,9 @@ blockquote .blockquote-footer {
 
 #mobile-nav {
   height: 90px; }
+  #mobile-nav .navbar-brand img {
+    max-height: 74px;
+    width: auto; }
   #mobile-nav .navbar-toggler {
     border-color: transparent; }
   #mobile-nav .navbar-collapse {

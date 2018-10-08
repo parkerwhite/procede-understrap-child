@@ -97,10 +97,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<nav id="mobile-nav" class="navbar sticky-top navbar-expand-lg navbar-light bg-white d-block d-lg-none">
 
-			<?php if ( 'container' == $container ) : ?>
-				<div class="container" >
-			<?php endif; ?>
-
 			<div class="row justify-content-between align-items-center">
 
 				<div class="col-6">
@@ -146,10 +142,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'walker'          => new WP_Bootstrap_Navwalker(),
 					)
 				); ?>
-
-			<?php if ( 'container' == $container ) : ?>
-				</div><!-- .container -->
-			<?php endif; ?>
 
 		</nav><!-- .site-navigation -->
 
