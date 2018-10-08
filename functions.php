@@ -50,13 +50,52 @@ function register_custom_nav_menus() {
 }
 add_action( 'after_setup_theme', 'register_custom_nav_menus' );
 
-function wpsites_exclude_latest_post( $query ) {
-    if ( $query->is_home() && $query->is_main_query() ) {
-        $query->set( 'offset', '1' );
+add_action('pre_get_posts', 'myprefix_query_offset', 1 );
+function myprefix_query_offset(&$query) {
+
+    //Before anything else, make sure this is the right query...
+    if ( ! $query->is_home() ) {
+        return;
+    }
+
+    //First, define your desired offset...
+    $offset = 1;
+    
+    //Next, determine how many posts per page you want (we'll use WordPress's settings)
+    $ppp = get_option('posts_per_page');
+
+    //Next, detect and handle pagination...
+    if ( $query->is_paged ) {
+
+        //Manually determine page query offset (offset + current page (minus one) x posts per page)
+        $page_offset = $offset + ( ($query->query_vars['paged']-1) * $ppp );
+
+        //Apply adjust page offset
+        $query->set('offset', $page_offset );
+
+    }
+    else {
+
+        //This is the first page. Just use the offset...
+        $query->set('offset',$offset);
+
     }
 }
 
-add_action( 'pre_get_posts', 'wpsites_exclude_latest_post', 1 );
+add_filter('found_posts', 'myprefix_adjust_offset_pagination', 1, 2 );
+function myprefix_adjust_offset_pagination($found_posts, $query) {
+
+    //Define our offset again...
+    $offset = 1;
+
+    //Ensure we're modifying the right query object...
+    if ( $query->is_home() ) {
+        //Reduce WordPress's found_posts count by the offset... 
+        return $found_posts - $offset;
+    }
+    return $found_posts;
+}
+
 
 /**
  * Initialize theme default settings
