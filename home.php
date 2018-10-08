@@ -56,10 +56,11 @@ $upload_dir = wp_upload_dir();
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
 		<?php
+		$cat = get_category_by_slug( 'featured' );
 		$args = array(
 			'numberposts' => 1,
 			'offset' => 0,
-			'category' => 0,
+			'category' => $cat->term_id,
 			'orderby' => 'post_date',
 			'order' => 'DESC',
 			'include' => '',
@@ -70,25 +71,23 @@ $upload_dir = wp_upload_dir();
 			'post_status' => 'publish',
 			'suppress_filters' => true
 		);
-
-		$recent_posts = wp_get_recent_posts( $args, OBJECT );
-
+		$featured_posts = wp_get_recent_posts( $args, OBJECT );
 		?>
 
-		<?php foreach ($recent_posts as $recent_post) : $post_object = get_post( $recent_post->ID ); ?>
+		<?php foreach ($featured_posts as $featured_post) : $post_object = get_post( $featured_post->ID ); ?>
 
 			<div class="row mb-2">
 				
-				<?php if ( has_post_thumbnail( $recent_post->ID ) ) { ?>
+				<?php if ( has_post_thumbnail( $featured_post->ID ) ) { ?>
 					<div class="col-12 col-lg-6 order-12">
-						<?php echo get_the_post_thumbnail( $recent_post->ID, 'full', array( 'class' => 'object-fit-cover' ) ); ?>
+						<?php echo get_the_post_thumbnail( $featured_post->ID, 'full', array( 'class' => 'object-fit-cover' ) ); ?>
 					</div>
 				<?php } ?>
 
 				<div class="col-12 col-lg-6 order-1">
-					<h2><?php echo get_the_title( $recent_post->ID ); ?></h2>
+					<h2><?php echo get_the_title( $featured_post->ID ); ?></h2>
 					<?php echo apply_filters( 'the_content', wp_trim_words( $post_object->post_content, 50, '...' ) ); ?>
-					<p class="text-right"><a href="<?php echo get_permalink( $recent_post->ID ); ?>" class="btn btn-primary"><?php echo __( 'Read More', 'understrap' ); ?></a></p>
+					<p class="text-right"><a href="<?php echo get_permalink( $featured_post->ID ); ?>" class="btn btn-primary"><?php echo __( 'Read More', 'understrap' ); ?></a></p>
 				</div>
 
 			</div>
