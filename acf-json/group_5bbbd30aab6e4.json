@@ -1,6 +1,6 @@
 {
     "key": "group_5bbbd30aab6e4",
-    "title": "Team Members",
+    "title": "Team Member Details",
     "fields": [
         {
             "key": "field_5bbbd338c18de",
@@ -54,6 +54,21 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
+                },
+                {
+                    "key": "field_5bbbdddfb2c15",
+                    "label": "LinkedIn Profile URL",
+                    "name": "linkedin_profile_url",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url"
                 }
             ]
         }
@@ -75,5 +90,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1539036034
+    "modified": 1539038757
 }
