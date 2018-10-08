@@ -456,8 +456,12 @@ blockquote {
 		border-color: transparent;
 	}
 	.navbar-collapse {
-		position: absolute;
+		bottom: 0;
+		height: 100vh;
+		height: calc(100vh - 90px);
 		left: 0;
+		overflow-y: scroll;
+		position: absolute;
 		right: 0;
 		top: 90px;
 	}
@@ -514,6 +518,9 @@ blockquote {
 			}
 		}
 	}
+}
+body.admin-bar #mobile-nav .navbar-collapse {
+		height: calc(100vh - 136px);
 }
 
 //
@@ -898,6 +905,17 @@ section {
 		}
 	}
 }
+
+//
+// Insider Program
+//
+#insider-program {
+	background-image: url(/wp-content/uploads/2018/10/InsiderProgram.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 
 //
 // Single

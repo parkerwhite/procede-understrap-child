@@ -11922,8 +11922,12 @@ blockquote .blockquote-footer {
   #mobile-nav .navbar-toggler {
     border-color: transparent; }
   #mobile-nav .navbar-collapse {
-    position: absolute;
+    bottom: 0;
+    height: 100vh;
+    height: calc(100vh - 90px);
     left: 0;
+    overflow-y: scroll;
+    position: absolute;
     right: 0;
     top: 90px; }
   #mobile-nav #mobile-menu {
@@ -11961,6 +11965,9 @@ blockquote .blockquote-footer {
     border-right: .3em solid transparent;
     border-top: 0;
     border-left: .3em solid transparent; }
+
+body.admin-bar #mobile-nav .navbar-collapse {
+  height: calc(100vh - 136px); }
 
 .nav.nav-tabs {
   -webkit-box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.16);
@@ -14770,6 +14777,12 @@ section {
   .gform_wrapper .gform_footer .gform_button {
     padding-left: 3rem;
     padding-right: 3rem; }
+
+#insider-program {
+  background-image: url(/wp-content/uploads/2018/10/InsiderProgram.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .entry-header img {
   margin-bottom: 3rem; }
