@@ -9,6 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+add_filter( 'widget_text', 'do_shortcode' );
+
 add_action( 'widgets_init', 'understrap_widgets_init' );
 
 if ( ! function_exists( 'understrap_widgets_init' ) ) {
