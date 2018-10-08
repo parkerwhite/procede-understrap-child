@@ -11663,6 +11663,9 @@ ul.list-checklist {
               transform: rotate(-45deg);
       width: 32px; }
 
+.text-linkedin {
+  color: #0077B5; }
+
 .bg-gray-clip {
   background: #F7F7F7;
   background: -webkit-gradient(linear, left top, left bottom, from(#F7F7F7), color-stop(75%, #F7F7F7), color-stop(75%, #fff), to(#fff));
@@ -14818,6 +14821,8 @@ section {
     text-align: center;
     top: -30px;
     width: 60px; }
+  .modal-content .modal-title {
+    font-weight: bold; }
 
 .entry-header img {
   margin-bottom: 3rem; }
