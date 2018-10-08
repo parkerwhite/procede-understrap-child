@@ -5546,7 +5546,7 @@ button.close {
 
 @media (min-width: 576px) {
   .modal-dialog {
-    max-width: 500px;
+    max-width: 1300px;
     margin: 1.75rem auto; }
   .modal-dialog-centered {
     min-height: calc(100% - (1.75rem * 2)); }
@@ -5557,7 +5557,7 @@ button.close {
 
 @media (min-width: 1025px) {
   .modal-lg {
-    max-width: 800px; } }
+    max-width: 1600px; } }
 
 .tooltip {
   position: absolute;
@@ -14803,6 +14803,20 @@ section {
   .gform_wrapper .gform_footer .gform_button {
     padding-left: 3rem;
     padding-right: 3rem; }
+
+.modal-content {
+  border-radius: 0; }
+  .modal-content button.close {
+    background-color: #fff;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0.625rem 0.9375rem rgba(112, 112, 112, 0.5);
+            box-shadow: 0 0.625rem 0.9375rem rgba(112, 112, 112, 0.5);
+    height: 60px;
+    position: absolute;
+    right: -30px;
+    text-align: center;
+    top: -30px;
+    width: 60px; }
 
 .entry-header img {
   margin-bottom: 3rem; }

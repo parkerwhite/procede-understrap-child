@@ -938,6 +938,23 @@ section {
 	}
 }
 
+//
+// Modals
+//
+.modal-content {
+	border-radius: 0;
+	button.close {
+		background-color: $white;
+		border-radius: 50%;
+		box-shadow: $box-shadow;
+		height: 60px;
+		position: absolute;
+		right: -30px;
+		text-align: center;
+		top: -30px;
+		width: 60px;
+	}
+}
 
 //
 // Single
