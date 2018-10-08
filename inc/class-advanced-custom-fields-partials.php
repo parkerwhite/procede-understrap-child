@@ -340,7 +340,7 @@ class Advanced_Custom_Fields_Partials {
 		$col_widths        = array( 'col-12' );
 
 		if ( $background_image ) {
-			$section_bg_img = wp_get_attachment_image_src( $background_image );
+			$section_bg_img = wp_get_attachment_image_src( $background_image, 'full' );
 			$section_css_class .= " section-w-background-image";
 			$section_color = 'transparent';
 		}
@@ -397,7 +397,7 @@ class Advanced_Custom_Fields_Partials {
 								$col_style     = null;
 
 								if ( $col_image ) {
-									$image_src = wp_get_attachment_image_src( $col_image );
+									$image_src = wp_get_attachment_image_src( $col_image, 'full' );
 									$col_style = sprintf( 'style="background-image:url(%1$s);background-repeat:no-repeat;background-size:cover;background-position:center;"', $image_src[0] );
 								}
 
