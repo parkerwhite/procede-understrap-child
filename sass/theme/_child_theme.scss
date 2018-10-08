@@ -951,6 +951,7 @@ section {
 		background-color: $white;
 		border-radius: 50%;
 		box-shadow: $box-shadow-sm;
+		color: transparent;
 		height: 60px;
 		opacity: 1;
 		position: absolute;
@@ -959,14 +960,15 @@ section {
 		top: -30px;
 		width: 60px;
 		&:before, &:after {
+			background: $gray-600;;
 			content: '';
-			position: absolute;
 			height: 2px;
-			width: 100%;
-			top: 50%;
-			left: 0;
+			left: 50%;
+			margin-left: -20px;
 			margin-top: -1px;
-			background: $black;;
+			position: absolute;
+			top: 50%;
+			width: 40px;
 		}
 		&:before {
 			transform: rotate(45deg);
