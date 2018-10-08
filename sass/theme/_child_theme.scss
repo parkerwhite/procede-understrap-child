@@ -704,7 +704,7 @@ section {
 	}
 	&[data-cols="3"] {
 		.card {
-			@include media-breakpoint-up('xl') { // 3 Cols
+			@include media-breakpoint-up('lg') { // 3 Cols
 				flex: 1 0 30%;
 				flex: 1 0 calc(33.3333% - #{$card-spacer-x * 2});
 			}		
@@ -712,7 +712,7 @@ section {
 	}
 	&[data-cols="4"] {
 		.card {
-			@include media-breakpoint-up('xl') { // 4 Cols
+			@include media-breakpoint-up('lg') { // 4 Cols
 				flex: 1 0 20%;
 				flex: 1 0 calc(25% - #{$card-spacer-x * 2});
 			}		
