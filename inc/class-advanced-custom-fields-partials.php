@@ -332,11 +332,18 @@ class Advanced_Custom_Fields_Partials {
 		$section_color     = $this->get_field( $this->repeater_field . '_' . $key . '_section_color', false );
 		$section_title     = $this->get_field( $this->repeater_field . '_' . $key . '_section_title', false );
 		$section_id        = $this->get_field( $this->repeater_field . '_' . $key . '_section_id' );
+		$background_image  = $this->get_field( $this->repeater_field . '_' . $key . '_section_background_image' );
 		$row_css_class     = $this->get_field( $this->repeater_field . '_' . $key . '_row_css_class' );
 		$split_background  = $this->get_field( $this->repeater_field . '_' . $key . '_split_background', false );
 		$columns           = $this->get_field( $this->repeater_field . '_' . $key . '_columns', false );
 		$cols_per_row      = $this->get_field( $this->repeater_field . '_' . $key . '_columns_per_row', false );
 		$col_widths        = array( 'col-12' );
+
+		if ( $background_image ) {
+			$section_bg_img = wp_get_attachment_image_src( $background_image );
+			$section_css_class .= " section-w-background-image";
+			$section_color = 'transparent';
+		}
 
 		if ( $split_background ) {
 			$col_widths[]  = 'col-split';
@@ -344,8 +351,6 @@ class Advanced_Custom_Fields_Partials {
 		} else {
 			$col_widths[]  = ( $cols_per_row > 0 ? 'col-md-' . ( 12 / $cols_per_row ) : 'col-md-auto' );
 		}
-
-
 
 		if ( $columns ): 
 
@@ -355,68 +360,78 @@ class Advanced_Custom_Fields_Partials {
 
 			<section class="section-row-w-columns <?php echo ( $split_background ? 'section-split-cols' : '' ); ?> <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> <?php echo ( esc_html( $section_css_class ) ); ?>" id="<?php echo ( $section_id ? $section_id : '' ); ?>">
 
-				<?php if ( $split_background ) { ?>
-					<div class="container-fluid"><!-- .container -->
-				<?php } else { ?>
-					<div class="<?php echo esc_attr( $this->container ); ?>"><!-- .container -->
+				<?php if ( $background_image ) { ?>
+					<img src="<?php echo $section_bg_img[0]; ?>" class="object-fit-cover section-background-image">
+					<div class="background-image-overlay">
 				<?php } ?>
 
-					<?php if ( $section_title && ! $split_background ) { ?>
-
-						<div class="row justify-content-center">
-
-							<div class="col-12 text-center">
-
-								<h2 class="section-title"><?php echo $section_title; ?></h2>
-
-							</div>
-
-						</div>
-
+					<?php if ( $split_background ) { ?>
+						<div class="container-fluid"><!-- .container -->
+					<?php } else { ?>
+						<div class="<?php echo esc_attr( $this->container ); ?>"><!-- .container -->
 					<?php } ?>
 
-					<div class="row <?php echo ( esc_html( $row_css_class ) ); ?>" data-cols="<?php echo $cols_per_row; ?>">
+						<?php if ( $section_title && ! $split_background ) { ?>
 
-						<?php for ( $i = 0; $i < $columns; $i++ ) {
+							<div class="row justify-content-center">
 
-							$content       = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_content' );
-							$col_css       = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_css_class' );
-							$col_color     = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_column_color' );
-							$col_image     = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_column_image' );
-							$overwrite_css = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_overwrite_css' );
-							$col_style     = null;
+								<div class="col-12 text-center">
 
-							if ( $col_image ) {
-								$image_src = wp_get_attachment_image_src( $col_image );
-								$col_style = sprintf( 'style="background-image:url(%1$s);background-repeat:no-repeat;background-size:cover;background-position:center;"', $image_src[0] );
-							}
+									<h2 class="section-title"><?php echo $section_title; ?></h2>
 
-							if ( $overwrite_css && ! $split_background )
-								$col_widths = array();
-
-							if ( $col_color && $split_background )
-								$col_css .= ' bg-' . $col_color;
-
-							if ( $cols_per_row > 0 && $split_background ) :
-								if ( ( $i + 1 ) % $cols_per_row === 0 )
-									$col_css .= ' col-split-end';
-								if ( $i % $cols_per_row === 0 )
-									$col_css .= ' col-split-start';
-							endif;
-
-							?>
-
-							<div class="<?php echo implode( " ", $col_widths ); ?> <?php echo $col_css; ?>" <?php echo $col_style; ?>>
-
-								<?php echo apply_filters( 'the_content', html_entity_decode( $content ) ); ?>
+								</div>
 
 							</div>
 
 						<?php } ?>
 
-					</div>
+						<div class="row <?php echo ( esc_html( $row_css_class ) ); ?>" data-cols="<?php echo $cols_per_row; ?>">
 
-				</div><!-- /.container -->
+							<?php for ( $i = 0; $i < $columns; $i++ ) {
+
+								$content       = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_content' );
+								$col_css       = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_css_class' );
+								$col_color     = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_column_color' );
+								$col_image     = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_column_image' );
+								$overwrite_css = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_overwrite_css' );
+								$col_style     = null;
+
+								if ( $col_image ) {
+									$image_src = wp_get_attachment_image_src( $col_image );
+									$col_style = sprintf( 'style="background-image:url(%1$s);background-repeat:no-repeat;background-size:cover;background-position:center;"', $image_src[0] );
+								}
+
+								if ( $overwrite_css && ! $split_background )
+									$col_widths = array();
+
+								if ( $col_color && $split_background )
+									$col_css .= ' bg-' . $col_color;
+
+								if ( $cols_per_row > 0 && $split_background ) :
+									if ( ( $i + 1 ) % $cols_per_row === 0 )
+										$col_css .= ' col-split-end';
+									if ( $i % $cols_per_row === 0 )
+										$col_css .= ' col-split-start';
+								endif;
+
+								?>
+
+								<div class="<?php echo implode( " ", $col_widths ); ?> <?php echo $col_css; ?>" <?php echo $col_style; ?>>
+
+									<?php echo apply_filters( 'the_content', html_entity_decode( $content ) ); ?>
+
+								</div>
+
+							<?php } ?>
+
+						</div>
+
+					</div><!-- /.container -->
+
+				<?php if ( $background_image ) { ?>
+					</div><!-- /.background-image-overlay -->
+				<?php } ?>
+
 
 			</section>
 

@@ -148,6 +148,26 @@ img.object-fit-cover {
 	object-fit: cover;
 	width: 100%;
 }
+section.section-w-background-image {
+	background-color: transparent;
+	color: $white;
+	padding-bottom: 0;
+	padding-top: 0;
+	img.section-background-image {
+		bottom: 0;
+		left: 0;
+		right: 0;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		z-index: -1;
+	}
+	.background-image-overlay {
+		padding-bottom: 3.125rem;
+		padding-top: 3.125rem;
+		background-color: rgba($black, .65);
+	}
+}
 
 //
 // Blockquote
@@ -609,6 +629,7 @@ body.admin-bar #mobile-nav .navbar-collapse {
 section {
 	padding-bottom: 3.125rem;
 	padding-top: 3.125rem;
+	position: relative;
 
 	&.section-split-cols {
 		padding-bottom: 0;
