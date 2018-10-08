@@ -5518,7 +5518,7 @@ button.close {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding: 1rem; }
+  padding: 2rem; }
 
 .modal-footer {
   display: -webkit-box;
@@ -5530,7 +5530,7 @@ button.close {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 1rem;
+  padding: 2rem;
   border-top: 1px solid #F5F5F5; }
   .modal-footer > :not(:first-child) {
     margin-left: .25rem; }
@@ -11664,7 +11664,8 @@ ul.list-checklist {
       width: 32px; }
 
 .text-linkedin {
-  color: #0077B5; }
+  color: #0077B5;
+  font-size: 1.8rem; }
 
 .bg-gray-clip {
   background: #F7F7F7;
