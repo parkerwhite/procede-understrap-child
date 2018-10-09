@@ -134,7 +134,7 @@ ul {
 }
 .text-linkedin {
 	color: #0077B5;
-	font-size: 1.8rem;
+	font-size: #{$font-size-base * 1.285714286}; // 1.8rem;
 }
 
 
@@ -183,7 +183,7 @@ section.section-w-background-image {
 //
 blockquote {
 	.blockquote-footer {
-		font-size: 1.25rem;
+		font-size: #{$font-size-base * 0.892857143}; // 1.25rem;
 
 		&:before {
 			display: none;
@@ -453,7 +453,7 @@ blockquote {
 					.dropdown-item {
 						background-color: transparent;
 						color: $gray-600;
-						font-size: 1.25rem;
+						font-size: #{$font-size-base * 0.892857143}; // 1.25rem;
 						&:hover {
 							background-color: transparent;
 							color: $dark;
@@ -568,7 +568,7 @@ body.admin-bar #mobile-nav .navbar-collapse {
 		border-radius: 0;
 		color: $gray-600;
 		flex: 1 0 33.3%;
-		font-size: 25px;
+		font-size: 1.5625rem; // 25px;
 		font-weight: $font-weight-bold;
 		padding: 2.5rem 1rem;
 		text-align: center;
@@ -776,11 +776,11 @@ section {
 			}
 			.card-body {
 				h5 {
-					font-size: 1.25rem;
+					font-size: #{$font-size-base * 0.892857143}; // 1.25rem;
 					font-weight: $font-weight-bold;
 				}
 				p {
-					font-size: 1.125rem;
+					font-size: #{$font-size-base * 0.803571429}; // 1.125rem;
 				}
 			}
 		}
@@ -922,7 +922,7 @@ section {
 	select,
 	textarea {
 		border-radius: 0 !important;
-		font-size: 14px !important;
+		font-size: 0.875rem !important; // 14px
 		height: auto !important;
 		padding: 1rem !important;
 		-webkit-appearance: none;
@@ -1153,7 +1153,7 @@ section {
 		padding-top: 1.375rem;
 
 		p {
-			font-size: 1rem;
+			font-size: #{$font-size-base * 0.727272727}; // 1rem;
 			line-height: 1.1875rem;
 			margin-bottom: 0;
 		}
