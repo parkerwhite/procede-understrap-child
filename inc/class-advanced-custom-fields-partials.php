@@ -129,7 +129,12 @@ class Advanced_Custom_Fields_Partials {
 
 		$container = $this->container;
 
-		$post_id   = get_the_ID(); 
+		$post_id   = get_the_ID();
+
+		// var_dump(get_post_meta( $post_id ));
+
+		$css_classes_page_header_row_css    = get_post_meta( $post_id, 'css_classes_page_header_row_css', true );
+		$css_classes_page_header_column_css = get_post_meta( $post_id, 'css_classes_page_header_column_css', true );
 
 		if ( $style && $style !== 'none' ) : ?>
 		
@@ -149,9 +154,9 @@ class Advanced_Custom_Fields_Partials {
 
 				<div class="<?php echo esc_attr( $container ); ?>" id="" tabindex="-1">
 
-					<div class="row">
+					<div class="row <?php echo ( $css_classes_page_header_row_css ? $css_classes_page_header_row_css : 'align-items-center justify-content-center' ); ?>">
 
-						<div class="col-12 col-md-8 col-xl-8 offset-md-2 offset-xl-2 text-center">
+						<div class="col-12 text-center <?php echo ( $css_classes_page_header_column_css ? $css_classes_page_header_column_css : 'col-md-8' ); ?>">
 
 							<header class="page-header">
 
