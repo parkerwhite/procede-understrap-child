@@ -49,7 +49,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						$menu = get_term( $locations[ 'topnav' ] );
 						$menu_items = wp_get_nav_menu_items($menu->term_id);
 						foreach ($menu_items as $menu_item) { ?>
-							<a href="<?php echo $menu_item->url; ?>" class="btn <?php echo implode(" ", $menu_item->classes); ?>"><?php _e( $menu_item->title, 'understrap' ); ?></a>
+							<a href="<?php echo $menu_item->url; ?>" class="btn <?php echo implode(" ", $menu_item->classes); ?>" target="<?php echo $menu_item->target; ?>"><?php _e( $menu_item->title, 'understrap' ); ?></a>
 						<?php }
 					}
 				} ?>

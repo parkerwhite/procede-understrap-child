@@ -488,7 +488,10 @@ class Advanced_Custom_Fields_Partials {
 					$post_content = apply_filters( 'the_content', html_entity_decode( $post->post_content ) );
 					$post_image   = get_the_post_thumbnail( $post_id, 'post-thumbnail', array( 'class' => 'object-fit-cover' ) );
 					if ( get_post_type( $post_id ) === 'cpt-testimonials' ) {
-						$slide_content[] = sprintf( '<div class="carousel-item %1$s"><blockquote class="blockquote">%2$s<footer class="blockquote-footer">%3$s %4$s</footer></blockquote></div>', $active, $post_content, $post_image, get_the_title( $post_id ) );
+						$provided_by  = get_post_meta( $post_id, 'testimonial_provided_by', true );
+						$job_title    = get_post_meta( $post_id, 'testimonial_job_title', true );
+						$dealership   = get_post_meta( $post_id, 'testimonial_dealership', true );
+						$slide_content[] = sprintf( '<div class="carousel-item %1$s"><blockquote class="blockquote">%2$s<footer class="blockquote-footer">%3$s %4$s - <cite title="Source Title">%5$s at %6$s</cite></footer></blockquote></div>', $active, $post_content, $post_image, $provided_by, $job_title, $dealership );
 					} else {
 						$slide_content[] = sprintf( '<div class="carousel-item %1$s">%2$s</div>', $active, $post_content );
 					}
