@@ -1158,11 +1158,11 @@ section {
 			color: $gray-600;
 			display: inline-block;
 			font-size: #{$font-size-base * 1.181818};
-			height: #{$font-size-base * 2.727272};
-			line-height: #{$font-size-base * 2.727272};
+			height: #{$font-size-base * 2.181818};
+			line-height: #{$font-size-base * 2.181818};
 			margin-bottom: .25rem;
 			text-align: center;
-			width: #{$font-size-base * 2.727272};
+			width: #{$font-size-base * 2.181818};
 
 			&:hover {
 				border-color: $dark;
