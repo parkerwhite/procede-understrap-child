@@ -104,6 +104,18 @@ p {
 	.min-height-#{$i} {
 		min-height: #{$i * $spacer};
 	}
+	@each $breakpoint, $value in $grid-breakpoints {
+		.height-#{$breakpoint}-#{$i} {
+			@include media-breakpoint-up("#{$breakpoint}") {
+				height: #{$i * $spacer};
+			}
+		}
+		.min-height-#{$breakpoint}-#{$i} {
+			@include media-breakpoint-up("#{$breakpoint}") {
+				min-height: #{$i * $spacer};
+			}
+		}
+	}
 }
 
 //
@@ -131,12 +143,12 @@ ul {
 				border-left: 5px solid $white;
 				content: "";
 				display: block;
-				height: 18px;
-				left: -5rem;
+				height: 16px;
+				left: -5.1rem;
 				position: absolute;
 				top: 13px;
 				transform: rotate(-45deg);
-				width: 32px;
+				width: 28px;
 			}
 		}
 	}
@@ -193,6 +205,7 @@ section.section-w-background-image {
 blockquote {
 	.blockquote-footer {
 		font-size: #{$font-size-base * 0.892857143}; // 1.25rem;
+		margin-top: 1rem;
 
 		&:before {
 			display: none;
@@ -405,6 +418,7 @@ blockquote {
 			// Mega Menu wrapper
 			> .dropdown-menu { // ul
 				border: none;
+				border-top: 1px solid $gray-100;
 				box-shadow: $box-shadow;
 				// flex: 0 0 25%;
 				left: -8.5rem;
@@ -418,18 +432,18 @@ blockquote {
 				// }
 				&:before {
 					background-color: $white;
-					border-top: #{$font-size-base * .909090} solid #fff;
-					border-right: #{$font-size-base * .909090} solid #fff;
-					border-left: #{$font-size-base * .909090} solid transparent;
-					border-bottom: #{$font-size-base * .909090} solid transparent;
+					border-top: 1px solid $gray-100; // #{$font-size-base * .909090} solid #fff;
+					border-right: 1px solid $gray-100; // #{$font-size-base * .909090} solid #fff;
+					// border-left: #{$font-size-base * .909090} solid transparent;
+					// border-bottom: #{$font-size-base * .909090} solid transparent;
 					content: "";
 					display: block;
-					height: 0;
+					height: #{$font-size-base * 1.181818};
 					left: 10rem;
 					position: absolute;
 					top: -#{$font-size-base * .909090};
-					transform: rotate(45deg);
-					width: 0;
+					transform: rotate(-45deg);
+					width: #{$font-size-base * 1.181818};
 				}
 				.dropdown-header {
 					color: $dark;
@@ -917,11 +931,16 @@ section {
 	}
 }
 //
-// customer-profiles
+// custom carousels
 //
+#home_testimonials {
+	.carousel {
+		min-height: 12rem;
+	}
+}
 #customer-profiles {
 	.w-100 {
-		border-bottom: 1px solid $gray-600;
+		border-bottom: 1px solid $gray-200;
 		margin-bottom: 3rem;
 		padding-top: 3rem;
 	}
@@ -1110,15 +1129,15 @@ section {
 	.social-icons {
 		a {
 			border: 1px solid $gray-600;
-			border-radius: 1.875rem;
+			border-radius: 50%;
 			color: $gray-600;
 			display: inline-block;
-			font-size: 1.625rem;
-			height: 3.75rem;
-			line-height: 3.75rem;
+			font-size: #{$font-size-base * 1.181818};
+			height: #{$font-size-base * 2.727272};
+			line-height: #{$font-size-base * 2.727272};
 			margin-bottom: .25rem;
 			text-align: center;
-			width: 3.75rem;
+			width: #{$font-size-base * 2.727272};
 
 			&:hover {
 				border-color: $dark;
