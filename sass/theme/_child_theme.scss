@@ -97,7 +97,7 @@ p {
   }
 }
 
-@for $i from 1 through 10 {
+@for $i from 1 through 20 {
 	.height-#{$i} {
 		height: #{$i * $spacer};
 	}
@@ -913,7 +913,7 @@ section {
 .carousel-inner {
 	height: 100%;
 	.carousel-item {
-		min-height: #{$font-size-base * 9.090909};
+		// min-height: #{$font-size-base * 9.090909};
 	}
 }
 //

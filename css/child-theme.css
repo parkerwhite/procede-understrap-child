@@ -11695,6 +11695,66 @@ hr.dark {
 .min-height-10 {
   min-height: 8.33333rem; }
 
+.height-11 {
+  height: 9.16666rem; }
+
+.min-height-11 {
+  min-height: 9.16666rem; }
+
+.height-12 {
+  height: 10.0rem; }
+
+.min-height-12 {
+  min-height: 10.0rem; }
+
+.height-13 {
+  height: 10.83333rem; }
+
+.min-height-13 {
+  min-height: 10.83333rem; }
+
+.height-14 {
+  height: 11.66666rem; }
+
+.min-height-14 {
+  min-height: 11.66666rem; }
+
+.height-15 {
+  height: 12.5rem; }
+
+.min-height-15 {
+  min-height: 12.5rem; }
+
+.height-16 {
+  height: 13.33333rem; }
+
+.min-height-16 {
+  min-height: 13.33333rem; }
+
+.height-17 {
+  height: 14.16666rem; }
+
+.min-height-17 {
+  min-height: 14.16666rem; }
+
+.height-18 {
+  height: 14.99999rem; }
+
+.min-height-18 {
+  min-height: 14.99999rem; }
+
+.height-19 {
+  height: 15.83333rem; }
+
+.min-height-19 {
+  min-height: 15.83333rem; }
+
+.height-20 {
+  height: 16.66666rem; }
+
+.min-height-20 {
+  min-height: 16.66666rem; }
+
 ul.list-checklist {
   padding-left: 5.625rem;
   list-style: none; }
@@ -14847,8 +14907,6 @@ section {
 
 .carousel-inner {
   height: 100%; }
-  .carousel-inner .carousel-item {
-    min-height: 10.90909rem; }
 
 #customer-profiles .w-100 {
   border-bottom: 1px solid #707070;
