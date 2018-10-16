@@ -97,6 +97,15 @@ p {
   }
 }
 
+@for $i from 1 through 10 {
+	.height-#{$i} {
+		height: #{$i * $spacer};
+	}
+	.min-height-#{$i} {
+		min-height: #{$i * $spacer};
+	}
+}
+
 //
 // lists 
 //
@@ -613,6 +622,7 @@ body.admin-bar #mobile-nav .navbar-collapse {
 
 		.page-title {
 			font-weight: $font-weight-normal;
+			margin-bottom: #{$font-size-base * 2.5};
 		}
 		.page-subtitle {}
 	}
@@ -628,6 +638,7 @@ body.admin-bar #mobile-nav .navbar-collapse {
 
 		.page-title {
 			font-weight: $font-weight-normal;
+			margin-bottom: #{$font-size-base * 2.5};
 		}
 		.page-subtitle {}
 	}
@@ -832,12 +843,12 @@ section {
 .carousel-control-next,
 .carousel-control-prev {
 	opacity: 1;
-	align-items: inherit;
+	// align-items: inherit;
 
 	.carousel-control-next-icon,
 	.carousel-control-prev-icon {
 		position: relative;
-		top: 6rem;
+		// top: 6rem;
 		&:after,
 		&:before {
 			background-color: $primary;
@@ -899,8 +910,11 @@ section {
 	}
 }
 
-.carousel-item {
-	min-height: #{$font-size-base * 9.090909};
+.carousel-inner {
+	height: 100%;
+	.carousel-item {
+		min-height: #{$font-size-base * 9.090909};
+	}
 }
 //
 // customer-profiles
