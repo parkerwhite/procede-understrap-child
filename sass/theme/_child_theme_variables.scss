@@ -179,7 +179,7 @@ $link-hover-decoration:     underline !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+$paragraph-margin-bottom:   2em !default; // 1rem !default;
 
 
 // Grid breakpoints
@@ -270,7 +270,7 @@ $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.571428571 !default; // 1.5 !default;
 
 $h1-font-size:                ($font-size-base * 2.909090) !default; // $font-size-base * 2.5 !default;
-$h2-font-size:                ($font-size-base * 1.636363) !default; // $font-size-base * 2 !default;
+$h2-font-size:                ($font-size-base * 1.454545) !default; // $font-size-base * 2 !default;
 $h3-font-size:                ($font-size-base * 1.236363) !default; // $font-size-base * 1.75 !default;
 $h4-font-size:                ($font-size-base * 1.134545) !default; // $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base !default; // $font-size-base * 1.25 !default;
@@ -715,8 +715,8 @@ $jumbotron-bg:                      $gray-200 !default;
 
 // Cards
 
-$card-spacer-y:                     1.125rem !default; // .75rem !default;
-$card-spacer-x:                     1.125rem !default; // 1.25rem !default;
+$card-spacer-y:                     ($spacer * 1.125) !default; // .75rem !default;
+$card-spacer-x:                     ($spacer * 1.125) !default; // 1.25rem !default;
 $card-border-width:                 $border-width !default;
 $card-border-radius:                0 !default; // $border-radius !default;
 $card-border-color:                 rgba($gray-600, .5) !default; // rgba($black, .125) !default;
@@ -816,8 +816,8 @@ $modal-header-border-width:         $modal-content-border-width !default;
 $modal-footer-border-width:         $modal-header-border-width !default;
 $modal-header-padding:              1rem !default;
 
-$modal-lg:                          1600px !default; // 800px !default;
-$modal-md:                          1300px !default; // 500px !default;
+$modal-lg:                          1300px !default; // 800px !default;
+$modal-md:                          1100px !default; // 500px !default;
 $modal-sm:                          300px !default;
 
 $modal-transition:                  transform .3s ease-out !default;
