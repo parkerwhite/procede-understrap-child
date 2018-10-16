@@ -156,7 +156,7 @@ class Advanced_Custom_Fields_Partials {
 
 					<div class="row <?php echo ( $css_classes_page_header_row_css ? $css_classes_page_header_row_css : 'align-items-center justify-content-center' ); ?>">
 
-						<div class="col-12 text-center <?php echo ( $css_classes_page_header_column_css ? $css_classes_page_header_column_css : 'col-md-8' ); ?>">
+						<div class="col-12 text-center <?php echo ( $css_classes_page_header_column_css ? $css_classes_page_header_column_css : 'col-md-8 col-lg-7 col-xl-6' ); ?>">
 
 							<header class="page-header">
 

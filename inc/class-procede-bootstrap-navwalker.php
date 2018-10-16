@@ -486,8 +486,8 @@ if ( ! class_exists( 'Procede_WP_Bootstrap_Navwalker' ) ) {
 							unset( $atts['target'] );
 						} elseif ( 'dropdown-header' === $link_class || 'dropdown-divider' === $link_class || 'dropdown-item-text' === $link_class ) {
 							// Store a type flag and unset href and target.
-							unset( $atts['href'] );
-							unset( $atts['target'] );
+							// unset( $atts['href'] );
+							// unset( $atts['target'] );
 						}
 					}
 				}
@@ -527,7 +527,7 @@ if ( ! class_exists( 'Procede_WP_Bootstrap_Navwalker' ) ) {
 			} elseif ( 'dropdown-header' === $linkmod_type ) {
 				// For a header use a span with the .h6 class instead of a real
 				// header tag so that it doesn't confuse screen readers.
-				$output .= '<span class="dropdown-header h6"' . $attributes . '>';
+				$output .= '<a class="dropdown-header h6"' . $attributes . '>';
 			} elseif ( 'dropdown-divider' === $linkmod_type ) {
 				// this is a divider.
 				$output .= '<div class="dropdown-divider"' . $attributes . '>';
@@ -546,7 +546,11 @@ if ( ! class_exists( 'Procede_WP_Bootstrap_Navwalker' ) ) {
 		 */
 		private function linkmod_element_close( $linkmod_type ) {
 			$output = '';
-			if ( 'dropdown-header' === $linkmod_type || 'dropdown-item-text' === $linkmod_type ) {
+			if ( 'dropdown-header' === $linkmod_type ) {
+				// For a header use a span with the .h6 class instead of a real
+				// header tag so that it doesn't confuse screen readers.
+				$output .= '</a>';
+			} elseif ( 'dropdown-item-text' === $linkmod_type ) {
 				// For a header use a span with the .h6 class instead of a real
 				// header tag so that it doesn't confuse screen readers.
 				$output .= '</span>';

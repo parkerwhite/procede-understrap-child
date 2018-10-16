@@ -90,7 +90,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse d-flex flex-grow-1',
+						'container_class' => 'collapse navbar-collapse d-flex flex-grow-1 ml-md-5',
 						'container_id'    => 'main-menu-wrapper',
 						'menu_class'      => 'navbar-nav ml-auto w-100 justify-content-between',
 						'fallback_cb'     => '',

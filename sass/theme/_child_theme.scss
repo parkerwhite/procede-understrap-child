@@ -6,7 +6,7 @@
 // Fixed Nav
 //
 body {
-	margin-top: 222px;
+	margin-top: 218px;
 	&.admin-bar {
 		#wrapper-navbar {
 			top: 32px;
@@ -64,11 +64,11 @@ h3 {
 			border-radius: 50%;
 			content: "";
 			display: inline-block;
-			height: 38px;
+			height: #{$font-size-base * 1.727272};
 			margin-right: 1rem;
 			position: relative;
 			top: .5rem;
-			width: 38px;
+			width: #{$font-size-base * 1.727272};
 		}
 		img {
 			max-height: 2rem;
@@ -111,11 +111,11 @@ ul {
 				border-radius: 50%;
 				content: "";
 				display: inline-block;
-				height: 52px;
+				height: #{$font-size-base * 2.363636};
 				left: -5.625rem;
 				position: absolute;
 				top: 0;
-				width: 52px;
+				width: #{$font-size-base * 2.363636};
 			}
 			&:after {
 				border-bottom: 5px solid $white;
@@ -328,7 +328,7 @@ blockquote {
 
 	.navbar-brand {
 		img {
-			height: 7.375rem;
+			height: 6rem; // 7.375rem;
 			width: auto;
 		}
 	}
@@ -409,16 +409,16 @@ blockquote {
 				// }
 				&:before {
 					background-color: $white;
-					border-top: 20px solid #fff;
-					border-right: 20px solid #fff;
-					border-left: 20px solid transparent;
-					border-bottom: 20px solid transparent;
+					border-top: #{$font-size-base * .909090} solid #fff;
+					border-right: #{$font-size-base * .909090} solid #fff;
+					border-left: #{$font-size-base * .909090} solid transparent;
+					border-bottom: #{$font-size-base * .909090} solid transparent;
 					content: "";
 					display: block;
 					height: 0;
 					left: 10rem;
 					position: absolute;
-					top: -20px;
+					top: -#{$font-size-base * .909090};
 					transform: rotate(45deg);
 					width: 0;
 				}
@@ -1123,6 +1123,12 @@ section {
 
 			.menu-item {
 				flex: 1 0 50%;
+				&:nth-child(odd) {
+					flex: 1 0 40%;
+				}
+				&:nth-child(even) {
+					flex: 1 0 60%;
+				}
 				a {
 					color: $gray-600;
 					&:hover {

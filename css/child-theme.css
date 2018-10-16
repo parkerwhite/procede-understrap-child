@@ -312,16 +312,16 @@ h1, h2, h1.entry-title, h3, h4, h5, h6,
   color: inherit; }
 
 h1, .h1 {
-  font-size: 4rem; }
+  font-size: 3.49091rem; }
 
 h2, h1.entry-title, .h2 {
-  font-size: 2.25rem; }
+  font-size: 1.96364rem; }
 
 h3, .h3 {
-  font-size: 1.7rem; }
+  font-size: 1.48364rem; }
 
 h4, .h4 {
-  font-size: 1.56rem; }
+  font-size: 1.36145rem; }
 
 h5, .h5 {
   font-size: 1.2rem; }
@@ -11543,7 +11543,7 @@ a.skip-link {
   display: block; }
 
 body {
-  margin-top: 222px; }
+  margin-top: 218px; }
   body.admin-bar #wrapper-navbar {
     top: 32px; }
     @media screen and (max-width: 782px) {
@@ -11565,7 +11565,7 @@ h1 {
   line-height: .95em; }
   @media (max-width: 1024.98px) {
     h1 {
-      font-size: 2.6rem; } }
+      font-size: 2.34545rem; } }
 
 h2, h1.entry-title {
   letter-spacing: .025em;
@@ -11573,14 +11573,14 @@ h2, h1.entry-title {
   margin-bottom: 1em; }
   @media (max-width: 1024.98px) {
     h2, h1.entry-title {
-      font-size: 1.725rem; } }
+      font-size: 1.58182rem; } }
 
 h3 {
   letter-spacing: .025em;
   line-height: 1.294em; }
   @media (max-width: 1024.98px) {
     h3 {
-      font-size: 1.45rem; } }
+      font-size: 1.34182rem; } }
   h3.add-ons {
     font-weight: 700;
     margin-bottom: 3rem;
@@ -11590,11 +11590,11 @@ h3 {
       border-radius: 50%;
       content: "";
       display: inline-block;
-      height: 38px;
+      height: 2.07273rem;
       margin-right: 1rem;
       position: relative;
       top: .5rem;
-      width: 38px; }
+      width: 2.07273rem; }
     h3.add-ons img {
       max-height: 2rem;
       width: auto;
@@ -11606,7 +11606,7 @@ h4 {
   line-height: 1.218em; }
   @media (max-width: 1024.98px) {
     h4 {
-      font-size: 1.38rem; } }
+      font-size: 1.28073rem; } }
 
 p:last-of-type {
   margin-bottom: 0; }
@@ -11645,11 +11645,11 @@ ul.list-checklist {
       border-radius: 50%;
       content: "";
       display: inline-block;
-      height: 52px;
+      height: 2.83636rem;
       left: -5.625rem;
       position: absolute;
       top: 0;
-      width: 52px; }
+      width: 2.83636rem; }
     ul.list-checklist li:after {
       border-bottom: 5px solid #fff;
       border-left: 5px solid #fff;
@@ -11833,7 +11833,7 @@ blockquote .blockquote-footer {
   height: 9.5rem;
   padding: 0; }
   #main-nav .navbar-brand img {
-    height: 7.375rem;
+    height: 6rem;
     width: auto; }
   #main-nav .navbar-nav {
     height: 9.5rem; }
@@ -11884,16 +11884,16 @@ blockquote .blockquote-footer {
     margin-top: 3rem; }
     #main-nav #main-menu > .dropdown > .dropdown-menu:before {
       background-color: #fff;
-      border-top: 20px solid #fff;
-      border-right: 20px solid #fff;
-      border-left: 20px solid transparent;
-      border-bottom: 20px solid transparent;
+      border-top: 1.09091rem solid #fff;
+      border-right: 1.09091rem solid #fff;
+      border-left: 1.09091rem solid transparent;
+      border-bottom: 1.09091rem solid transparent;
       content: "";
       display: block;
       height: 0;
       left: 10rem;
       position: absolute;
-      top: -20px;
+      top: -1.09091rem;
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg);
       width: 0; }
@@ -14950,6 +14950,14 @@ section {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 50%;
             flex: 1 0 50%; }
+    .site-footer .widget_nav_menu ul.menu .menu-item:nth-child(odd) {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 40%;
+              flex: 1 0 40%; }
+    .site-footer .widget_nav_menu ul.menu .menu-item:nth-child(even) {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 60%;
+              flex: 1 0 60%; }
     .site-footer .widget_nav_menu ul.menu .menu-item a {
       color: #707070; }
       .site-footer .widget_nav_menu ul.menu .menu-item a:hover {

@@ -24,7 +24,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<div class="col-12 col-md">
 
-					<?php the_custom_logo(); ?>
+					<?php if ( ! get_theme_mod( 'procede_footer_logo' ) ) { ?>
+
+						<a class="" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+
+					<?php } else { ?>
+
+						<img src="<?php echo wp_get_attachment_url( get_theme_mod( 'procede_footer_logo' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" class="mb-1"/>
+
+					<?php } ?>
+
 
 					<h5 class="tagline"><?php echo str_replace( '. ', ".<br />", get_bloginfo('description') ); ?></h5>
 
