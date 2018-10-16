@@ -425,6 +425,7 @@ blockquote {
 				.dropdown-header {
 					color: $dark;
 					font-size: $font-size-base;
+					text-decoration: none !important;
 					&:after {
 						content: "";
 						display: block;
@@ -436,7 +437,7 @@ blockquote {
 				}
 				.header-hidden,
 				.hidden-header {
-					span.dropdown-header {
+					.dropdown-header {
 						visibility: hidden;
 						&:after {
 							border-color: transparent;
@@ -831,9 +832,12 @@ section {
 .carousel-control-next,
 .carousel-control-prev {
 	opacity: 1;
+	align-items: inherit;
 
 	.carousel-control-next-icon,
 	.carousel-control-prev-icon {
+		position: relative;
+		top: 6rem;
 		&:after,
 		&:before {
 			background-color: $primary;
@@ -895,6 +899,9 @@ section {
 	}
 }
 
+.carousel-item {
+	min-height: #{$font-size-base * 9.090909};
+}
 //
 // customer-profiles
 //
