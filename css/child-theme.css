@@ -15745,10 +15745,11 @@ section {
     .gform_wrapper .gform_footer .gform_button {
       padding-left: 3rem;
       padding-right: 3rem; }
-  .gform_wrapper .top_label li.gfield.gf_left_half,
-  .gform_wrapper .top_label li.gfield.gf_right_half {
-    width: 49.5%;
-    width: calc(50% - 2px); }
+  @media (min-width: 768px) {
+    .gform_wrapper .top_label li.gfield.gf_left_half,
+    .gform_wrapper .top_label li.gfield.gf_right_half {
+      width: 49.5%;
+      width: calc(50% - 2px); } }
 
 @media (min-width: 576px) {
   .modal-dialog {
