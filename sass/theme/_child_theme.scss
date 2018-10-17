@@ -6,7 +6,7 @@
 // Fixed Nav
 //
 body {
-	margin-top: 218px;
+	margin-top: 200px;
 	&.admin-bar {
 		#wrapper-navbar {
 			top: 32px;
@@ -85,7 +85,7 @@ h4 {
 		@include mobile-size( $h4-font-size );
 	}
 }
-.card-body p {
+p {
 	&:last-of-type {
 		margin-bottom: 0;
 	}
@@ -354,7 +354,7 @@ blockquote {
 }
 #main-nav {
 	box-shadow: $box-shadow-sm;
-	height: 9.5rem;
+	height: 8.5rem;
 	padding: 0;
 
 	.navbar-brand {
@@ -364,7 +364,7 @@ blockquote {
 		}
 	}
 	.navbar-nav {
-		height: 9.5rem;
+		height: 8.5rem;
 
 		> .nav-item {
 			align-items: center;

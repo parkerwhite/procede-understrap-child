@@ -137,53 +137,32 @@ class Advanced_Custom_Fields_Partials {
 		$css_classes_page_header_column_css = get_post_meta( $post_id, 'css_classes_page_header_column_css', true );
 
 		if ( $style && $style !== 'none' ) : ?>
-		
 		<section id="header-wrapper" class="wrapper <?php echo 'wrapper-' . $style; ?>">
-
 			<?php if ( $style == 'hero' ) : ?>
-
 				<?php echo get_the_post_thumbnail( $post_id, 'full', array( 'class' => 'object-fit-cover' ) ); ?>
-
 				<div id="header-hero-content-wrapper">
-			
 			<?php else : ?>
-
 				<div id="header-content-wrapper">
-
 			<?php endif; ?>
-
 				<div class="<?php echo esc_attr( $container ); ?>" id="" tabindex="-1">
-
 					<div class="row <?php echo ( $css_classes_page_header_row_css ? $css_classes_page_header_row_css : 'align-items-center justify-content-center' ); ?>">
-
 						<div class="col-12 text-center <?php echo ( $css_classes_page_header_column_css ? $css_classes_page_header_column_css : 'col-md-8 col-lg-7 col-xl-6' ); ?>">
-
 							<header class="page-header">
-
 								<?php if ( $this->get_field( 'page_title' ) ) { ?>
 									<h1 class="page-title"><?php echo $this->get_field( 'page_title', false ); ?></h1>
 								<?php } ?>
-
 								<?php if ( $this->get_field( 'page_subtitle' ) ) { ?>
 									<h2 class="page-subtitle"><?php echo $this->get_field( 'page_subtitle', false ); ?></h2>
 								<?php } ?>
-
 								<?php if ( $this->get_field( 'header_text' ) ) { ?>
 									<div class="page-description"><?php echo apply_filters( 'the_content', html_entity_decode( do_shortcode( $this->get_field( 'header_text', false ) ) ) ); ?></div>
 								<?php } ?>
-
 							</header><!-- .page-header -->
-
 						</div>
-
 					</div>
-
 				</div><!-- .container -->
-
 			</div><!-- #header-hero-content-wrapper -->
-
 		</section>
-
 		<?php endif;
 	}
 
@@ -215,27 +194,15 @@ class Advanced_Custom_Fields_Partials {
 			ob_start();
 
 			?>
-
 			<section class="section-card-deck wrapper <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> <?php echo ( esc_html( $css_class ) ); ?>">
-
 				<div class="<?php echo esc_attr( $this->container ); ?>">
-
 					<div class="row">
-
 						<div class="col">
-
 							<h3 class="section-title"><?php _e( $section_title, 'understrap' ); ?></h3>
-
 							<?php echo apply_filters( 'the_content', html_entity_decode( $section_intro ) ); ?>
-
 						</div>
-
 					</div>
-
 					<div class="card-deck" data-cols="<?php echo $cards; ?>">
-
-						<pre><?php // print_r( get_post_meta( get_the_ID() ) ); ?></pre>
-
 						<?php for ($i = 0; $i < $cards; $i++) {
 
 							$use_custom_content = get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_use_custom_content', true );
@@ -275,45 +242,26 @@ class Advanced_Custom_Fields_Partials {
 							}
 
 							?>
-
 							<article class="card" id="post-<?php echo $post_id; ?>">
-
 								<?php if ( $card_img_top ) : ?>
-
 									<div class="card-header">
-
 										<img src="<?php echo $card_img_top; ?>" alt="" class="object-fit-cover card-img-top">
-
 									</div>
-
 								<?php endif; ?>
-
 								<div class="card-body">
-
 									<?php if ( $card_title ) { ?>
 										<h5 class="card-title"><?php echo $card_title; ?></h5>
 									<?php } ?>
-
 									<?php echo $card_body; ?>
-
 								</div><!-- .card-body -->
-
 								<div class="card-footer text-center">
-
 									<a href="<?php echo $link_url; ?>" class="btn btn-secondary" target="<?php echo $link_target; ?>"><?php echo ( $link_title ? $link_title : __( 'Read More' ) ); ?></a>
-
 								</div><!-- .card-footer -->
-
 							</article><!-- #post-## -->
-
 						<?php } ?>
-
 					</div>
-
 				</div>
-
 			</section>
-
 			<?php
 
 			echo ob_get_clean();
@@ -362,36 +310,24 @@ class Advanced_Custom_Fields_Partials {
 			ob_start();
 
 			?>
-
 			<section class="section-row-w-columns <?php echo ( $split_background ? 'section-split-cols' : '' ); ?> <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> <?php echo ( esc_html( $section_css_class ) ); ?>" id="<?php echo ( $section_id ? $section_id : '' ); ?>">
-
 				<?php if ( $background_image ) { ?>
 					<img src="<?php echo $section_bg_img[0]; ?>" class="object-fit-cover section-background-image">
 					<div class="background-image-overlay">
 				<?php } ?>
-
 					<?php if ( $split_background ) { ?>
 						<div class="container-fluid"><!-- .container -->
 					<?php } else { ?>
 						<div class="<?php echo esc_attr( $this->container ); ?>"><!-- .container -->
 					<?php } ?>
-
 						<?php if ( $section_title && ! $split_background ) { ?>
-
 							<div class="row justify-content-center">
-
 								<div class="col-12 text-center">
-
 									<h2 class="section-title"><?php echo $section_title; ?></h2>
-
 								</div>
-
 							</div>
-
 						<?php } ?>
-
 						<div class="row <?php echo ( esc_html( $row_css_class ) ); ?>" data-cols="<?php echo $cols_per_row; ?>">
-
 							<?php for ( $i = 0; $i < $columns; $i++ ) {
 
 								$content       = $this->get_field( $this->repeater_field . '_' . $key . '_columns_' . $i . '_content' );
@@ -420,26 +356,16 @@ class Advanced_Custom_Fields_Partials {
 								endif;
 
 								?>
-
 								<div class="<?php echo implode( " ", $col_widths ); ?> <?php echo $col_css; ?>" <?php echo $col_style; ?>>
-
 									<?php echo apply_filters( 'the_content', html_entity_decode( $content ) ); ?>
-
 								</div>
-
 							<?php } ?>
-
 						</div>
-
 					</div><!-- /.container -->
-
 				<?php if ( $background_image ) { ?>
 					</div><!-- /.background-image-overlay -->
 				<?php } ?>
-
-
 			</section>
-
 			<?php
 
 			echo ob_get_clean();
@@ -505,7 +431,6 @@ class Advanced_Custom_Fields_Partials {
 			ob_start();
 
 			?>
-
 			<section class="section-slider-testimonial <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> <?php echo ( esc_html( $css_class ) ); ?>">
 				<div class="<?php echo esc_attr( $this->container ); ?>">
 					<?php if ( $section_title ) { ?>
@@ -564,25 +489,15 @@ class Advanced_Custom_Fields_Partials {
 		ob_start();
 
 		?>
-
 		<section class="section-row-break <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> py-0">
-
 			<div class="<?php echo esc_attr( $this->container ); ?>">
-
 				<div class="row justify-content-center">
-
 					<div class="col-3">
-
 						<hr class="<?php echo $line_color; ?>" />
-
 					</div>
-
 				</div>
-
 			</div>
-
 		</section>
-
 		<?php
 
 		echo ob_get_clean();

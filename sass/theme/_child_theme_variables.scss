@@ -717,9 +717,9 @@ $jumbotron-bg:                      $gray-200 !default;
 
 $card-spacer-y:                     ($spacer * 1.125) !default; // .75rem !default;
 $card-spacer-x:                     ($spacer * 1.125) !default; // 1.25rem !default;
-$card-border-width:                 $border-width !default;
+$card-border-width:                 0 !default; // $border-width !default;
 $card-border-radius:                0 !default; // $border-radius !default;
-$card-border-color:                 rgba($gray-600, .5) !default; // rgba($black, .125) !default;
+$card-border-color:                 transparent !default; // rgba($gray-600, .5) !default; // rgba($black, .125) !default;
 $card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border-width}) !default;
 $card-cap-bg:                       rgba($black, .03) !default;
 $card-bg:                           $white !default;
