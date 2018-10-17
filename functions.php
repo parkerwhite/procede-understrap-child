@@ -54,6 +54,18 @@ add_action( 'after_setup_theme', 'register_custom_nav_menus' );
 remove_filter( 'the_content', 'wpautop' );
 add_filter( 'the_content', 'wpautop' , 99);
 add_filter( 'the_content', 'shortcode_unautop', 100 );
+/**
+ * Remove empty paragraphs created by wpautop()
+ * @author Ryan Hamilton
+ * @link https://gist.github.com/Fantikerz/5557617
+ */
+function remove_empty_p( $content ) {
+    $content = force_balance_tags( $content );
+    $content = preg_replace( '#<p>\s*+(<br\s*/*>)?\s*</p>#i', '', $content );
+    $content = preg_replace( '~\s?<p>(\s|&nbsp;)+</p>\s?~', '', $content );
+    return $content;
+}
+add_filter('the_content', 'remove_empty_p', 20, 1);
 
 /**
  * Initialize theme default settings

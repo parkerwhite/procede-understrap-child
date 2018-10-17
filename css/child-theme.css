@@ -11562,7 +11562,7 @@ body {
 h1 {
   font-weight: 700;
   letter-spacing: 0;
-  line-height: .95em; }
+  line-height: 1.1em; }
   @media (max-width: 1024.98px) {
     h1 {
       font-size: 2.34545rem; } }
@@ -15745,6 +15745,10 @@ section {
     .gform_wrapper .gform_footer .gform_button {
       padding-left: 3rem;
       padding-right: 3rem; }
+  .gform_wrapper .top_label li.gfield.gf_left_half,
+  .gform_wrapper .top_label li.gfield.gf_right_half {
+    width: 49.5%;
+    width: calc(50% - 2px); }
 
 @media (min-width: 576px) {
   .modal-dialog {

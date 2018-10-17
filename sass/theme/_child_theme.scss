@@ -33,7 +33,7 @@ body {
 h1 {
 	font-weight: $font-weight-bold;
 	letter-spacing: 0;
-	line-height: .95em;
+	line-height: 1.1em;
 	@include media-breakpoint-down('md') {
 		@include mobile-size( $h1-font-size );
 	}
@@ -1040,6 +1040,11 @@ section {
 			padding-left: 3rem;
 			padding-right: 3rem;
 		}
+	}
+	.top_label li.gfield.gf_left_half,
+	.top_label li.gfield.gf_right_half {
+		width: 49.5%;
+		width: calc(50% - 2px);
 	}
 }
 
