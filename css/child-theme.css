@@ -15568,20 +15568,20 @@ section {
   @media all and (-ms-high-contrast: none) and (min-width: 768px), (-ms-high-contrast: active) and (min-width: 768px) {
     .card-deck .card {
       -webkit-box-flex: 1;
-          -ms-flex: 1 0 40%;
-              flex: 1 0 40%; } }
+          -ms-flex: 1 0 30%;
+              flex: 1 0 30%; } }
 
 @media all and (-ms-high-contrast: none) and (min-width: 1025px), (-ms-high-contrast: active) and (min-width: 1025px) {
   .card-deck[data-cols="3"] .card {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 30%;
-            flex: 1 0 30%; } }
+        -ms-flex: 1 0 20%;
+            flex: 1 0 20%; } }
 
 @media all and (-ms-high-contrast: none) and (min-width: 1025px), (-ms-high-contrast: active) and (min-width: 1025px) {
   .card-deck[data-cols="4"] .card {
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 20%;
-            flex: 1 0 20%; } }
+        -ms-flex: 1 0 10%;
+            flex: 1 0 10%; } }
 
 #home-wrapper .card-deck .card {
   background: #F5F5F5;
