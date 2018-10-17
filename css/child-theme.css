@@ -12678,6 +12678,9 @@ blockquote .blockquote-footer {
         border-bottom-right-radius: 0;
         border-top-left-radius: 1.5rem;
         border-top-right-radius: 0;
+        height: auto;
+        padding-bottom: 0;
+        padding-top: 0;
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
         width: 10rem; }
@@ -15694,26 +15697,25 @@ section {
   -o-object-fit: contain;
      object-fit: contain; }
 
-.gform_wrapper input,
-.gform_wrapper select,
-.gform_wrapper textarea {
-  border-radius: 0 !important;
-  font-size: 0.875rem !important;
-  height: auto !important;
-  padding: 1rem !important;
-  -webkit-appearance: none; }
-
-.gform_wrapper .gfield_label {
-  display: none !important; }
-
-.gform_wrapper .form-group, .gform_wrapper .wpcf7 .wpcf7-form p, .wpcf7 .wpcf7-form .gform_wrapper p {
-  margin-bottom: 1.5rem; }
-
-.gform_wrapper .gform_footer {
-  padding-left: 1rem; }
-  .gform_wrapper .gform_footer .gform_button {
-    padding-left: 3rem;
-    padding-right: 3rem; }
+.gform_wrapper {
+  padding: 0; }
+  .gform_wrapper input,
+  .gform_wrapper select,
+  .gform_wrapper textarea {
+    border-radius: 0 !important;
+    font-size: 0.875rem !important;
+    height: auto !important;
+    padding: 1rem !important;
+    -webkit-appearance: none; }
+  .gform_wrapper .gfield_label {
+    display: none !important; }
+  .gform_wrapper .form-group, .gform_wrapper .wpcf7 .wpcf7-form p, .wpcf7 .wpcf7-form .gform_wrapper p {
+    margin-bottom: 1.5rem; }
+  .gform_wrapper .gform_footer {
+    padding-left: 1rem; }
+    .gform_wrapper .gform_footer .gform_button {
+      padding-left: 3rem;
+      padding-right: 3rem; }
 
 @media (min-width: 576px) {
   .modal-dialog {

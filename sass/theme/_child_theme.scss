@@ -329,6 +329,9 @@ blockquote {
 				border-bottom-right-radius: 0;
 				border-top-left-radius: 1.5rem;
 				border-top-right-radius: 0;
+				height: auto;
+				padding-bottom: 0;
+				padding-top: 0;
 				transition: $transition-base;
 				width: 10rem;
 				&:focus {
@@ -983,6 +986,7 @@ section {
 // GForms
 //
 .gform_wrapper {
+	padding: 0;
 	input,
 	select,
 	textarea {

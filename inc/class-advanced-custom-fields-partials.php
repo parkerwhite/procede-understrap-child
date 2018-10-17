@@ -507,41 +507,23 @@ class Advanced_Custom_Fields_Partials {
 			?>
 
 			<section class="section-slider-testimonial <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> <?php echo ( esc_html( $css_class ) ); ?>">
-
 				<div class="<?php echo esc_attr( $this->container ); ?>">
-
 					<?php if ( $section_title ) { ?>
-
 						<div class="row justify-content-center">
-
 							<div class="col-12 col-md-10 col-xl-8 text-center">
-
 								<h2 class="section-title"><?php echo $section_title; ?></h2>
-
 							</div>
-
 						</div>
-
 					<?php } ?>
-
 					<div class="row justify-content-center">
-
-						<div class="col-12 col-md-11 col-xl-9">
-
+						<div class="col-12 col-md-10 col-lg-9">
 							<div id="carousel_<?php echo $rand_str; ?>" class="carousel slide carousel_<?php echo $rand_str; ?>" data-ride="false" data-interval="<?php echo ( $interval ? $interval : false ); ?>">
-
-								<div class="carousel-inner text-center">
-
-									<?php echo implode( '', $slide_content ); ?>
-
-								</div>
-
+								<div class="carousel-inner text-center"><?php echo implode( '', $slide_content ); ?></div>
 								<?php if ( $show_indicators ) { ?>
 									<ol class="carousel-indicators">
 										<?php echo implode( '', $slide_indicators ); ?>
 									</ol>
 								<?php } ?>
-
 								<?php if ( $show_controls ) { ?>
 									<a class="carousel-control-prev" href="#carousel_<?php echo $rand_str; ?>" role="button" data-slide="prev">
 										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -552,17 +534,11 @@ class Advanced_Custom_Fields_Partials {
 										<span class="sr-only"><?php _e( 'Next' ); ?></span>
 									</a>
 								<?php } ?>
-
 							</div>
-
 						</div>
-
 					</div>
-
 				</div>
-
 			</section>
-
 			<?php
 
 			echo ob_get_clean();
