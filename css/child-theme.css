@@ -12830,6 +12830,11 @@ blockquote .blockquote-footer {
         -ms-flex-direction: column;
             flex-direction: column; }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+  #main-menu > .dropdown:first-child > .dropdown-menu {
+    width: 1000px; } }
+
 #mobile-nav {
   height: 90px; }
   #mobile-nav .navbar-brand img {

@@ -511,6 +511,13 @@ blockquote {
 		}
 	}
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     /* IE10+ CSS styles go here */
+	#main-menu > .dropdown:first-child > .dropdown-menu {
+		width: 1000px;
+	}
+}
+
 #mobile-nav {
 	height: 90px;
 	.navbar-brand {

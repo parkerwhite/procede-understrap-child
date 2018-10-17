@@ -4007,5 +4007,9 @@
 		if (ref)
 			ref.removeClass("show").find(".dropdown-menu").removeClass("show");
 	}
+
+	var navTopH = $('#top-nav').height();
+	var navMainH = $('#main-nav').height();
+	var navHeight = navTopH + navMainH;
 	
 })(jQuery);
