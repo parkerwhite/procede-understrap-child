@@ -805,6 +805,31 @@ section {
 		}
 	}
 }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     /* IE10+ CSS styles go here */
+	.card-deck {
+		.card {
+			flex: 1 0 100%;
+			@include media-breakpoint-up('md') { // 2 Cols
+				flex: 1 0 40%;
+			}
+		}
+		&[data-cols="3"] {
+			.card {
+				@include media-breakpoint-up('lg') { // 3 Cols
+					flex: 1 0 30%;
+				}		
+			}
+		}
+		&[data-cols="4"] {
+			.card {
+				@include media-breakpoint-up('lg') { // 4 Cols
+					flex: 1 0 20%;
+				}		
+			}
+		}
+	}
+}
 
 #home-wrapper {
 	.card-deck {
