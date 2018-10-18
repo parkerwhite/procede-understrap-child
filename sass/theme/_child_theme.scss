@@ -1047,6 +1047,9 @@ section {
 			height: 0;
 		}
 	}
+	textarea {
+		max-height: 8rem;
+	}
 	@include media-breakpoint-up('md') {
 		.top_label li.gfield.gf_left_half,
 		.top_label li.gfield.gf_right_half {
@@ -1190,6 +1193,9 @@ section {
 // Site Footer
 //
 .site-footer {
+	p {
+		font-size: .95rem;
+	}
 	.custom-logo-link {
 		max-width: 15.5rem;
 	}
@@ -1246,6 +1252,7 @@ section {
 				}
 				a {
 					color: $gray-600;
+					font-size: .9rem;
 					&:hover {
 						color: $dark;
 						text-decoration: none;
