@@ -1317,6 +1317,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "page-templates\/blank.php"
             }
         ]
     ],
@@ -1333,5 +1338,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1539024919
+    "modified": 1539822000
 }
