@@ -14636,7 +14636,7 @@ body.admin-bar #mobile-nav .navbar-collapse {
           box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.16); }
   .nav.nav-tabs .nav-link {
     background-color: #F5F5F5;
-    border: 1px solid #707070;
+    border: 0.5px solid rgba(112, 112, 112, 0.5);
     border-radius: 0;
     color: #707070;
     -webkit-box-flex: 1;
@@ -14653,9 +14653,9 @@ body.admin-bar #mobile-nav .navbar-collapse {
 
 .tab-content {
   background-color: #fff;
-  border-width: 1px;
+  border-width: .5px;
   border-style: solid;
-  border-color: #fff #707070 #707070;
+  border-color: #fff rgba(112, 112, 112, 0.5) rgba(112, 112, 112, 0.5);
   -webkit-box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.16);
           box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.16);
   padding: 3rem; }
