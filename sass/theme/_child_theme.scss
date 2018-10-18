@@ -1040,12 +1040,19 @@ section {
 			padding-left: 3rem;
 			padding-right: 3rem;
 		}
+		br {
+			display: none;
+		}
+		p {
+			height: 0;
+		}
 	}
 	@include media-breakpoint-up('md') {
 		.top_label li.gfield.gf_left_half,
 		.top_label li.gfield.gf_right_half {
 			width: 49.5%;
 			width: calc(50% - 2px);
+			flex: 0 0 50%;
 		}
 	}
 }
