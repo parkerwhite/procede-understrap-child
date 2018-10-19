@@ -183,6 +183,7 @@ class Advanced_Custom_Fields_Partials {
 		$rand_str          = $this->rand_str();
 
 		$css_class         = $this->get_field( $this->repeater_field . '_' . $key . '_css_class' );
+		$section_id        = $this->get_field( $this->repeater_field . '_' . $key . '_section_id' );
 		$section_color     = $this->get_field( $this->repeater_field . '_' . $key . '_section_color', false );
 		$section_title     = $this->get_field( $this->repeater_field . '_' . $key . '_section_title' );
 		$section_intro     = $this->get_field( $this->repeater_field . '_' . $key . '_section_intro', false );
@@ -195,6 +196,7 @@ class Advanced_Custom_Fields_Partials {
 
 			?>
 			<section class="section-card-deck wrapper <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> <?php echo ( esc_html( $css_class ) ); ?>">
+				<a class="anchor" name="anchor-<?php echo $section_id; ?>"></a>
 				<div class="<?php echo esc_attr( $this->container ); ?>">
 					<div class="row">
 						<div class="col">
@@ -311,6 +313,7 @@ class Advanced_Custom_Fields_Partials {
 
 			?>
 			<section class="section-row-w-columns <?php echo ( $split_background ? 'section-split-cols' : '' ); ?> <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> <?php echo ( esc_html( $section_css_class ) ); ?>" id="<?php echo ( $section_id ? $section_id : '' ); ?>">
+				<a class="anchor" name="anchor-<?php echo $section_id; ?>"></a>
 				<?php if ( $background_image ) { ?>
 					<img src="<?php echo $section_bg_img[0]; ?>" class="object-fit-cover section-background-image">
 					<div class="background-image-overlay">
@@ -386,6 +389,7 @@ class Advanced_Custom_Fields_Partials {
 		$rand_str        = $this->rand_str();
 
 		$css_class       = $this->get_field( $this->repeater_field . '_' . $key . '_css_class' );
+		$section_id      = $this->get_field( $this->repeater_field . '_' . $key . '_section_id' );
 		$section_color   = $this->get_field( $this->repeater_field . '_' . $key . '_section_color', false );
 		$section_title   = $this->get_field( $this->repeater_field . '_' . $key . '_section_title', false );
 		$slides          = $this->get_field( $this->repeater_field . '_' . $key . '_slides', false );
@@ -417,7 +421,8 @@ class Advanced_Custom_Fields_Partials {
 						$provided_by  = get_post_meta( $post_id, 'testimonial_provided_by', true );
 						$job_title    = get_post_meta( $post_id, 'testimonial_job_title', true );
 						$dealership   = get_post_meta( $post_id, 'testimonial_dealership', true );
-						$slide_content[] = sprintf( '<div class="carousel-item %1$s"><blockquote class="blockquote">%2$s<footer class="blockquote-footer">%3$s %4$s - <cite title="Source Title">%5$s at %6$s</cite></footer></blockquote></div>', $active, $post_content, $post_image, $provided_by, $job_title, $dealership );
+						$citation     = ( $job_title || $dealership ) ? sprintf( '<cite title="Source Title">%1$s %2$s</cite>', $job_title, ( $dealership ? ' at ' . $dealership : '' ) ) : '';
+						$slide_content[] = sprintf( '<div class="carousel-item %1$s"><blockquote class="blockquote">%2$s<footer class="blockquote-footer">%3$s %4$s %5$s</footer></blockquote></div>', $active, $post_content, $post_image, $provided_by, $citation );
 					} else {
 						$slide_content[] = sprintf( '<div class="carousel-item %1$s">%2$s</div>', $active, $post_content );
 					}
@@ -432,6 +437,7 @@ class Advanced_Custom_Fields_Partials {
 
 			?>
 			<section class="section-slider-testimonial <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> <?php echo ( esc_html( $css_class ) ); ?>">
+				<a class="anchor" name="anchor-<?php echo $section_id; ?>"></a>
 				<div class="<?php echo esc_attr( $this->container ); ?>">
 					<?php if ( $section_title ) { ?>
 						<div class="row justify-content-center">
@@ -483,6 +489,7 @@ class Advanced_Custom_Fields_Partials {
 
 		$rand_str      = $this->rand_str();
 
+		$section_id      = $this->get_field( $this->repeater_field . '_' . $key . '_section_id' );
 		$section_color = $this->get_field( $this->repeater_field . '_' . $key . '_section_color', false );
 		$line_color    = $this->get_field( $this->repeater_field . '_' . $key . '_line_color', false );
 
@@ -490,6 +497,7 @@ class Advanced_Custom_Fields_Partials {
 
 		?>
 		<section class="section-row-break <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> py-0">
+			<a class="anchor" name="anchor-<?php echo $section_id; ?>"></a>
 			<div class="<?php echo esc_attr( $this->container ); ?>">
 				<div class="row justify-content-center">
 					<div class="col-3">
