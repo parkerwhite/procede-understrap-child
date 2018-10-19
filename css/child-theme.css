@@ -13319,6 +13319,11 @@ h4 {
 p:last-of-type {
   margin-bottom: 0; }
 
+a.anchor {
+  position: absolute;
+  left: 0px;
+  top: -194px; }
+
 hr.primary {
   border-top: 1px solid #71C26A !important; }
 
@@ -20783,7 +20788,7 @@ section {
     .card .card-header h2, .card .card-header h1.entry-title {
       margin-bottom: 0; }
     .card .card-header .card-img-top {
-      height: 18rem; }
+      height: 12rem; }
   .card .card-body {
     background-color: transparent; }
   .card .card-footer {

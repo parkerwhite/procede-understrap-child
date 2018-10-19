@@ -91,6 +91,12 @@ p {
 	}
 }
 
+a.anchor {
+	position: absolute;
+	left: 0px;
+	top: -194px;
+}
+
 @each $color, $value in $theme-colors {
   hr.#{$color} {
     border-top: 1px solid #{$value} !important;
@@ -763,7 +769,7 @@ section {
 		}
 
 		.card-img-top {
-			height: 18rem;
+			height: 12rem; // 18rem;
 		}
 	}
 
