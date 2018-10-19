@@ -13243,7 +13243,7 @@ h1 {
 h2, h1.entry-title {
   letter-spacing: .025em;
   line-height: 1.222222em;
-  margin-bottom: 1em; }
+  margin-bottom: 2em; }
   @media (max-width: 1024.98px) {
     h2, h1.entry-title {
       font-size: 1.35rem; } }

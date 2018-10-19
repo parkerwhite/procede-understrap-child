@@ -44,7 +44,7 @@ h1 {
 h2 {
 	letter-spacing: .025em;
 	line-height: 1.222222em;
-	margin-bottom: 1em;
+	margin-bottom: 2em;
 	@include media-breakpoint-down('md') {
 		@include mobile-size( $h2-font-size );
 	}
