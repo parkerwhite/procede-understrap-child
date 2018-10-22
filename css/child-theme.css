@@ -20964,8 +20964,7 @@ section {
     border-radius: 0 !important;
     font-size: 0.875rem !important;
     height: auto !important;
-    padding: 1rem !important;
-    -webkit-appearance: none; }
+    padding: 1rem !important; }
   .gform_wrapper .gfield_label {
     display: none !important; }
   .gform_wrapper .form-group, .gform_wrapper .wpcf7 .wpcf7-form p, .wpcf7 .wpcf7-form .gform_wrapper p {
