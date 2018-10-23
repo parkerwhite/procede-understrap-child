@@ -18014,7 +18014,8 @@ blockquote .blockquote-footer {
         font-size: inherit;
         padding: inherit; }
       #main-nav .navbar-nav > .nav-item .nav-link {
-        padding: 0; }
+        padding: 0;
+        line-height: 8rem; }
     #main-nav .navbar-nav .current-menu-item {
       color: #71C26A; }
   #main-nav #main-menu-wrapper {
@@ -20878,6 +20879,8 @@ section {
 #services_cards .card:hover {
   color: #fff !important;
   background-color: #71C26A; }
+  #services_cards .card:hover a {
+    color: #fff; }
 
 .carousel-inner {
   margin: auto;
