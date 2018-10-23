@@ -77,7 +77,7 @@ add_filter('the_content', 'remove_empty_p', 20, 1);
 /**
  * Theme setup and custom theme supports.
  */
-// require get_stylesheet_directory() . '/inc/setup.php';
+require get_stylesheet_directory() . '/inc/setup.php';
 
 /**
  * Register widget area.
