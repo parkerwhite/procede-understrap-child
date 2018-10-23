@@ -44,6 +44,8 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
+add_image_size( 'post_intro', 932, 311, true );
+
 function register_custom_nav_menus() {
     register_nav_menu( 'mobile', __( 'Mobile Menu', 'understrap' ) );
     register_nav_menu( 'topnav', __( 'Top Navbar', 'understrap' ) );

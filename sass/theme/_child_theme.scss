@@ -885,6 +885,12 @@ section {
 			max-height: 60px;
 		}
 	}
+	.card {
+		&:hover {
+			color: $white !important;
+			background-color: $primary;
+		}
+	}
 }
 //
 // Carousel
@@ -1025,13 +1031,17 @@ section {
 //
 .gform_wrapper {
 	padding: 0;
-	input,
+	input[type="email"],
+	input[type="number"],
+	input[type="text"],
 	select,
 	textarea {
 		border-radius: 0 !important;
 		font-size: 0.875rem !important; // 14px
 		height: auto !important;
 		padding: 1rem !important;
+	}
+	select {
 		-webkit-appearance: none;
 	}
 	.gfield_label {
@@ -1162,6 +1172,11 @@ section {
 				color: $primary;
 			}
 		}
+	}
+}
+#search-wrapper {
+	.entry-footer {
+		margin-top: 2rem;
 	}
 }
 //

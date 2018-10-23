@@ -28,7 +28,7 @@ if ( ! function_exists( 'understrap_add_site_info' ) ) {
     $the_theme = wp_get_theme();
     
     $site_info = sprintf(
-      '<p>Copyright © %1$d %2$s. All rights reserved. <a href="%3$s">Privacy Policy</a></p>', date( "Y" ), get_bloginfo( 'name' ), get_privacy_policy_url() 
+      '<p>Copyright © %1$d %2$s. All rights reserved. <a href="%3$s">Privacy Policy</a> | <a href="%4$s">Terms of Service</a></p>', date( "Y" ), get_bloginfo( 'name' ), get_privacy_policy_url(), get_permalink( 865 )
     );
 
     echo apply_filters( 'understrap_site_info_content', $site_info ); // WPCS: XSS ok.
