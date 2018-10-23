@@ -58,7 +58,7 @@ $post_type = get_post_type();
 					
 					<?php if ( has_post_thumbnail( $recent_post->ID ) ) { ?>
 						<div class="col-12 col-lg-6 order-12">
-							<?php echo get_the_post_thumbnail( $recent_post->ID, 'full', array( 'class' => 'object-fit-cover' ) ); ?>
+							<?php echo get_the_post_thumbnail( $recent_post->ID, 'post_intro', array( 'class' => '' ) ); ?>
 						</div>
 					<?php } ?>
 

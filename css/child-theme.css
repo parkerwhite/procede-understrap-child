@@ -17978,7 +17978,8 @@ blockquote .blockquote-footer {
         font-size: inherit;
         padding: inherit; }
       #main-nav .navbar-nav > .nav-item .nav-link {
-        padding: 0; }
+        padding: 0;
+        line-height: 8rem; }
     #main-nav .navbar-nav .current-menu-item {
       color: #71C26A; }
   #main-nav #main-menu-wrapper {
@@ -20839,6 +20840,12 @@ section {
 #services_cards .card-header img {
   max-height: 60px; }
 
+#services_cards .card:hover {
+  color: #fff !important;
+  background-color: #71C26A; }
+  #services_cards .card:hover a {
+    color: #fff; }
+
 .carousel-inner {
   margin: auto;
   width: 70%; }
@@ -20958,13 +20965,20 @@ section {
 
 .gform_wrapper {
   padding: 0; }
-  .gform_wrapper input,
+  .gform_wrapper input[type="email"],
+  .gform_wrapper input[type="number"],
+  .gform_wrapper input[type="text"],
   .gform_wrapper select,
   .gform_wrapper textarea {
     border-radius: 0 !important;
     font-size: 0.875rem !important;
     height: auto !important;
     padding: 1rem !important; }
+<<<<<<< HEAD
+=======
+  .gform_wrapper select {
+    -webkit-appearance: none; }
+>>>>>>> master
   .gform_wrapper .gfield_label {
     display: none !important; }
   .gform_wrapper .form-group, .gform_wrapper .wpcf7 .wpcf7-form p, .wpcf7 .wpcf7-form .gform_wrapper p {
@@ -21063,6 +21077,9 @@ section {
     .entry-footer .social-icons a:active, .entry-footer .social-icons a:focus {
       border-color: #71C26A;
       color: #71C26A; }
+
+#search-wrapper .entry-footer {
+  margin-top: 2rem; }
 
 .widget.widget_categories ul {
   list-style: none;
