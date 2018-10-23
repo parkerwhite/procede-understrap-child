@@ -6,7 +6,7 @@
 // Fixed Nav
 //
 body {
-	margin-top: 200px;
+	margin-top: 198px; // 200px;
 	&.admin-bar {
 		#wrapper-navbar {
 			top: 32px;
@@ -44,7 +44,7 @@ h1 {
 h2 {
 	letter-spacing: .025em;
 	line-height: 1.222222em;
-	margin-bottom: 1em;
+	margin-bottom: 2em; // 1em;
 	@include media-breakpoint-down('md') {
 		@include mobile-size( $h2-font-size );
 	}
