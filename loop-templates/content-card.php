@@ -13,7 +13,7 @@
 
 		<div class="card-header">
 
-			<?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'object-fit-cover card-img-top' ) ); ?>
+			<a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'object-fit-cover card-img-top' ) ); ?></a>
 
 		</div>
 
@@ -21,7 +21,7 @@
 
 	<div class="card-body">
 
-		<?php the_title( '<h5 class="card-title">', '</h5>' ); ?>
+		<a href="<?php echo get_the_permalink(); ?>"><?php the_title( '<h5 class="card-title">', '</h5>' ); ?></a>
 
 		<?php
 		if ( has_excerpt() ) {
