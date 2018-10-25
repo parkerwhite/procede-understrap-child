@@ -631,6 +631,10 @@ body.admin-bar #mobile-nav .navbar-collapse {
 			border-color: $primary;
 			color: $white;
 		}
+		&:nth-child(2) {
+			border-left-color: rgba($gray-600, .3);
+			border-right-color: rgba($gray-600, .3);
+		}
 	}
 }
 .tab-content {
@@ -1020,7 +1024,7 @@ section {
 }
 #customer-profiles {
 	.w-100 {
-		border-bottom: 1px solid $gray-200;
+		border-bottom: 1px solid rgba($gray-600, .3);
 		margin-bottom: 3rem;
 		padding-top: 3rem;
 	}

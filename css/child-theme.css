@@ -18185,6 +18185,9 @@ body.admin-bar #mobile-nav .navbar-collapse {
       background-color: #71C26A;
       border-color: #71C26A;
       color: #fff; }
+    .nav.nav-tabs .nav-link:nth-child(2) {
+      border-left-color: rgba(112, 112, 112, 0.3);
+      border-right-color: rgba(112, 112, 112, 0.3); }
 
 .tab-content {
   background-color: #fff;
@@ -20996,7 +20999,7 @@ section {
   min-height: 12rem; }
 
 #customer-profiles .w-100 {
-  border-bottom: 1px solid #F5F5F5;
+  border-bottom: 1px solid rgba(112, 112, 112, 0.3);
   margin-bottom: 3rem;
   padding-top: 3rem; }
 
