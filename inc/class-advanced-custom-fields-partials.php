@@ -275,6 +275,76 @@ class Advanced_Custom_Fields_Partials {
 	}
 
 	/**
+	 * Repeater Rows
+	 *
+	 * The following methods are designed to be called from within the 1page_builder1
+	 * repeater included in certain template files.
+	 */
+
+	/**
+	 * The ACF partial template for Posts Card Decks
+	 */
+	public function acf_partial_related_posts() {
+
+		$key = $this->key;
+
+		$rand_str          = $this->rand_str();
+
+		$related_posts     = $this->get_field( 'related_posts', false );
+
+		if ( $related_posts > 0 ): 
+
+			ob_start();
+
+			?>
+			<section class="section-card-deck wrapper">
+				<div class="card-deck" data-cols="<?php echo $related_posts; ?>">
+					<?php for ($i = 0; $i < $related_posts; $i++) {
+
+						$post_id       = esc_html( get_post_meta( get_the_ID(), 'related_posts_' . $key . '_related_post', true ) );
+						$post          = get_post( $post_id );
+
+						if ( has_post_thumbnail( $post_id ) ) {
+							$card_img_top = get_the_post_thumbnail_url( $post_id, 'large' );
+						}
+
+						$card_title    = get_the_title( $post_id );
+
+						$card_body     = ( has_excerpt( $post_id ) ? get_the_excerpt( $post_id ) : apply_filters( 'the_content', html_entity_decode( $post->post_content ) ) );
+
+						$link_url      = get_permalink( $post_id );
+
+					?>
+						<article class="card" id="post-<?php echo $post_id; ?>">
+							<?php if ( $card_img_top ) : ?>
+								<div class="card-header">
+									<img src="<?php echo $card_img_top; ?>" alt="" class="object-fit-cover card-img-top">
+								</div>
+							<?php endif; ?>
+							<div class="card-body">
+								<?php if ( $card_title ) { ?>
+									<h5 class="card-title"><?php echo $card_title; ?></h5>
+								<?php } ?>
+								<?php echo $card_body; ?>
+							</div><!-- .card-body -->
+							<div class="card-footer text-center">
+								<a href="<?php echo $link_url; ?>" class="btn btn-secondary" target="<?php echo $link_target; ?>"><?php _e( 'Read More' ); ?></a>
+							</div><!-- .card-footer -->
+						</article><!-- #post-## -->
+					<?php } ?>
+				</div>
+			</section>
+			<?php
+
+			echo ob_get_clean();
+
+		endif;
+
+		return;
+
+	}
+
+	/**
 	 * The ACF partial template for multi-column rows
 	 */
 	public function acf_partial_row_w_cols() {

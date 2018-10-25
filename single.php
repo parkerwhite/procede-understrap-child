@@ -41,13 +41,13 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 			</main><!-- #main -->
 
-			<pre><?php print_r( get_post_meta( get_the_ID() ) ); ?></pre>
+			<!-- <pre><?php print_r( get_post_meta( get_the_ID() ) ); ?></pre> -->
 
 			<?php
 
 			$partials = new Advanced_Custom_Fields_Partials( $container );
 
-			$partials->repeater( 'related_posts' );
+			$partials->acf_partial_related_posts();
 
 			?>
 
