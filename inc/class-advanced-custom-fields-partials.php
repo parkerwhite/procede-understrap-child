@@ -301,9 +301,10 @@ class Advanced_Custom_Fields_Partials {
 				<div class="card-deck" data-cols="<?php echo $related_posts; ?>">
 					<?php for ($i = 0; $i < $related_posts; $i++) {
 
-						$post_id       = esc_html( get_post_meta( get_the_ID(), 'related_posts_' . $key . '_related_post', true ) );
+						$post_id       = get_post_meta( get_the_ID(), 'related_posts_' . $i . '_related_post', true );
 						$post          = get_post( $post_id );
 
+						$card_img_top  = false;
 						if ( has_post_thumbnail( $post_id ) ) {
 							$card_img_top = get_the_post_thumbnail_url( $post_id, 'large' );
 						}
