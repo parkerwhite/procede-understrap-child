@@ -48,6 +48,9 @@ h2 {
 	@include media-breakpoint-down('md') {
 		@include mobile-size( $h2-font-size );
 	}
+	&.widget-title {
+		margin-bottom: 1em;
+	}
 }
 h3 {
 	letter-spacing: .025em;
@@ -216,8 +219,13 @@ section.section-w-background-image {
 //
 blockquote {
 	.blockquote-footer {
+		display: flex;
+		flex-direction: row;
 		font-size: #{$font-size-base * 0.892857143}; // 1.25rem;
 		margin-top: 1rem;
+		.bf-left {
+			
+		}
 
 		&:before {
 			display: none;
@@ -1187,6 +1195,7 @@ section {
 // widgets
 //
 .widget {
+	margin-bottom: 2rem;
 	&.widget_categories {
 		ul {
 			list-style: none;

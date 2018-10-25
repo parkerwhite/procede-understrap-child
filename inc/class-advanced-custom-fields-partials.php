@@ -421,8 +421,9 @@ class Advanced_Custom_Fields_Partials {
 						$provided_by  = get_post_meta( $post_id, 'testimonial_provided_by', true );
 						$job_title    = get_post_meta( $post_id, 'testimonial_job_title', true );
 						$dealership   = get_post_meta( $post_id, 'testimonial_dealership', true );
+						$image_str    = ( $post_image ? '<span class="bf-left">' . $post_image . '</span>' : '' );
 						$citation     = ( $job_title || $dealership ) ? sprintf( '<cite title="Source Title">%1$s %2$s</cite>', $job_title, ( $dealership ? ' at ' . $dealership : '' ) ) : '';
-						$slide_content[] = sprintf( '<div class="carousel-item %1$s"><blockquote class="blockquote">%2$s<footer class="blockquote-footer"><span class="bf-left">%3$s</span><span class="bf-right">%4$s %5$s</span></footer></blockquote></div>', $active, $post_content, $post_image, $provided_by, $citation );
+						$slide_content[] = sprintf( '<div class="carousel-item %1$s"><blockquote class="blockquote">%2$s<footer class="blockquote-footer">%3$s<span class="bf-right">%4$s %5$s</span></footer></blockquote></div>', $active, $post_content, $image_str, $provided_by, $citation );
 					} else {
 						$slide_content[] = sprintf( '<div class="carousel-item %1$s">%2$s</div>', $active, $post_content );
 					}
