@@ -311,7 +311,7 @@ class Advanced_Custom_Fields_Partials {
 
 						$card_title    = get_the_title( $post_id );
 
-						$card_body     = ( has_excerpt( $post_id ) ? get_the_excerpt( $post_id ) : apply_filters( 'the_content', html_entity_decode( $post->post_content ) ) );
+						$card_body     = ( has_excerpt( $post_id ) ? get_the_excerpt( $post_id ) : apply_filters( 'the_content', html_entity_decode( wp_trim_words( $post->post_content ) ) ) );
 
 						$link_url      = get_permalink( $post_id );
 
