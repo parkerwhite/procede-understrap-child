@@ -32,5 +32,26 @@
 	var navTopH = $('#top-nav').height();
 	var navMainH = $('#main-nav').height();
 	var navHeight = navTopH + navMainH;
-	
+
+})(jQuery);
+
+/**
+ * Set Carousel Item heights
+ *
+ * The following jQuery sets the height of each `.carousel-item` 
+ * to the height of the largest carousel item in the set. This 
+ * prevents unusual resizing issues for dynamic text lengths.
+ */
+(function( $ ) {
+	function setCarouselHeights($carousel) {
+		var maxCarouselItemHeight = Math.max.apply(null, $carousel.find(".carousel-item").map(function (){
+			return $(this).height();
+		}).get());
+		$carousel.find(".carousel-item").each(function(){
+			$(this).css("height", maxCarouselItemHeight);
+		});
+	}
+	$(".carousel").each(function(){
+		setCarouselHeights($(this));
+	});
 })(jQuery);
