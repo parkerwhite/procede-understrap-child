@@ -24,7 +24,7 @@
                 {
                     "key": "field_5bd1ff409918b",
                     "label": "Post",
-                    "name": "post",
+                    "name": "related_post",
                     "type": "post_object",
                     "instructions": "",
                     "required": 0,
@@ -63,5 +63,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1540489095
+    "modified": 1540489736
 }
