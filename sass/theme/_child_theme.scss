@@ -223,9 +223,8 @@ blockquote {
 		flex-direction: row;
 		font-size: #{$font-size-base * 0.892857143}; // 1.25rem;
 		margin-top: 1rem;
-		.bf-left {
-			
-		}
+		.bf-left {}
+		.bf-right {}
 
 		&:before {
 			display: none;
