@@ -21144,8 +21144,14 @@ section {
       color: #707070;
       display: inline-block;
       font-weight: 700;
-      padding: 10px 25px;
+      padding: 5px 10px;
       margin: 0 10px 10px 0; }
+      .widget.widget_lc_taxonomy ul li a {
+        font-size: 0.9rem; }
+
+@media (max-width: 767.98px) {
+  .site-footer img.footer-logo {
+    max-width: 8.125rem; } }
 
 .site-footer p {
   font-size: .95rem; }

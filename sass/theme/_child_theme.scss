@@ -1219,8 +1219,11 @@ section {
 				color: $gray-600;
 				display: inline-block;
 				font-weight: $font-weight-bold;
-				padding: 10px 25px;
+				padding: 5px 10px;
 				margin: 0 10px 10px 0;
+				a {
+					font-size: #{$font-size-base * .818181};
+				}
 			}
 		}
 	}
@@ -1230,6 +1233,11 @@ section {
 // Site Footer
 //
 .site-footer {
+	img.footer-logo {
+		@include media-breakpoint-down('sm') {
+			max-width: 8.125rem;
+		}
+	}
 	p {
 		font-size: .95rem;
 	}
