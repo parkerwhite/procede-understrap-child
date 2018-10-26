@@ -17724,11 +17724,11 @@ ul.list-checklist {
       border-radius: 50%;
       content: "";
       display: inline-block;
-      height: 2.6rem;
+      height: 2.86rem;
       left: -5.625rem;
       position: absolute;
       top: 0;
-      width: 2.6rem; }
+      width: 2.86rem; }
     ul.list-checklist li:after {
       border-bottom: 5px solid #fff;
       border-left: 5px solid #fff;

@@ -141,11 +141,11 @@ ul {
 				border-radius: 50%;
 				content: "";
 				display: inline-block;
-				height: #{$font-size-base * 2.363636};
+				height: #{$font-size-base * 2.6};
 				left: -5.625rem;
 				position: absolute;
 				top: 0;
-				width: #{$font-size-base * 2.363636};
+				width: #{$font-size-base * 2.6};
 			}
 			&:after {
 				border-bottom: 5px solid $white;
