@@ -298,6 +298,7 @@ class Advanced_Custom_Fields_Partials {
 
 			?>
 			<section class="section-card-deck wrapper">
+				<h2>Related Posts</h2>
 				<div class="card-deck" data-cols="<?php echo $related_posts; ?>">
 					<?php for ($i = 0; $i < $related_posts; $i++) {
 
@@ -324,7 +325,7 @@ class Advanced_Custom_Fields_Partials {
 							<?php endif; ?>
 							<div class="card-body">
 								<?php if ( $card_title ) { ?>
-									<h5 class="card-title"><?php echo $card_title; ?></h5>
+									<h3 class="card-title"><?php echo $card_title; ?></h3>
 								<?php } ?>
 								<?php echo $card_body; ?>
 							</div><!-- .card-body -->
