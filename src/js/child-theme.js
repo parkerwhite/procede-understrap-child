@@ -43,7 +43,8 @@
  * prevents unusual resizing issues for dynamic text lengths.
  */
 (function( $ ) {
-	function setCarouselHeights($carousel) {
+	function setCarouselHeight($carousel) {
+		var id = $carousel.attr("id");
 		var maxCarouselItemHeight = Math.max.apply(null, $carousel.find(".carousel-item").map(function (){
 			return $(this).height();
 		}).get());
@@ -51,12 +52,16 @@
 			$(this).css("height", maxCarouselItemHeight);
 		});
 	}
-	$(".carousel").each(function(){
-		setCarouselHeights($(this));
+	var $carousels = $(".carousel");
+	$carousels.each(function(){
+		setCarouselHeight($(this));
 	});
-	$(window).on('resize', function(){
-		$(".carousel").each(function(){
-			setCarouselHeights($(this));
+	$(window).resize(function(){
+		$carousels.each(function(){
+			$(this).find(".carousel-item").each(function(){
+				$(this).css("height", "");
+			});
+			setCarouselHeight($(this));
 		});
 	});
 })(jQuery);
