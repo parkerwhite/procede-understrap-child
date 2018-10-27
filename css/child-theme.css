@@ -1751,6 +1751,42 @@ pre {
   .ginput_container textarea::-webkit-input-placeholder {
     color: #707070;
     opacity: 1; }
+  .form-control:-ms-input-placeholder, .wpcf7 input[type=text]:-ms-input-placeholder,
+  .wpcf7 input[type=search]:-ms-input-placeholder,
+  .wpcf7 input[type=url]:-ms-input-placeholder,
+  .wpcf7 input[type=tel]:-ms-input-placeholder,
+  .wpcf7 input[type=number]:-ms-input-placeholder,
+  .wpcf7 input[type=range]:-ms-input-placeholder,
+  .wpcf7 input[type=date]:-ms-input-placeholder,
+  .wpcf7 input[type=month]:-ms-input-placeholder,
+  .wpcf7 input[type=week]:-ms-input-placeholder,
+  .wpcf7 input[type=time]:-ms-input-placeholder,
+  .wpcf7 input[type=datetime]:-ms-input-placeholder,
+  .wpcf7 input[type=datetime-local]:-ms-input-placeholder,
+  .wpcf7 input[type=color]:-ms-input-placeholder,
+  .wpcf7 input[type=email]:-ms-input-placeholder,
+  .wpcf7 input[type=file]:-ms-input-placeholder,
+  .wpcf7 input[type=submit]:-ms-input-placeholder,
+  .wpcf7 select:-ms-input-placeholder,
+  .wpcf7 textarea:-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors:-ms-input-placeholder, .ginput_container input[type="color"]:-ms-input-placeholder,
+  .ginput_container input[type="date"]:-ms-input-placeholder,
+  .ginput_container input[type="datetime-local"]:-ms-input-placeholder,
+  .ginput_container input[type="email"]:-ms-input-placeholder,
+  .ginput_container input[type="image"]:-ms-input-placeholder,
+  .ginput_container input[type="month"]:-ms-input-placeholder,
+  .ginput_container input[type="number"]:-ms-input-placeholder,
+  .ginput_container input[type="password"]:-ms-input-placeholder,
+  .ginput_container input[type="reset"]:-ms-input-placeholder,
+  .ginput_container input[type="search"]:-ms-input-placeholder,
+  .ginput_container input[type="tel"]:-ms-input-placeholder,
+  .ginput_container input[type="text"]:-ms-input-placeholder,
+  .ginput_container input[type="time"]:-ms-input-placeholder,
+  .ginput_container input[type="url"]:-ms-input-placeholder,
+  .ginput_container input[type="week"]:-ms-input-placeholder,
+  .ginput_container select:-ms-input-placeholder,
+  .ginput_container textarea:-ms-input-placeholder {
+    color: #707070;
+    opacity: 1; }
   .form-control::-ms-input-placeholder, .wpcf7 input[type=text]::-ms-input-placeholder,
   .wpcf7 input[type=search]::-ms-input-placeholder,
   .wpcf7 input[type=url]::-ms-input-placeholder,
@@ -17724,11 +17760,11 @@ ul.list-checklist {
       border-radius: 50%;
       content: "";
       display: inline-block;
-      height: 2.86rem;
+      height: 2.6rem;
       left: -5.625rem;
       position: absolute;
       top: 0;
-      width: 2.86rem; }
+      width: 2.6rem; }
     ul.list-checklist li:after {
       border-bottom: 5px solid #fff;
       border-left: 5px solid #fff;
@@ -17789,6 +17825,9 @@ blockquote .blockquote-footer {
       -ms-flex-direction: row;
           flex-direction: row;
   font-size: 0.98214rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 1rem; }
   blockquote .blockquote-footer:before {
     display: none; }
@@ -21068,9 +21107,7 @@ section {
   border-bottom: 1px solid #707070;
   border-top: 1px solid #707070;
   padding-bottom: 1.375rem;
-  padding-top: 1.375rem;
-  margin-bottom: 1.375rem;
-  margin-top: 1.375rem; }
+  padding-top: 1.375rem; }
   .entry-footer .social-icons a {
     border: 1px solid #707070;
     border-radius: 50%;

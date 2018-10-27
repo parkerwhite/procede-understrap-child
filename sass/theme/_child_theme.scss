@@ -141,11 +141,11 @@ ul {
 				border-radius: 50%;
 				content: "";
 				display: inline-block;
-				height: #{$font-size-base * 2.6};
+				height: #{$font-size-base * 2.363636};
 				left: -5.625rem;
 				position: absolute;
 				top: 0;
-				width: #{$font-size-base * 2.6};
+				width: #{$font-size-base * 2.363636};
 			}
 			&:after {
 				border-bottom: 5px solid $white;
@@ -222,6 +222,7 @@ blockquote {
 		display: flex;
 		flex-direction: row;
 		font-size: #{$font-size-base * 0.892857143}; // 1.25rem;
+		justify-content: center;
 		margin-top: 1rem;
 		.bf-left {}
 		.bf-right {}
@@ -1164,8 +1165,6 @@ section {
 	border-top: 1px solid $gray-600;
 	padding-bottom: 1.375rem;
 	padding-top: 1.375rem;
-	margin-bottom: 1.375rem;
-	margin-top: 1.375rem;
 	.social-icons {
 		a {
 			border: 1px solid $gray-600;

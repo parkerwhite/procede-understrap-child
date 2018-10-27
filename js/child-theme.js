@@ -4033,4 +4033,9 @@
 	$(".carousel").each(function(){
 		setCarouselHeights($(this));
 	});
+	$(window).on('resize', function(){
+		$(".carousel").each(function(){
+			setCarouselHeights($(this));
+		});
+	});
 })(jQuery);
