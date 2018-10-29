@@ -298,7 +298,7 @@ class Advanced_Custom_Fields_Partials {
 
 			?>
 			<section class="section-card-deck wrapper">
-				<h2>Related Posts</h2>
+				<h2><?php _e( 'Related Posts' ); ?></h2>
 				<div class="card-deck" data-cols="<?php echo $related_posts; ?>">
 					<?php for ($i = 0; $i < $related_posts; $i++) {
 
