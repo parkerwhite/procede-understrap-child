@@ -13318,8 +13318,9 @@ h4 {
     h4 {
       font-size: 1.174rem; } }
 
-p:last-of-type {
-  margin-bottom: 0; }
+@media (min-width: 768px) {
+  p:last-of-type {
+    margin-bottom: 0; } }
 
 a.anchor {
   position: absolute;
@@ -18184,6 +18185,12 @@ body.admin-bar #mobile-nav .navbar-collapse {
     font-weight: 700;
     padding: 2.5rem 1rem;
     text-align: center; }
+    @media (max-width: 767.98px) {
+      .nav.nav-tabs .nav-link {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 100%;
+                flex: 1 0 100%;
+        padding: 1.5rem 1rem; } }
     .nav.nav-tabs .nav-link.active {
       background-color: #71C26A;
       border-color: #71C26A;
@@ -18191,6 +18198,12 @@ body.admin-bar #mobile-nav .navbar-collapse {
     .nav.nav-tabs .nav-link:nth-child(2) {
       border-left-color: rgba(112, 112, 112, 0.3);
       border-right-color: rgba(112, 112, 112, 0.3); }
+      @media (max-width: 767.98px) {
+        .nav.nav-tabs .nav-link:nth-child(2) {
+          border-left-color: transparent;
+          border-right-color: transparent;
+          border-bottom-color: rgba(112, 112, 112, 0.3);
+          border-top-color: rgba(112, 112, 112, 0.3); } }
 
 .tab-content {
   background-color: #fff;
@@ -18200,6 +18213,9 @@ body.admin-bar #mobile-nav .navbar-collapse {
   -webkit-box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.16);
           box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.16);
   padding: 3rem; }
+  @media (max-width: 767.98px) {
+    .tab-content {
+      padding: 2rem .5rem; } }
 
 #header-wrapper {
   padding: 0;

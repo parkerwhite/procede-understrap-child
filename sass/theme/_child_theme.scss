@@ -90,7 +90,9 @@ h4 {
 }
 p {
 	&:last-of-type {
-		margin-bottom: 0;
+		@include media-breakpoint-up('md') {
+			margin-bottom: 0;
+		}
 	}
 }
 
@@ -627,6 +629,10 @@ body.admin-bar #mobile-nav .navbar-collapse {
 		font-weight: $font-weight-bold;
 		padding: 2.5rem 1rem;
 		text-align: center;
+		@include media-breakpoint-down('sm') {
+			flex: 1 0 100%;
+			padding: 1.5rem 1rem;
+		}
 		&.active {
 			background-color: $primary;
 			border-color: $primary;
@@ -635,6 +641,12 @@ body.admin-bar #mobile-nav .navbar-collapse {
 		&:nth-child(2) {
 			border-left-color: rgba($gray-600, .3);
 			border-right-color: rgba($gray-600, .3);
+			@include media-breakpoint-down('sm') {
+				border-left-color: transparent;
+				border-right-color: transparent;
+				border-bottom-color: rgba($gray-600, .3);
+				border-top-color: rgba($gray-600, .3);
+			}
 		}
 	}
 }
@@ -645,6 +657,9 @@ body.admin-bar #mobile-nav .navbar-collapse {
 	border-color: transparent; // $white rgba($gray-600, .5) rgba($gray-600, .5);
 	box-shadow: $box-shadow-sm;
 	padding: 3rem;
+	@include media-breakpoint-down('sm') {
+		padding: 2rem .5rem;
+	}
 }
 
 //
