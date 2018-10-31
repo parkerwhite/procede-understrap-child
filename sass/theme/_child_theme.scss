@@ -819,26 +819,26 @@ section {
 }
 .card-deck {
 	.card {
-		flex: 0 0 100%;
+		flex: 1 0 100%;
 		margin-bottom: #{$card-deck-margin * 2};
 		@include media-breakpoint-up('md') { // 2 Cols
-			flex: 0 0 40%;
-			flex: 0 0 calc(50% - #{$card-spacer-x * 2 * 2});
+			flex: 1 0 40%;
+			flex: 1 0 calc(50% - #{$card-spacer-x * 2 * 2});
 		}
 	}
 	&[data-cols="3"] {
 		.card {
 			@include media-breakpoint-up('lg') { // 3 Cols
-				flex: 0 0 30%;
-				flex: 0 0 calc(33.3333% - #{$card-spacer-x * 2});
+				flex: 1 0 30%;
+				flex: 1 0 calc(33.3333% - #{$card-spacer-x * 2});
 			}		
 		}
 	}
 	&[data-cols="4"] {
 		.card {
 			@include media-breakpoint-up('lg') { // 4 Cols
-				flex: 0 0 20%;
-				flex: 0 0 calc(25% - #{$card-spacer-x * 2});
+				flex: 1 0 20%;
+				flex: 1 0 calc(25% - #{$card-spacer-x * 2});
 			}		
 		}
 	}
