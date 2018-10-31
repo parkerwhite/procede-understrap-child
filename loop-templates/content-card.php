@@ -13,7 +13,7 @@
 
 		<div class="card-header">
 
-			<a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'object-fit-cover card-img-top' ) ); ?></a>
+			<a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_post_thumbnail( $post->ID, 'post_card', array( 'class' => 'object-fit-cover card-img-top' ) ); ?></a>
 
 		</div>
 

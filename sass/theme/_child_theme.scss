@@ -855,7 +855,7 @@ section {
 		&[data-cols="3"] {
 			.card {
 				@include media-breakpoint-up('lg') { // 3 Cols
-					flex: 1 0 20%;
+					flex: 1 0 25%;
 				}		
 			}
 		}
@@ -866,6 +866,9 @@ section {
 				}		
 			}
 		}
+	}
+	.nav.nav-tabs .nav-link {
+		flex: 1 0 30%;
 	}
 }
 
