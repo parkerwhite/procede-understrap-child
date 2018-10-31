@@ -644,7 +644,11 @@ body.admin-bar #mobile-nav .navbar-collapse {
 			@include media-breakpoint-down('sm') {
 				border-left-color: transparent;
 				border-right-color: transparent;
-				border-bottom-color: rgba($gray-600, .3);
+				border-top-color: rgba($gray-600, .3);
+			}
+		}
+		&:nth-child(3) {
+			@include media-breakpoint-down('sm') {
 				border-top-color: rgba($gray-600, .3);
 			}
 		}
@@ -858,7 +862,7 @@ section {
 		&[data-cols="4"] {
 			.card {
 				@include media-breakpoint-up('lg') { // 4 Cols
-					flex: 1 0 10%;
+					flex: 1 0 20%;
 				}		
 			}
 		}

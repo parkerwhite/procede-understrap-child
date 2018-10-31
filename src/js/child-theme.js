@@ -48,9 +48,11 @@
 		var maxCarouselItemHeight = Math.max.apply(null, $carousel.find(".carousel-item").map(function (){
 			return $(this).height();
 		}).get());
-		$carousel.find(".carousel-item").each(function(){
-			$(this).css("height", maxCarouselItemHeight);
-		});
+		if(maxCarouselItemHeight > 0){
+			$carousel.find(".carousel-item").each(function(){
+				$(this).css("height", maxCarouselItemHeight);
+			});
+		}
 	}
 	var $carousels = $(".carousel");
 	$carousels.each(function(){
