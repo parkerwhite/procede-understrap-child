@@ -3984,6 +3984,10 @@
  * has a gap from its parent nav item. This adds a slight delay
  * to allow the cursor to cross the gap before the dropdown is
  * closed.
+ *
+ * Nav fix to hide menu on #anchor click
+ *
+ * Removes `.show` class from Nav elements on subnav click.
  */
 (function( $ ) {
 	'use strict';
@@ -3995,6 +3999,11 @@
 		.on("mouseover", showDropdown)
 		.on("mouseleave", function(){
 			timer = setTimeout( hideDropdown, 250);
+		});
+
+	$("#main-menu > .nav-item .dropdown-menu .dropdown-item")
+		.on("click", function(){
+			$("#main-menu .show").removeClass("show");
 		});
 
 	function showDropdown() {

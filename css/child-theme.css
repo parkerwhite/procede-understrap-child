@@ -18021,7 +18021,7 @@ blockquote .blockquote-footer {
         margin-left: 0; }
       #main-nav .navbar-nav > .nav-item:last-of-type {
         margin-right: 0; }
-      #main-nav .navbar-nav > .nav-item:hover, #main-nav .navbar-nav > .nav-item.show {
+      #main-nav .navbar-nav > .nav-item.show {
         border-top-color: #71C26A; }
       #main-nav .navbar-nav > .nav-item.dropdown-header {
         font-size: inherit;
@@ -18038,7 +18038,7 @@ blockquote .blockquote-footer {
         margin-left: 5rem; } }
   #main-nav #main-menu .dropdown-toggle:after {
     display: none; }
-  #main-nav #main-menu > .dropdown:hover .dropdown-menu, #main-nav #main-menu > .dropdown.show .dropdown-menu {
+  #main-nav #main-menu > .dropdown.show .dropdown-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }

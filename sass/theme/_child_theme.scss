@@ -399,7 +399,7 @@ blockquote {
 			&:last-of-type {
 				margin-right: 0;
 			}
-			&:hover,
+			// &:hover,
 			&.show {
 				border-top-color: $primary;
 			}
@@ -435,7 +435,7 @@ blockquote {
 			@include media-breakpoint-down('lg') {
 				// position: inherit;
 			}
-			&:hover,
+			// &:hover,
 			&.show {
 				.dropdown-menu {
 					display: flex;
