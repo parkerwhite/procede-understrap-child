@@ -20840,27 +20840,27 @@ section {
       -webkit-box-flex: 1;
           -ms-flex: 1 0 40%;
               flex: 1 0 40%;
-      -ms-flex: 1 0 calc(50% - 3.75rem);
-          flex: 1 0 calc(50% - 3.75rem);
-      max-width: calc(50% - 3.75rem); } }
+      -ms-flex: 1 0 calc(50% - 1.875rem);
+          flex: 1 0 calc(50% - 1.875rem);
+      max-width: calc(50% - 1.875rem); } }
 
 @media (min-width: 1025px) {
   .card-deck[data-cols="3"] .card {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 30%;
             flex: 1 0 30%;
-    -ms-flex: 1 0 calc(33.3333% - 1.875rem);
-        flex: 1 0 calc(33.3333% - 1.875rem);
-    max-width: calc(33.3333% - 1.875rem); } }
+    -ms-flex: 1 0 calc(33.3333% - 0.9375rem);
+        flex: 1 0 calc(33.3333% - 0.9375rem);
+    max-width: calc(33.3333% - 0.9375rem); } }
 
 @media (min-width: 1025px) {
   .card-deck[data-cols="4"] .card {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 20%;
             flex: 1 0 20%;
-    -ms-flex: 1 0 calc(25% - 1.875rem);
-        flex: 1 0 calc(25% - 1.875rem);
-    max-width: calc(25% - 1.875rem); } }
+    -ms-flex: 1 0 calc(25% - 0.9375rem);
+        flex: 1 0 calc(25% - 0.9375rem);
+    max-width: calc(25% - 0.9375rem); } }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   /* IE10+ CSS styles go here */
