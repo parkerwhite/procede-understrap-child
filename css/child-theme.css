@@ -21078,6 +21078,11 @@ section {
           -ms-flex: 0 0 50%;
               flex: 0 0 50%; } }
 
+#mc_embed_signup .mc-field-group.input-group ul {
+  width: 100%; }
+  #mc_embed_signup .mc-field-group.input-group ul input[type="checkbox"] {
+    margin-right: .5rem; }
+
 @media (min-width: 576px) {
   .modal-dialog {
     width: 80vw;

@@ -1068,7 +1068,7 @@ section {
 }
 
 //
-// GForms
+// Forms
 //
 .gform_wrapper {
 	padding: 0;
@@ -1114,6 +1114,13 @@ section {
 			width: calc(50% - 2px);
 			flex: 0 0 50%;
 		}
+	}
+}
+
+#mc_embed_signup .mc-field-group.input-group ul {
+	width: 100%;
+	input[type="checkbox"] {
+		margin-right: .5rem;
 	}
 }
 
