@@ -20888,9 +20888,9 @@ section {
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .nav.nav-tabs .nav-link {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 30%;
-            flex: 0 0 30%; } }
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 30%;
+            flex: 1 0 30%; } }
 
 #home-wrapper .card-deck .card {
   background: #F5F5F5;

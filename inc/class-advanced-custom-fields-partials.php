@@ -521,7 +521,7 @@ class Advanced_Custom_Fields_Partials {
 					<?php } ?>
 					<div class="row justify-content-center">
 						<div class="col-12 col-md-10 col-lg-9">
-							<div id="carousel_<?php echo $rand_str; ?>" class="carousel slide carousel_<?php echo $rand_str; ?>" data-ride="false" data-interval="<?php echo ( $interval ? $interval : false ); ?>">
+							<div id="carousel_<?php echo $rand_str; ?>" class="carousel carousel_<?php echo $rand_str; ?>" data-ride="false" data-interval="<?php echo ( $interval ? $interval : false ); ?>">
 								<div class="carousel-inner text-center"><?php echo implode( '', $slide_content ); ?></div>
 								<?php if ( $show_indicators ) { ?>
 									<ol class="carousel-indicators">
