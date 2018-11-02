@@ -4118,6 +4118,6 @@ jQuery.fn.bicubicImgInterpolation = function(settings) {
 	};
 };
 
-jQuery( document ).ready(function() {
-	jQuery('img').bicubicImgInterpolation({});
-});
+// jQuery( document ).ready(function() {
+// 	jQuery('img').bicubicImgInterpolation({});
+// });
