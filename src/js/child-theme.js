@@ -139,6 +139,8 @@ jQuery.fn.bicubicImgInterpolation = function(settings) {
 	};
 };
 
-// jQuery( document ).ready(function() {
-// 	jQuery('img').bicubicImgInterpolation({});
-// });
+jQuery( document ).ready(function() {
+	if (navigator.appName == 'Microsoft Internet Explorer' || navigator.appName == 'Netscape' || !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1)){
+		jQuery('img').bicubicImgInterpolation({});
+	}
+});
