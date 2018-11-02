@@ -4030,7 +4030,7 @@
  * to the height of the largest carousel item in the set. This 
  * prevents unusual resizing issues for dynamic text lengths.
  */
-(function( $ ) {
+(function($) {
 	function setCarouselHeight($carousel) {
 		var id = $carousel.attr("id");
 		var maxCarouselItemHeight = Math.max.apply(null, $carousel.find(".carousel-item").map(function (){
@@ -4053,6 +4053,11 @@
 			});
 			setCarouselHeight($(this));
 		});
+	});
+
+	$('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+		console.log(e.target); // newly activated tab
+		// e.relatedTarget // previous active tab
 	});
 })(jQuery);
 
