@@ -77,7 +77,7 @@
 	});
 
 	$('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
-		console.log(e.target.attr("aria-controls")); // newly activated tab
+		console.log($(e.target).attr("aria-controls")); // newly activated tab
 		// e.relatedTarget // previous active tab
 
 	});
