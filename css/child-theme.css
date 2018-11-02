@@ -21281,8 +21281,8 @@ section {
  */
 .wph-modal {
   background: rgba(0, 0, 0, 0.5);
-  padding-left: 0;
-  padding-right: 0; }
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
   .wph-modal .hustle-modal {
     width: 100%;
     max-width: 100%; }
