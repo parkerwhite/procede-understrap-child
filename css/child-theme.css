@@ -21288,17 +21288,14 @@ section {
     max-width: 100%; }
     .wph-modal .hustle-modal .hustle-modal-close {
       position: absolute;
+      right: 1rem;
       top: 1rem;
-      right: 1rem; }
+      z-index: 1; }
       .wph-modal .hustle-modal .hustle-modal-close .hustle-icon {
         height: 3rem;
         max-height: 3rem;
         max-width: 3rem;
         width: 3rem; }
-        .wph-modal .hustle-modal .hustle-modal-close .hustle-icon path {
-          fill: transparent; }
-          .wph-modal .hustle-modal .hustle-modal-close .hustle-icon path:hover {
-            fill: transparent; }
     .wph-modal .hustle-modal .hustle-modal-body section {
       padding: 0; }
       .wph-modal .hustle-modal .hustle-modal-body section .hustle-modal-image {
@@ -21306,9 +21303,11 @@ section {
         @media (max-width: 767.98px) {
           .wph-modal .hustle-modal .hustle-modal-body section .hustle-modal-image {
             display: none; } }
+      .wph-modal .hustle-modal .hustle-modal-body section .hustle-modal-content,
       .wph-modal .hustle-modal .hustle-modal-body section .hustle-modal-message {
         padding: 4rem 8rem; }
         @media (max-width: 767.98px) {
+          .wph-modal .hustle-modal .hustle-modal-body section .hustle-modal-content,
           .wph-modal .hustle-modal .hustle-modal-body section .hustle-modal-message {
             padding: 2rem 4rem; } }
 

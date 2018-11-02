@@ -1393,18 +1393,16 @@ section {
 		max-width: 100%;
 		.hustle-modal-close {
 			position: absolute;
-			top: 1rem;
 			right: 1rem;
+			top: 1rem;
+			z-index: 1;
 			.hustle-icon {
 				height: 3rem;
 				max-height: 3rem;
 				max-width: 3rem;
 				width: 3rem;
 				path {
-					fill: transparent;
-					&:hover {
-						fill: transparent;
-					}
+					&:hover {}
 				}
 			}
 		}
@@ -1417,6 +1415,7 @@ section {
 						display: none;
 					}
 				}
+				.hustle-modal-content,
 				.hustle-modal-message {
 					padding: 4rem 8rem;
 					@include media-breakpoint-down('sm') {
