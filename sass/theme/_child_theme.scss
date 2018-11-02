@@ -1396,13 +1396,33 @@ section {
 			right: 1rem;
 			top: 1rem;
 			z-index: 1;
+			&:before, &:after {
+				background: $gray-600;;
+				content: '';
+				height: 2px;
+				left: 50%;
+				margin-left: -20px;
+				margin-top: -1px;
+				position: absolute;
+				top: 50%;
+				width: 40px;
+			}
+			&:before {
+				transform: rotate(45deg);
+			}
+			&:after {
+				transform: rotate(-45deg);
+			}
 			.hustle-icon {
-				height: 3rem;
-				max-height: 3rem;
-				max-width: 3rem;
-				width: 3rem;
+				height: 2rem;
+				max-height: 2rem;
+				max-width: 2rem;
+				width: 2rem;
 				path {
-					&:hover {}
+					fill: transparent;
+					&:hover {
+						fill: transparent;
+					}
 				}
 			}
 		}
