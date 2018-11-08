@@ -4068,7 +4068,7 @@
  * Modernizr Fix for `object-fit`
  */
 (function($){
-	if ( ! Modernizr.objectfit || Modernizr.objectfit ) {
+	if ( ! Modernizr.objectfit ) {
 		$('.card-header__img-wrapper').each(function () {
 			var $container = $(this),
 				imgUrl     = $container.find('img').prop('src');
