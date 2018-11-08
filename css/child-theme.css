@@ -1751,42 +1751,6 @@ pre {
   .ginput_container textarea::-webkit-input-placeholder {
     color: #707070;
     opacity: 1; }
-  .form-control:-ms-input-placeholder, .wpcf7 input[type=text]:-ms-input-placeholder,
-  .wpcf7 input[type=search]:-ms-input-placeholder,
-  .wpcf7 input[type=url]:-ms-input-placeholder,
-  .wpcf7 input[type=tel]:-ms-input-placeholder,
-  .wpcf7 input[type=number]:-ms-input-placeholder,
-  .wpcf7 input[type=range]:-ms-input-placeholder,
-  .wpcf7 input[type=date]:-ms-input-placeholder,
-  .wpcf7 input[type=month]:-ms-input-placeholder,
-  .wpcf7 input[type=week]:-ms-input-placeholder,
-  .wpcf7 input[type=time]:-ms-input-placeholder,
-  .wpcf7 input[type=datetime]:-ms-input-placeholder,
-  .wpcf7 input[type=datetime-local]:-ms-input-placeholder,
-  .wpcf7 input[type=color]:-ms-input-placeholder,
-  .wpcf7 input[type=email]:-ms-input-placeholder,
-  .wpcf7 input[type=file]:-ms-input-placeholder,
-  .wpcf7 input[type=submit]:-ms-input-placeholder,
-  .wpcf7 select:-ms-input-placeholder,
-  .wpcf7 textarea:-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors:-ms-input-placeholder, .ginput_container input[type="color"]:-ms-input-placeholder,
-  .ginput_container input[type="date"]:-ms-input-placeholder,
-  .ginput_container input[type="datetime-local"]:-ms-input-placeholder,
-  .ginput_container input[type="email"]:-ms-input-placeholder,
-  .ginput_container input[type="image"]:-ms-input-placeholder,
-  .ginput_container input[type="month"]:-ms-input-placeholder,
-  .ginput_container input[type="number"]:-ms-input-placeholder,
-  .ginput_container input[type="password"]:-ms-input-placeholder,
-  .ginput_container input[type="reset"]:-ms-input-placeholder,
-  .ginput_container input[type="search"]:-ms-input-placeholder,
-  .ginput_container input[type="tel"]:-ms-input-placeholder,
-  .ginput_container input[type="text"]:-ms-input-placeholder,
-  .ginput_container input[type="time"]:-ms-input-placeholder,
-  .ginput_container input[type="url"]:-ms-input-placeholder,
-  .ginput_container input[type="week"]:-ms-input-placeholder,
-  .ginput_container select:-ms-input-placeholder,
-  .ginput_container textarea:-ms-input-placeholder {
-    color: #707070;
-    opacity: 1; }
   .form-control::-ms-input-placeholder, .wpcf7 input[type=text]::-ms-input-placeholder,
   .wpcf7 input[type=search]::-ms-input-placeholder,
   .wpcf7 input[type=url]::-ms-input-placeholder,
@@ -9282,7 +9246,8 @@ button.bg-dark:focus {
   margin-top: auto !important; }
 
 .mr-auto,
-.mx-auto {
+.mx-auto,
+.aligncenter {
   margin-right: auto !important; }
 
 .mb-auto,
@@ -9290,7 +9255,8 @@ button.bg-dark:focus {
   margin-bottom: auto !important; }
 
 .ml-auto,
-.mx-auto {
+.mx-auto,
+.aligncenter {
   margin-left: auto !important; }
 
 @media (min-width: 576px) {
@@ -10833,14 +10799,8 @@ a.text-dark:hover, a.text-dark:focus {
   float: right;
   margin-left: 1.5em; }
 
-.aligncenter {
-  margin: 0px auto; }
-
 .entry-footer span {
   padding-right: 10px; }
-
-figure.woocommerce-product-gallery__wrapper {
-  max-width: inherit !important; }
 
 img.wp-post-image,
 article img,
@@ -10891,6 +10851,9 @@ a.skip-link {
   color: #fff; }
   .navbar-dark .navbar-brand a:hover, .navbar-dark .navbar-brand a:focus {
     color: #fff; }
+
+.navbar h1 {
+  font-weight: 400; }
 
 /*
 * Use existing Bootstrap 4 classes and
@@ -20821,6 +20784,15 @@ section {
     border-bottom: none; }
     .card .card-header h2, .card .card-header h1.entry-title {
       margin-bottom: 0; }
+    .card .card-header .card-header__img-wrapper {
+      background-size: cover;
+      background-position: 50% 50%; }
+      .card .card-header .card-header__img-wrapper.compat-object-fit img {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        -moz-opacity: 0;
+        -khtml-opacity: 0;
+        opacity: 0; }
     .card .card-header .card-img-top {
       height: 12rem; }
   .card .card-body {
@@ -21298,6 +21270,7 @@ section {
         left: 50%;
         margin-left: -20px;
         margin-top: -1px;
+        pointer-events: none;
         position: absolute;
         top: 50%;
         width: 40px; }

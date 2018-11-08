@@ -217,6 +217,7 @@ class Advanced_Custom_Fields_Partials {
 							$link_target  = '_self';
 
 							if ( $use_custom_content ) {
+								$post_id       = $i;
 								$card_img_id   = get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_card_image', true );
 								$card_img_src  = wp_get_attachment_image_src( $card_img_id, 'large' );
 								$card_img_top  = $card_img_src[0];
@@ -246,8 +247,10 @@ class Advanced_Custom_Fields_Partials {
 							?>
 							<article class="card" id="post-<?php echo $post_id; ?>">
 								<?php if ( $card_img_top ) : ?>
-									<div class="card-header">
-										<img src="<?php echo $card_img_top; ?>" alt="" class="object-fit-cover card-img-top">
+									<div class="card-header" data-img="<?php echo $card_img_top; ?>">
+										<div class="card-header__img-wrapper">
+											<img src="<?php echo $card_img_top; ?>" alt="" class="object-fit-cover card-img-top">
+										</div>
 									</div>
 								<?php endif; ?>
 								<div class="card-body">
@@ -319,8 +322,10 @@ class Advanced_Custom_Fields_Partials {
 					?>
 						<article class="card" id="post-<?php echo $post_id; ?>">
 							<?php if ( $card_img_top ) : ?>
-								<div class="card-header">
-									<img src="<?php echo $card_img_top; ?>" alt="" class="object-fit-cover card-img-top">
+								<div class="card-header" data-img="<?php echo $card_img_top; ?>">
+									<div class="card-header__img-wrapper">
+										<img src="<?php echo $card_img_top; ?>" alt="" class="object-fit-cover card-img-top">
+									</div>
 								</div>
 							<?php endif; ?>
 							<div class="card-body">
