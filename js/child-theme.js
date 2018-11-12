@@ -4068,8 +4068,8 @@
  * Modernizr Fix for `object-fit`
  */
 (function($){
-	if ( ! Modernizr.objectfit ) {
-		$('.card-header__img-wrapper').each(function () {
+	$.fn.addImageToWrapperBg = function(){
+		$(this).each(function () {
 			var $container = $(this),
 				imgUrl     = $container.find('img').prop('src');
 			if (imgUrl) {
@@ -4078,6 +4078,10 @@
 					.addClass('compat-object-fit');
 			}  
 		});
+	}
+	if ( ! Modernizr.objectfit ) {
+		$('.card-header__img-wrapper').addImageToWrapperBg();
+		$('.object-fit__img-wrapper').addImageToWrapperBg();
 	}
 })(jQuery);
 

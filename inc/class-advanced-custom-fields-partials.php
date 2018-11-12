@@ -392,7 +392,9 @@ class Advanced_Custom_Fields_Partials {
 			<section class="section-row-w-columns <?php echo ( $split_background ? 'section-split-cols' : '' ); ?> <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> <?php echo ( esc_html( $section_css_class ) ); ?>" id="<?php echo ( $section_id ? $section_id : '' ); ?>">
 				<a class="anchor" name="anchor-<?php echo $section_id; ?>"></a>
 				<?php if ( $background_image ) { ?>
-					<img src="<?php echo $section_bg_img[0]; ?>" class="object-fit-cover section-background-image">
+					<div class="object-fit__img-wrapper" data-img="<?php echo $section_bg_img[0]; ?>">
+						<img src="<?php echo $section_bg_img[0]; ?>" class="object-fit-cover section-background-image">
+					</div>
 					<div class="background-image-overlay">
 				<?php } ?>
 					<?php if ( $split_background ) { ?>

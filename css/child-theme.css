@@ -17766,6 +17766,10 @@ section.section-w-background-image {
   color: #fff;
   padding-bottom: 0;
   padding-top: 0; }
+  section.section-w-background-image .object-fit__img-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
   section.section-w-background-image img.section-background-image {
     bottom: 0;
     left: 0;
