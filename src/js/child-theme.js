@@ -97,10 +97,10 @@
 			}  
 		});
 	}
-	if ( ! Modernizr.objectfit ) {
+	// if ( ! Modernizr.objectfit ) {
 		$('.card-header__img-wrapper').addImageToWrapperBg();
 		$('.object-fit__img-wrapper').addImageToWrapperBg();
-	}
+	// }
 })(jQuery);
 
 
