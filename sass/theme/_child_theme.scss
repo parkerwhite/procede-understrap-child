@@ -220,6 +220,16 @@ section.section-w-background-image {
 		background-color: rgba($black, .65);
 	}
 }
+.compat-object-fit {
+	z-index: -1;
+	img {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		filter: alpha(opacity=0);
+		-moz-opacity: 0;
+		-khtml-opacity: 0;
+		opacity: 0;
+	}
+}
 
 
 //
@@ -809,16 +819,6 @@ section {
 		.card-header__img-wrapper {
 			background-size: cover;
 			background-position: 50% 50%;
-
-			&.compat-object-fit {
-				img {
-					-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-					filter: alpha(opacity=0);
-					-moz-opacity: 0;
-					-khtml-opacity: 0;
-					opacity: 0;
-				}
-			}
 		}
 
 		.card-img-top {

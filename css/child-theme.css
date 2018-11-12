@@ -17784,6 +17784,15 @@ section.section-w-background-image {
     padding-top: 3.125rem;
     background-color: rgba(0, 0, 0, 0.65); }
 
+.compat-object-fit {
+  z-index: -1; }
+  .compat-object-fit img {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0; }
+
 blockquote .blockquote-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20791,12 +20800,6 @@ section {
     .card .card-header .card-header__img-wrapper {
       background-size: cover;
       background-position: 50% 50%; }
-      .card .card-header .card-header__img-wrapper.compat-object-fit img {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-        filter: alpha(opacity=0);
-        -moz-opacity: 0;
-        -khtml-opacity: 0;
-        opacity: 0; }
     .card .card-header .card-img-top {
       height: 12rem; }
   .card .card-body {
