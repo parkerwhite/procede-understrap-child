@@ -222,8 +222,15 @@ section.section-w-background-image {
 	height: 100%;
 	position: absolute;
 	width: 100%;
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		position: relative;
+		height: auto;
+	}
 	&.compat-object-fit {
 		z-index: -1;
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			z-index: inherit;
+		}
 		img {
 			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 			filter: alpha(opacity=0);
