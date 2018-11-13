@@ -224,12 +224,12 @@ section.section-w-background-image {
 	width: 100%;
 	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 		position: relative;
-		height: auto;
+		// height: auto;
 	}
 	&.compat-object-fit {
-		z-index: -1;
+		// z-index: -1;
 		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-			z-index: inherit;
+			// z-index: inherit;
 		}
 		img {
 			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -238,6 +238,11 @@ section.section-w-background-image {
 			-khtml-opacity: 0;
 			opacity: 0;
 		}
+	}
+}
+.card-header__img-wrapper {
+	&.compat-object-fit {
+		z-index: -1;
 	}
 }
 
