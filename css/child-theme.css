@@ -17786,10 +17786,6 @@ section.section-w-background-image {
   background-size: cover;
   height: 100%;
   width: 100%; }
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .card-header__img-wrapper,
-    .object-fit__img-wrapper {
-      position: relative; } }
   .card-header__img-wrapper.compat-object-fit img,
   .object-fit__img-wrapper.compat-object-fit img {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -17799,7 +17795,8 @@ section.section-w-background-image {
     opacity: 0; }
 
 .object-fit__img-wrapper.compat-object-fit {
-  z-index: -1; }
+  z-index: -1;
+  position: absolute; }
 
 blockquote .blockquote-footer {
   display: -webkit-box;

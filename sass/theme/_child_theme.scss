@@ -222,10 +222,10 @@ section.section-w-background-image {
 	height: 100%;
 	// position: absolute;
 	width: 100%;
-	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-		position: relative;
-		// height: auto;
-	}
+	// @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	// 	position: relative;
+	// 	// height: auto;
+	// }
 	&.compat-object-fit {
 		// z-index: -1;
 		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -243,6 +243,7 @@ section.section-w-background-image {
 .object-fit__img-wrapper {
 	&.compat-object-fit {
 		z-index: -1;
+		position: absolute;
 	}
 }
 
