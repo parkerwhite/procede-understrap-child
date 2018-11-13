@@ -17798,7 +17798,7 @@ section.section-w-background-image {
     -khtml-opacity: 0;
     opacity: 0; }
 
-.card-header__img-wrapper.compat-object-fit {
+.object-fit__img-wrapper.compat-object-fit {
   z-index: -1; }
 
 blockquote .blockquote-footer {
