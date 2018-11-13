@@ -17785,7 +17785,6 @@ section.section-w-background-image {
   background-position: 50% 50%;
   background-size: cover;
   height: 100%;
-  position: absolute;
   width: 100%; }
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .card-header__img-wrapper,
