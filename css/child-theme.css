@@ -18269,6 +18269,8 @@ body.admin-bar #mobile-nav .navbar-collapse {
     #header-wrapper #header-hero-content-wrapper .page-title {
       font-weight: 400;
       margin-bottom: 2.75rem; }
+      #header-wrapper #header-hero-content-wrapper .page-title:last-child {
+        margin-bottom: 0; }
 
 section {
   padding-bottom: 3.125rem;

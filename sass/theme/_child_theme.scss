@@ -741,6 +741,9 @@ body.admin-bar #mobile-nav .navbar-collapse {
 		.page-title {
 			font-weight: $font-weight-normal;
 			margin-bottom: #{$font-size-base * 2.5};
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 		.page-subtitle {}
 	}
