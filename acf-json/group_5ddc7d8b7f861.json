@@ -1,0 +1,49 @@
+{
+    "key": "group_5ddc7d8b7f861",
+    "title": "Hero Image Settings",
+    "fields": [
+        {
+            "key": "field_5ddc7d990c1f3",
+            "label": "Overlay",
+            "name": "hero_image_settings_overlay",
+            "type": "true_false",
+            "instructions": "Toggle the gray hero image overlay",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": ""
+}
