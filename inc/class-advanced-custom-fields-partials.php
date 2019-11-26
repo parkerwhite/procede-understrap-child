@@ -36,8 +36,8 @@ class Advanced_Custom_Fields_Partials {
 	/**
 	 * Disable ACF on Frontend
 	 *
-	 * Why would we want to disable front-end ACF? For speed and to prevent things  
-	 * from breaking if the plugin ever gets disabled. Check out these articles 
+	 * Why would we want to disable front-end ACF? For speed and to prevent things
+	 * from breaking if the plugin ever gets disabled. Check out these articles
 	 * [here](https://www.billerickson.net/code/disable-acf-frontend/)
 	 * [here](https://www.billerickson.net/advanced-custom-fields-frontend-dependency/)
 	 *
@@ -68,9 +68,9 @@ class Advanced_Custom_Fields_Partials {
 
 		$post_type = ( $post_type ? $post_type : get_post_type( get_the_ID() ) );
 
-		$args = array( 
+		$args = array(
 			'orderby'        => 'rand',
-			'posts_per_page' => '1', 
+			'posts_per_page' => '1',
 			'post_type'      => $post_type
 		);
 
@@ -112,7 +112,7 @@ class Advanced_Custom_Fields_Partials {
 	 * @return (str/array) $value
 	 */
 	public function get_field( $field, $esc = true ) {
-		
+
 		$value = get_post_meta( get_the_ID(), $field, true );
 
 		if ( $esc ) {
@@ -135,12 +135,13 @@ class Advanced_Custom_Fields_Partials {
 
 		$css_classes_page_header_row_css    = get_post_meta( $post_id, 'css_classes_page_header_row_css', true );
 		$css_classes_page_header_column_css = get_post_meta( $post_id, 'css_classes_page_header_column_css', true );
+		$show_hero_overlay									= get_post_meta( $post_id, 'hero_image_settings_overlay', true );
 
 		if ( $style && $style !== 'none' ) : ?>
 		<section id="header-wrapper" class="wrapper <?php echo 'wrapper-' . $style; ?>">
 			<?php if ( $style == 'hero' ) : ?>
 				<?php echo get_the_post_thumbnail( $post_id, 'full', array( 'class' => 'object-fit-cover' ) ); ?>
-				<div id="header-hero-content-wrapper">
+				<div id="header-hero-content-wrapper" class="<?php echo $show_hero_overlay ? 'overlay-show' : 'overlay-hidden'; ?>">
 			<?php else : ?>
 				<div id="header-content-wrapper">
 			<?php endif; ?>
@@ -190,7 +191,7 @@ class Advanced_Custom_Fields_Partials {
 		$read_more         = $this->get_field( $this->repeater_field . '_' . $key . '_read_more' );
 		$cards             = $this->get_field( $this->repeater_field . '_' . $key . '_cards', false );
 
-		if ( $cards ): 
+		if ( $cards ):
 
 			ob_start();
 
@@ -217,6 +218,7 @@ class Advanced_Custom_Fields_Partials {
 							$link_target  = '_self';
 
 							if ( $use_custom_content ) {
+								$post_id       = $i;
 								$card_img_id   = get_post_meta( get_the_ID(), $this->repeater_field . '_' . $key . '_cards_' . $i . '_card_image', true );
 								$card_img_src  = wp_get_attachment_image_src( $card_img_id, 'large' );
 								$card_img_top  = $card_img_src[0];
@@ -246,8 +248,10 @@ class Advanced_Custom_Fields_Partials {
 							?>
 							<article class="card" id="post-<?php echo $post_id; ?>">
 								<?php if ( $card_img_top ) : ?>
-									<div class="card-header">
-										<img src="<?php echo $card_img_top; ?>" alt="" class="object-fit-cover card-img-top">
+									<div class="card-header" data-img="<?php echo $card_img_top; ?>">
+										<div class="card-header__img-wrapper">
+											<img src="<?php echo $card_img_top; ?>" alt="" class="object-fit-cover card-img-top">
+										</div>
 									</div>
 								<?php endif; ?>
 								<div class="card-body">
@@ -292,7 +296,7 @@ class Advanced_Custom_Fields_Partials {
 
 		$related_posts     = $this->get_field( 'related_posts', false );
 
-		if ( $related_posts > 0 ): 
+		if ( $related_posts > 0 ):
 
 			ob_start();
 
@@ -319,8 +323,10 @@ class Advanced_Custom_Fields_Partials {
 					?>
 						<article class="card" id="post-<?php echo $post_id; ?>">
 							<?php if ( $card_img_top ) : ?>
-								<div class="card-header">
-									<img src="<?php echo $card_img_top; ?>" alt="" class="object-fit-cover card-img-top">
+								<div class="card-header" data-img="<?php echo $card_img_top; ?>">
+									<div class="card-header__img-wrapper">
+										<img src="<?php echo $card_img_top; ?>" alt="" class="object-fit-cover card-img-top">
+									</div>
 								</div>
 							<?php endif; ?>
 							<div class="card-body">
@@ -379,7 +385,7 @@ class Advanced_Custom_Fields_Partials {
 			$col_widths[]  = ( $cols_per_row > 0 ? 'col-md-' . ( 12 / $cols_per_row ) : 'col-md-auto' );
 		}
 
-		if ( $columns ): 
+		if ( $columns ):
 
 			ob_start();
 
@@ -387,7 +393,9 @@ class Advanced_Custom_Fields_Partials {
 			<section class="section-row-w-columns <?php echo ( $split_background ? 'section-split-cols' : '' ); ?> <?php echo ( $section_color ? 'bg-' . $section_color : '' ); ?> <?php echo ( esc_html( $section_css_class ) ); ?>" id="<?php echo ( $section_id ? $section_id : '' ); ?>">
 				<a class="anchor" name="anchor-<?php echo $section_id; ?>"></a>
 				<?php if ( $background_image ) { ?>
-					<img src="<?php echo $section_bg_img[0]; ?>" class="object-fit-cover section-background-image">
+					<div class="object-fit__img-wrapper" data-img="<?php echo $section_bg_img[0]; ?>">
+						<img src="<?php echo $section_bg_img[0]; ?>" class="object-fit-cover section-background-image">
+					</div>
 					<div class="background-image-overlay">
 				<?php } ?>
 					<?php if ( $split_background ) { ?>
@@ -476,7 +484,7 @@ class Advanced_Custom_Fields_Partials {
 			$slide_content    = array();
 			$slide_indicators = array();
 
-			for ($i = 0; $i < $slides; $i++) { 
+			for ($i = 0; $i < $slides; $i++) {
 
 				$active       = ( $i == 0 ? 'active' : '' );
 				$is_custom    = $this->get_field( $this->repeater_field . '_' . $key . '_slides_' . $i . '_custom_content', false );
