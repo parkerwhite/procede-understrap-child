@@ -82,6 +82,8 @@ class Advanced_Custom_Fields_Partials {
 				return get_post( $id );
 			return $id;
 		endwhile;
+
+		wp_reset_query();
 	}
 
 	/**
@@ -135,15 +137,15 @@ class Advanced_Custom_Fields_Partials {
 
 		$css_classes_page_header_row_css    = get_post_meta( $post_id, 'css_classes_page_header_row_css', true );
 		$css_classes_page_header_column_css = get_post_meta( $post_id, 'css_classes_page_header_column_css', true );
-		$show_hero_overlay									= get_post_meta( $post_id, 'hero_image_settings_overlay', true );
+		$show_hero_overlay									= ( metadata_exists( 'post', $post_id, 'hero_image_settings_overlay' ) ? get_post_meta( $post_id, 'hero_image_settings_overlay', true ) : 1 );
 
 		if ( $style && $style !== 'none' ) : ?>
 		<section id="header-wrapper" class="wrapper <?php echo 'wrapper-' . $style; ?>">
 			<?php if ( $style == 'hero' ) : ?>
 				<?php echo get_the_post_thumbnail( $post_id, 'full', array( 'class' => 'object-fit-cover' ) ); ?>
-				<div id="header-hero-content-wrapper" class="<?php echo $show_hero_overlay ? 'overlay-show' : 'overlay-hidden'; ?>">
+				<div id="header-hero-content-wrapper" class="<?php echo $show_hero_overlay ? 'overlay-show' : 'overlay-hidden'; ?>" data-overlay="<?php echo $show_hero_overlay; ?>">
 			<?php else : ?>
-				<div id="header-content-wrapper">
+				<div id="header-content-wrapper" data-overlay="<?php echo $show_hero_overlay; ?>">
 			<?php endif; ?>
 				<div class="<?php echo esc_attr( $container ); ?>" id="" tabindex="-1">
 					<div class="row <?php echo ( $css_classes_page_header_row_css ? $css_classes_page_header_row_css : 'align-items-center justify-content-center' ); ?>">
@@ -249,9 +251,9 @@ class Advanced_Custom_Fields_Partials {
 							<article class="card" id="post-<?php echo $post_id; ?>">
 								<?php if ( $card_img_top ) : ?>
 									<div class="card-header" data-img="<?php echo $card_img_top; ?>">
-										<div class="card-header__img-wrapper">
+										<a href="<?php echo $link_url; ?>">
 											<img src="<?php echo $card_img_top; ?>" alt="" class="object-fit-cover card-img-top">
-										</div>
+										</a>
 									</div>
 								<?php endif; ?>
 								<div class="card-body">

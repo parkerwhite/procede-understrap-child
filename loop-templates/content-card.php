@@ -10,13 +10,11 @@
 <article <?php post_class( array( 'card' ) ); ?> id="post-<?php the_ID(); ?>">
 
 	<?php if ( has_post_thumbnail() ) : ?>
-
 		<div class="card-header">
-
-			<a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_post_thumbnail( $post->ID, 'post_card', array( 'class' => 'object-fit-cover card-img-top' ) ); ?></a>
-
+			<a href="<?php echo get_the_permalink(); ?>">
+				<?php echo get_the_post_thumbnail( $post->ID, 'post_card', array( 'class' => 'object-fit-cover card-img-top' ) ); ?>
+			</a>
 		</div>
-
 	<?php endif; ?>
 
 	<div class="card-body">
@@ -39,4 +37,4 @@
 
 	</div><!-- .card-footer -->
 
-</article><!-- #post-## -->
+</article><!-- #post-<?php the_ID(); ?> -->
