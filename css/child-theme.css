@@ -13253,6 +13253,11 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
+#wpadminbar #wp-admin-bar-wp-logo,
+#wpadminbar #wp-admin-bar-customize,
+#wpadminbar #wp-admin-bar-new-content {
+  display: none; }
+
 body {
   margin-top: 198px; }
   body.admin-bar #wrapper-navbar {
@@ -17837,6 +17842,41 @@ section.section-w-background-image {
   z-index: -1;
   position: absolute; }
 
+#featured-post .img-featured-wrapper {
+  float: right;
+  height: 362.8125px;
+  margin-bottom: 30px;
+  margin-left: 60px;
+  max-width: 50%;
+  overflow: hidden;
+  position: relative;
+  width: calc(50% - 30px);
+  height: 362.8125px; }
+  @media (max-width: 767.98px) {
+    #featured-post .img-featured-wrapper {
+      height: 135px; } }
+  @media (max-width: 1024.98px) {
+    #featured-post .img-featured-wrapper {
+      height: 236.25px; } }
+  @media (max-width: 1598.98px) {
+    #featured-post .img-featured-wrapper {
+      height: 292.5px; } }
+  #featured-post .img-featured-wrapper img {
+    bottom: -99999px;
+    height: auto;
+    left: -99999px;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute;
+    right: -99999px;
+    top: -99999px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    width: auto; }
+
 blockquote .blockquote-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18048,8 +18088,14 @@ blockquote .blockquote-footer {
         padding: inherit; }
       #main-nav .navbar-nav > .nav-item .nav-link {
         padding: 0; }
-    #main-nav .navbar-nav .current-menu-item {
+    #main-nav .navbar-nav .current-menu-item,
+    #main-nav .navbar-nav .current_page_item,
+    #main-nav .navbar-nav .current_page_parent {
       color: #71C26A; }
+      #main-nav .navbar-nav .current-menu-item > .nav-link,
+      #main-nav .navbar-nav .current_page_item > .nav-link,
+      #main-nav .navbar-nav .current_page_parent > .nav-link {
+        color: #71C26A; }
   #main-nav #main-menu-wrapper {
     max-width: 66.5rem; }
     @media (min-width: 1599px) {
@@ -20943,9 +20989,6 @@ section {
     font-weight: 700; }
   #home-wrapper .card-deck .card .card-body p {
     font-size: 0.88393rem; }
-
-#home-wrapper .row.row-featured img.wp-post-image, #home-wrapper .row-featured.gform_fields img.wp-post-image {
-  max-height: 28.6rem; }
 
 #leadership .card-deck .card {
   -webkit-box-shadow: none;

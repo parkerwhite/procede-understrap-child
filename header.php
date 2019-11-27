@@ -66,7 +66,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					}
 				} ?>
 
-				
+
 
 			<?php if ( 'container' == $container ) : ?>
 				</div><!-- .container -->
@@ -84,15 +84,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<?php if ( ! has_custom_logo() ) { ?>
 
 					<?php if ( is_front_page() && is_home() ) : ?>
-
 						<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-
 					<?php else : ?>
-
 						<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
-
 					<?php endif; ?>
-
 
 				<?php } else { ?>
 					<?php the_custom_logo(); ?>

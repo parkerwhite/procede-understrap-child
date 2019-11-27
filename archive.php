@@ -23,56 +23,15 @@ $post_type = get_post_type();
 
 ?>
 
-<?php if ( is_front_page() && is_home() ) : ?>
-	<?php get_template_part( 'global-templates/hero' ); ?>
-<?php endif; ?>
-
 <div class="wrapper" id="archive-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-		<?php if ( $post_type == 'post' ) :
+		<?php if ( $post_type === 'post' ) { ?>
 
-			$args = array(
-				'numberposts' => 1,
-				'offset' => 0,
-				'category' => 0,
-				'orderby' => 'post_date',
-				'order' => 'DESC',
-				'include' => '',
-				'exclude' => '',
-				'meta_key' => '',
-				'meta_value' =>'',
-				'post_type' => $post_type,
-				'post_status' => 'publish',
-				'suppress_filters' => true
-			);
+			<?php get_template_part( 'partials/partial', 'featured-post' ); ?>
 
-			$recent_posts = wp_get_recent_posts( $args, OBJECT );
-
-			?>
-
-			<?php foreach ($recent_posts as $recent_post) : $post_object = get_post( $recent_post->ID ); ?>
-
-				<div class="row mb-2">
-
-					<?php if ( has_post_thumbnail( $recent_post->ID ) ) { ?>
-						<div class="col-12 col-md-6 order-12">
-							<?php echo get_the_post_thumbnail( $recent_post->ID, 'post_intro', array( 'class' => '' ) ); ?>
-						</div>
-					<?php } ?>
-
-					<div class="col-12 col-md-6 order-1">
-						<h2><?php echo get_the_title( $recent_post->ID ); ?></h2>
-						<?php echo apply_filters( 'the_content', wp_trim_words( $post_object->post_content, 50, '...' ) ); ?>
-						<p class="text-right"><a href="<?php echo get_permalink( $recent_post->ID ); ?>" class="btn btn-primary"><?php echo __( 'Read More', 'understrap' ); ?></a></p>
-					</div>
-
-				</div>
-
-			<?php endforeach; ?>
-
-		<?php endif; ?>
+		<?php } ?>
 
 		<div class="row">
 

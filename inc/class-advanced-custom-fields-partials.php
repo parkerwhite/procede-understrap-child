@@ -143,7 +143,7 @@ class Advanced_Custom_Fields_Partials {
 		<section id="header-wrapper" class="wrapper <?php echo 'wrapper-' . $style; ?>">
 			<?php if ( $style == 'hero' ) : ?>
 				<?php echo get_the_post_thumbnail( $post_id, 'full', array( 'class' => 'object-fit-cover' ) ); ?>
-				<div id="header-hero-content-wrapper" class="<?php echo $show_hero_overlay ? 'overlay-show' : 'overlay-hidden'; ?>" data-overlay="<?php echo $show_hero_overlay; ?>">
+				<div id="header-hero-content-wrapper" class="<?php echo $show_hero_overlay ? 'overlay-show' : 'overlay-hide'; ?>" data-overlay="<?php echo $show_hero_overlay; ?>">
 			<?php else : ?>
 				<div id="header-content-wrapper" data-overlay="<?php echo $show_hero_overlay; ?>">
 			<?php endif; ?>
