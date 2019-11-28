@@ -13,15 +13,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-		<?php
-		if ( function_exists( 'bcn_display' ) ) {
-			bcn_display();
-		}?>
+		<?php if ( function_exists( 'bcn_display' ) ) { bcn_display(); } ?>
 	</div>
 
 	<header class="entry-header">
 
-		<?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'img-fluid' ) ); ?>
+		<?php echo get_the_post_thumbnail( get_the_ID(), 'large', array( 'class' => 'img-fluid' ) ); ?>
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 

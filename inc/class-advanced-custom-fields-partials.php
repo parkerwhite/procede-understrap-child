@@ -442,7 +442,8 @@ class Advanced_Custom_Fields_Partials {
 
 								?>
 								<div class="<?php echo implode( " ", $col_widths ); ?> <?php echo $col_css; ?>" <?php echo $col_style; ?>>
-									<?php echo apply_filters( 'the_content', html_entity_decode( $content ) ); ?>
+									<?php // echo shortcode_unautop( apply_filters( 'the_content', html_entity_decode( $content ) ) ); ?>
+									<?php echo do_shortcode( wpautop( html_entity_decode( $content ), false ) ); ?>
 								</div>
 							<?php } ?>
 						</div>

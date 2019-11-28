@@ -69,3 +69,16 @@ if ( ! function_exists( 'custom_logo_class' ) ) {
       return $html;
   }
 }
+
+if ( ! function_exists( 'remove_br_from_autop' ) ) {
+  remove_filter( 'the_content', 'wpautop' );
+  add_filter( 'the_content', 'remove_br_from_autop', 10 );
+
+  /**
+   * Remove <br> from `wpautop` filter in `the_content`
+   */
+  function remove_br_from_autop( $content ) {
+    $br = false;
+    return wpautop( $content, $br );
+  }
+}

@@ -20889,24 +20889,57 @@ section {
     border-bottom: none; }
     .card .card-header h2, .card .card-header h1.entry-title {
       margin-bottom: 0; }
-    .card .card-header > a {
+    .card .card-header a {
       display: block;
       height: 100%;
       min-height: 12rem;
       overflow: hidden;
       position: relative;
       width: 100%; }
-      .card .card-header > a > img {
-        position: absolute;
+      .card .card-header a img {
+        bottom: -99999px;
         height: auto;
         left: -99999px;
-        right: -99999px;
         margin: auto;
-        max-width: inherit;
+        max-height: 120%;
+        max-width: 120%;
         min-height: 100%;
         min-width: 100%;
         -o-object-fit: cover;
            object-fit: cover;
+        position: absolute;
+        right: -99999px;
+        top: -99999px;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        width: auto; }
+    .card .card-header.icon-header a {
+      min-height: 5rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .card .card-header.icon-header a img {
+        bottom: inherit;
+        height: auto;
+        left: inherit;
+        margin: auto;
+        max-height: auto;
+        max-width: auto;
+        min-height: auto;
+        min-width: auto;
+        -o-object-fit: cover;
+           object-fit: cover;
+        position: absolute;
+        right: inherit;
+        top: inherit;
+        -webkit-transform: scale(1);
+                transform: scale(1);
         width: auto; }
   .card .card-body {
     background-color: transparent; }
@@ -21182,7 +21215,8 @@ section {
     right: -30px;
     text-align: center;
     top: -30px;
-    width: 60px; }
+    width: 60px;
+    z-index: 1; }
     .modal-content button.close:before, .modal-content button.close:after {
       background: #707070;
       content: '';
