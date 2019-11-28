@@ -17800,10 +17800,15 @@ ul.list-checklist {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F7F7F7', endColorstr='#fff',GradientType=0 ); }
 
 img.object-fit-cover {
-  height: 100%;
+  height: auto;
+  margin: auto;
+  min-height: 100%;
+  min-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%; }
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  width: auto; }
 
 section.section-w-background-image {
   background-color: transparent;
@@ -18287,6 +18292,10 @@ body.admin-bar #mobile-nav .navbar-collapse {
 #header-wrapper {
   padding: 0;
   position: relative; }
+  #header-wrapper.wrapper-hero {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; }
   #header-wrapper .wp-post-image {
     position: absolute;
     z-index: -1; }
@@ -20926,15 +20935,16 @@ section {
               justify-content: center; }
       .card .card-header.icon-header a img {
         bottom: inherit;
+        display: block;
         height: auto;
         left: inherit;
         margin: auto;
-        max-height: auto;
-        max-width: auto;
+        max-height: inherit;
+        max-width: inherit;
         min-height: auto;
         min-width: auto;
-        -o-object-fit: cover;
-           object-fit: cover;
+        -o-object-fit: inherit;
+           object-fit: inherit;
         position: absolute;
         right: inherit;
         top: inherit;

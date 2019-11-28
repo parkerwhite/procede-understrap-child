@@ -138,11 +138,16 @@ class Advanced_Custom_Fields_Partials {
 		$css_classes_page_header_row_css    = get_post_meta( $post_id, 'css_classes_page_header_row_css', true );
 		$css_classes_page_header_column_css = get_post_meta( $post_id, 'css_classes_page_header_column_css', true );
 		$show_hero_overlay									= ( metadata_exists( 'post', $post_id, 'hero_image_settings_overlay' ) ? get_post_meta( $post_id, 'hero_image_settings_overlay', true ) : 1 );
+		$hero_image_url											= get_the_post_thumbnail_url( $post_id, 'full' );
+		$bg = null;
+		if ( $hero_image_url && $style === 'hero' ) {
+			$bg = sprintf( 'style="background-image:url(%s);"', $hero_image_url );
+		}
 
 		if ( $style && $style !== 'none' ) : ?>
-		<section id="header-wrapper" class="wrapper <?php echo 'wrapper-' . $style; ?>">
+		<section id="header-wrapper" class="wrapper <?php echo 'wrapper-' . $style; ?>" <?php echo $bg; ?>>
 			<?php if ( $style == 'hero' ) : ?>
-				<?php echo get_the_post_thumbnail( $post_id, 'full', array( 'class' => 'object-fit-cover' ) ); ?>
+				<?php echo get_the_post_thumbnail( $post_id, 'full', array( 'class' => 'object-fit-cover hidden' ) ); ?>
 				<div id="header-hero-content-wrapper" class="<?php echo $show_hero_overlay ? 'overlay-show' : 'overlay-hide'; ?>" data-overlay="<?php echo $show_hero_overlay; ?>">
 			<?php else : ?>
 				<div id="header-content-wrapper" data-overlay="<?php echo $show_hero_overlay; ?>">
