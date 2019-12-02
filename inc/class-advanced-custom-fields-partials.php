@@ -504,7 +504,7 @@ class Advanced_Custom_Fields_Partials {
 					$post_id      = $this->get_field( $this->repeater_field . '_' . $key . '_slides_' . $i . '_posts', false );
 					$post         = get_post( $post_id );
 					$post_content = apply_filters( 'the_content', html_entity_decode( $post->post_content ) );
-					$post_image   = get_the_post_thumbnail( $post_id, 'post-thumbnail', array( 'class' => 'object-fit-cover' ) );
+					$post_image   = get_the_post_thumbnail( $post_id, 'post-thumbnail', array( 'class' => '' ) );
 					if ( get_post_type( $post_id ) === 'cpt-testimonials' ) {
 						$provided_by  = get_post_meta( $post_id, 'testimonial_provided_by', true );
 						$job_title    = get_post_meta( $post_id, 'testimonial_job_title', true );
