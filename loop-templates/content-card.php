@@ -12,7 +12,7 @@
 	<?php if ( has_post_thumbnail() ) : ?>
 		<div class="card-header">
 			<a href="<?php echo get_the_permalink(); ?>">
-				<?php echo get_the_post_thumbnail( get_the_ID(), 'large', array( 'class' => 'object-fit-cover card-img-top' ) ); ?>
+				<?php echo get_the_post_thumbnail( get_the_ID(), 'large', array( 'class' => 'card-img-top' ) ); ?>
 			</a>
 		</div>
 	<?php endif; ?>

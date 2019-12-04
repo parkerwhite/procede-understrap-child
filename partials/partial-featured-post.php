@@ -41,7 +41,7 @@ if ( $featured_post_query->have_posts() ) : while ( $featured_post_query->have_p
   <div class="col">
     <?php if ( has_post_thumbnail( get_the_ID() ) ) { ?>
       <div class="img-featured-wrapper">
-        <?php echo get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'img-featured object-fit-cover' ) ); ?>
+        <?php echo get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'img-featured' ) ); ?>
       </div>
     <?php } ?>
     <h2><?php the_title(); ?></h2>

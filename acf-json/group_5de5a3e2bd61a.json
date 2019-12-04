@@ -1,0 +1,116 @@
+{
+    "key": "group_5de5a3e2bd61a",
+    "title": "Partners Page",
+    "fields": [
+        {
+            "key": "field_5de5a405d5cc5",
+            "label": "Page Content",
+            "name": "partners_page",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5de5a421d5cc6",
+                    "label": "Certified Partners Copy",
+                    "name": "certified_partners_copy",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "We're proud to partner with some of the industry's most innovative, best-in-class suppliers, third-party vendors, and manufacturers. Our Certified Partners provide a wide range of products and services that integrate seamlessly with Excede® to significantly improve your dealership’s operations. Our growing list of Certified Partners includes:",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5de5a455d5cc7",
+                    "label": "Alliance Partners Copy",
+                    "name": "alliance_partners_copy",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Our Alliance Partner Program is focused on working with some of the industry's top third-party service providers on a wide range of initiatives, from joint marketing efforts and bilateral development initiatives, to creating innovative ways to deliver added value to our mutual customers. Our strategic Alliance Partners include:",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5de5a484d5cc8",
+                    "label": "Partner With Us Copy",
+                    "name": "partner_with_us_copy",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Procede Software is continuously seeking strategic partners who can help us further our mission of providing best-in-class dealership management solutions for our customers. Contact us today to learn more about partnering with us.\r\n\r\n[button url=\"\/solutions\/partners\/partner-request-form\/\" target=\"_blank\" class=\"btn-primary\"]Let's Talk[\/button]",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_5de5a4cad5cc9",
+                    "label": "Excede API Copy",
+                    "name": "excede_api_copy",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Excede API (Application Programming Interface) is a programmatic interface that allows Certified Partners to quickly develop applications that integrate seamlessly with Excede. Built using the REST development model, Excede API provides the standard call format and parameters needed for software programmers to build integrations.\r\n\r\n[button url=\"\/solutions\/excede-api\/\" class=\"btn-primary\"]Learn more[\/button]",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-partners.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Add content to Partners Page blocks."
+}

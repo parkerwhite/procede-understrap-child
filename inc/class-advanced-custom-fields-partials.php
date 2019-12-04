@@ -147,7 +147,7 @@ class Advanced_Custom_Fields_Partials {
 		if ( $style && $style !== 'none' ) : ?>
 		<section id="header-wrapper" class="wrapper <?php echo 'wrapper-' . $style; ?>" <?php echo $bg; ?>>
 			<?php if ( $style == 'hero' ) : ?>
-				<?php echo get_the_post_thumbnail( $post_id, 'full', array( 'class' => 'object-fit-cover hidden' ) ); ?>
+				<?php echo get_the_post_thumbnail( $post_id, 'full', array( 'class' => 'hidden' ) ); ?>
 				<div id="header-hero-content-wrapper" class="<?php echo $show_hero_overlay ? 'overlay-show' : 'overlay-hide'; ?>" data-overlay="<?php echo $show_hero_overlay; ?>">
 			<?php else : ?>
 				<div id="header-content-wrapper" data-overlay="<?php echo $show_hero_overlay; ?>">
@@ -257,7 +257,7 @@ class Advanced_Custom_Fields_Partials {
 								<?php if ( $card_img_top ) : ?>
 									<div class="card-header" data-img="<?php echo $card_img_top; ?>">
 										<a href="<?php echo $link_url; ?>">
-											<img src="<?php echo $card_img_top; ?>" alt="" class="object-fit-cover card-img-top">
+											<img src="<?php echo $card_img_top; ?>" alt="" class="card-img-top">
 										</a>
 									</div>
 								<?php endif; ?>
@@ -332,7 +332,7 @@ class Advanced_Custom_Fields_Partials {
 							<?php if ( $card_img_top ) : ?>
 								<div class="card-header" data-img="<?php echo $card_img_top; ?>">
 									<div class="card-header__img-wrapper">
-										<img src="<?php echo $card_img_top; ?>" alt="" class="object-fit-cover card-img-top">
+										<img src="<?php echo $card_img_top; ?>" alt="" class="card-img-top">
 									</div>
 								</div>
 							<?php endif; ?>
@@ -401,7 +401,7 @@ class Advanced_Custom_Fields_Partials {
 				<a class="anchor" name="anchor-<?php echo $section_id; ?>"></a>
 				<?php if ( $background_image ) { ?>
 					<div class="object-fit__img-wrapper" data-img="<?php echo $section_bg_img[0]; ?>">
-						<img src="<?php echo $section_bg_img[0]; ?>" class="object-fit-cover section-background-image">
+						<img src="<?php echo $section_bg_img[0]; ?>" class="section-background-image">
 					</div>
 					<div class="background-image-overlay">
 				<?php } ?>

@@ -26,7 +26,7 @@ $hero_text = get_option( 'options_archive_hero_text' );
 
 <section id="header-wrapper" class="wrapper wrapper-hero" <?php echo $bg; ?>>
 
-	<img width="1920" src="<?php echo $hero_image_url; ?>" class="object-fit-cover wp-post-image hidden" alt="" sizes="(max-width: 1920px) 100vw, 1920px">
+	<img width="1920" src="<?php echo $hero_image_url; ?>" class="wp-post-image hidden" alt="" sizes="(max-width: 1920px) 100vw, 1920px">
 
 	<div id="header-hero-content-wrapper" class="<?php echo $show_hero_overlay ? 'overlay-show' : 'overlay-hide'; ?>" data-overlay="<?php echo $show_hero_overlay; ?>">
 		<div class="<?php echo esc_attr( $container ); ?>" id="" tabindex="-1">

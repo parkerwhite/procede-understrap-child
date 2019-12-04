@@ -44,10 +44,13 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
+add_theme_support( 'post-thumbnails' );
+
 add_image_size( 'post_intro', 932, 311, true );
 add_image_size( 'post_card', 300, 173, true );
 
 function register_custom_nav_menus() {
+    register_nav_menu( 'primary', __( 'Primary Menu', 'understrap' ) );
     register_nav_menu( 'mobile', __( 'Mobile Menu', 'understrap' ) );
     register_nav_menu( 'topnav', __( 'Top Navbar', 'understrap' ) );
 }
