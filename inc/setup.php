@@ -29,11 +29,23 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
  * ACF Options Page
  */
 if( function_exists( 'acf_add_options_page' ) ) {
-	acf_add_options_page( array(
+	$parent = acf_add_options_page( array(
 		'page_title' 	=> 'Theme General Settings',
 		'menu_title'	=> 'Theme Settings',
 		'menu_slug' 	=> 'theme-general-settings',
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
 	) );
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Archive Settings',
+		'menu_title' 	=> 'Archive Settings',
+		'parent_slug' 	=> $parent['menu_slug'],
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Services',
+		'menu_title' 	=> 'Services',
+		'parent_slug' 	=> $parent['menu_slug'],
+	));
 }

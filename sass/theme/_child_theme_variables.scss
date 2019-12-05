@@ -234,7 +234,7 @@ $border-radius:               1.25rem !default; // .25rem !default;
 $border-radius-lg:            1.5rem !default; // .3rem !default;
 $border-radius-sm:            1rem !default; // .2rem !default;
 
-$box-shadow-sm:               0 .1875rem .375rem rgba($black, .16) !default; // 0 .125rem .25rem rgba($black, .075) !default;
+$box-shadow-sm:               0 3px 6px -3px rgba($black,.16); // 0 .1875rem .375rem rgba($black, .16) !default; // 0 .125rem .25rem rgba($black, .075) !default;
 $box-shadow:                  0 0.25rem 1rem rgba($black, .10); // 0 .1875rem .375rem rgba($black, .16) !default;
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 
@@ -605,7 +605,7 @@ $dropdown-link-active-bg:           transparent !default; // $component-active-b
 $dropdown-link-disabled-color:      $gray-600 !default;
 
 $dropdown-item-padding-y:           .25rem !default;
-$dropdown-item-padding-x:           1.5rem !default;
+$dropdown-item-padding-x:           1rem !default; // 1.5rem !default;
 
 $dropdown-header-color:             $gray-600 !default;
 

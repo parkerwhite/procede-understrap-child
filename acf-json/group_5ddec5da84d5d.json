@@ -87,7 +87,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "theme-general-settings"
+                "value": "acf-options-archive-settings"
             }
         ]
     ],
