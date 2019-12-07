@@ -1,0 +1,54 @@
+{
+    "key": "group_5dea8426dd9e0",
+    "title": "Integrations Options",
+    "fields": [
+        {
+            "key": "field_5dea8426e52d3",
+            "label": "Available Integrations",
+            "name": "available_integrations",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "truck": "Truck Manufacturers & Affiliates",
+                "bus": "Bus and Trailer Manufacturers",
+                "engine": "Engine and Transmission Manufacturers",
+                "automotive": "Automotive Manufacturers"
+            },
+            "allow_custom": 0,
+            "default_value": [
+                "truck",
+                "bus",
+                "engine",
+                "automotive"
+            ],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-integrations.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Choose from available solutions."
+}

@@ -3,8 +3,9 @@
  * Partial for adding hero section to archive pages
  */
 
-if ( ! get_the_ID() )
-  return null;
+if ( ! defined( 'ABSPATH' ) || ! get_the_ID() ) {
+	exit; // Exit if accessed directly.
+}
 
 $container = get_theme_mod( 'understrap_container_type' );
 
@@ -21,7 +22,7 @@ $hero_text = ( metadata_exists( 'post', get_the_ID(), 'page_hero_copy' ) ? get_p
 
 ?>
 
-<section id="header-wrapper" class="wrapper wrapper-hero" <?php echo $bg; ?>>
+<section id="header-wrapper" class="wrapper wrapper-hero bg-light" <?php echo $bg; ?>>
 
   <?php if ( has_post_thumbnail() ) : ?>
   	<img width="1920" src="<?php echo $featured_img_url; ?>" class="wp-post-image hidden" alt="" sizes="(max-width: 1920px) 100vw, 1920px">

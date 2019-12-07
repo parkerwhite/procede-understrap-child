@@ -44,6 +44,8 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 
+add_theme_support( 'title-tag' );
+
 add_theme_support( 'post-thumbnails' );
 
 add_image_size( 'post_intro', 932, 311, true );

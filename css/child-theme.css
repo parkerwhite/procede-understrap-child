@@ -17766,28 +17766,46 @@ hr.dark {
   .min-height-xl-100 {
     min-height: 83.3333rem; } }
 
-ul.list-checklist {
-  padding-left: 5.625rem;
-  list-style: none; }
-  ul.list-checklist li {
+.section-checklist .list-checklist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  margin-left: -30px;
+  margin-right: -30px;
+  padding: 0; }
+  .section-checklist .list-checklist .checklist-item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+    margin-bottom: 2.5rem;
+    padding-left: calc(5.625rem + 30px);
+    padding-right: 30px;
     position: relative; }
-    ul.list-checklist li:before {
+    @media (max-width: 767.98px) {
+      .section-checklist .list-checklist .checklist-item {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 100%;
+                flex: 1 0 100%; } }
+    .section-checklist .list-checklist .checklist-item:before {
       background: #71C26A;
       border-radius: 50%;
       content: "";
       display: inline-block;
       height: 2.86rem;
-      left: -5.625rem;
+      left: 30px;
       position: absolute;
       top: 0;
       width: 2.86rem; }
-    ul.list-checklist li:after {
+    .section-checklist .list-checklist .checklist-item:after {
       border-bottom: 5px solid #fff;
       border-left: 5px solid #fff;
       content: "";
       display: block;
       height: 16px;
-      left: -5.1rem;
+      left: 39px;
       position: absolute;
       top: 13px;
       -webkit-transform: rotate(-45deg);
@@ -18110,8 +18128,11 @@ blockquote .blockquote-footer {
     #main-nav .navbar-nav .current_page_parent {
       color: #71C26A; }
       #main-nav .navbar-nav .current-menu-item > .nav-link,
+      #main-nav .navbar-nav .current-menu-item > .dropdown-item,
       #main-nav .navbar-nav .current_page_item > .nav-link,
-      #main-nav .navbar-nav .current_page_parent > .nav-link {
+      #main-nav .navbar-nav .current_page_item > .dropdown-item,
+      #main-nav .navbar-nav .current_page_parent > .nav-link,
+      #main-nav .navbar-nav .current_page_parent > .dropdown-item {
         color: #71C26A; }
   #main-nav #main-menu-wrapper {
     max-width: 66.5rem; }
@@ -18314,6 +18335,7 @@ body.admin-bar #mobile-nav .navbar-collapse {
       padding: 2rem .5rem; } }
 
 #header-wrapper {
+  overflow: hidden;
   padding: 0;
   position: relative; }
   #header-wrapper.wrapper-hero {
@@ -18324,10 +18346,8 @@ body.admin-bar #mobile-nav .navbar-collapse {
     position: absolute;
     z-index: -1; }
   #header-wrapper #header-content-wrapper {
-    background-color: #F5F5F5;
     color: #707070; }
   #header-wrapper #header-hero-content-wrapper {
-    background-color: #F5F5F5;
     color: #fff; }
     #header-wrapper #header-hero-content-wrapper.overlay-show {
       background-color: rgba(0, 0, 0, 0.65); }
@@ -21075,14 +21095,20 @@ section {
           box-shadow: none;
   border: none; }
 
-#services_cards .card-header img {
+#services_cards .card-header img,
+#solutions_cards .card-header img,
+#integrations_cards .card-header img {
   max-height: 60px;
   width: auto; }
 
-#services_cards .card:hover {
+#services_cards .card:hover,
+#solutions_cards .card:hover,
+#integrations_cards .card:hover {
   color: #fff !important;
   background-color: #71C26A; }
-  #services_cards .card:hover a {
+  #services_cards .card:hover a,
+  #solutions_cards .card:hover a,
+  #integrations_cards .card:hover a {
     color: #fff; }
 
 .carousel-inner {

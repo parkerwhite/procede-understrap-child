@@ -1,0 +1,71 @@
+{
+    "key": "group_5dea7e612c887",
+    "title": "Solutions Options",
+    "fields": [
+        {
+            "key": "field_5dea7e61337e8",
+            "label": "Available Solutions",
+            "name": "available_solutions",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "dms": "Excede DMS",
+                "analytics": "Excede Analytics",
+                "accounting": "Accounting",
+                "lease": "Lease-Rental",
+                "parts": "Parts",
+                "service": "Service",
+                "vehicle": "Vehicle Sales",
+                "integrations": "Integrations",
+                "partners": "Partners"
+            },
+            "allow_custom": 0,
+            "default_value": [
+                "dms",
+                "analytics",
+                "accounting",
+                "lease",
+                "parts",
+                "service",
+                "vehicle",
+                "integrations",
+                "partners"
+            ],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-solutions.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-analytics.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Choose from available solutions."
+}

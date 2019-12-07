@@ -196,9 +196,14 @@
                 "value": "page"
             },
             {
-                "param": "post_template",
-                "operator": "!=",
+                "param": "page_template",
+                "operator": "==",
                 "value": "page-templates\/blank.php"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
             }
         ]
     ],
@@ -207,10 +212,7 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content"
-    ],
-    "active": 1,
-    "description": "",
-    "modified": 1539822017
+    "hide_on_screen": "",
+    "active": true,
+    "description": ""
 }

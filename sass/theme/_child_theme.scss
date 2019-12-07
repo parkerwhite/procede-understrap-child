@@ -152,19 +152,64 @@ a.stretched-link {
 //
 // lists
 //
-ul {
-	&.list-checklist {
-		padding-left: 5.625rem;
+
+// ul {
+// 	&.list-checklist {
+// 		padding-left: 5.625rem;
+// 		list-style: none;
+// 		li {
+// 			position: relative;
+// 			&:before {
+// 				background: $primary;
+// 				border-radius: 50%;
+// 				content: "";
+// 				display: inline-block;
+// 				height: #{$font-size-base * 2.6};
+// 				left: -5.625rem;
+// 				position: absolute;
+// 				top: 0;
+// 				width: #{$font-size-base * 2.6};
+// 			}
+// 			&:after {
+// 				border-bottom: 5px solid $white;
+// 				border-left: 5px solid $white;
+// 				content: "";
+// 				display: block;
+// 				height: 16px;
+// 				left: -5.1rem;
+// 				position: absolute;
+// 				top: 13px;
+// 				transform: rotate(-45deg);
+// 				width: 28px;
+// 			}
+// 		}
+// 	}
+// }
+
+.section-checklist {
+	.list-checklist {
+		display: flex;
+		flex-wrap: wrap;
 		list-style: none;
-		li {
+		margin-left: -#{$grid-gutter-width / 2};
+		margin-right: -#{$grid-gutter-width / 2};
+		padding: 0;
+		.checklist-item {
+			flex: 1 0 50%;
+			margin-bottom: #{$spacer * 3};
+			padding-left: calc(5.625rem + #{$grid-gutter-width / 2});
+			padding-right: #{$grid-gutter-width / 2};
 			position: relative;
+			@include media-breakpoint-down('sm') {
+				flex: 1 0 100%;
+			}
 			&:before {
 				background: $primary;
 				border-radius: 50%;
 				content: "";
 				display: inline-block;
 				height: #{$font-size-base * 2.6};
-				left: -5.625rem;
+				left: #{$grid-gutter-width / 2};
 				position: absolute;
 				top: 0;
 				width: #{$font-size-base * 2.6};
@@ -175,7 +220,7 @@ ul {
 				content: "";
 				display: block;
 				height: 16px;
-				left: -5.1rem;
+				left: #{($grid-gutter-width / 2) + 9};
 				position: absolute;
 				top: 13px;
 				transform: rotate(-45deg);
@@ -184,6 +229,7 @@ ul {
 		}
 	}
 }
+
 .text-linkedin {
 	color: #0077B5;
 	font-size: #{$font-size-base * 1.285714286}; // 1.8rem;
@@ -508,7 +554,8 @@ blockquote {
 		.current_page_item,
 		.current_page_parent {
 			color: $primary;
-			> .nav-link {
+			> .nav-link,
+			> .dropdown-item {
 				color: $primary;
 			}
 		}
@@ -848,6 +895,7 @@ body.admin-bar #mobile-nav .navbar-collapse {
 // Hero
 //
 #header-wrapper {
+	overflow: hidden;
 	padding: 0;
 	position: relative;
 
@@ -863,11 +911,11 @@ body.admin-bar #mobile-nav .navbar-collapse {
 	}
 
 	#header-content-wrapper {
-		background-color: $gray-200;
+		// background-color: $gray-200;
 		color: $gray-600;
 	}
 	#header-hero-content-wrapper {
-		background-color: $gray-200;
+		// background-color: $gray-200;
 		color: $white;
 		&.overlay-show {
 			background-color: rgba($black, .65);
@@ -1138,7 +1186,9 @@ section {
 	}
 }
 
-#services_cards {
+#services_cards,
+#solutions_cards,
+#integrations_cards {
 	.card-header {
 		img {
 			max-height: 60px;

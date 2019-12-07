@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Services Pages
+ * Template Name: Integrations Pages
  *
  * @package fareverse
  */
@@ -11,7 +11,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-<article <?php post_class( 'services-page' ); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class( 'solutions-page' ); ?> id="post-<?php the_ID(); ?>">
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
@@ -33,7 +33,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 		<?php get_template_part( 'partials/partial', 'checklist' ); ?>
 
-		<?php get_template_part( 'partials/partial', 'services' ); ?>
+		<?php get_template_part( 'partials/partial', 'integrations' ); ?>
 
 		<?php get_template_part( 'partials/partial', 'testimonials' ); ?>
 

@@ -1,0 +1,44 @@
+{
+  "key": "group_5de828ab57381",
+  "title": "Contact Form",
+  "fields": [
+      {
+          "key": "field_5de828dc72ca6",
+          "label": "Gravity Form ID",
+          "name": "contact_form_id",
+          "type": "number",
+          "instructions": "Enter the Form ID of the Gravity Form to include in the \"Contact\" block on pages and posts.",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "min": 1,
+          "max": 9999,
+          "step": 1
+      }
+  ],
+  "location": [
+      [
+          {
+              "param": "options_page",
+              "operator": "==",
+              "value": "theme-general-settings"
+          }
+      ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "Set the contact form used on pages and posts"
+}

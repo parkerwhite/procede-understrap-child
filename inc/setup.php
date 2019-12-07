@@ -48,4 +48,16 @@ if( function_exists( 'acf_add_options_page' ) ) {
 		'menu_title' 	=> 'Services',
 		'parent_slug' 	=> $parent['menu_slug'],
 	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Solutions',
+		'menu_title' 	=> 'Solutions',
+		'parent_slug' 	=> $parent['menu_slug'],
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Integrations',
+		'menu_title' 	=> 'Integrations',
+		'parent_slug' 	=> $parent['menu_slug'],
+	));
 }
