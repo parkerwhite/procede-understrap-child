@@ -1066,6 +1066,11 @@
                 "param": "post_template",
                 "operator": "!=",
                 "value": "page-templates\/blank.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-solutions.php"
             }
         ]
     ],

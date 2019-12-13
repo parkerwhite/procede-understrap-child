@@ -2,7 +2,7 @@
 /**
  * Template Name: Integrations Pages
  *
- * @package fareverse
+ * @package procede
  */
 
 get_header();

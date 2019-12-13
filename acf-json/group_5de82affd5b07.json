@@ -1,45 +1,81 @@
 {
-  "key": "group_5de82affd5b07",
-  "title": "Testimonials",
-  "fields": [
-      {
-          "key": "field_5de82b07dfe18",
-          "label": "Testimonials",
-          "name": "testimonials",
-          "type": "post_object",
-          "instructions": "Select testimonials to be included in testimonial section (if available).",
-          "required": 0,
-          "conditional_logic": 0,
-          "wrapper": {
-              "width": "",
-              "class": "",
-              "id": ""
-          },
-          "post_type": [
-              "cpt-testimonials"
-          ],
-          "taxonomy": "",
-          "allow_null": 0,
-          "multiple": 1,
-          "return_format": "id",
-          "ui": 1
-      }
-  ],
-  "location": [
-      [
-          {
-              "param": "post_type",
-              "operator": "==",
-              "value": "page"
-          }
-      ]
-  ],
-  "menu_order": 0,
-  "position": "normal",
-  "style": "default",
-  "label_placement": "top",
-  "instruction_placement": "label",
-  "hide_on_screen": "",
-  "active": true,
-  "description": "Select testimonials to be included in testimonial section."
+    "key": "group_5de82affd5b07",
+    "title": "Testimonials",
+    "fields": [
+        {
+            "key": "field_5de82b07dfe18",
+            "label": "Testimonials",
+            "name": "testimonials",
+            "type": "post_object",
+            "instructions": "Select testimonials to be included in testimonial section (if available). If none are selected, all testimonials will be used.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "cpt-testimonials"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_5df26167d09a6",
+            "label": "Section Color",
+            "name": "testimonials_section_background_color",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "white": "White",
+                "light": "Light Gray (#F7F7F7)",
+                "secondary": "Dark Gray 1 (#707070)",
+                "dark": "Dark Gray 2 (#4C5C53)",
+                "black": "Black",
+                "primary": "Green (Primary)"
+            },
+            "default_value": [
+                "white"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-solutions.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Select testimonials to be included in testimonial section."
 }

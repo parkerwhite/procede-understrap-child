@@ -2,7 +2,7 @@
 /**
  * Partial template for Cards used in card-decks
  *
- * @package fareverse
+ * @package procede
  */
 
 ?>

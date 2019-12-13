@@ -24,44 +24,26 @@ $args = array(
 
 $testimonials_query = new WP_Query( $args );
 
+$testimonials_section_background_color = ( metadata_exists( 'post', get_the_ID(), 'testimonials_section_background_color' ) ? get_post_meta( get_the_ID(), 'testimonials_section_background_color', true ) : 'light' );
+$testimonials_section_background_color_class = sprintf( 'bg-%s', $testimonials_section_background_color );
+
 ?>
-<section id="section-testimonials" class="section-row-w-columns section-split-cols bg-light">
+<section id="section-testimonials" class="section-row-w-columns section-split-cols <?php echo $testimonials_section_background_color_class; ?>">
   <a class="anchor" name="anchor-testimonials"></a>
   <div class="container-fluid">
     <div class="row " data-cols="2">
       <?php if ( $testimonials_query->have_posts() ) : $i = 0; ?>
         <?php if ( $form_id ) : ?>
-          <div class="testimonial-column col-12 col-split col-split-md-6 p-2 p-lg-5 text-center bg-light col-split-start">
+          <div class="testimonial-column col-12 col-split col-split-md-6 p-2 p-lg-5 text-center col-split-start">
         <?php else : ?>
-          <div class="testimonial-column col-12 col-md-10 col-lg-8 text-center bg-light">
+          <div class="testimonial-column col-12 col-md-10 col-lg-8 text-center">
         <?php endif; ?>
-          <h2>Testimonials</h2>
+          <h2><?php _e( 'Testimonials', 'procede' ); ?></h2>
           <div class="carousel mb-2" id="carousel-8aec0799" data-interval="5000" data-keyboard="true" data-pause="false" data-ride="false" data-wrap="true">
             <div class="carousel-inner">
               <?php while ( $testimonials_query->have_posts() ) : $testimonials_query->the_post(); ?>
-                <?php
-                $provided_by  = get_post_meta( get_the_ID(), 'testimonial_provided_by', true );
-                $job_title    = get_post_meta( get_the_ID(), 'testimonial_job_title', true );
-                $dealership   = get_post_meta( get_the_ID(), 'testimonial_dealership', true );
-                $citation     = ( $job_title || $dealership ) ? sprintf( '<cite title="Source Title">%1$s%2$s%3$s</cite>', $job_title, ( ( $job_title && $dealership ) ? ' at ' : '' ), $dealership ) : false;
-                ?>
-                <div class="carousel-item <?php echo $i === 0 ? 'active' : ''; ?>">
-                  <blockquote class="blockquote text-center">
-                    <?php the_content(); ?>
-                    <footer class="blockquote-footer">
-                      <?php if ( has_post_thumbnail() ) { ?>
-                        <span class="bf-left">
-                          <?php echo get_the_post_thumbnail(); ?>
-                        </span>
-                      <?php } ?>
-                      <span class="bf-right text-left">
-                        <?php echo $provided_by; ?>
-                        <?php echo ( $provided_by && $citation ) ? '<br>' : ''; ?>
-                        <?php echo $citation; ?>
-                      </span>
-                    </footer>
-                  </blockquote>
-                </div>
+                <?php // get_template_part( 'loop-templates/content', 'testimonial' ); ?>
+                <?php include( locate_template( 'loop-templates/content-testimonial.php', false, false ) ); ?>
               <?php $i++; endwhile; ?>
             </div>
             <div>

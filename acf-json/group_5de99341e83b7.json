@@ -3,9 +3,9 @@
     "title": "Checklist",
     "fields": [
         {
-            "key": "field_5de9936ba6dd7",
-            "label": "Checklist",
-            "name": "checklist",
+            "key": "field_5df276ae54eb5",
+            "label": "Items",
+            "name": "checklist_items",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -18,14 +18,38 @@
             "collapsed": "",
             "min": 0,
             "max": 0,
-            "layout": "table",
+            "layout": "row",
             "button_label": "Add Item",
             "sub_fields": [
                 {
-                    "key": "field_5de9940ba6dd9",
-                    "label": "Items",
-                    "name": "items",
-                    "type": "group",
+                    "key": "field_5df2760fa1e4a",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "image",
+                    "instructions": "In some instances an icon can be used instead of the default checkmark.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5de99438a6dda",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -34,47 +58,30 @@
                         "class": "",
                         "id": ""
                     },
-                    "layout": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5de99438a6dda",
-                            "label": "Title",
-                            "name": "title",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5de99440a6ddb",
-                            "label": "Copy",
-                            "name": "copy",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "basic",
-                            "media_upload": 0,
-                            "delay": 0
-                        }
-                    ]
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5de99440a6ddb",
+                    "label": "Copy",
+                    "name": "copy",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
                 }
             ]
         }
@@ -85,13 +92,6 @@
                 "param": "page_template",
                 "operator": "==",
                 "value": "page-services.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "page-solutions.php"
             }
         ],
         [

@@ -2,7 +2,7 @@
 /**
  * Template Name: Analytics Pages
  *
- * @package fareverse
+ * @package procede
  */
 
 get_header();

@@ -2,7 +2,7 @@
 /**
  * Template name: Partners Page
  *
- * @package fareverse
+ * @package procede
  */
 
 get_header();

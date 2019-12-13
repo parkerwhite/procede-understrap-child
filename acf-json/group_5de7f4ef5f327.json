@@ -1,93 +1,86 @@
 {
-  "key": "group_5de7f4ef5f327",
-  "title": "Page Hero",
-  "fields": [
-      {
-          "key": "field_5de7f4ef67297",
-          "label": "Page Hero",
-          "name": "page_hero",
-          "type": "group",
-          "instructions": "The page hero allows you to add text over a hero image. You can use Bootstrap grid HTML and CSS classes to modify the layout, colors, etc.",
-          "required": 0,
-          "conditional_logic": [
-              [
-                  {
-                      "field": "field_5de7f60af6257",
-                      "operator": "!=empty"
-                  }
-              ],
-              [
-                  {
-                      "field": "field_5de7f60af6257",
-                      "operator": "!=empty"
-                  }
-              ]
-          ],
-          "wrapper": {
-              "width": "",
-              "class": "",
-              "id": ""
-          },
-          "layout": "block",
-          "sub_fields": [
-              {
-                  "key": "field_5de7f60af6257",
-                  "label": "Copy",
-                  "name": "copy",
-                  "type": "wysiwyg",
-                  "instructions": "Use Bootstrap classes to add colors and styles to your hero text. Available classes include <code>text-white<\/code> for white, <code>text-primary<\/code> for green, and <code>text-dark<\/code> for dark-gray text colors. You can also use <code>text-center<\/code> to center align text. For example <code>&lt;span class=\"text-primary\"&gt;this text is green&lt;\/span&gt;<\/code> or <code>&lt;h1 class=\"text-center\"&gt;this header is centered&lt;\/h1&gt;<\/code>.",
-                  "required": 0,
-                  "conditional_logic": 0,
-                  "wrapper": {
-                      "width": "",
-                      "class": "",
-                      "id": ""
-                  },
-                  "default_value": "",
-                  "tabs": "all",
-                  "toolbar": "full",
-                  "media_upload": 0,
-                  "delay": 0
-              }
-          ]
-      }
-  ],
-  "location": [
-      [
-          {
-              "param": "page_type",
-              "operator": "==",
-              "value": "front_page"
-          }
-      ],
-      [
-          {
-              "param": "page_template",
-              "operator": "==",
-              "value": "page-services.php"
-          }
-      ],
-      [
-          {
-              "param": "page_template",
-              "operator": "==",
-              "value": "page-solutions.php"
-          }
-      ],
-      [
-          {
-              "param": "page_template",
-              "operator": "==",
-              "value": "page-integrations.php"
-          }
-      ]
-  ],
-  "menu_order": 0,
-  "position": "acf_after_title",
-  "style": "seamless",
-  "label_placement": "top",
-  "instruction_placement": "label",
-  "hide_on_screen": "",
-  "active": true,
-  "description": "Used to add hero content to pages."
+    "key": "group_5de7f4ef5f327",
+    "title": "Page Hero",
+    "fields": [
+        {
+            "key": "field_5de7f4ef67297",
+            "label": "Page Hero",
+            "name": "page_hero",
+            "type": "group",
+            "instructions": "The page hero allows you to add text over a hero image. You can use Bootstrap grid HTML and CSS classes to modify the layout, colors, etc.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5de7f60af6257",
+                        "operator": "!=empty"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5de7f60af6257",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5de7f60af6257",
+                    "label": "Copy",
+                    "name": "copy",
+                    "type": "wysiwyg",
+                    "instructions": "Use Bootstrap classes to add colors and styles to your hero text. Available classes include <code>text-white<\/code> for white, <code>text-primary<\/code> for green, and <code>text-dark<\/code> for dark-gray text colors. You can also use <code>text-center<\/code> to center align text. For example <code>&lt;span class=\"text-primary\"&gt;this text is green&lt;\/span&gt;<\/code> or <code>&lt;h1 class=\"text-center\"&gt;this header is centered&lt;\/h1&gt;<\/code>.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-services.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-integrations.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Used to add hero content to pages."
 }

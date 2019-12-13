@@ -2,7 +2,7 @@
 /**
  * Template Name: Services Pages
  *
- * @package fareverse
+ * @package procede
  */
 
 get_header();

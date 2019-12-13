@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package fareverse
+ * @package procede
  */
 
 get_header();
@@ -20,7 +20,7 @@ $page_header_type = get_post_meta( get_the_ID(), 'page_header_type', true );
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<?php // fareverse_page_header( $page_header_type ); ?>
+	<?php // procede_page_header( $page_header_type ); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 

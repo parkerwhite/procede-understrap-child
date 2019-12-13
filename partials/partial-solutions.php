@@ -22,20 +22,14 @@ foreach ( $solutions_options as $key => $solution ) {
 ?>
 
 <?php if ( $count ) : ?>
-<section class="section-row-w-columns bg-white " id="solutions_cards">
+<section class="section-row-w-columns bg-white " id="available_solutions">
   <a class="anchor" name="anchor-solutions_cards"></a>
-  <div class="container">
-    <div class="row card-deck icon-cards justify-content-center" data-cols="3">
+  <div class="container-fluid container-fluid-max">
+    <div class="row">
       <?php foreach ( $solutions as $key => $solution ) { ?>
-        <div class="card text-center px-0 py-1 card-<?php echo $key; ?>">
-          <div class="card-header icon-header pb-0">
-            <?php echo wp_get_attachment_image( $solution['image'] ); ?>
-          </div>
-          <div class="card-body pb-0">
-            <h3 class="mb-2"><?php echo $solution['title']; ?></h3>
-            <?php echo apply_filters( 'the_content', $solution['copy'] ); ?>
-          </div>
-          <a href="<?php echo get_permalink( $solution['link'] ); ?>" class="btn btn-link btn-learn-more stretched-link card-footer pb-1"><span>Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+        <div class="col-4 solution-col-<?php echo $key; ?>">
+          <?php echo wp_get_attachment_image( $solution['image'] ); ?>
+          <a href="<?php echo get_permalink( $solution['link'] ); ?>" class="link-text stretched-link"><?php echo $solution['title']; ?></a>
         </div>
       <?php } ?>
     </div>

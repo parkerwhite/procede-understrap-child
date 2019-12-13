@@ -7,7 +7,7 @@
             "label": "Available Solutions",
             "name": "available_solutions",
             "type": "checkbox",
-            "instructions": "",
+            "instructions": "Select which solutions you would like to link to from this page. Selected items appear as related content cards at the bottom of the page.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -34,9 +34,7 @@
                 "lease",
                 "parts",
                 "service",
-                "vehicle",
-                "integrations",
-                "partners"
+                "vehicle"
             ],
             "layout": "vertical",
             "toggle": 0,
@@ -45,13 +43,6 @@
         }
     ],
     "location": [
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "page-solutions.php"
-            }
-        ],
         [
             {
                 "param": "page_template",
