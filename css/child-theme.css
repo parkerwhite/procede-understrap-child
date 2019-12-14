@@ -17781,9 +17781,9 @@ hr.dark {
   margin-right: -30px;
   padding: 0; }
   .section-checklist .list-checklist .checklist-item {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 50%;
-            flex: 1 0 50%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
     margin-bottom: 2.5rem;
     padding-left: calc(5.625rem + 30px);
     padding-right: 30px;
@@ -17817,9 +17817,6 @@ hr.dark {
       width: 28px; }
 
 .media.checklist {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-bottom: 3rem; }
   .media.checklist .media-checklist-icon {
     background-color: #F7F7F7;

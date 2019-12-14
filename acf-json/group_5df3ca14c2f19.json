@@ -1,0 +1,82 @@
+{
+  "key": "group_5df3ca14c2f19",
+  "title": "Bootstrap Element: Carousel",
+  "fields": [
+      {
+          "key": "field_5df3ca3017fbd",
+          "label": "Carousel",
+          "name": "carousel",
+          "type": "repeater",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "collapsed": "",
+          "min": 0,
+          "max": 0,
+          "layout": "row",
+          "button_label": "Add Slide",
+          "sub_fields": [
+              {
+                  "key": "field_5df3e513047fc",
+                  "label": "Slide",
+                  "name": "slide",
+                  "type": "wysiwyg",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "",
+                  "tabs": "all",
+                  "toolbar": "full",
+                  "media_upload": 1,
+                  "delay": 1
+              }
+          ]
+      },
+      {
+          "key": "field_5df3f65db63bf",
+          "label": "Class",
+          "name": "carousel_class",
+          "type": "text",
+          "instructions": "Add a custom class to the carousel wrapper.",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+      }
+  ],
+  "location": [
+      [
+          {
+              "param": "post_type",
+              "operator": "==",
+              "value": "post"
+          }
+      ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "seamless",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": false,
+  "description": "Add a slider to page content"
+}

@@ -149,3 +149,8 @@ require get_stylesheet_directory() . '/inc/class-procede-bootstrap-navwalker.php
  * Load Advanced Custom Fields Partials.
  */
 require get_stylesheet_directory() . '/inc/class-advanced-custom-fields-partials.php';
+
+/**
+ * Load ACF Bootstrap Builder.
+ */
+require get_stylesheet_directory() . '/inc/class-acf-bootstrap-builder.php';

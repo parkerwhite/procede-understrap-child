@@ -11,6 +11,18 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 $page_header_type = get_post_meta( get_the_ID(), 'page_header_type', true );
 
+$partners_category_array = array(
+  'asset-condition-management',
+  'consulting-recruitment',
+  'customer-relationship-management',
+  'document-archiving',
+  'online-vehicle-sales',
+  'parts-management',
+  'payment-processing-taxation',
+  'service-management',
+  'telematics-dispatch-systems'
+);
+
 ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
@@ -36,38 +48,9 @@ $page_header_type = get_post_meta( get_the_ID(), 'page_header_type', true );
   <section class="section section-certified-partners bg-light">
     <a class="anchor" name="anchor-certified-partners"></a>
     <div class="container">
-      <div class="row justify-content-center align-items-center">
-        <?php
-        $certified_partners_args = array(
-          'posts_per_page'  => -1,
-          'orderby'         => 'menu_order',
-          'post_type'       => 'cpt-partners',
-          'post_status'     => 'publish',
-          'tax_query'       => array(
-            array(
-              'taxonomy' => 'cpt-partner-categories',
-              'terms'    => 'certified-partners',
-              'field'    => 'slug',
-            ),
-          ),
-        );
-
-        $certified_partners_query = new WP_Query( $certified_partners_args );
-
-        if ( $certified_partners_query->have_posts() ) : while ( $certified_partners_query->have_posts() ) : $certified_partners_query->the_post();
-        ?>
-          <div class="col-6 col-md-4 col-lg-3 mb-1">
-            <?php
-            if ( has_post_thumbnail( get_the_ID() ) ) {
-              $featured_img_str = get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'img-featured', 'alt' => get_the_title() ) );
-              echo do_shortcode( sprintf( '[button target="modal" page-id="%1$s" class="btn-link"]%2$s[/button]', get_the_ID(), $featured_img_str ) );
-            } else {
-              echo sprintf( '<h2>%s</h2>', get_the_title() );
-            }
-            ?>
-          </div>
-        <?php endwhile; endif; wp_reset_query(); ?>
-      </div>
+      <?php foreach ( $partners_category_array as $partner ) {
+        procede_partners_row( $partner, 'certified-partners' );
+      } ?>
     </div>
   </section>
 
@@ -90,38 +73,9 @@ $page_header_type = get_post_meta( get_the_ID(), 'page_header_type', true );
   <section class="section section-alliance-partners">
     <a class="anchor" name="anchor-alliance-partners"></a>
     <div class="container">
-      <div class="row justify-content-center align-items-center">
-        <?php
-        $alliance_partners_args = array(
-          'posts_per_page'  => -1,
-          'orderby'         => 'menu_order',
-          'post_type'       => 'cpt-partners',
-          'post_status'     => 'publish',
-          'tax_query'       => array(
-            array(
-              'taxonomy' => 'cpt-partner-categories',
-              'terms'    => 'alliance-partners',
-              'field'    => 'slug',
-            ),
-          ),
-        );
-
-        $alliance_partners_query = new WP_Query( $alliance_partners_args );
-
-        if ( $alliance_partners_query->have_posts() ) : while ( $alliance_partners_query->have_posts() ) : $alliance_partners_query->the_post();
-        ?>
-          <div class="col-6 col-md-4 col-lg-3 mb-1">
-            <?php
-            if ( has_post_thumbnail( get_the_ID() ) ) {
-              $featured_img_str = get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'img-featured', 'alt' => get_the_title() ) );
-              echo do_shortcode( sprintf( '[button target="modal" page-id="%1$s" class="btn-link"]%2$s[/button]', get_the_ID(), $featured_img_str ) );
-            } else {
-              echo sprintf( '<h2>%s</h2>', get_the_title() );
-            }
-            ?>
-          </div>
-        <?php endwhile; endif; wp_reset_query(); ?>
-      </div>
+      <?php foreach ( $partners_category_array as $partner ) {
+        procede_partners_row( $partner, 'alliance-partners' );
+      } ?>
     </div>
   </section>
 

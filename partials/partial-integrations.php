@@ -41,6 +41,15 @@ foreach ( $integrations_options as $key => $integration ) {
     </div>
   </div>
 </section>
+<section class="section-row-w-columns bg-white pt-0" id="integrations_subtext">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8 col-xl-8">
+        <p class="text-center">We also work with many other OEM brands. If you are interested in learning more, please contact <a href="mailto:partners@procedesoftware.com">partners@procedesoftware.com</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
 <?php endif; ?>
 
 <?php

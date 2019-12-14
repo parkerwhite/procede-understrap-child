@@ -120,3 +120,28 @@ if ( ! function_exists ( 'understrap_category_transient_flusher' ) ) {
 		delete_transient( 'understrap_categories' );
 	}
 }
+
+/**
+ * Format the_content() for Bootstrap pages
+ */
+if ( ! function_exists( 'the_formatted_content') ) {
+	function the_formatted_content() {
+		$the_formatted_content = get_the_formatted_content();
+		if ( $the_formatted_content ) {
+			echo apply_filters( 'the_content', $the_formatted_content );
+			return;
+		}
+		return false;
+	}
+}
+if ( ! function_exists( 'get_the_formatted_content') ) {
+	function get_the_formatted_content() {
+		$container = get_theme_mod( 'understrap_container_type' );
+		if ( !empty( get_the_content() ) ) {
+			$the_content = get_the_content();
+			$formatted_string = sprintf( '<section><div class="%1$s"><div class="%2$s"><div class="%3$s">%4$s</div></div></div></section>', $container, 'row', 'col', $the_content );
+			return $formatted_string;
+		}
+		return false;
+	}
+}

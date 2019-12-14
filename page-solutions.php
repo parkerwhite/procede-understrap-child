@@ -227,8 +227,15 @@ $hero_text = ( metadata_exists( 'post', get_the_ID(), 'solutions_page_sections_h
 		}
 		?>
 		<?php if ( $solutions_page_sections_related_solutions_available_solutions_count ) : ?>
-		<section class="section-row-w-columns bg-white p-0" id="section_related-solutions">
+		<section class="section-row-w-columns bg-white pb-0" id="section_related-solutions">
 			<a class="anchor" name="anchor-solutions_cards"></a>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<h2 class="section-title text-center mb-4">Optimizing Every Department In Your Dealership</h2>
+					</div>
+				</div>
+			</div>
 			<div class="container-fluid">
 				<div class="row">
 					<?php foreach ( $related_solutions as $key => $solution ) { ?>

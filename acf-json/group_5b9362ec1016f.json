@@ -1071,6 +1071,11 @@
                 "param": "page_template",
                 "operator": "!=",
                 "value": "page-solutions.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "page-analytics.php"
             }
         ]
     ],

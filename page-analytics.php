@@ -21,12 +21,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 		<?php
 
-		if ( class_exists('Advanced_Custom_Fields_Partials') ) {
-
-			$partials = new Advanced_Custom_Fields_Partials( $container );
-
-			$partials->repeater( 'page_sections' );
-
+		if ( class_exists('ACF_Bootstrap_Builder') ) {
+			$acfbb = new ACF_Bootstrap_Builder( $container );
+			$acfbb->bootstrap_builder_layout();
 		}
 
 		?>

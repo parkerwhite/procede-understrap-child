@@ -22,13 +22,16 @@ foreach ( $solutions_options as $key => $solution ) {
 ?>
 
 <?php if ( $count ) : ?>
-<section class="section-row-w-columns bg-white " id="available_solutions">
+<section class="section-row-w-columns bg-white p-0" id="section_related-solutions">
   <a class="anchor" name="anchor-solutions_cards"></a>
-  <div class="container-fluid container-fluid-max">
+  <div class="container-fluid">
     <div class="row">
       <?php foreach ( $solutions as $key => $solution ) { ?>
-        <div class="col-4 solution-col-<?php echo $key; ?>">
-          <?php echo wp_get_attachment_image( $solution['image'] ); ?>
+        <div class="col-12 col-md-6 col-lg-4 solution solution-col-<?php echo $key; ?>">
+          <div class="solution-image-wrapper">
+            <?php echo wp_get_attachment_image( $solution['image'], 'full', false, array( 'class' => 'main' ) ); ?>
+            <?php echo wp_get_attachment_image( $solution['image_hover'], 'full', false, array( 'class' => 'on-hover' ) ); ?>
+          </div>
           <a href="<?php echo get_permalink( $solution['link'] ); ?>" class="link-text stretched-link"><?php echo $solution['title']; ?></a>
         </div>
       <?php } ?>

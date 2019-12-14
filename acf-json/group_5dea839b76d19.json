@@ -1,432 +1,432 @@
 {
-  "key": "group_5dea839b76d19",
-  "title": "Integrations",
-  "fields": [
-      {
-          "key": "field_5dea839b7dd3b",
-          "label": "Integrations",
-          "name": "integrations",
-          "type": "group",
-          "instructions": "",
-          "required": 0,
-          "conditional_logic": 0,
-          "wrapper": {
-              "width": "",
-              "class": "",
-              "id": ""
-          },
-          "layout": "block",
-          "sub_fields": [
-              {
-                  "key": "field_5dea839b82169",
-                  "label": "Truck Manufacturers & Affiliates",
-                  "name": "truck",
-                  "type": "group",
-                  "instructions": "",
-                  "required": 0,
-                  "conditional_logic": 0,
-                  "wrapper": {
-                      "width": "",
-                      "class": "",
-                      "id": ""
-                  },
-                  "layout": "block",
-                  "sub_fields": [
-                      {
-                          "key": "field_5dea8511c23c6",
-                          "label": "Title",
-                          "name": "title",
-                          "type": "text",
-                          "instructions": "",
-                          "required": 0,
-                          "conditional_logic": 0,
-                          "wrapper": {
-                              "width": "",
-                              "class": "",
-                              "id": ""
-                          },
-                          "default_value": "Truck Manufacturers & Affiliates",
-                          "placeholder": "",
-                          "prepend": "",
-                          "append": "",
-                          "maxlength": ""
-                      },
-                      {
-                          "key": "field_5dea839b854dd",
-                          "label": "Image",
-                          "name": "image",
-                          "type": "image",
-                          "instructions": "",
-                          "required": 0,
-                          "conditional_logic": 0,
-                          "wrapper": {
-                              "width": "",
-                              "class": "",
-                              "id": ""
-                          },
-                          "return_format": "",
-                          "preview_size": "thumbnail",
-                          "library": "",
-                          "min_width": "",
-                          "min_height": "",
-                          "min_size": "",
-                          "max_width": "",
-                          "max_height": "",
-                          "max_size": "",
-                          "mime_types": ""
-                      },
-                      {
-                          "key": "field_5dea839b8551a",
-                          "label": "Copy",
-                          "name": "copy",
-                          "type": "text",
-                          "instructions": "",
-                          "required": 0,
-                          "conditional_logic": 0,
-                          "wrapper": {
-                              "width": "",
-                              "class": "",
-                              "id": ""
-                          },
-                          "default_value": "Integrations are compliant with major commercial truck manufacturers, including Daimler Trucks North America LLC, Hino Motors Ltd., Idealease Inc., Isuzu Motors Ltd., Mack Trucks Inc., Mitsubishi Fuso Truck and Bus Corporation, Navistar International Corporation, PACCAR Inc., and Volvo Trucks USA.",
-                          "placeholder": "",
-                          "prepend": "",
-                          "append": "",
-                          "maxlength": ""
-                      },
-                      {
-                          "key": "field_5dea839b85556",
-                          "label": "Link",
-                          "name": "link",
-                          "type": "page_link",
-                          "instructions": "",
-                          "required": 0,
-                          "conditional_logic": 0,
-                          "wrapper": {
-                              "width": "",
-                              "class": "",
-                              "id": ""
-                          },
-                          "post_type": "",
-                          "taxonomy": "",
-                          "allow_null": 0,
-                          "allow_archives": 1,
-                          "multiple": 0
-                      }
-                  ]
-              },
-              {
-                  "key": "field_5dea839b8e6dd",
-                  "label": "Bus and Trailer Manufacturers",
-                  "name": "bus",
-                  "type": "group",
-                  "instructions": "",
-                  "required": 0,
-                  "conditional_logic": 0,
-                  "wrapper": {
-                      "width": "",
-                      "class": "",
-                      "id": ""
-                  },
-                  "layout": "block",
-                  "sub_fields": [
-                      {
-                          "key": "field_5dea853cc23c8",
-                          "label": "Title",
-                          "name": "title",
-                          "type": "text",
-                          "instructions": "",
-                          "required": 0,
-                          "conditional_logic": 0,
-                          "wrapper": {
-                              "width": "",
-                              "class": "",
-                              "id": ""
-                          },
-                          "default_value": "Bus and Trailer Manufacturers",
-                          "placeholder": "",
-                          "prepend": "",
-                          "append": "",
-                          "maxlength": ""
-                      },
-                      {
-                          "key": "field_5dea839b909ee",
-                          "label": "Image",
-                          "name": "image",
-                          "type": "image",
-                          "instructions": "",
-                          "required": 0,
-                          "conditional_logic": 0,
-                          "wrapper": {
-                              "width": "",
-                              "class": "",
-                              "id": ""
-                          },
-                          "return_format": "",
-                          "preview_size": "thumbnail",
-                          "library": "",
-                          "min_width": "",
-                          "min_height": "",
-                          "min_size": "",
-                          "max_width": "",
-                          "max_height": "",
-                          "max_size": "",
-                          "mime_types": ""
-                      },
-                      {
-                          "key": "field_5dea839b90a2b",
-                          "label": "Copy",
-                          "name": "copy",
-                          "type": "text",
-                          "instructions": "",
-                          "required": 0,
-                          "conditional_logic": 0,
-                          "wrapper": {
-                              "width": "",
-                              "class": "",
-                              "id": ""
-                          },
-                          "default_value": "Product team works closely with various bus and trailer manufacturers, including IC Bus LLC, Thomas Built Buses, Inc., and more.",
-                          "placeholder": "",
-                          "prepend": "",
-                          "append": "",
-                          "maxlength": ""
-                      },
-                      {
-                          "key": "field_5dea839b90a66",
-                          "label": "Link",
-                          "name": "link",
-                          "type": "page_link",
-                          "instructions": "",
-                          "required": 0,
-                          "conditional_logic": 0,
-                          "wrapper": {
-                              "width": "",
-                              "class": "",
-                              "id": ""
-                          },
-                          "post_type": "",
-                          "taxonomy": "",
-                          "allow_null": 0,
-                          "allow_archives": 1,
-                          "multiple": 0
-                      }
-                  ]
-              },
-              {
-                  "key": "field_5dea839b97f50",
-                  "label": "Engine and Transmission Manufacturers",
-                  "name": "engine",
-                  "type": "group",
-                  "instructions": "",
-                  "required": 0,
-                  "conditional_logic": 0,
-                  "wrapper": {
-                      "width": "",
-                      "class": "",
-                      "id": ""
-                  },
-                  "layout": "block",
-                  "sub_fields": [
-                      {
-                          "key": "field_5dea8520c23c7",
-                          "label": "Title",
-                          "name": "title",
-                          "type": "text",
-                          "instructions": "",
-                          "required": 0,
-                          "conditional_logic": 0,
-                          "wrapper": {
-                              "width": "",
-                              "class": "",
-                              "id": ""
-                          },
-                          "default_value": "Engine and Transmission Manufacturers",
-                          "placeholder": "",
-                          "prepend": "",
-                          "append": "",
-                          "maxlength": ""
-                      },
-                      {
-                          "key": "field_5dea839b9a0c9",
-                          "label": "Image",
-                          "name": "image",
-                          "type": "image",
-                          "instructions": "",
-                          "required": 0,
-                          "conditional_logic": 0,
-                          "wrapper": {
-                              "width": "",
-                              "class": "",
-                              "id": ""
-                          },
-                          "return_format": "",
-                          "preview_size": "thumbnail",
-                          "library": "",
-                          "min_width": "",
-                          "min_height": "",
-                          "min_size": "",
-                          "max_width": "",
-                          "max_height": "",
-                          "max_size": "",
-                          "mime_types": ""
-                      },
-                      {
-                          "key": "field_5dea839b9a10a",
-                          "label": "Copy",
-                          "name": "copy",
-                          "type": "text",
-                          "instructions": "",
-                          "required": 0,
-                          "conditional_logic": 0,
-                          "wrapper": {
-                              "width": "",
-                              "class": "",
-                              "id": ""
-                          },
-                          "default_value": "Our Product team works closely with engine and transmission manufacturers, including Allison Transmission, Caterpillar Inc., Detroit Diesel Corporation, and more.",
-                          "placeholder": "",
-                          "prepend": "",
-                          "append": "",
-                          "maxlength": ""
-                      },
-                      {
-                          "key": "field_5dea839b9a148",
-                          "label": "Link",
-                          "name": "link",
-                          "type": "page_link",
-                          "instructions": "",
-                          "required": 0,
-                          "conditional_logic": 0,
-                          "wrapper": {
-                              "width": "",
-                              "class": "",
-                              "id": ""
-                          },
-                          "post_type": "",
-                          "taxonomy": "",
-                          "allow_null": 0,
-                          "allow_archives": 1,
-                          "multiple": 0
-                      }
-                  ]
-              },
-              {
-                  "key": "field_5dea8bde61a2b",
-                  "label": "Automotive Manufacturers",
-                  "name": "automotive",
-                  "type": "group",
-                  "instructions": "",
-                  "required": 0,
-                  "conditional_logic": 0,
-                  "wrapper": {
-                      "width": "",
-                      "class": "",
-                      "id": ""
-                  },
-                  "layout": "block",
-                  "sub_fields": [
-                      {
-                          "key": "field_5dea8bde61a2c",
-                          "label": "Title",
-                          "name": "title",
-                          "type": "text",
-                          "instructions": "",
-                          "required": 0,
-                          "conditional_logic": 0,
-                          "wrapper": {
-                              "width": "",
-                              "class": "",
-                              "id": ""
-                          },
-                          "default_value": "Automotive Manufacturers",
-                          "placeholder": "",
-                          "prepend": "",
-                          "append": "",
-                          "maxlength": ""
-                      },
-                      {
-                          "key": "field_5dea8bde61a2d",
-                          "label": "Image",
-                          "name": "image",
-                          "type": "image",
-                          "instructions": "",
-                          "required": 0,
-                          "conditional_logic": 0,
-                          "wrapper": {
-                              "width": "",
-                              "class": "",
-                              "id": ""
-                          },
-                          "return_format": "array",
-                          "preview_size": "thumbnail",
-                          "library": "all",
-                          "min_width": "",
-                          "min_height": "",
-                          "min_size": "",
-                          "max_width": "",
-                          "max_height": "",
-                          "max_size": "",
-                          "mime_types": ""
-                      },
-                      {
-                          "key": "field_5dea8bde61a2e",
-                          "label": "Copy",
-                          "name": "copy",
-                          "type": "text",
-                          "instructions": "",
-                          "required": 0,
-                          "conditional_logic": 0,
-                          "wrapper": {
-                              "width": "",
-                              "class": "",
-                              "id": ""
-                          },
-                          "default_value": "We have an extensive list of integrations that our Product team has built alongside major automotive manufacturers, including Ford Motor Company, General Motors LLC, Mercedes-Benz Vans, Nissan Motor Company, and Toyota Motor Company.",
-                          "placeholder": "",
-                          "prepend": "",
-                          "append": "",
-                          "maxlength": ""
-                      },
-                      {
-                          "key": "field_5dea8bde61a2f",
-                          "label": "Link",
-                          "name": "link",
-                          "type": "page_link",
-                          "instructions": "",
-                          "required": 0,
-                          "conditional_logic": 0,
-                          "wrapper": {
-                              "width": "",
-                              "class": "",
-                              "id": ""
-                          },
-                          "post_type": "",
-                          "taxonomy": "",
-                          "allow_null": 0,
-                          "allow_archives": 1,
-                          "multiple": 0
-                      }
-                  ]
-              }
-          ]
-      }
-  ],
-  "location": [
-      [
-          {
-              "param": "options_page",
-              "operator": "==",
-              "value": "acf-options-integrations"
-          }
-      ]
-  ],
-  "menu_order": 0,
-  "position": "normal",
-  "style": "default",
-  "label_placement": "top",
-  "instruction_placement": "label",
-  "hide_on_screen": "",
-  "active": true,
-  "description": "Integrations card details."
+    "key": "group_5dea839b76d19",
+    "title": "Integrations",
+    "fields": [
+        {
+            "key": "field_5dea839b7dd3b",
+            "label": "Integrations",
+            "name": "integrations",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5dea839b82169",
+                    "label": "Truck Manufacturers & Affiliates",
+                    "name": "truck",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5dea8511c23c6",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Truck Manufacturers & Affiliates",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5dea839b854dd",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "",
+                            "preview_size": "thumbnail",
+                            "library": "",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5dea839b8551a",
+                            "label": "Copy",
+                            "name": "copy",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Integrations are compliant with major commercial truck manufacturers, including Daimler Trucks North America LLC, Hino Motors Ltd., Idealease Inc., Isuzu Motors Ltd., Mack Trucks Inc., Mitsubishi Fuso Truck and Bus Corporation, Navistar International Corporation, PACCAR Inc., and Volvo Trucks USA.",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5dea839b85556",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "page_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": "",
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "allow_archives": 1,
+                            "multiple": 0
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5dea839b8e6dd",
+                    "label": "Bus and Trailer Manufacturers",
+                    "name": "bus",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5dea853cc23c8",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Bus and Trailer Manufacturers",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5dea839b909ee",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "",
+                            "preview_size": "thumbnail",
+                            "library": "",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5dea839b90a2b",
+                            "label": "Copy",
+                            "name": "copy",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Product team works closely with various bus and trailer manufacturers, including IC Bus LLC, Thomas Built Buses, Inc., and more.",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5dea839b90a66",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "page_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": "",
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "allow_archives": 1,
+                            "multiple": 0
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5dea839b97f50",
+                    "label": "Engine and Transmission Manufacturers",
+                    "name": "engine",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5dea8520c23c7",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Engine and Transmission Manufacturers",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5dea839b9a0c9",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "",
+                            "preview_size": "thumbnail",
+                            "library": "",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5dea839b9a10a",
+                            "label": "Copy",
+                            "name": "copy",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Our Product team works closely with engine and transmission manufacturers, including Allison Transmission, Caterpillar Inc., Detroit Diesel Corporation, and more.",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5dea839b9a148",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "page_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": "",
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "allow_archives": 1,
+                            "multiple": 0
+                        }
+                    ]
+                },
+                {
+                    "key": "field_5dea8bde61a2b",
+                    "label": "Automotive Manufacturers",
+                    "name": "automotive",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5dea8bde61a2c",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "Automotive Manufacturers",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5dea8bde61a2d",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5dea8bde61a2e",
+                            "label": "Copy",
+                            "name": "copy",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "We have an extensive list of integrations that our Product team has built alongside major automotive manufacturers, including Ford Motor Company, General Motors LLC, Mercedes-Benz Vans, Nissan Motor Company, and Toyota Motor Company.",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5dea8bde61a2f",
+                            "label": "Link",
+                            "name": "link",
+                            "type": "page_link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": "",
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "allow_archives": 1,
+                            "multiple": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-integrations"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Integrations card details."
 }

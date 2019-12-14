@@ -47,7 +47,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-analytics.php"
+                "value": "page-solutions.php"
             }
         ]
     ],
@@ -57,6 +57,6 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "Choose from available solutions."
 }

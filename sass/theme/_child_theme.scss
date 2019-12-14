@@ -166,7 +166,7 @@ a.stretched-link {
 		margin-right: -#{$grid-gutter-width / 2};
 		padding: 0;
 		.checklist-item {
-			flex: 1 0 50%;
+			flex: 0 0 50%;
 			margin-bottom: #{$spacer * 3};
 			padding-left: calc(5.625rem + #{$grid-gutter-width / 2});
 			padding-right: #{$grid-gutter-width / 2};
@@ -202,7 +202,7 @@ a.stretched-link {
 }
 
 .media.checklist {
-	align-items: center;
+	// align-items: center;
 	margin-bottom: 3rem;
 	.media-checklist-icon {
 		background-color: $light;

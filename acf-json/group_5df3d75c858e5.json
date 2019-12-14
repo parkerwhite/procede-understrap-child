@@ -1,0 +1,478 @@
+{
+  "key": "group_5df3d75c858e5",
+  "title": "Bootstrap Builder: Layout (NEW)",
+  "fields": [
+      {
+          "key": "field_5df3dcaf7bebb",
+          "label": "Bootstrap Layout Builder",
+          "name": "bootstrap_layout_builder",
+          "type": "group",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "layout": "block",
+          "sub_fields": [
+              {
+                  "key": "field_5df3d77c0e1f6",
+                  "label": "Section",
+                  "name": "section",
+                  "type": "repeater",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "collapsed": "",
+                  "min": 0,
+                  "max": 0,
+                  "layout": "block",
+                  "button_label": "Add Section",
+                  "sub_fields": [
+                      {
+                          "key": "field_5df3d7d80e1f8",
+                          "label": "Show Advanced Options",
+                          "name": "show_advanced_options",
+                          "type": "true_false",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "message": "Show advanced options?",
+                          "default_value": 0,
+                          "ui": 1,
+                          "ui_on_text": "",
+                          "ui_off_text": ""
+                      },
+                      {
+                          "key": "field_5df3d8250e1f9",
+                          "label": "Class",
+                          "name": "class",
+                          "type": "text",
+                          "instructions": "Add custom CSS classes to this section.",
+                          "required": 0,
+                          "conditional_logic": [
+                              [
+                                  {
+                                      "field": "field_5df3d7d80e1f8",
+                                      "operator": "==",
+                                      "value": "1"
+                                  }
+                              ]
+                          ],
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "default_value": "section",
+                          "placeholder": "",
+                          "prepend": "",
+                          "append": "",
+                          "maxlength": ""
+                      },
+                      {
+                          "key": "field_5df3d8550e1fa",
+                          "label": "ID",
+                          "name": "id",
+                          "type": "text",
+                          "instructions": "Add custom ID attribute to this section.",
+                          "required": 0,
+                          "conditional_logic": [
+                              [
+                                  {
+                                      "field": "field_5df3d7d80e1f8",
+                                      "operator": "==",
+                                      "value": "1"
+                                  }
+                              ]
+                          ],
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "default_value": "",
+                          "placeholder": "",
+                          "prepend": "",
+                          "append": "",
+                          "maxlength": ""
+                      },
+                      {
+                          "key": "field_5df3d78f0e1f7",
+                          "label": "Row",
+                          "name": "row",
+                          "type": "repeater",
+                          "instructions": "",
+                          "required": 0,
+                          "conditional_logic": 0,
+                          "wrapper": {
+                              "width": "",
+                              "class": "",
+                              "id": ""
+                          },
+                          "collapsed": "",
+                          "min": 0,
+                          "max": 0,
+                          "layout": "block",
+                          "button_label": "",
+                          "sub_fields": [
+                              {
+                                  "key": "field_5df3d95da98f0",
+                                  "label": "Show Advanced Options",
+                                  "name": "show_advanced_options",
+                                  "type": "true_false",
+                                  "instructions": "",
+                                  "required": 0,
+                                  "conditional_logic": 0,
+                                  "wrapper": {
+                                      "width": "",
+                                      "class": "",
+                                      "id": ""
+                                  },
+                                  "message": "Show advanced options?",
+                                  "default_value": 0,
+                                  "ui": 1,
+                                  "ui_on_text": "",
+                                  "ui_off_text": ""
+                              },
+                              {
+                                  "key": "field_5df3d98fa98f1",
+                                  "label": "Class",
+                                  "name": "class",
+                                  "type": "text",
+                                  "instructions": "",
+                                  "required": 0,
+                                  "conditional_logic": [
+                                      [
+                                          {
+                                              "field": "field_5df3d95da98f0",
+                                              "operator": "==",
+                                              "value": "1"
+                                          }
+                                      ]
+                                  ],
+                                  "wrapper": {
+                                      "width": "",
+                                      "class": "",
+                                      "id": ""
+                                  },
+                                  "default_value": "",
+                                  "placeholder": "",
+                                  "prepend": "",
+                                  "append": "",
+                                  "maxlength": ""
+                              },
+                              {
+                                  "key": "field_5df3d934a98ef",
+                                  "label": "ID",
+                                  "name": "id",
+                                  "type": "text",
+                                  "instructions": "",
+                                  "required": 0,
+                                  "conditional_logic": [
+                                      [
+                                          {
+                                              "field": "field_5df3d95da98f0",
+                                              "operator": "==",
+                                              "value": "1"
+                                          }
+                                      ]
+                                  ],
+                                  "wrapper": {
+                                      "width": "",
+                                      "class": "",
+                                      "id": ""
+                                  },
+                                  "default_value": "",
+                                  "placeholder": "",
+                                  "prepend": "",
+                                  "append": "",
+                                  "maxlength": ""
+                              },
+                              {
+                                  "key": "field_5df3d9d9a98f2",
+                                  "label": "Column",
+                                  "name": "column",
+                                  "type": "repeater",
+                                  "instructions": "",
+                                  "required": 0,
+                                  "conditional_logic": 0,
+                                  "wrapper": {
+                                      "width": "",
+                                      "class": "",
+                                      "id": ""
+                                  },
+                                  "collapsed": "",
+                                  "min": 0,
+                                  "max": 4,
+                                  "layout": "block",
+                                  "button_label": "Add Column",
+                                  "sub_fields": [
+                                      {
+                                          "key": "field_5df3da12a98f3",
+                                          "label": "Show Advanced Options",
+                                          "name": "show_advanced_options",
+                                          "type": "true_false",
+                                          "instructions": "",
+                                          "required": 0,
+                                          "conditional_logic": 0,
+                                          "wrapper": {
+                                              "width": "",
+                                              "class": "",
+                                              "id": ""
+                                          },
+                                          "message": "Show advanced options?",
+                                          "default_value": 0,
+                                          "ui": 1,
+                                          "ui_on_text": "",
+                                          "ui_off_text": ""
+                                      },
+                                      {
+                                          "key": "field_5df3da35a98f4",
+                                          "label": "Class",
+                                          "name": "class",
+                                          "type": "text",
+                                          "instructions": "Add custom CSS classes separated by a space.",
+                                          "required": 0,
+                                          "conditional_logic": [
+                                              [
+                                                  {
+                                                      "field": "field_5df3da12a98f3",
+                                                      "operator": "==",
+                                                      "value": "1"
+                                                  }
+                                              ]
+                                          ],
+                                          "wrapper": {
+                                              "width": "",
+                                              "class": "",
+                                              "id": ""
+                                          },
+                                          "default_value": "col",
+                                          "placeholder": "",
+                                          "prepend": "",
+                                          "append": "",
+                                          "maxlength": ""
+                                      },
+                                      {
+                                          "key": "field_5df3da58a98f5",
+                                          "label": "ID",
+                                          "name": "id",
+                                          "type": "text",
+                                          "instructions": "Add custom ID attribute",
+                                          "required": 0,
+                                          "conditional_logic": [
+                                              [
+                                                  {
+                                                      "field": "field_5df3da12a98f3",
+                                                      "operator": "==",
+                                                      "value": "1"
+                                                  }
+                                              ]
+                                          ],
+                                          "wrapper": {
+                                              "width": "",
+                                              "class": "",
+                                              "id": ""
+                                          },
+                                          "default_value": "",
+                                          "placeholder": "",
+                                          "prepend": "",
+                                          "append": "",
+                                          "maxlength": ""
+                                      },
+                                      {
+                                          "key": "field_5df3f7e8ab771",
+                                          "label": "Wrap Content",
+                                          "name": "wrap_content",
+                                          "type": "true_false",
+                                          "instructions": "",
+                                          "required": 0,
+                                          "conditional_logic": 0,
+                                          "wrapper": {
+                                              "width": "",
+                                              "class": "",
+                                              "id": ""
+                                          },
+                                          "message": "Wrap the column content in a `div` element?",
+                                          "default_value": 0,
+                                          "ui": 1,
+                                          "ui_on_text": "",
+                                          "ui_off_text": ""
+                                      },
+                                      {
+                                          "key": "field_5df3f81eab772",
+                                          "label": "Wrapper Class",
+                                          "name": "wrapper_class",
+                                          "type": "text",
+                                          "instructions": "Add custom CSS classes to the content wrapper. For example, use `card` to wrap the content in a card with drop shadow.",
+                                          "required": 0,
+                                          "conditional_logic": [
+                                              [
+                                                  {
+                                                      "field": "field_5df3f7e8ab771",
+                                                      "operator": "==",
+                                                      "value": "1"
+                                                  }
+                                              ]
+                                          ],
+                                          "wrapper": {
+                                              "width": "",
+                                              "class": "",
+                                              "id": ""
+                                          },
+                                          "default_value": "card",
+                                          "placeholder": "",
+                                          "prepend": "",
+                                          "append": "",
+                                          "maxlength": ""
+                                      },
+                                      {
+                                          "key": "field_5df3da95a98f6",
+                                          "label": "Content",
+                                          "name": "content",
+                                          "type": "flexible_content",
+                                          "instructions": "",
+                                          "required": 0,
+                                          "conditional_logic": 0,
+                                          "wrapper": {
+                                              "width": "",
+                                              "class": "",
+                                              "id": ""
+                                          },
+                                          "layouts": {
+                                              "layout_5df3da99964ed": {
+                                                  "key": "layout_5df3da99964ed",
+                                                  "name": "wysiwyg",
+                                                  "label": "Wysiwyg",
+                                                  "display": "block",
+                                                  "sub_fields": [
+                                                      {
+                                                          "key": "field_5df3daada98f7",
+                                                          "label": "Wysiwyg",
+                                                          "name": "wysiwyg",
+                                                          "type": "wysiwyg",
+                                                          "instructions": "",
+                                                          "required": 0,
+                                                          "conditional_logic": 0,
+                                                          "wrapper": {
+                                                              "width": "",
+                                                              "class": "",
+                                                              "id": ""
+                                                          },
+                                                          "default_value": "",
+                                                          "tabs": "all",
+                                                          "toolbar": "full",
+                                                          "media_upload": 1,
+                                                          "delay": 1
+                                                      }
+                                                  ],
+                                                  "min": "",
+                                                  "max": ""
+                                              },
+                                              "layout_5df3daeea98f8": {
+                                                  "key": "layout_5df3daeea98f8",
+                                                  "name": "carousel",
+                                                  "label": "Carousel",
+                                                  "display": "block",
+                                                  "sub_fields": [
+                                                      {
+                                                          "key": "field_5df3daf4a98f9",
+                                                          "label": "Carousel",
+                                                          "name": "carousel",
+                                                          "type": "clone",
+                                                          "instructions": "",
+                                                          "required": 0,
+                                                          "conditional_logic": 0,
+                                                          "wrapper": {
+                                                              "width": "",
+                                                              "class": "",
+                                                              "id": ""
+                                                          },
+                                                          "clone": [
+                                                              "group_5df3ca14c2f19"
+                                                          ],
+                                                          "display": "seamless",
+                                                          "layout": "block",
+                                                          "prefix_label": 0,
+                                                          "prefix_name": 0
+                                                      }
+                                                  ],
+                                                  "min": "",
+                                                  "max": ""
+                                              },
+                                              "layout_5df3f3f360c7e": {
+                                                  "key": "layout_5df3f3f360c7e",
+                                                  "name": "button",
+                                                  "label": "Button",
+                                                  "display": "block",
+                                                  "sub_fields": [
+                                                      {
+                                                          "key": "field_5df3f3fa60c7f",
+                                                          "label": "Button",
+                                                          "name": "button",
+                                                          "type": "clone",
+                                                          "instructions": "",
+                                                          "required": 0,
+                                                          "conditional_logic": 0,
+                                                          "wrapper": {
+                                                              "width": "",
+                                                              "class": "",
+                                                              "id": ""
+                                                          },
+                                                          "clone": [
+                                                              "group_5df3f39e4751a"
+                                                          ],
+                                                          "display": "seamless",
+                                                          "layout": "block",
+                                                          "prefix_label": 0,
+                                                          "prefix_name": 0
+                                                      }
+                                                  ],
+                                                  "min": "",
+                                                  "max": ""
+                                              }
+                                          },
+                                          "button_label": "Add Element",
+                                          "min": "",
+                                          "max": ""
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "location": [
+      [
+          {
+              "param": "page_template",
+              "operator": "==",
+              "value": "page-analytics.php"
+          }
+      ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "seamless",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": ""
+}
