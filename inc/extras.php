@@ -64,10 +64,10 @@ if ( ! function_exists( 'procede_partners_row' ) ) {
 
 		if ( $query->have_posts() ) : ?>
 			<div class="row justify-content-center align-items-center mb-3">
+				<div class="col-12 text-center">
+					<h3 class="partner-category-title mb-2"><?php echo $term->name; ?></h3>
+				</div>
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-					<div class="col-12 text-center">
-						<h3 class="partner-category-title mb-2"><?php echo $term->name; ?></h3>
-					</div>
 					<div class="col-6 col-md-4 col-lg-3 mb-1">
 						<?php
 						if ( has_post_thumbnail( get_the_ID() ) ) {

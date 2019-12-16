@@ -25,9 +25,9 @@ foreach ( $services_options as $key => $service ) {
 <section class="section-row-w-columns bg-white " id="services_cards">
   <a class="anchor" name="anchor-services_cards"></a>
   <div class="container">
-    <div class="row card-deck icon-cards justify-content-center" data-cols="4">
+    <div class="row card-deck icon-cards justify-content-center">
       <?php foreach ( $services as $key => $service ) { ?>
-        <div class="card text-center px-0 py-1 card-<?php echo $key; ?>">
+        <div class="card col-12 col-md-6 col-lg text-center px-0 py-1 card-<?php echo $key; ?>">
           <div class="card-header icon-header pb-0">
             <?php echo wp_get_attachment_image( $service['image'] ); ?>
           </div>

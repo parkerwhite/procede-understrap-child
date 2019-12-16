@@ -28,14 +28,18 @@ foreach ( $integrations_options as $key => $integration ) {
     <div class="row card-deck icon-cards justify-content-center" data-cols="4">
       <?php foreach ( $integrations as $key => $integration ) { ?>
         <div class="card text-center px-0 py-1 card-<?php echo $key; ?>">
-          <div class="card-header icon-header pb-0">
-            <?php echo wp_get_attachment_image( $integration['image'] ); ?>
-          </div>
-          <div class="card-body pb-0">
+          <?php if ( $integration['image'] ) { ?>
+            <div class="card-header icon-header pb-0">
+              <?php echo wp_get_attachment_image( $integration['image'] ); ?>
+            </div>
+          <?php } ?>
+          <div class="card-body">
             <h3 class="mb-2"><?php echo $integration['title']; ?></h3>
             <?php echo apply_filters( 'the_content', $integration['copy'] ); ?>
           </div>
-          <a href="<?php echo get_permalink( $integration['link'] ); ?>" class="btn btn-link btn-learn-more stretched-link card-footer pb-1"><span>Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+          <?php if ( $integration['link'] ) { ?>
+            <a href="<?php echo get_permalink( $integration['link'] ); ?>" class="btn btn-link btn-learn-more stretched-link card-footer pb-1"><span>Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+          <?php } ?>
         </div>
       <?php } ?>
     </div>
