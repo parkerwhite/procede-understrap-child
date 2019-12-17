@@ -34,7 +34,7 @@ $partners_category_array = array(
     <div class="container"><!-- .container -->
       <div class="row justify-content-center">
         <div class="col-12 text-center">
-          <h2 class="section-title">Certified Partners</h2>
+          <h1 class="section-title">Certified Partners</h1>
         </div>
       </div>
       <div class="row " data-cols="1">
@@ -59,7 +59,7 @@ $partners_category_array = array(
     <div class="container"><!-- .container -->
       <div class="row justify-content-center">
         <div class="col-12 text-center">
-          <h2 class="section-title">Alliance Partners</h2>
+          <h1 class="section-title">Alliance Partners</h1>
         </div>
       </div>
       <div class="row " data-cols="1">

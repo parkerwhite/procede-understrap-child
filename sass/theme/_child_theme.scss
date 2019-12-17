@@ -613,7 +613,10 @@ blockquote {
 						&:focus,
 						&:hover,
 						.active {
-							color: $primary;
+							// color: $primary;
+							img {
+								filter: invert(66%) sepia(72%) saturate(289%) hue-rotate(68deg) brightness(91%) contrast(88%);
+							}
 						}
 					}
 				}
@@ -1654,7 +1657,7 @@ section {
 	}
 
 	#wrapper-colophon {
-		background-color: $gray-200;
+		// background-color: $gray-200;
 		padding-bottom: 1.375rem;
 		padding-top: 1.375rem;
 
@@ -1693,7 +1696,7 @@ section {
 		margin-top: 1.8rem;
 	}
 	.img-thumbnail {
-		box-shadow: $box-shadow;
+		// box-shadow: $box-shadow;
 		margin-bottom: 2rem;
 		@include media-breakpoint-up('lg') {
 			max-width: 600px;

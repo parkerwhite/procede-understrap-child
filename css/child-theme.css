@@ -18235,9 +18235,10 @@ blockquote .blockquote-footer {
             height: 40px;
             margin: 0 auto 0.625rem;
             width: auto; }
-          #main-nav #main-menu .dropdown .dropdown-menu .menu-item .dropdown-item:active, #main-nav #main-menu .dropdown .dropdown-menu .menu-item .dropdown-item:focus, #main-nav #main-menu .dropdown .dropdown-menu .menu-item .dropdown-item:hover,
-          #main-nav #main-menu .dropdown .dropdown-menu .menu-item .dropdown-item .active {
-            color: #71C26A; }
+          #main-nav #main-menu .dropdown .dropdown-menu .menu-item .dropdown-item:active img, #main-nav #main-menu .dropdown .dropdown-menu .menu-item .dropdown-item:focus img, #main-nav #main-menu .dropdown .dropdown-menu .menu-item .dropdown-item:hover img,
+          #main-nav #main-menu .dropdown .dropdown-menu .menu-item .dropdown-item .active img {
+            -webkit-filter: invert(66%) sepia(72%) saturate(289%) hue-rotate(68deg) brightness(91%) contrast(88%);
+                    filter: invert(66%) sepia(72%) saturate(289%) hue-rotate(68deg) brightness(91%) contrast(88%); }
     #main-nav #main-menu .dropdown.wide-dropdown .dropdown-menu {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
@@ -21599,7 +21600,6 @@ section {
     display: none; }
 
 .site-footer #wrapper-colophon {
-  background-color: #F5F5F5;
   padding-bottom: 1.375rem;
   padding-top: 1.375rem; }
   .site-footer #wrapper-colophon p {
@@ -21629,8 +21629,6 @@ section {
   #section_solutions-intro .section-title {
     margin-top: 1.8rem; }
   #section_solutions-intro .img-thumbnail {
-    -webkit-box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
-            box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem; }
     @media (min-width: 1025px) {
       #section_solutions-intro .img-thumbnail {

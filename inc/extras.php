@@ -65,7 +65,7 @@ if ( ! function_exists( 'procede_partners_row' ) ) {
 		if ( $query->have_posts() ) : ?>
 			<div class="row justify-content-center align-items-center mb-3">
 				<div class="col-12 text-center">
-					<h3 class="partner-category-title mb-2"><?php echo $term->name; ?></h3>
+					<h2 class="partner-category-title mb-2"><?php echo $term->name; ?></h2>
 				</div>
 				<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 					<div class="col-6 col-md-4 col-lg-3 mb-1">

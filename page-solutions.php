@@ -113,7 +113,7 @@ $hero_text = ( metadata_exists( 'post', get_the_ID(), 'solutions_page_sections_h
 				</div>
 				<?php $testimonials_query = new WP_Query( $testimonial_args ); if ( $testimonials_query->have_posts() ) : $i = 0; ?>
 				<div class="row justify-content-center">
-					<div class="testimonial-column col-12 col-md-10 col-lg-9 col-xl-7">
+					<div class="testimonial-column col-12">
 						<div class="carousel mb-2" id="carousel-8aec0799" data-interval="5000" data-keyboard="true" data-pause="false" data-ride="false" data-wrap="true">
 							<div class="carousel-inner">
 								<?php while ( $testimonials_query->have_posts() ) : $testimonials_query->the_post(); ?>
@@ -239,7 +239,7 @@ $hero_text = ( metadata_exists( 'post', get_the_ID(), 'solutions_page_sections_h
 			<div class="container-fluid">
 				<div class="row">
 					<?php foreach ( $related_solutions as $key => $solution ) { ?>
-						<div class="col-12 col-md-6 col-lg-4 solution solution-col-<?php echo $key; ?>">
+						<div class="col-12 col-md-6 col-lg-3 solution solution-col-<?php echo $key; ?>">
 							<div class="solution-image-wrapper">
 								<?php echo wp_get_attachment_image( $solution['image'], 'full', false, array( 'class' => 'main' ) ); ?>
 								<?php echo wp_get_attachment_image( $solution['image_hover'], 'full', false, array( 'class' => 'on-hover' ) ); ?>

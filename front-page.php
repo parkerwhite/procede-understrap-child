@@ -83,7 +83,7 @@ $featured_customers = get_post_meta( get_the_ID(), 'featured_customers', true );
 	<?php endif; wp_reset_query(); ?>
 
 	<?php if ( $featured_customers ) : ?>
-	<section class="section-row-w-columns" id="featured_customers">
+	<section class="section-row-w-columns bg-light" id="featured_customers">
 		<a class="anchor" name="anchor-featured-customers"></a>
 		<div class="container">
 			<div class="row justify-content-center">
