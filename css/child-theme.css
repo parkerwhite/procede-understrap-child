@@ -17819,13 +17819,9 @@ hr.dark {
 .media.checklist {
   margin-bottom: 3rem; }
   .media.checklist .media-checklist-icon {
-    background-color: #F7F7F7;
-    border: 1px solid #707070;
-    border-radius: 50%;
-    height: 62px;
-    margin-right: 0.83333rem;
-    padding: .5rem;
-    width: 62px; }
+    height: auto;
+    margin-right: 2.38333rem;
+    width: 2.86rem; }
 
 .breadcrumbs {
   margin-bottom: 1rem; }
@@ -17922,6 +17918,11 @@ section.section-w-background-image {
     -webkit-transform: scale(1);
             transform: scale(1);
     width: auto; }
+
+.section-certified-partners .wp-post-image,
+.section-alliance-partners .wp-post-image {
+  max-height: 150px;
+  width: auto; }
 
 blockquote .blockquote-footer {
   display: -webkit-box;

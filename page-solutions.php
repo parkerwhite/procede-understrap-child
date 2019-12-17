@@ -75,7 +75,11 @@ $hero_text = ( metadata_exists( 'post', get_the_ID(), 'solutions_page_sections_h
 							<?php for ( $i = 0; $i < $solutions_page_sections_highlights_highlight_items; $i++ ) { ?>
 								<div class="col-12 col-lg-6">
 									<div class="media checklist">
-										<?php echo wp_get_attachment_image( get_post_meta( get_the_ID(), 'solutions_page_sections_highlights_highlight_items_' . $i . '_icon', true ), 'thumbnail', false, array( 'class' => 'media-checklist-icon' ) ); ?>
+										<?php if ( wp_get_attachment_image( get_post_meta( get_the_ID(), 'solutions_page_sections_highlights_highlight_items_' . $i . '_icon', true ) ) ) {
+											echo wp_get_attachment_image( get_post_meta( get_the_ID(), 'solutions_page_sections_highlights_highlight_items_' . $i . '_icon', true ), 'thumbnail', false, array( 'class' => 'media-checklist-icon' ) );
+										} else {
+											echo '<img src="' . get_stylesheet_directory_uri() . '/images/ic_check_circle_24px@2x.png" class="media-checklist-icon media-checklist-icon-default" />';
+										} ?>
 										<div class="media-body">
 											<?php echo apply_filters( 'the_content', get_post_meta( get_the_ID(), 'solutions_page_sections_highlights_highlight_items_' . $i . '_copy', true ) ); ?>
 										</div>

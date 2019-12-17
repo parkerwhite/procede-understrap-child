@@ -201,17 +201,15 @@ a.stretched-link {
 	}
 }
 
-.media.checklist {
-	// align-items: center;
-	margin-bottom: 3rem;
-	.media-checklist-icon {
-		background-color: $light;
-		border: 1px solid $secondary;
-		border-radius: 50%;
-		height: 62px;
-		margin-right: #{$spacer};
-		padding: .5rem;
-		width: 62px;
+.media {
+	&.checklist {
+		// align-items: center;
+		margin-bottom: 3rem;
+		.media-checklist-icon {
+			height: auto;
+			margin-right: #{$spacer * 2.86};
+			width: 2.86rem;
+		}
 	}
 }
 
@@ -333,6 +331,13 @@ section.section-w-background-image {
 	}
 }
 
+.section-certified-partners,
+.section-alliance-partners {
+	.wp-post-image {
+		max-height: 150px;
+		width: auto;
+	}
+}
 
 //
 // Blockquote
