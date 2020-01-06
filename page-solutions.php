@@ -163,7 +163,7 @@ $hero_text = ( metadata_exists( 'post', get_the_ID(), 'solutions_page_sections_h
 						<h2 class="section-title text-center mb-4"><?php echo get_post_meta( get_the_ID(), 'solutions_page_sections_additional_solutions_title', true ); ?></h2>
 					</div>
 				</div>
-				<div class="row justify-content-between">
+				<div class="row justify-content-center">
 					<?php for ( $i = 0; $i < $solutions_page_sections_additional_solutions_checklist_items; $i++ ) { ?>
 						<div class="solution col-12 col-md-6 col-lg-4">
 							<div class="text-center">
@@ -203,7 +203,7 @@ $hero_text = ( metadata_exists( 'post', get_the_ID(), 'solutions_page_sections_h
 							<?php
 							$solutions_page_sections_grouped_content_group_items = get_post_meta( get_the_ID(), 'solutions_page_sections_grouped_content_group_' . $i . '_items', true );
 							?>
-							<div class="row justify-content-between">
+							<div class="row">
 								<?php for ( $j = 0; $j < $solutions_page_sections_grouped_content_group_items; $j++) { ?>
 									<div class="solution-wrapper col-12 col-md-6 col-lg-4">
 										<h3 class="solution-title"><?php echo get_post_meta( get_the_ID(), 'solutions_page_sections_grouped_content_group_' . $i . '_items_' . $j . '_title', true ); ?></h3>

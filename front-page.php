@@ -93,9 +93,10 @@ $featured_customers = get_post_meta( get_the_ID(), 'featured_customers', true );
 			</div>
 			<div class="row justify-content-center align-items-center" data-cols="<?php echo $featured_customers; ?>">
 				<?php for ($i = 0; $i < $featured_customers; $i++ ) { ?>
+					<?php $featured_customer_link_array = get_post_meta( get_the_ID(), 'featured_customers_' . $i . '_customer_link', true ); ?>
 					<div class="col-12 col-md-6 col-xl-3 text-center">
 						<p>
-							<a href="<?php echo get_post_meta( get_the_ID(), 'featured_customers_' . $i . '_customer_link', true ); ?>" class="btn btn-image">
+							<a href="<?php echo $featured_customer_link_array['url']; ?>" class="btn btn-image">
 								<span>
 									<?php echo wp_get_attachment_image( get_post_meta( get_the_ID(), 'featured_customers_' . $i . '_customer_image', true ), 'large', false, array( 'class' => 'img-fluids' ) ); ?>
 								</span>
