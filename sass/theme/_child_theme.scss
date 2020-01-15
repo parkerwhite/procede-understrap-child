@@ -10,6 +10,12 @@
 @mixin mobile-size( $font-size ){
 	font-size: #{( ( $font-size - $font-size-base ) / 2 ) + $font-size-base};
 }
+
+// Reset
+html {
+	overflow-x: hidden;
+}
+
 //
 // Fixed Nav
 //
@@ -587,9 +593,11 @@ blockquote {
 				padding: 0 #{$grid-gutter-width / 2};
 				right: -1px;
 				transition: height .15s ease;
+				z-index: 0;
 				&.show {
-					height: #{$spacer * 10.5};
 					box-shadow: $box-shadow-sm;
+					height: #{$spacer * 10.5};
+					z-index: 1;
 				}
 				@each $breakpoint, $container-max-width in $container-max-widths {
 					@include media-breakpoint-down( $breakpoint ) {
@@ -1106,67 +1114,70 @@ section {
 }
 .card-deck {
 	.card {
-		// flex: 1 0 100%;
-		height: 100%;
+		flex: inherit;
+		min-height: 100%;
 		margin-bottom: #{$card-deck-margin * 2};
-		// @include media-breakpoint-up('md') { // 2 Cols
-		// 	flex: 1 0 40%;
-		// 	flex: 1 0 calc(50% - #{$card-spacer-x * 2});
-		// 	max-width: calc(50% - #{$card-spacer-x * 2});
-		// }
 	}
-	// &[data-cols="3"] {
-	// 	.card {
-	// 		@include media-breakpoint-up('lg') { // 3 Cols
-	// 			flex: 1 0 30%;
-	// 			flex: 1 0 calc(33.3333% - #{$card-spacer-x});
-	// 			max-width: calc(33.3333% - #{$card-spacer-x});
-	// 		}
-	// 	}
-	// }
-	// &[data-cols="4"] {
-	// 	.card {
-	// 		@include media-breakpoint-up('lg') { // 4 Cols
-	// 			flex: 1 0 20%;
-	// 			flex: 1 0 calc(25% - #{$card-spacer-x});
-	// 			max-width: calc(25% - #{$card-spacer-x});
-	// 		}
-	// 	}
-	// }
-	// &[data-cols="5"] {
-	// 	.card {
-	// 		@include media-breakpoint-up('lg') { // 4 Cols
-	// 			flex: 1 0 18%;
-	// 			flex: 1 0 calc(20% - #{$card-spacer-x});
-	// 			max-width: calc(20% - #{$card-spacer-x});
-	// 		}
-	// 	}
-	// }
+
+	&.partners-card-deck {
+		.card {
+			box-shadow: 0 0.15rem 0.5rem rgba(0,0,0,.1);
+			padding: 1rem;
+			.card-body {
+				align-items: center;
+				display: flex;
+				flex: 1 0 160px;
+				max-height: 160px;
+				justify-content: center;
+				padding: 0;
+			}
+			.card-footer {
+				align-items: flex-start;
+				display: flex;
+				flex: 1 0 100%;
+				justify-content: center;
+				padding: 0;
+				text-align: center;
+			}
+			.btn-link {
+				position: absolute;
+				bottom: 0;
+				content: "";
+				display: block;
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		}
+	}
+
+	&.integrations-partners-card-deck {
+		.card {
+			align-items: center;
+			display: flex;
+			justify-content: center;;
+			.card-body {
+				align-items: center;
+				display: flex;
+				justify-content: center;
+				text-align: center;
+			}
+			.btn-link {
+				position: absolute;
+				bottom: 0;
+				content: "";
+				display: block;
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		}
+	}
 }
+
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-     /* IE10+ CSS styles go here */
-	// .card-deck {
-	// 	.card {
-	// 		flex: 1 0 100%;
-	// 		@include media-breakpoint-up('md') { // 2 Cols
-	// 			flex: 1 0 30%;
-	// 		}
-	// 	}
-	// 	&[data-cols="3"] {
-	// 		.card {
-	// 			@include media-breakpoint-up('lg') { // 3 Cols
-	// 				flex: 1 0 25%;
-	// 			}
-	// 		}
-	// 	}
-	// 	&[data-cols="4"] {
-	// 		.card {
-	// 			@include media-breakpoint-up('lg') { // 4 Cols
-	// 				flex: 1 0 20%;
-	// 			}
-	// 		}
-	// 	}
-	// }
 	.nav.nav-tabs .nav-link {
 		flex: 1 0 30%;
 	}
@@ -1741,6 +1752,7 @@ section {
 		padding-top: #{$spacer * 5.3125};
 		transform: scale(1);
 		transition: all .15s ease;
+		z-index: 0;
 		&:hover {
 			background-color: $primary;
 			border-color: $primary;

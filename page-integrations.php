@@ -35,6 +35,13 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 		<?php get_template_part( 'partials/partial', 'integrations' ); ?>
 
+		<section class="section section-integrations-partners bg-white">
+			<a class="anchor" name="anchor-integrations-partners"></a>
+			<div class="container">
+				<?php procede_integrations_partners_cards(); ?>
+			</div>
+		</section>
+
 		<?php get_template_part( 'partials/partial', 'testimonials' ); ?>
 
 	<?php endwhile; // end of the loop. ?>

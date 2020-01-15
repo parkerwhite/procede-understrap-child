@@ -18,29 +18,31 @@ if ( has_post_thumbnail() ) {
 
 $show_hero_overlay = ( metadata_exists( 'post', get_the_ID(), 'hero_image_settings_overlay' ) ? get_post_meta( get_the_ID(), 'hero_image_settings_overlay', true ) : 1 );
 
-$hero_text = ( metadata_exists( 'post', get_the_ID(), 'solutions_page_sections_hero_copy' ) ? get_post_meta( get_the_ID(), 'solutions_page_sections_hero_copy', true ) : '' );
+$hero_text = ( metadata_exists( 'post', get_the_ID(), 'solutions_page_sections_hero_copy' ) ? get_post_meta( get_the_ID(), 'solutions_page_sections_hero_copy', true ) : false );
 
 ?>
 
 <article <?php post_class( 'solutions-page' ); ?> id="post-<?php the_ID(); ?>">
 	<?php while ( have_posts() ) : the_post(); ?>
 
-		<section id="header-wrapper" class="wrapper wrapper-hero bg-light" <?php echo $bg; ?>>
-			<?php if ( has_post_thumbnail() ) : ?>
-				<img width="1920" src="<?php echo $featured_img_url; ?>" class="wp-post-image hidden" alt="" sizes="(max-width: 1920px) 100vw, 1920px">
-			<?php endif; ?>
-			<div id="header-hero-content-wrapper" class="<?php echo $show_hero_overlay ? 'overlay-show' : 'overlay-hide'; ?>" data-overlay="<?php echo $show_hero_overlay; ?>">
-				<div class="<?php echo esc_attr( $container ); ?>" id="header-hero-content-container">
-					<div class="row">
-						<div class="col">
-							<header class="page-header">
-								<?php echo apply_filters( 'the_content', $hero_text ); ?>
-							</header>
+		<?php if ( $hero_text || has_post_thumbnail() ) : ?>
+			<section id="header-wrapper" class="wrapper wrapper-hero bg-light" <?php echo $bg; ?>>
+				<?php if ( has_post_thumbnail() ) : ?>
+					<img width="1920" src="<?php echo $featured_img_url; ?>" class="wp-post-image hidden" alt="" sizes="(max-width: 1920px) 100vw, 1920px">
+				<?php endif; ?>
+				<div id="header-hero-content-wrapper" class="<?php echo $show_hero_overlay ? 'overlay-show' : 'overlay-hide'; ?>" data-overlay="<?php echo $show_hero_overlay; ?>">
+					<div class="<?php echo esc_attr( $container ); ?>" id="header-hero-content-container">
+						<div class="row">
+							<div class="col">
+								<header class="page-header">
+									<?php echo apply_filters( 'the_content', $hero_text ); ?>
+								</header>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		<?php endif; ?>
 
 		<?php
 		$solutions_page_sections_intro_background_image = get_post_meta( get_the_ID(), 'solutions_page_sections_intro_background_image', true );

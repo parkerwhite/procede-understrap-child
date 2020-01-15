@@ -13257,6 +13257,9 @@ a.skip-link {
 #wpadminbar #wp-admin-bar-new-content {
   display: none; }
 
+html {
+  overflow-x: hidden; }
+
 body {
   margin-top: 198px; }
   body.admin-bar #wrapper-navbar {
@@ -18184,12 +18187,14 @@ blockquote .blockquote-footer {
       right: -1px;
       -webkit-transition: height .15s ease;
       transition: height .15s ease;
+      z-index: 0;
       padding-left: calc(50vw - 675px);
       padding-right: calc(50vw - 675px); }
       #main-nav #main-menu .dropdown .dropdown-menu.show {
-        height: 8.75rem;
         -webkit-box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.16);
-                box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.16); }
+                box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.16);
+        height: 8.75rem;
+        z-index: 1; }
       @media (max-width: 767.98px) {
         #main-nav #main-menu .dropdown .dropdown-menu {
           padding-left: calc(50vw - 270px);
@@ -21205,11 +21210,88 @@ section {
     padding-bottom: 1.6875rem; }
 
 .card-deck .card {
-  height: 100%;
+  -webkit-box-flex: inherit;
+      -ms-flex: inherit;
+          flex: inherit;
+  min-height: 100%;
   margin-bottom: 0.9375rem; }
 
+.card-deck.partners-card-deck .card {
+  -webkit-box-shadow: 0 0.15rem 0.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.15rem 0.5rem rgba(0, 0, 0, 0.1);
+  padding: 1rem; }
+  .card-deck.partners-card-deck .card .card-body {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 160px;
+            flex: 1 0 160px;
+    max-height: 160px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0; }
+  .card-deck.partners-card-deck .card .card-footer {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+    text-align: center; }
+  .card-deck.partners-card-deck .card .btn-link {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+.card-deck.integrations-partners-card-deck .card {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .card-deck.integrations-partners-card-deck .card .card-body {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center; }
+  .card-deck.integrations-partners-card-deck .card .btn-link {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0; }
+
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* IE10+ CSS styles go here */
   .nav.nav-tabs .nav-link {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 30%;
@@ -21670,7 +21752,8 @@ section {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: all .15s ease;
-  transition: all .15s ease; }
+  transition: all .15s ease;
+  z-index: 0; }
   #section_related-solutions .solution:hover {
     background-color: #71C26A;
     border-color: #71C26A;

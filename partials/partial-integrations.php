@@ -27,25 +27,27 @@ foreach ( $integrations_options as $key => $integration ) {
   <div class="container">
     <div class="row card-deck icon-cards justify-content-center" data-cols="4">
       <?php foreach ( $integrations as $key => $integration ) { ?>
-        <div class="card text-center px-0 py-1 card-<?php echo $key; ?>">
-          <?php if ( $integration['image'] ) { ?>
-            <div class="card-header icon-header pb-0">
-              <?php echo wp_get_attachment_image( $integration['image'] ); ?>
+        <div class="col-6 col-md-3 p-0">
+          <div class="card text-center px-0 py-1 card-<?php echo $key; ?>">
+            <?php if ( $integration['image'] ) { ?>
+              <div class="card-header icon-header pb-0">
+                <?php echo wp_get_attachment_image( $integration['image'] ); ?>
+              </div>
+            <?php } ?>
+            <div class="card-body">
+              <h3 class="mb-2"><?php echo $integration['title']; ?></h3>
+              <?php echo apply_filters( 'the_content', $integration['copy'] ); ?>
             </div>
-          <?php } ?>
-          <div class="card-body">
-            <h3 class="mb-2"><?php echo $integration['title']; ?></h3>
-            <?php echo apply_filters( 'the_content', $integration['copy'] ); ?>
+            <?php if ( $integration['link'] ) { ?>
+              <a href="<?php echo get_permalink( $integration['link'] ); ?>" class="btn btn-link btn-learn-more stretched-link card-footer pb-1"><span>Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+            <?php } ?>
           </div>
-          <?php if ( $integration['link'] ) { ?>
-            <a href="<?php echo get_permalink( $integration['link'] ); ?>" class="btn btn-link btn-learn-more stretched-link card-footer pb-1"><span>Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
-          <?php } ?>
         </div>
       <?php } ?>
     </div>
   </div>
 </section>
-<section class="section-row-w-columns bg-white pt-0" id="integrations_subtext">
+<section class="section-row-w-columns bg-white py-0" id="integrations_subtext">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-8 col-xl-8">
