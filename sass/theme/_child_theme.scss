@@ -1481,6 +1481,13 @@ section {
 //
 // Modals
 //
+body.modal-open {
+	padding-right: 16px;
+	#top-nav,
+	#main-nav {
+		margin-right: 16px;
+	}
+}
 .modal-dialog {
 	@include media-breakpoint-up('sm') {
 		width: 80vw;

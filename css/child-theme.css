@@ -21541,6 +21541,12 @@ section {
   #mc_embed_signup .mc-field-group.input-group ul input[type="checkbox"] {
     margin-right: .5rem; }
 
+body.modal-open {
+  padding-right: 16px; }
+  body.modal-open #top-nav,
+  body.modal-open #main-nav {
+    margin-right: 16px; }
+
 @media (min-width: 576px) {
   .modal-dialog {
     width: 80vw;
