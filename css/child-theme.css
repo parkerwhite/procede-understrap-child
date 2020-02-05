@@ -13284,6 +13284,8 @@ h1 {
   @media (max-width: 1024.98px) {
     h1 {
       font-size: 2.15rem; } }
+  h1.page-title {
+    font-weight: 400; }
 
 h2, h1.entry-title {
   letter-spacing: .025em;
@@ -13344,6 +13346,9 @@ a.stretched-link::after {
   top: 0;
   right: 0;
   bottom: 0; }
+
+.no-target > a {
+  cursor: default; }
 
 hr.primary {
   border-top: 1px solid #71C26A !important; }
@@ -17788,6 +17793,7 @@ hr.dark {
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
     margin-bottom: 2.5rem;
+    max-width: 50%;
     padding-left: calc(5.625rem + 30px);
     padding-right: 30px;
     position: relative; }
@@ -17795,7 +17801,8 @@ hr.dark {
       .section-checklist .list-checklist .checklist-item {
         -webkit-box-flex: 1;
             -ms-flex: 1 0 100%;
-                flex: 1 0 100%; } }
+                flex: 1 0 100%;
+        max-width: 100%; } }
     .section-checklist .list-checklist .checklist-item:before {
       background: #71C26A;
       border-radius: 50%;
@@ -17895,17 +17902,25 @@ section.section-w-background-image {
   max-width: 50%;
   overflow: hidden;
   position: relative;
-  width: calc(50% - 30px);
-  height: 362.8125px; }
-  @media (max-width: 767.98px) {
+  width: calc(50% - 30px); }
+  @media (min-width: 576px) and (max-width: 767.98px) {
     #featured-post .img-featured-wrapper {
       height: 135px; } }
-  @media (max-width: 1024.98px) {
+  @media (min-width: 768px) and (max-width: 1024.98px) {
     #featured-post .img-featured-wrapper {
       height: 236.25px; } }
-  @media (max-width: 1598.98px) {
+  @media (min-width: 1025px) and (max-width: 1598.98px) {
     #featured-post .img-featured-wrapper {
       height: 292.5px; } }
+  @media (min-width: 1599px) {
+    #featured-post .img-featured-wrapper {
+      height: 362.8125px; } }
+  @media (max-width: 1024.98px) {
+    #featured-post .img-featured-wrapper {
+      max-height: 200px;
+      min-width: 100%;
+      margin-bottom: 1rem;
+      width: 100%; } }
   #featured-post .img-featured-wrapper img {
     bottom: -99999px;
     height: auto;
@@ -17925,7 +17940,8 @@ section.section-w-background-image {
 .section-certified-partners .wp-post-image,
 .section-alliance-partners .wp-post-image {
   max-height: 150px;
-  width: auto; }
+  width: auto;
+  max-width: 180px; }
 
 blockquote .blockquote-footer {
   display: -webkit-box;
@@ -17957,55 +17973,60 @@ blockquote .blockquote-footer {
         margin-right: .5rem;
         width: 3.5rem; } }
 
-.btn.btn-primary, .wpcf7 input.btn-primary[type=submit], .wpcf7 input.gform_button[type=submit], .gform_button {
-  background-color: #71C26A;
-  border: 1px solid #71C26A;
-  color: #fff; }
-  .btn.btn-primary:hover, .wpcf7 input.btn-primary:hover[type=submit], .wpcf7 input.gform_button:hover[type=submit], .gform_button:hover {
-    background-color: #fff;
+.btn,
+.wpcf7 input[type=submit], .gform_button {
+  outline: none; }
+  .btn:active, .wpcf7 input:active[type=submit], .gform_button:active, .btn:focus,
+  .wpcf7 input:focus[type=submit], .gform_button:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  .btn.btn-primary, .wpcf7 input.btn-primary[type=submit], .wpcf7 input.gform_button[type=submit], .gform_button {
+    background-color: #71C26A;
+    border: 1px solid #71C26A;
+    color: #fff; }
+    .btn.btn-primary:hover, .wpcf7 input.btn-primary:hover[type=submit], .wpcf7 input.gform_button:hover[type=submit], .gform_button:hover {
+      background-color: #fff;
+      color: #71C26A; }
+    .btn.btn-primary:active, .wpcf7 input.btn-primary:active[type=submit], .wpcf7 input.gform_button:active[type=submit], .gform_button:active, .btn.btn-primary:focus, .wpcf7 input.btn-primary:focus[type=submit], .wpcf7 input.gform_button:focus[type=submit], .gform_button:focus {
+      background-color: #707070;
+      color: #fff;
+      border-color: #707070; }
+  .btn.btn-secondary, .wpcf7 input.btn-secondary[type=submit], .btn-secondary.gform_button {
+    background-color: #707070;
+    border: 1px solid #707070;
+    color: #fff; }
+    .btn.btn-secondary:hover, .wpcf7 input.btn-secondary:hover[type=submit], .btn-secondary.gform_button:hover {
+      background-color: #fff;
+      color: #707070; }
+    .btn.btn-secondary:active, .wpcf7 input.btn-secondary:active[type=submit], .btn-secondary.gform_button:active, .btn.btn-secondary:focus, .wpcf7 input.btn-secondary:focus[type=submit], .btn-secondary.gform_button:focus {
+      background-color: #71C26A;
+      color: #fff;
+      border-color: #71C26A; }
+  .btn.btn-outline-primary,
+  .wpcf7 input[type=submit], .btn-outline-primary.gform_button {
+    background-color: transparent;
+    border: 1px solid #71C26A;
     color: #71C26A; }
-  .btn.btn-primary:active, .wpcf7 input.btn-primary:active[type=submit], .wpcf7 input.gform_button:active[type=submit], .gform_button:active, .btn.btn-primary:focus, .wpcf7 input.btn-primary:focus[type=submit], .wpcf7 input.gform_button:focus[type=submit], .gform_button:focus {
-    background-color: #707070;
-    color: #fff;
-    border-color: #707070; }
-
-.btn.btn-secondary, .wpcf7 input.btn-secondary[type=submit], .btn-secondary.gform_button {
-  background-color: #707070;
-  border: 1px solid #707070;
-  color: #fff; }
-  .btn.btn-secondary:hover, .wpcf7 input.btn-secondary:hover[type=submit], .btn-secondary.gform_button:hover {
-    background-color: #fff;
+    .btn.btn-outline-primary:hover, .wpcf7 input:hover[type=submit], .btn-outline-primary.gform_button:hover {
+      background-color: #71C26A;
+      color: #fff; }
+    .btn.btn-outline-primary:active, .wpcf7 input:active[type=submit], .btn-outline-primary.gform_button:active, .btn.btn-outline-primary:focus,
+    .wpcf7 input:focus[type=submit], .btn-outline-primary.gform_button:focus {
+      background-color: #707070;
+      color: #fff;
+      border-color: #707070; }
+  .btn.btn-outline-secondary, .wpcf7 input.btn-outline-secondary[type=submit], .btn-outline-secondary.gform_button {
+    background-color: transparent;
+    border: 1px solid #707070;
     color: #707070; }
-  .btn.btn-secondary:active, .wpcf7 input.btn-secondary:active[type=submit], .btn-secondary.gform_button:active, .btn.btn-secondary:focus, .wpcf7 input.btn-secondary:focus[type=submit], .btn-secondary.gform_button:focus {
-    background-color: #71C26A;
-    color: #fff;
-    border-color: #71C26A; }
-
-.btn.btn-outline-primary,
-.wpcf7 input[type=submit], .btn-outline-primary.gform_button {
-  background-color: transparent;
-  border: 1px solid #71C26A;
-  color: #71C26A; }
-  .btn.btn-outline-primary:hover, .wpcf7 input:hover[type=submit], .btn-outline-primary.gform_button:hover {
-    background-color: #71C26A;
-    color: #fff; }
-  .btn.btn-outline-primary:active, .wpcf7 input:active[type=submit], .btn-outline-primary.gform_button:active, .btn.btn-outline-primary:focus,
-  .wpcf7 input:focus[type=submit], .btn-outline-primary.gform_button:focus {
-    background-color: #707070;
-    color: #fff;
-    border-color: #707070; }
-
-.btn.btn-outline-secondary, .wpcf7 input.btn-outline-secondary[type=submit], .btn-outline-secondary.gform_button {
-  background-color: transparent;
-  border: 1px solid #707070;
-  color: #707070; }
-  .btn.btn-outline-secondary:hover, .wpcf7 input.btn-outline-secondary:hover[type=submit], .btn-outline-secondary.gform_button:hover {
-    background-color: #707070;
-    color: #fff; }
-  .btn.btn-outline-secondary:active, .wpcf7 input.btn-outline-secondary:active[type=submit], .btn-outline-secondary.gform_button:active, .btn.btn-outline-secondary:focus, .wpcf7 input.btn-outline-secondary:focus[type=submit], .btn-outline-secondary.gform_button:focus {
-    background-color: #71C26A;
-    color: #fff;
-    border-color: #71C26A; }
+    .btn.btn-outline-secondary:hover, .wpcf7 input.btn-outline-secondary:hover[type=submit], .btn-outline-secondary.gform_button:hover {
+      background-color: #707070;
+      color: #fff; }
+    .btn.btn-outline-secondary:active, .wpcf7 input.btn-outline-secondary:active[type=submit], .btn-outline-secondary.gform_button:active, .btn.btn-outline-secondary:focus, .wpcf7 input.btn-outline-secondary:focus[type=submit], .btn-outline-secondary.gform_button:focus {
+      background-color: #71C26A;
+      color: #fff;
+      border-color: #71C26A; }
 
 .container-fluid-max {
   max-width: 1920px; }
@@ -18184,16 +18205,22 @@ blockquote .blockquote-footer {
       min-width: 100%;
       overflow: hidden;
       padding: 0 30px;
+      position: fixed;
       right: -1px;
+      top: 200px;
       -webkit-transition: height .15s ease;
       transition: height .15s ease;
       z-index: 0;
       padding-left: calc(50vw - 675px);
       padding-right: calc(50vw - 675px); }
+      .admin-bar #main-nav #main-menu .dropdown .dropdown-menu {
+        top: 224px; }
       #main-nav #main-menu .dropdown .dropdown-menu.show {
         -webkit-box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.16);
                 box-shadow: 0 3px 6px -3px rgba(0, 0, 0, 0.16);
         height: 8.75rem;
+        -webkit-transition: height .15s ease .1s;
+        transition: height .15s ease .1s;
         z-index: 1; }
       @media (max-width: 767.98px) {
         #main-nav #main-menu .dropdown .dropdown-menu {
@@ -21210,16 +21237,16 @@ section {
     padding-bottom: 1.6875rem; }
 
 .card-deck .card {
-  -webkit-box-flex: inherit;
-      -ms-flex: inherit;
-          flex: inherit;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   min-height: 100%;
   margin-bottom: 0.9375rem; }
 
 .card-deck.partners-card-deck .card {
   -webkit-box-shadow: 0 0.15rem 0.5rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.15rem 0.5rem rgba(0, 0, 0, 0.1);
-  padding: 1rem; }
+  padding: 1rem 0.5rem; }
   .card-deck.partners-card-deck .card .card-body {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -21248,7 +21275,6 @@ section {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 0;
     text-align: center; }
   .card-deck.partners-card-deck .card .btn-link {
     position: absolute;
@@ -21269,7 +21295,9 @@ section {
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  min-height: 200px;
+  height: 100%; }
   .card-deck.integrations-partners-card-deck .card .card-body {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -21428,6 +21456,8 @@ section {
 
 .carousel-inner {
   height: 100%; }
+  .carousel-inner .carousel-item {
+    max-width: 100vw; }
 
 #home_testimonials .carousel {
   min-height: 12rem; }
@@ -21459,6 +21489,11 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  .testimonial-column .carousel-item {
+    max-width: 50vw; }
+    @media (max-width: 767.98px) {
+      .testimonial-column .carousel-item {
+        max-width: 100vw; } }
 
 .gform_wrapper {
   padding: 0; }

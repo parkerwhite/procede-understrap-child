@@ -27,7 +27,7 @@ foreach ( $integrations_options as $key => $integration ) {
   <div class="container">
     <div class="row card-deck icon-cards justify-content-center" data-cols="4">
       <?php foreach ( $integrations as $key => $integration ) { ?>
-        <div class="col-6 col-md-3 p-0">
+        <div class="col-12 col-md-3 p-0">
           <div class="card text-center px-0 py-1 card-<?php echo $key; ?>">
             <?php if ( $integration['image'] ) { ?>
               <div class="card-header icon-header pb-0">

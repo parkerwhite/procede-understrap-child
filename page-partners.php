@@ -32,11 +32,6 @@ $partners_category_array = array(
   <section class="section-row-w-columns bg-light text-center">
     <a class="anchor" name="anchor-certified-partners-copy"></a>
     <div class="container"><!-- .container -->
-      <div class="row justify-content-center">
-        <div class="col-12 text-center">
-          <h1 class="section-title">Certified Partners</h1>
-        </div>
-      </div>
       <div class="row " data-cols="1">
         <div class=" col-12 col-md-8 offset-md-2">
           <?php echo apply_filters( 'the_content', get_post_meta( get_the_ID(), 'partners_page_certified_partners_copy', true ) ); ?>

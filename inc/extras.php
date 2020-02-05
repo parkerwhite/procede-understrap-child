@@ -71,7 +71,7 @@ if ( ! function_exists( 'procede_partners_cards' ) ) {
 							<div class="card-footer">
 								<h4 class="partner-category-title"><?php echo filtered_terms_str( $terms, $taxonomy ); ?></h4>
 							</div>
-							<?php echo do_shortcode( sprintf( '[button target="modal" page-id="%1$s" class="btn-link"]%2$s[/button]', get_the_ID(), '&nbsp;' ) ); ?>
+							<?php echo do_shortcode( sprintf( '[button target="modal" page-id="%1$s" class="btn-link"]%2$s[/button]', get_the_ID(), '' ) ); ?>
 						</div>
 					</div>
 				<?php endwhile; ?>
@@ -105,7 +105,8 @@ if ( ! function_exists( 'procede_integrations_partners_cards' ) ) {
 	function procede_integrations_partners_cards() {
 		$args = array(
 			'posts_per_page'  => -1,
-			'orderby'         => 'menu_order',
+			'orderby'         => 'title',
+			'order'						=> 'ASC',
 			'post_type'       => 'cpt-integrations',
 			'post_status'     => 'publish',
 		);
@@ -127,7 +128,7 @@ if ( ! function_exists( 'procede_integrations_partners_cards' ) ) {
 								}
 								?>
 							</div>
-							<?php echo do_shortcode( sprintf( '[button target="modal" page-id="%1$s" class="btn-link"]%2$s[/button]', get_the_ID(), '&nbsp;' ) ); ?>
+							<?php /* echo do_shortcode( sprintf( '[button target="modal" page-id="%1$s" class="btn-link"]%2$s[/button]', get_the_ID(), '&nbsp;' ) ); // Modal if needed */ ?>
 						</div>
 					</div>
 				<?php endwhile; ?>

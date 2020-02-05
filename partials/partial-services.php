@@ -27,15 +27,17 @@ foreach ( $services_options as $key => $service ) {
   <div class="container">
     <div class="row card-deck icon-cards justify-content-center">
       <?php foreach ( $services as $key => $service ) { ?>
-        <div class="card col-12 col-md-6 col-lg text-center px-0 py-1 card-<?php echo $key; ?>">
-          <div class="card-header icon-header pb-0">
-            <?php echo wp_get_attachment_image( $service['image'] ); ?>
+        <div class="col-12 col-md-6 col-lg text-center px-0">
+          <div class="card card-<?php echo $key; ?>">
+            <div class="card-header icon-header pb-0">
+              <?php echo wp_get_attachment_image( $service['image'] ); ?>
+            </div>
+            <div class="card-body pb-0">
+              <h3 class="mb-2"><?php echo $service['title']; ?></h3>
+              <?php echo apply_filters( 'the_content', $service['copy'] ); ?>
+            </div>
+            <a href="<?php echo get_permalink( $service['link'] ); ?>" class="btn btn-link btn-learn-more stretched-link card-footer pb-1"><span>Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
           </div>
-          <div class="card-body pb-0">
-            <h3 class="mb-2"><?php echo $service['title']; ?></h3>
-            <?php echo apply_filters( 'the_content', $service['copy'] ); ?>
-          </div>
-          <a href="<?php echo get_permalink( $service['link'] ); ?>" class="btn btn-link btn-learn-more stretched-link card-footer pb-1"><span>Learn More <i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
         </div>
       <?php } ?>
     </div>

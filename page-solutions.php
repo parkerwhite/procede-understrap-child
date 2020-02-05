@@ -167,7 +167,7 @@ $hero_text = ( metadata_exists( 'post', get_the_ID(), 'solutions_page_sections_h
 				</div>
 				<div class="row justify-content-center">
 					<?php for ( $i = 0; $i < $solutions_page_sections_additional_solutions_checklist_items; $i++ ) { ?>
-						<div class="solution col-12 col-md-6 col-lg-4">
+						<div class="solution col-12 col-md-6 <?php echo $solutions_page_sections_additional_solutions_checklist_items == 1 ? 'col-lg-6' : 'col-lg-4'; ?>">
 							<div class="text-center">
 								<?php echo wp_get_attachment_image( get_post_meta( get_the_ID(), 'solutions_page_sections_additional_solutions_checklist_items_' . $i . '_icon', true ), 'thumbnail', false, array( 'class' => 'solution-icon' ) ); ?>
 								<h3 class="solution-title"><?php echo get_post_meta( get_the_ID(), 'solutions_page_sections_additional_solutions_checklist_items_' . $i . '_title', true ); ?></h3>
@@ -196,7 +196,9 @@ $hero_text = ( metadata_exists( 'post', get_the_ID(), 'solutions_page_sections_h
 									<?php
 									$solutions_page_sections_grouped_content_group_link = get_post_meta( get_the_ID(), 'solutions_page_sections_grouped_content_group_' . $i . '_link', true );
 									?>
-									<a href="<?php echo $solutions_page_sections_grouped_content_group_link['url']; ?>" class="section-link" target="<?php echo $solutions_page_sections_grouped_content_group_link['target']; ?>"><?php _e( 'Learn More', 'procede' ); ?> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+									<?php if(isset($solutions_page_sections_grouped_content_group_link['url'])) { ?>
+										<a href="<?php echo $solutions_page_sections_grouped_content_group_link['url']; ?>" class="section-link" target="<?php echo $solutions_page_sections_grouped_content_group_link['target']; ?>"><?php _e( 'Learn More', 'procede' ); ?> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+									<?php } ?>
 								</div>
 								<div class="col-12">
 									<hr class="bg-primary"/>

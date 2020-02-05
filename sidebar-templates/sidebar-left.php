@@ -18,9 +18,9 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
 <?php if ( 'both' === $sidebar_pos ) : ?>
-	<div class="col-md-2 widget-area" id="left-sidebar" role="complementary">
+	<div class="col-md-2 order-12 order-md-0 widget-area" id="left-sidebar" role="complementary">
 <?php else : ?>
-	<div class="col-md-3 widget-area" id="left-sidebar" role="complementary">
+	<div class="col-md-3 order-12 order-md-0 widget-area" id="left-sidebar" role="complementary">
 <?php endif; ?>
 
 	<?php dynamic_sidebar( 'left-sidebar' ); ?>
