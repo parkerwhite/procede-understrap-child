@@ -29,6 +29,8 @@ $partners_category_array = array(
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
+  <?php get_template_part( 'partials/partial', 'hero' ); ?>
+
   <section class="section-row-w-columns bg-light text-center">
     <a class="anchor" name="anchor-certified-partners-copy"></a>
     <div class="container"><!-- .container -->

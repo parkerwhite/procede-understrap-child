@@ -13259,6 +13259,8 @@ a.skip-link {
 
 html {
   overflow-x: hidden; }
+  html.show-modal {
+    overflow-y: hidden; }
 
 body {
   margin-top: 198px; }
@@ -18207,7 +18209,7 @@ blockquote .blockquote-footer {
       padding: 0 30px;
       position: fixed;
       right: -1px;
-      top: 200px;
+      top: 198px;
       -webkit-transition: height .15s ease;
       transition: height .15s ease;
       z-index: 0;
@@ -21458,6 +21460,8 @@ section {
   height: 100%; }
   .carousel-inner .carousel-item {
     max-width: 100vw; }
+    .carousel-inner .carousel-item p:last-child {
+      margin-bottom: 0; }
 
 #home_testimonials .carousel {
   min-height: 12rem; }
@@ -21847,10 +21851,17 @@ section {
     background-color: transparent;
     color: #fff;
     max-width: 480px;
+    max-width: 33.333%;
     padding-bottom: 30px;
     padding-top: 30px;
     -webkit-transition: all .15s ease;
     transition: all .15s ease; }
+    @media (max-width: 1024.98px) {
+      #section_grouped-solutions-content .solution-wrapper {
+        max-width: 50%; } }
+    @media (max-width: 767.98px) {
+      #section_grouped-solutions-content .solution-wrapper {
+        max-width: 100%; } }
     #section_grouped-solutions-content .solution-wrapper:hover {
       background-color: #F7F7F7;
       color: #707070; }
