@@ -37,6 +37,7 @@ $page_header_type = get_post_meta( get_the_ID(), 'page_header_type', true );
 
 		<?php
 		if ( class_exists('Advanced_Custom_Fields_Partials') ) {
+			$partials = new Advanced_Custom_Fields_Partials( $container );
 			$partials->repeater( 'page_sections' );
 		}
 		?>
