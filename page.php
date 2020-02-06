@@ -23,13 +23,15 @@ $page_header_type = get_post_meta( get_the_ID(), 'page_header_type', true );
 	<?php while ( have_posts() ) : the_post(); ?>
 
 		<?php
-		if ( class_exists('Advanced_Custom_Fields_Partials') ) {
-			$partials = new Advanced_Custom_Fields_Partials( $container );
-			if ( $partials->get_field( 'page_header_type' ) ) {
-				$partials->acf_partial_page_header( $partials->get_field( 'page_header_type' ) );
-			}
-		}
+		// if ( class_exists('Advanced_Custom_Fields_Partials') ) {
+		// 	$partials = new Advanced_Custom_Fields_Partials( $container );
+		// 	if ( $partials->get_field( 'page_header_type' ) ) {
+		// 		$partials->acf_partial_page_header( $partials->get_field( 'page_header_type' ) );
+		// 	}
+		// }
 		?>
+
+		<?php get_template_part( 'partials/partial', 'hero' ); ?>
 
 		<?php the_formatted_content(); ?>
 

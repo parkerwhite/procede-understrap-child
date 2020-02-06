@@ -272,6 +272,7 @@ section.section-w-background-image {
 	padding-top: 0;
 	img.section-background-image {
 		bottom: 0;
+		height: 100%;
 		left: 0;
 		right: 0;
 		object-fit: cover;
@@ -921,7 +922,7 @@ body.admin-bar #mobile-nav .navbar-collapse {
 	border-width: .5px;
 	border-style: solid;
 	border-color: transparent; // $white rgba($gray-600, .5) rgba($gray-600, .5);
-	box-shadow: $box-shadow-sm;
+	box-shadow: $box-shadow;
 	padding: 3rem;
 	@include media-breakpoint-down('sm') {
 		padding: 2rem .5rem;
@@ -1772,7 +1773,7 @@ body.modal-open {
 
 #section_additional-solutions {
 	.solution {
-		max-width: 520px;
+		// max-width: 520px;
 		@include media-breakpoint-down('md') {
 			margin-bottom: 4rem;
 			&:last-child {
