@@ -4189,11 +4189,11 @@
 /**
  * Modal fix for padding scrollbar
  */
-(function($) {
-	$('.modal').on('show.bs.modal', function () {
-		$('html').addClass('show-modal');
-	})
-	$('.modal').on('hidden.bs.modal', function () {
-		$('html').removeClass('show-modal');
-	})
-})(jQuery)
+// (function($) {
+// 	$('.modal').on('show.bs.modal', function () {
+// 		$('html').addClass('show-modal');
+// 	})
+// 	$('.modal').on('hidden.bs.modal', function () {
+// 		$('html').removeClass('show-modal');
+// 	})
+// })(jQuery)

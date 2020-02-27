@@ -14,9 +14,9 @@
 // Reset
 html {
 	overflow-x: hidden;
-	&.show-modal {
-		overflow-y: hidden;
-	}
+	// &.show-modal {
+	// 	overflow-y: hidden;
+	// }
 }
 
 //
@@ -1482,11 +1482,11 @@ section {
 //
 // Modals
 //
+
 body.modal-open {
-	padding-right: 16px;
-	#top-nav,
-	#main-nav {
-		margin-right: 16px;
+	padding-right: 0 !important;
+	#wrapper-navbar {
+		padding-right: 0 !important;
 	}
 }
 .modal-dialog {

@@ -13259,8 +13259,6 @@ a.skip-link {
 
 html {
   overflow-x: hidden; }
-  html.show-modal {
-    overflow-y: hidden; }
 
 body {
   margin-top: 198px; }
@@ -21543,10 +21541,9 @@ section {
     margin-right: .5rem; }
 
 body.modal-open {
-  padding-right: 16px; }
-  body.modal-open #top-nav,
-  body.modal-open #main-nav {
-    margin-right: 16px; }
+  padding-right: 0 !important; }
+  body.modal-open #wrapper-navbar {
+    padding-right: 0 !important; }
 
 @media (min-width: 576px) {
   .modal-dialog {

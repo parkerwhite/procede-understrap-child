@@ -158,7 +158,8 @@ class ACF_Bootstrap_Builder {
 												break;
 											case 'wysiwyg':
 											default:
-												echo apply_filters( 'the_content', $this->get_field( 'bootstrap_layout_builder_section_' . $i . '_row_' . $j . '_column_' . $k . '_content_' . $l . '_wysiwyg', true ) );
+												// echo apply_filters( 'the_content', $this->get_field( 'bootstrap_layout_builder_section_' . $i . '_row_' . $j . '_column_' . $k . '_content_' . $l . '_wysiwyg', true ) );
+												echo do_shortcode( wpautop( html_entity_decode( $this->get_field( 'bootstrap_layout_builder_section_' . $i . '_row_' . $j . '_column_' . $k . '_content_' . $l . '_wysiwyg', true ) ), false ) );
 												break;
 										}
                   } ?>
