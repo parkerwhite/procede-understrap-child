@@ -69,7 +69,7 @@ $testimonials_section_background_color_class = sprintf( 'bg-%s', $testimonials_s
           <div class="row justify-content-center">
             <div class="text-white text-center col-12 col-xl-8 mb-2">
               <h2>Contact Us</h2>
-              <p class="mb-2">Faster. Smarter. Simple. Learn how our Excede can transform your dealership business.</p>
+              <p class="mb-2">Faster. Smarter. Simple. Learn how Excede can transform your dealership business.</p>
               <?php echo do_shortcode( $form_shortcode ); ?>
             </div>
           </div>
